@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SSMP.Core" namespace="SSMP.Core.Domain">
+    <class name="UserRole" table="UserRole" >
+    <id name="ID" type="System.Int32" column="UserRoleId">
+        <generator class="identity"/>
+    </id>
+    <property name="UserRoleDesc" column="UserRoleDesc" type="System.String" not-null="false" length="255"/>
+    <property name="UserRoleName" column="UserRoleName" type="System.String" not-null="false" length="100"/>
+    <bag name="Userses" table="Users" inverse="true" lazy="true" cascade="delete">
+    <key column="UserRoleId" />
+    <one-to-many class="User"/>
+    </bag>
+ </class>
+</hibernate-mapping>

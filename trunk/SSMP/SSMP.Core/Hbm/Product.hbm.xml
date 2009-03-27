@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SSMP.Core" namespace="SSMP.Core.Domain">
+    <class name="Product" table="Product" >
+    <id name="ID" type="System.String" column="ProductId">
+        <generator class="assigned"/>
+    </id>
+    <property name="MfgDate" column="MfgDate" type="System.DateTime" not-null="false" />
+    <property name="ExpDate" column="ExpDate" type="System.DateTime" not-null="false" />
+    <property name="ProductNameId" column="ProductNameId" type="System.Int32" not-null="false" />
+    <property name="PurchasePrice" column="PurchasePrice" type="System.String" not-null="false" length="20"/>
+    <property name="SalePrice" column="SalePrice" type="System.String" not-null="false" length="20"/>
+    <property name="Discount" column="Discount" type="System.Int32" not-null="false" />
+    <property name="StatusId" column="StatusId" type="System.Int32" not-null="true" />
+    <property name="BillPurchaseId" column="BillPurchaseId" type="System.String" not-null="true" length="10"/>
+    <property name="BillSaleId" column="BillSaleId" type="System.String" not-null="false" length="10"/>
+    <many-to-one name="BillPurchaseIdLookup" column="BillPurchaseId" class="BillPurchase"  update="0"  insert="0" />
+    <many-to-one name="BillSaleIdLookup" column="BillSaleId" class="BillSale"  update="0"  insert="0" />
+    <many-to-one name="ProductNameIdLookup" column="ProductNameId" class="ProductName"  update="0"  insert="0" />
+    <many-to-one name="StatusIdLookup" column="StatusId" class="ProductStatus"  update="0"  insert="0" />
+ </class>
+</hibernate-mapping>

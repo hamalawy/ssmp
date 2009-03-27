@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SSMP.Core" namespace="SSMP.Core.Domain">
+    <class name="Action" table="Action" >
+    <id name="ID" type="System.Int32" column="ActionId">
+        <generator class="identity"/>
+    </id>
+    <property name="ActionName" column="ActionName" type="System.String" not-null="true" length="100"/>
+    <property name="ActionDesc" column="ActionDesc" type="System.String" not-null="false" length="255"/>
+    <bag name="ActionDetails" table="ActionDetail" inverse="true" lazy="true" cascade="delete">
+    <key column="ActionId" />
+    <one-to-many class="ActionDetail"/>
+    </bag>
+ </class>
+</hibernate-mapping>

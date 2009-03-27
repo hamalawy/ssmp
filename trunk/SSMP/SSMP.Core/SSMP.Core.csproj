@@ -1,0 +1,126 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{886B9150-769C-48A4-B43F-D5014EDB56E9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SSMP.Core</RootNamespace>
+    <AssemblyName>SSMP.Core</AssemblyName>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataInterfaces\IActionDao.cs" />
+    <Compile Include="DataInterfaces\IActionDetailDao.cs" />
+    <Compile Include="DataInterfaces\IBillPurchaseDao.cs" />
+    <Compile Include="DataInterfaces\IBillSaleDao.cs" />
+    <Compile Include="DataInterfaces\ICategoryDao.cs" />
+    <Compile Include="DataInterfaces\ICountryDao.cs" />
+    <Compile Include="DataInterfaces\ICustomerDao.cs" />
+    <Compile Include="DataInterfaces\IDao.cs" />
+    <Compile Include="DataInterfaces\IDaoFactory.cs" />
+    <Compile Include="DataInterfaces\IManufacturerDao.cs" />
+    <Compile Include="DataInterfaces\IProductDao.cs" />
+    <Compile Include="DataInterfaces\IProductNameDao.cs" />
+    <Compile Include="DataInterfaces\IProductStatusDao.cs" />
+    <Compile Include="DataInterfaces\IProviderDao.cs" />
+    <Compile Include="DataInterfaces\IReferenceDataDao.cs" />
+    <Compile Include="DataInterfaces\IReferenceGroupDao.cs" />
+    <Compile Include="DataInterfaces\IUnitDao.cs" />
+    <Compile Include="DataInterfaces\IUserDao.cs" />
+    <Compile Include="DataInterfaces\IUserRoleDao.cs" />
+    <Compile Include="DataInterfaces\IUserStatusDao.cs" />
+    <Compile Include="DataInterfaces\IUserTitleDao.cs" />
+    <Compile Include="Domain\Action.cs" />
+    <Compile Include="Domain\ActionDetail.cs" />
+    <Compile Include="Domain\BillPurchase.cs" />
+    <Compile Include="Domain\BillSale.cs" />
+    <Compile Include="Domain\Category.cs" />
+    <Compile Include="Domain\Country.cs" />
+    <Compile Include="Domain\Customer.cs" />
+    <Compile Include="Domain\DomainObject.cs" />
+    <Compile Include="Domain\Manufacturer.cs" />
+    <Compile Include="Domain\Product.cs" />
+    <Compile Include="Domain\ProductName.cs" />
+    <Compile Include="Domain\ProductStatus.cs" />
+    <Compile Include="Domain\Provider.cs" />
+    <Compile Include="Domain\ReferenceData.cs" />
+    <Compile Include="Domain\ReferenceGroup.cs" />
+    <Compile Include="Domain\Unit.cs" />
+    <Compile Include="Domain\User.cs" />
+    <Compile Include="Domain\UserRole.cs" />
+    <Compile Include="Domain\UserStatus.cs" />
+    <Compile Include="Domain\UserTitle.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\DBConstants.cs" />
+    <Compile Include="Utils\SearchParam.cs" />
+    <Compile Include="Utils\SearchResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Hbm\Action.hbm.xml" />
+    <EmbeddedResource Include="Hbm\ActionDetail.hbm.xml" />
+    <EmbeddedResource Include="Hbm\BillPurchase.hbm.xml" />
+    <EmbeddedResource Include="Hbm\BillSale.hbm.xml" />
+    <EmbeddedResource Include="Hbm\Category.hbm.xml" />
+    <EmbeddedResource Include="Hbm\Country.hbm.xml" />
+    <EmbeddedResource Include="Hbm\Customer.hbm.xml" />
+    <EmbeddedResource Include="Hbm\Manufacturer.hbm.xml" />
+    <EmbeddedResource Include="Hbm\Product.hbm.xml" />
+    <EmbeddedResource Include="Hbm\ProductName.hbm.xml" />
+    <EmbeddedResource Include="Hbm\ProductStatus.hbm.xml" />
+    <EmbeddedResource Include="Hbm\Provider.hbm.xml" />
+    <EmbeddedResource Include="Hbm\ReferenceData.hbm.xml" />
+    <EmbeddedResource Include="Hbm\ReferenceGroup.hbm.xml" />
+    <EmbeddedResource Include="Hbm\Unit.hbm.xml" />
+    <EmbeddedResource Include="Hbm\User.hbm.xml" />
+    <EmbeddedResource Include="Hbm\UserRole.hbm.xml" />
+    <EmbeddedResource Include="Hbm\UserStatus.hbm.xml" />
+    <EmbeddedResource Include="Hbm\UserTitle.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="nhibernate-mapping.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectBase.Utils\ProjectBase.Utils.csproj">
+      <Project>{24D21FC0-59B8-4208-AA1D-1B30D3F3C101}</Project>
+      <Name>ProjectBase.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

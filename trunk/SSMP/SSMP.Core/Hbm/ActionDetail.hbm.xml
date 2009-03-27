@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SSMP.Core" namespace="SSMP.Core.Domain">
+    <class name="ActionDetail" table="ActionDetail" >
+    <composite-id name="ID" class="SSMP.Domain.ActionDetail+DomainObjectID">
+        <key-property type="System.Int32" name="UserId" column="UserId" />
+        <key-property type="System.Int32" name="ActionId" column="ActionId" />
+    </composite-id>
+    <property name="ActionDate" column="ActionDate" type="System.DateTime" not-null="true" />
+    <many-to-one name="ActionIdLookup" column="ActionId" class="Action"  update="0"  insert="0" />
+    <many-to-one name="UserIdLookup" column="UserId" class="User"  update="0"  insert="0" />
+ </class>
+</hibernate-mapping>
