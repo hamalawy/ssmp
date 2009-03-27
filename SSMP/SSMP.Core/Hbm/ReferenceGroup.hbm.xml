@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SSMP.Core" namespace="SSMP.Core.Domain">
+    <class name="ReferenceGroup" table="ReferenceGroup" >
+    <id name="ID" type="System.String" column="RefGroup">
+        <generator class="assigned"/>
+    </id>
+    <property name="RefDesc" column="RefDesc" type="System.String" not-null="false" length="255"/>
+    <bag name="ReferenceDatas" table="ReferenceData" inverse="true" lazy="true" cascade="delete">
+    <key column="RefGroup" />
+    <one-to-many class="ReferenceData"/>
+    </bag>
+ </class>
+</hibernate-mapping>

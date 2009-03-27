@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SSMP.Core" namespace="SSMP.Core.Domain">
+    <class name="Country" table="Country" >
+    <id name="ID" type="System.Int32" column="CountryId">
+        <generator class="identity"/>
+    </id>
+    <property name="CountryName" column="CountryName" type="System.String" not-null="false" length="100"/>
+    <bag name="Manufacturers" table="Manufacturer" inverse="true" lazy="true" cascade="delete">
+    <key column="CountryId" />
+    <one-to-many class="Manufacturer"/>
+    </bag>
+    <bag name="Providers" table="Provider" inverse="true" lazy="true" cascade="delete">
+    <key column="CountryId" />
+    <one-to-many class="Provider"/>
+    </bag>
+ </class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SSMP.Core" namespace="SSMP.Core.Domain">
+    <class name="ReferenceData" table="ReferenceData" >
+    <id name="ID" type="System.String" column="RefName">
+        <generator class="assigned"/>
+    </id>
+    <property name="RefNumber" column="RefNumber" type="System.Int32" not-null="false" />
+    <property name="RefString" column="RefString" type="System.String" not-null="false" length="20"/>
+    <property name="RefDate" column="RefDate" type="System.DateTime" not-null="false" />
+    <property name="RefGroup" column="RefGroup" type="System.String" not-null="true" length="20"/>
+    <many-to-one name="RefGroupLookup" column="RefGroup" class="ReferenceGroup"  update="0"  insert="0" />
+ </class>
+</hibernate-mapping>

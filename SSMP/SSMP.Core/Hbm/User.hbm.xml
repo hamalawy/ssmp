@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SSMP.Core" namespace="SSMP.Core.Domain">
+    <class name="User" table="Users" >
+    <id name="ID" type="System.Int32" column="UserId">
+        <generator class="identity"/>
+    </id>
+    <property name="Username" column="Username" type="System.String" not-null="true" length="20"/>
+    <property name="Password" column="Password" type="System.String" not-null="true" length="32"/>
+    <property name="FullName" column="FullName" type="System.String" not-null="true" length="100"/>
+    <property name="Email" column="Email" type="System.String" not-null="false" length="50"/>
+    <property name="Birthday" column="Birthday" type="System.DateTime" not-null="false" />
+    <property name="IdCardNo" column="IdCardNo" type="System.String" not-null="false" length="20"/>
+    <property name="Sex" column="Sex" type="System.Byte" not-null="false" />
+    <property name="UserStatusId" column="UserStatusId" type="System.Int32" not-null="true" />
+    <property name="Address" column="Address" type="System.String" not-null="false" length="255"/>
+    <property name="UserRoleId" column="UserRoleId" type="System.Int32" not-null="true" />
+    <property name="UserTitleId" column="UserTitleId" type="System.Int32" not-null="false" />
+    <property name="TelNo" column="TelNo" type="System.String" not-null="false" length="20"/>
+    <many-to-one name="UserRoleIdLookup" column="UserRoleId" class="UserRole"  update="0"  insert="0" />
+    <many-to-one name="UserStatusIdLookup" column="UserStatusId" class="UserStatus"  update="0"  insert="0" />
+    <many-to-one name="UserTitleIdLookup" column="UserTitleId" class="UserTitle"  update="0"  insert="0" />
+    <bag name="ActionDetails" table="ActionDetail" inverse="true" lazy="true" cascade="delete">
+    <key column="UserId" />
+    <one-to-many class="ActionDetail"/>
+    </bag>
+    <bag name="BillPurchases" table="BillPurchase" inverse="true" lazy="true" cascade="delete">
+    <key column="UserId" />
+    <one-to-many class="BillPurchase"/>
+    </bag>
+    <bag name="BillSales" table="BillSale" inverse="true" lazy="true" cascade="delete">
+    <key column="UserId" />
+    <one-to-many class="BillSale"/>
+    </bag>
+ </class>
+</hibernate-mapping>

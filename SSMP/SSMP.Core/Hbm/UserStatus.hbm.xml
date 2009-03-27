@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SSMP.Core" namespace="SSMP.Core.Domain">
+    <class name="UserStatus" table="UserStatus" >
+    <id name="ID" type="System.Int32" column="UserStatusId">
+        <generator class="identity"/>
+    </id>
+    <property name="UserStatusName" column="UserStatusName" type="System.String" not-null="true" length="100"/>
+    <property name="UserStatusDesc" column="UserStatusDesc" type="System.String" not-null="false" length="255"/>
+    <bag name="Userses" table="Users" inverse="true" lazy="true" cascade="delete">
+    <key column="UserStatusId" />
+    <one-to-many class="User"/>
+    </bag>
+ </class>
+</hibernate-mapping>
