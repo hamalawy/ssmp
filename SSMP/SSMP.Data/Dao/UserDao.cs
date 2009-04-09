@@ -46,6 +46,11 @@ namespace SSMP.Data.Dao
 
             if (entity != null)
             {
+                if (entity.ID != 0)
+                {
+                    criteria.Add(Restrictions.Eq("ID", entity.ID));
+                }
+
                 if (entity.Username != null)
                 {
                     criteria.Add(Restrictions.Like("Username", entity.Username, MatchMode.Anywhere));

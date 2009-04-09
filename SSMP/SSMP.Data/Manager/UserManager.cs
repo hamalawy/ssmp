@@ -48,27 +48,21 @@ namespace SSMP.Data.Manager
 
         public User Save(User entity)
         {
+            throw new Exception("The method or operation is not implemented.");
+        }
+
+        public User SaveOrUpdate(User entity)
+        {
             try
             {
-                if (entity != null && entity.ID != null)
+                if (entity != null)
                 {
-                    if (!IsExist(entity))
-                    {
-                        userDao.Save(entity);
-                        userDao.CommitChanges();
-                    }
-                    else
-                    {
-                        throw new Exception("Username existed");
-                    }
-                }
-                else if (entity.ID != null && entity.ID == null)
-                {
-                    throw new Exception("Username cannot be null");
+                    userDao.SaveOrUpdate(entity);
+                    userDao.CommitChanges();
                 }
                 else
                 {
-                    throw new Exception("User entity cannot be null"); 
+                    throw new Exception("User entity cannot be null");
                 }
             }
             catch (Exception ex)
@@ -79,21 +73,34 @@ namespace SSMP.Data.Manager
             return entity;
         }
 
-        public User SaveOrUpdate(User entity)
-        {
-            throw new Exception("The method or operation is not implemented.");
-        }
-
         public void Delete(User entity)
         {
-            throw new Exception("The method or operation is not implemented.");
+            try
+            {
+                if (entity != null)
+                {
+                    //entity.UserTitleIdLookup = null;
+                    entity.UserTitleId = null;
+                    //userDao.CommitChanges();
+                    userDao.Delete(entity);
+                    userDao.CommitChanges();
+                }
+                else
+                {
+                    throw new Exception("User entity cannot be null");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public bool IsExist(User entity)
         {
-            List<User> list = userDao.GetByExample(entity, new string[0]);
+            User userObj = userDao.GetById(entity.ID, false);
 
-            if (list != null && list.Count > 0)
+            if (userObj != null)
             {
                 return true;
             }

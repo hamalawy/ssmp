@@ -53,9 +53,12 @@
     <Compile Include="Dao\CountryDao.cs" />
     <Compile Include="Dao\CustomerDao.cs" />
     <Compile Include="LogUtils\LogConstants.cs" />
+    <Compile Include="Manager\UserStatusManager.cs" />
+    <Compile Include="Manager\UserRoleManager.cs" />
     <Compile Include="Manager\IManager.cs" />
     <Compile Include="Manager\UserManager.cs" />
     <Compile Include="Dao\ManufacturerDao.cs" />
+    <Compile Include="Manager\UserTitleManager.cs" />
     <Compile Include="NHibernateManager\AbstractNHibernateDao.cs" />
     <Compile Include="NHibernateManager\NHibernateDaoFactory.cs" />
     <Compile Include="NHibernateManager\NHibernateSessionManager.cs" />
