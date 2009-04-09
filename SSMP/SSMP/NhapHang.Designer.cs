@@ -91,6 +91,7 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.lblDanhSachPhieuNhapHang = new System.Windows.Forms.Label();
             this.tpBaoCao = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
             this.tcNhapKhoHangHoa.SuspendLayout();
             this.tpLapPhieuNhapHangHoa.SuspendLayout();
             this.tpQuanLyPhieuNhapHangHoa.SuspendLayout();
@@ -106,11 +107,12 @@
             this.tcNhapKhoHangHoa.Location = new System.Drawing.Point(12, 3);
             this.tcNhapKhoHangHoa.Name = "tcNhapKhoHangHoa";
             this.tcNhapKhoHangHoa.SelectedIndex = 0;
-            this.tcNhapKhoHangHoa.Size = new System.Drawing.Size(848, 593);
+            this.tcNhapKhoHangHoa.Size = new System.Drawing.Size(895, 593);
             this.tcNhapKhoHangHoa.TabIndex = 0;
             // 
             // tpLapPhieuNhapHangHoa
             // 
+            this.tpLapPhieuNhapHangHoa.Controls.Add(this.label7);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.ngayXuathang);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.ngayNhapHang);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.label6);
@@ -155,7 +157,7 @@
             this.tpLapPhieuNhapHangHoa.Location = new System.Drawing.Point(4, 22);
             this.tpLapPhieuNhapHangHoa.Name = "tpLapPhieuNhapHangHoa";
             this.tpLapPhieuNhapHangHoa.Padding = new System.Windows.Forms.Padding(3);
-            this.tpLapPhieuNhapHangHoa.Size = new System.Drawing.Size(840, 567);
+            this.tpLapPhieuNhapHangHoa.Size = new System.Drawing.Size(887, 567);
             this.tpLapPhieuNhapHangHoa.TabIndex = 0;
             this.tpLapPhieuNhapHangHoa.Text = "Lập Phiếu nhập Hàng hóa";
             this.tpLapPhieuNhapHangHoa.UseVisualStyleBackColor = true;
@@ -517,7 +519,7 @@
             this.tpQuanLyPhieuNhapHangHoa.Location = new System.Drawing.Point(4, 22);
             this.tpQuanLyPhieuNhapHangHoa.Name = "tpQuanLyPhieuNhapHangHoa";
             this.tpQuanLyPhieuNhapHangHoa.Padding = new System.Windows.Forms.Padding(3);
-            this.tpQuanLyPhieuNhapHangHoa.Size = new System.Drawing.Size(840, 567);
+            this.tpQuanLyPhieuNhapHangHoa.Size = new System.Drawing.Size(887, 567);
             this.tpQuanLyPhieuNhapHangHoa.TabIndex = 1;
             this.tpQuanLyPhieuNhapHangHoa.Text = "Quản lý Phiếu nhập Hàng hóa";
             this.tpQuanLyPhieuNhapHangHoa.UseVisualStyleBackColor = true;
@@ -539,6 +541,7 @@
             this.btnCapNhatQuanLy.TabIndex = 6;
             this.btnCapNhatQuanLy.Text = "&Cập nhật";
             this.btnCapNhatQuanLy.UseVisualStyleBackColor = true;
+            this.btnCapNhatQuanLy.Click += new System.EventHandler(this.btnCapNhatQuanLy_Click);
             // 
             // btnXoaQuanLy
             // 
@@ -707,11 +710,20 @@
             this.tpBaoCao.Text = "Báo cáo";
             this.tpBaoCao.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(831, 86);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.TabIndex = 117;
+            this.label7.Text = "(vnđ)";
+            // 
             // frmNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(874, 608);
+            this.ClientSize = new System.Drawing.Size(919, 608);
             this.Controls.Add(this.tcNhapKhoHangHoa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -796,6 +808,7 @@
         private System.Windows.Forms.DateTimePicker ngayNhapHang;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
 
 
 
