@@ -9,5 +9,10 @@ namespace SSMP.Core.Utils
         public static string ASC = "ASC";
         public static string DESC = "DESC";
         public static string ID = "ID";
+        public class User
+        {
+            public static int ACTIVE = 1;
+            public static int LOCK = 0;
+        }
     }
 }

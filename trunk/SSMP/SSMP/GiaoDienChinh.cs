@@ -17,7 +17,7 @@ namespace SSMP
         public frmQuanLyNhomNguoiDung QuanLyNhomNguoiDung;
         public frmDanhMucLoaiSanPham DanhMucLoaiSanPham;
         public frmDanhMucNhaCungCap DanhMucNhaCungCap;
-        public frmQuanLyNguoiDung QuanLyNguoiDung;
+        public FrmUser QuanLyNguoiDung;
         public frmQuanLyDonVi QuanLyDonVi;
         public frmDanhMucNhaSanXuat DanhMucNhaSanXuat;
         public frmQuanLyHanhDong QuanLyHanhDong;
@@ -198,13 +198,13 @@ namespace SSMP
         {
             if (QuanLyNguoiDung == null)
             {
-                QuanLyNguoiDung = new frmQuanLyNguoiDung();
+                QuanLyNguoiDung = new FrmUser();
                 QuanLyNguoiDung.MdiParent = this;
                 QuanLyNguoiDung.Show();
             }
             if (QuanLyNguoiDung.IsDisposed)
             {
-                QuanLyNguoiDung = new frmQuanLyNguoiDung();
+                QuanLyNguoiDung = new FrmUser();
                 QuanLyNguoiDung.MdiParent = this;
                 QuanLyNguoiDung.Show();
             }
