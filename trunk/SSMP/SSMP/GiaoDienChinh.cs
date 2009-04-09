@@ -350,6 +350,8 @@ namespace SSMP
 
         private void frmGiaoDienChinh_Load(object sender, EventArgs e)
         {
+            
+            
             if (!File.Exists(Constants.CONFIG_FILE))
             {
                 MessageBox.Show("Because this is the first time use program, please config database", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
