@@ -112,5 +112,10 @@ namespace SSMP
             }
 
         }
+
+        private void btnCapNhatQuanLy_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

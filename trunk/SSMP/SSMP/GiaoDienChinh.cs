@@ -372,5 +372,21 @@ namespace SSMP
                 System.Console.WriteLine("Config file existed!");
             }
         }
+
+        private void tsmiLapPhieuBanHang_Click(object sender, EventArgs e)
+        {
+            if (NhapHang == null)
+            {
+                NhapHang = new frmNhapHang();
+                NhapHang.MdiParent = this;
+                NhapHang.Show();
+            }
+            if (NhapHang.IsDisposed)
+            {
+                NhapHang = new frmNhapHang();
+                NhapHang.MdiParent = this;
+                NhapHang.Show();
+            }
+        }
     }
 }
