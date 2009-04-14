@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SSMP.Core" namespace="SSMP.Core.Domain">
     <class name="BillPurchase" table="BillPurchase" >
-    <id name="ID" type="System.String" column="BillPurchaseId">
-        <generator class="assigned"/>
+    <id name="ID" type="System.Int64" column="BillPurchaseId">
+        <generator class="identity"/>
     </id>
     <property name="CreateDate" column="CreateDate" type="System.DateTime" not-null="true" />
     <property name="DeliveryStaff" column="DeliveryStaff" type="System.String" not-null="false" length="100"/>
     <property name="ProviderId" column="ProviderId" type="System.Int32" not-null="true" />
     <property name="UserId" column="UserId" type="System.Int32" not-null="true" />
-    <many-to-one name="ProviderIdLookup" column="ProviderId" class="Provider"  update="0"  insert="0" />
-    <many-to-one name="UserIdLookup" column="UserId" class="User"  update="0"  insert="0" />
     <bag name="Products" table="Product" inverse="true" lazy="true" cascade="delete">
     <key column="BillPurchaseId" />
     <one-to-many class="Product"/>

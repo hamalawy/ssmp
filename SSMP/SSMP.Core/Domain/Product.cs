@@ -7,7 +7,7 @@ namespace SSMP.Core.Domain
     /// Product object for NHibernate mapped table Product.
     /// </summary>
     [Serializable]
-    public class Product : DomainObject<System.String>
+    public class Product : DomainObject<System.Int64>
     {
 
 
@@ -18,18 +18,16 @@ namespace SSMP.Core.Domain
         private System.String _SalePrice;
         private System.Int32? _Discount;
         private System.Int32 _StatusId;
-        private System.String _BillPurchaseId;
-        private System.String _BillSaleId;
+        private System.Int64 _BillPurchaseId;
+        private System.Int64? _BillSaleId;
         private BillPurchase _BillPurchaseIdLookup;
         private BillSale _BillSaleIdLookup;
-        private ProductName _ProductNameIdLookup;
-        private ProductStatus _StatusIdLookup;
 
         public Product()
         {
         }
 
-        public Product(System.String id)
+        public Product(System.Int64 id)
         {
             base.ID = id;
         }
@@ -69,12 +67,12 @@ namespace SSMP.Core.Domain
              set { _StatusId = value;}
          }
 
-         public virtual System.String BillPurchaseId {
+         public virtual System.Int64 BillPurchaseId {
              get { return _BillPurchaseId; }
              set { _BillPurchaseId = value;}
          }
 
-         public virtual System.String BillSaleId {
+         public virtual System.Int64? BillSaleId {
              get { return _BillSaleId; }
              set { _BillSaleId = value;}
          }
@@ -87,16 +85,6 @@ namespace SSMP.Core.Domain
          public virtual BillSale BillSaleIdLookup{
              get { return _BillSaleIdLookup; }
              set { _BillSaleIdLookup = value;}
-         }
-
-         public virtual ProductName ProductNameIdLookup{
-             get { return _ProductNameIdLookup; }
-             set { _ProductNameIdLookup = value;}
-         }
-
-         public virtual ProductStatus StatusIdLookup{
-             get { return _StatusIdLookup; }
-             set { _StatusIdLookup = value;}
          }
 
 

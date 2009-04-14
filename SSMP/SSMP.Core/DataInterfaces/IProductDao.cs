@@ -9,7 +9,7 @@ namespace SSMP.Core.DataInterfaces
     /// place it in its own file for manageability.  In this way, it can grow further without
     /// cluttering up <see cref="IDaoFactory" />.
     /// </summary>
-    public interface IProductDao : IDao<Product, System.String>
+    public interface IProductDao : IDao<Product, System.Int64>
     {
 
     }
