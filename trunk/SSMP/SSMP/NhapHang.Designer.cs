@@ -31,14 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhapHang));
             this.tcNhapKhoHangHoa = new System.Windows.Forms.TabControl();
             this.tpLapPhieuNhapHangHoa = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
             this.ngayXuathang = new System.Windows.Forms.DateTimePicker();
             this.ngayNhapHang = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtGiaban = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtMota = new System.Windows.Forms.RichTextBox();
             this.ngayHetHan = new System.Windows.Forms.DateTimePicker();
             this.ngaySanXuat = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,8 +63,6 @@
             this.cboDonViTinh = new System.Windows.Forms.ComboBox();
             this.lblDonViTinh = new System.Windows.Forms.Label();
             this.lblTenSanPham = new System.Windows.Forms.Label();
-            this.txtNguoiVietPhieuNhapHang = new System.Windows.Forms.TextBox();
-            this.lblNguoiVietPhieuNhap = new System.Windows.Forms.Label();
             this.txtNgayThang = new System.Windows.Forms.TextBox();
             this.lblNgayThang = new System.Windows.Forms.Label();
             this.lblPhieuNhapKho = new System.Windows.Forms.Label();
@@ -91,7 +88,7 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.lblDanhSachPhieuNhapHang = new System.Windows.Forms.Label();
             this.tpBaoCao = new System.Windows.Forms.TabPage();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.tcNhapKhoHangHoa.SuspendLayout();
             this.tpLapPhieuNhapHangHoa.SuspendLayout();
             this.tpQuanLyPhieuNhapHangHoa.SuspendLayout();
@@ -112,6 +109,7 @@
             // 
             // tpLapPhieuNhapHangHoa
             // 
+            this.tpLapPhieuNhapHangHoa.Controls.Add(this.label8);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.label7);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.ngayXuathang);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.ngayNhapHang);
@@ -119,8 +117,6 @@
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.label4);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.label5);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.txtGiaban);
-            this.tpLapPhieuNhapHangHoa.Controls.Add(this.label3);
-            this.tpLapPhieuNhapHangHoa.Controls.Add(this.txtMota);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.ngayHetHan);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.ngaySanXuat);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.label2);
@@ -146,8 +142,6 @@
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.cboDonViTinh);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.lblDonViTinh);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.lblTenSanPham);
-            this.tpLapPhieuNhapHangHoa.Controls.Add(this.txtNguoiVietPhieuNhapHang);
-            this.tpLapPhieuNhapHangHoa.Controls.Add(this.lblNguoiVietPhieuNhap);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.txtNgayThang);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.lblNgayThang);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.lblPhieuNhapKho);
@@ -161,6 +155,15 @@
             this.tpLapPhieuNhapHangHoa.TabIndex = 0;
             this.tpLapPhieuNhapHangHoa.Text = "Lập Phiếu nhập Hàng hóa";
             this.tpLapPhieuNhapHangHoa.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(831, 86);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.TabIndex = 117;
+            this.label7.Text = "(vnđ)";
             // 
             // ngayXuathang
             // 
@@ -209,23 +212,6 @@
             this.txtGiaban.Name = "txtGiaban";
             this.txtGiaban.Size = new System.Drawing.Size(156, 20);
             this.txtGiaban.TabIndex = 111;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(614, 166);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 109;
-            this.label3.Text = "Mô tả :";
-            // 
-            // txtMota
-            // 
-            this.txtMota.Location = new System.Drawing.Point(669, 166);
-            this.txtMota.Name = "txtMota";
-            this.txtMota.Size = new System.Drawing.Size(156, 75);
-            this.txtMota.TabIndex = 108;
-            this.txtMota.Text = "";
             // 
             // ngayHetHan
             // 
@@ -435,23 +421,6 @@
             this.lblTenSanPham.Size = new System.Drawing.Size(78, 13);
             this.lblTenSanPham.TabIndex = 69;
             this.lblTenSanPham.Text = "Tên sản phẩm:";
-            // 
-            // txtNguoiVietPhieuNhapHang
-            // 
-            this.txtNguoiVietPhieuNhapHang.Location = new System.Drawing.Point(694, 39);
-            this.txtNguoiVietPhieuNhapHang.Name = "txtNguoiVietPhieuNhapHang";
-            this.txtNguoiVietPhieuNhapHang.ReadOnly = true;
-            this.txtNguoiVietPhieuNhapHang.Size = new System.Drawing.Size(131, 20);
-            this.txtNguoiVietPhieuNhapHang.TabIndex = 66;
-            // 
-            // lblNguoiVietPhieuNhap
-            // 
-            this.lblNguoiVietPhieuNhap.AutoSize = true;
-            this.lblNguoiVietPhieuNhap.Location = new System.Drawing.Point(630, 42);
-            this.lblNguoiVietPhieuNhap.Name = "lblNguoiVietPhieuNhap";
-            this.lblNguoiVietPhieuNhap.Size = new System.Drawing.Size(58, 13);
-            this.lblNguoiVietPhieuNhap.TabIndex = 65;
-            this.lblNguoiVietPhieuNhap.Text = "Người viết:";
             // 
             // txtNgayThang
             // 
@@ -705,19 +674,19 @@
             // 
             this.tpBaoCao.Location = new System.Drawing.Point(4, 22);
             this.tpBaoCao.Name = "tpBaoCao";
-            this.tpBaoCao.Size = new System.Drawing.Size(840, 567);
+            this.tpBaoCao.Size = new System.Drawing.Size(887, 567);
             this.tpBaoCao.TabIndex = 2;
             this.tpBaoCao.Text = "Báo cáo";
             this.tpBaoCao.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // label8
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(831, 86);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
-            this.label7.TabIndex = 117;
-            this.label7.Text = "(vnđ)";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(827, 140);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(21, 13);
+            this.label8.TabIndex = 118;
+            this.label8.Text = "(%)";
             // 
             // frmNhapHang
             // 
@@ -764,8 +733,6 @@
         private System.Windows.Forms.ComboBox cboDonViTinh;
         private System.Windows.Forms.Label lblDonViTinh;
         private System.Windows.Forms.Label lblTenSanPham;
-        private System.Windows.Forms.TextBox txtNguoiVietPhieuNhapHang;
-        private System.Windows.Forms.Label lblNguoiVietPhieuNhap;
         private System.Windows.Forms.TextBox txtNgayThang;
         private System.Windows.Forms.Label lblNgayThang;
         private System.Windows.Forms.Label lblPhieuNhapKho;
@@ -800,8 +767,6 @@
         private System.Windows.Forms.DateTimePicker ngaySanXuat;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox txtMota;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtGiaban;
         private System.Windows.Forms.DateTimePicker ngayXuathang;
@@ -809,6 +774,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
 
 
 

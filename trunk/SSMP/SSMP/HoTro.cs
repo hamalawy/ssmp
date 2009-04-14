@@ -22,7 +22,7 @@ namespace SSMP
         public static string TenDangNhap = "";
         public static string MatKhau = "";
 
-        public static string NguoiDung = "hung.hoang";
+        public static int maNguoiDung = 1;
 
         public HoTro()
         {
@@ -175,6 +175,30 @@ namespace SSMP
             return gt;
         }
 
+        public Int64 LayGiaTriTruongKhoaVuaChen2(string TenBang, string TenTruongKhoa)
+        {
+            Int64 gt = 0;
+            try
+            {
+                string CauLenh = "select max(" + TenTruongKhoa + ") from " + TenBang;
+                cmd = new SqlCommand(CauLenh, KetNoi());
+                cmd.Connection.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.Read()) gt = dr.GetInt64(0);
+            }
+            catch (Exception ex)
+            {
+                return gt;
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                if (dr != null) dr.Close();
+                if (cmd != null) cmd.Connection.Close();
+            }
+            return gt;
+        }
+
         public Int32 SoDongCuaBang(string CauLenh)
         {
             Int32 kq = 0;
@@ -284,6 +308,7 @@ namespace SSMP
             return DotNhap;
         }
 
+
         public Int32 LayVeKhoa(string TenBang, string TenTruongKhoa, string TenTruong, string GiaTri)
         {
             string CauLenh = "select " + TenTruongKhoa + " from " + TenBang + " where " + TenTruong + "=N'" + GiaTri + "'";
@@ -304,6 +329,28 @@ namespace SSMP
                 if (cmd != null) cmd.Connection.Close();
             }
             return 0;
+        }
+
+        public String LayVeKhoa2(string TenBang, string TenTruongKhoa, string TenTruong, string GiaTri)
+        {
+            string CauLenh = "select " + TenTruongKhoa + " from " + TenBang + " where " + TenTruong + "=N'" + GiaTri + "'";
+            try
+            {
+                cmd = new SqlCommand(CauLenh, KetNoi());
+                cmd.Connection.Open();
+                String khoa = cmd.ExecuteScalar().ToString();
+                return khoa;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+            finally
+            {
+                if (cmd != null) cmd.Connection.Close();
+            }
+            return null;
         }
     }
 }
