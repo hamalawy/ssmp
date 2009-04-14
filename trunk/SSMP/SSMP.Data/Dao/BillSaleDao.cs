@@ -5,7 +5,7 @@ using SSMP.Core.Domain;
 
 namespace SSMP.Data
 {
-    public class BillSaleDao : AbstractNHibernateDao<BillSale, System.String>, IBillSaleDao
+    public class BillSaleDao : AbstractNHibernateDao<BillSale, System.Int64>, IBillSaleDao
     {
     }
 }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using SSMP.Data;
 
 namespace SSMP
 {
@@ -30,6 +31,7 @@ namespace SSMP
         public frmGiaoDienChinh()
         {
             InitializeComponent();
+            NHibernateSessionManager.Instance.GetSession();
         }
 
         private void tsmiCauHinh_Click(object sender, EventArgs e)
