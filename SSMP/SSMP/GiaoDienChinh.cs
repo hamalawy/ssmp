@@ -23,6 +23,7 @@ namespace SSMP
         public frmDanhMucNhaSanXuat DanhMucNhaSanXuat;
         public frmQuanLyHanhDong QuanLyHanhDong;
         public frmNhapHang NhapHang;
+        public BanHang frmBanHang;
         public frmQuanLyChucVu QuanLyChucVu;
         public frmDanhMucSanPham DanhMucSanPham;
 
@@ -379,17 +380,17 @@ namespace SSMP
 
         private void tsmiLapPhieuBanHang_Click(object sender, EventArgs e)
         {
-            if (NhapHang == null)
+            if (frmBanHang == null)
             {
-                NhapHang = new frmNhapHang();
-                NhapHang.MdiParent = this;
-                NhapHang.Show();
+                frmBanHang = new BanHang();
+                frmBanHang.MdiParent = this;
+                frmBanHang.Show();
             }
-            if (NhapHang.IsDisposed)
+            if (frmBanHang.IsDisposed)
             {
-                NhapHang = new frmNhapHang();
-                NhapHang.MdiParent = this;
-                NhapHang.Show();
+                frmBanHang = new BanHang();
+                frmBanHang.MdiParent = this;
+                frmBanHang.Show();
             }
         }
     }

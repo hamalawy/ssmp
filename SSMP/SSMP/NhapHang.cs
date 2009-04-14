@@ -28,7 +28,6 @@ namespace SSMP
             this.Location = new Point((this.MdiParent.ClientSize.Width - this.Width) / 2, (this.MdiParent.ClientSize.Height - this.Height) / 2 - 50);
 
             //dien thong tin nguoi dung va ngay thang
-            txtNguoiVietPhieuNhapHang.Text = HoTro.NguoiDung;
             txtNgayThang.Text = DateTime.Now.ToString("MM/dd/yyyy");
 
             ht = new HoTro();
@@ -40,10 +39,10 @@ namespace SSMP
             ht.TaiDuLieu(cboLoaiSanPham, "Category", "CategoryId", "CategoryName");
 
             //tai don vi tinh
-            ht.TaiDuLieu(cboDonViTinh, "Unit", "UnitId", "UnitName");
+            ht.TaiDuLieu(cboDonViTinh, "Units", "UnitId", "UnitName");
 
             //tai ten san pham
-            ht.TaiDuLieu(cboTenSanPham, "ProductName", "ProductNameId", "ProductName");
+            ht.TaiDuLieu(cboTenSanPham, "ProductName", "ProductNameId", "ProdName");
 
             //tai quoc gia
             ht.TaiDuLieu(cboNguonGoc, "Country", "CountryId", "CountryName");
@@ -60,9 +59,8 @@ namespace SSMP
                 SqlCommand command = new SqlCommand() ;
 
                 // insert PhieuNhapKho
-                int maNguoiDung = ht.LayVeKhoa("Users", "UserId", "Username", txtNguoiVietPhieuNhapHang.Text);
+                int maNguoiDung = ht.LayGiaTriTruongKhoaVuaChen("Users", "UserId");
                 int maNhaCungCap = ht.LayVeKhoa("Provider", "ProviderId", "ProviderName", cboNhaCungCap.Text);
-                
                 command = new SqlCommand("insert into BillPurchase values(@ngaythang, @giaohang, @maNhacungcap, @manguoiDung)") ;
                 command.Parameters.Add("@ngaythang", txtNgayThang.Text);
                 command.Parameters.Add("@giaohang", txtNhanVienGiaoHang.Text);
@@ -71,36 +69,26 @@ namespace SSMP
                 ht.CapNhatDuLieu(command);
 
                 int soLuong = Int32.Parse(txtSoLuong.Text);
+                Int64 billPurchaseId = ht.LayGiaTriTruongKhoaVuaChen2("BillPurchase", "BillPurchaseId");
                 for (int i = 0; i < soLuong; i++)
                 {
                     // insert SanPham
-                    int maLoaiSp = ht.LayVeKhoa("Category", "CategoryId", "CategoryName", cboLoaiSanPham.Text);
-                    int maDonvi = ht.LayVeKhoa("Unit", "UnitId", "UnitName", cboDonViTinh.Text);
-                    int maNhaSx = ht.LayVeKhoa("Manufacturer", "ManId", "ManName", cboNhaSanXuat.Text);
-                    int IdtenSp = ht.LayVeKhoa("ProductName", "ProductNameId", "ProductName", cboTenSanPham.Text);
+                    int IdtenSp = ht.LayVeKhoa("ProductName", "ProductNameId", "ProdName", cboTenSanPham.Text);
                     command = new SqlCommand("insert into Product values(" +
-                        "@ngaysx, @ngayHetHan, @Mota, @IdtenSP, @PurchasePrice, @SalePrice, @CategoryId," +
-                        "@ManId, @UnitId, @DisCount, @importDate, @exportDate)");
-                    command.Parameters.Add("@ngaysx", ngaySanXuat.Value.ToString());
-                    command.Parameters.Add("@ngayHetHan", ngayHetHan.Value.ToString());
-                    command.Parameters.Add("@Mota", txtMota.Text);
+                        "@ngaysx, @ngayHetHan, @IdtenSP, @PurchasePrice, @SalePrice," +
+                        "@DisCount, @statusId, @billPurchaseId, null)");
+                    command.Parameters.Add("@ngaysx", ngaySanXuat.Value.ToShortDateString());
+                    command.Parameters.Add("@ngayHetHan", ngayHetHan.Value.ToShortDateString()); 
                     command.Parameters.Add("@IdtenSP", IdtenSp);
                     command.Parameters.Add("@PurchasePrice", txtGiaMua.Text);
                     command.Parameters.Add("@SalePrice", txtGiaban.Text);
-                    command.Parameters.Add("@CategoryId", maLoaiSp);
-                    command.Parameters.Add("@ManId", maNhaSx);
-                    command.Parameters.Add("@UnitId", maDonvi);
-                    command.Parameters.Add("@DisCount", Int32.Parse(txtGiamgia.Text));
-                    command.Parameters.Add("@importDate", ngayNhapHang.Value.ToString());
-                    command.Parameters.Add("@exportDate", ngayXuathang.Value.ToString());
-                    ht.CapNhatDuLieu(command);
-
-                    // insert chiTietPhieunhapKho
-                    int maSp = ht.LayGiaTriTruongKhoaVuaChen("Product", "ProductId");
-                    int maPhieu = ht.LayGiaTriTruongKhoaVuaChen("BillPurchase", "BillPurchaseId");
-                    command = new SqlCommand("insert into BillPurchaseDetail values(@maPhieu, @maSp)");
-                    command.Parameters.Add("@maSp", maSp);
-                    command.Parameters.Add("@maPhieu", maPhieu);
+                    if (txtGiamgia.Text.Length == 0)
+                    {
+                        command.Parameters.Add("@DisCount", Int32.Parse("0"));
+                    }
+                    else command.Parameters.Add("@DisCount", Int32.Parse(txtGiamgia.Text));
+                    command.Parameters.Add("@statusId", 1);
+                    command.Parameters.Add("@billPurchaseId", billPurchaseId);
                     ht.CapNhatDuLieu(command);
                 }
 
@@ -109,6 +97,7 @@ namespace SSMP
             catch (Exception ex)
             {
                 MessageBox.Show(ex.StackTrace);
+                
             }
 
         }
