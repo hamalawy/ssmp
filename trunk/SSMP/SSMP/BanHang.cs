@@ -25,7 +25,7 @@ namespace SSMP
                 HoTro ht = new HoTro();
                 SqlConnection conn = ht.KetNoi() ;
                 conn.Open() ;
-                SqlCommand command = new SqlCommand("select CustomerName from Customers where CustomerId = @khachhang", conn);
+                SqlCommand command = new SqlCommand("select CustomerName from Customer where CustomerId = @khachhang", conn);
                 command.Parameters.Add("@khachhang", txtKhachHang.Text);
                 String khachHang = command.ExecuteScalar().ToString();
 
@@ -80,7 +80,7 @@ namespace SSMP
                 {
                     DataGridViewRow row = dataGridViewDS.Rows[i];
                     // insert PhieuXuatKho
-                    command = new SqlCommand("select CustomerId from Customers where CusTomerName=@Cusname", conn);
+                    command = new SqlCommand("select CustomerId from Customer where CusTomerName=@Cusname", conn);
                     command.Parameters.Add("@CusNAme", row.Cells[1].Value.ToString());
                     int cusId = Int32.Parse(command.ExecuteScalar().ToString()) ;
 
