@@ -55,49 +55,16 @@ namespace SSMP
         {
             try
             {
-                ht = new HoTro();
-                SqlCommand command = new SqlCommand() ;
-
-                // insert PhieuNhapKho
-                int maNguoiDung = ht.LayGiaTriTruongKhoaVuaChen("Users", "UserId");
-                int maNhaCungCap = ht.LayVeKhoa("Provider", "ProviderId", "ProviderName", cboNhaCungCap.Text);
-                command = new SqlCommand("insert into BillPurchase values(@ngaythang, @giaohang, @maNhacungcap, @manguoiDung)") ;
-                command.Parameters.Add("@ngaythang", txtNgayThang.Text);
-                command.Parameters.Add("@giaohang", txtNhanVienGiaoHang.Text);
-                command.Parameters.Add("@maNhacungcap", maNhaCungCap);
-                command.Parameters.Add("@manguoiDung", maNguoiDung);
-                ht.CapNhatDuLieu(command);
-
-                int soLuong = Int32.Parse(txtSoLuong.Text);
-                Int64 billPurchaseId = ht.LayGiaTriTruongKhoaVuaChen2("BillPurchase", "BillPurchaseId");
-                for (int i = 0; i < soLuong; i++)
-                {
-                    // insert SanPham
-                    int IdtenSp = ht.LayVeKhoa("ProductName", "ProductNameId", "ProdName", cboTenSanPham.Text);
-                    command = new SqlCommand("insert into Product values(" +
-                        "@ngaysx, @ngayHetHan, @IdtenSP, @PurchasePrice, @SalePrice," +
-                        "@DisCount, @statusId, @billPurchaseId, null)");
-                    command.Parameters.Add("@ngaysx", ngaySanXuat.Value.ToShortDateString());
-                    command.Parameters.Add("@ngayHetHan", ngayHetHan.Value.ToShortDateString()); 
-                    command.Parameters.Add("@IdtenSP", IdtenSp);
-                    command.Parameters.Add("@PurchasePrice", txtGiaMua.Text);
-                    command.Parameters.Add("@SalePrice", txtGiaban.Text);
-                    if (txtGiamgia.Text.Length == 0)
-                    {
-                        command.Parameters.Add("@DisCount", Int32.Parse("0"));
-                    }
-                    else command.Parameters.Add("@DisCount", Int32.Parse(txtGiamgia.Text));
-                    command.Parameters.Add("@statusId", 1);
-                    command.Parameters.Add("@billPurchaseId", billPurchaseId);
-                    ht.CapNhatDuLieu(command);
-                }
-
-                MessageBox.Show("cap nhat xong");
+                Int32.Parse(txtSoLuong.Text);
+                Int32.Parse(txtGiaMua.Text);
+                String[] data = new String[] {cboTenSanPham.Text, txtSoLuong.Text, ngaySanXuat.Value.ToShortDateString()
+                    , ngayHetHan.Value.ToShortDateString(), cboDonViTinh.Text, cboNhaSanXuat.Text, cboNguonGoc.Text
+                    , txtGiaMua.Text, txtNhanVienGiaoHang.Text } ;
+                dataGridViewDanhSach.Rows.Add(data);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace);
-                
+                MessageBox.Show(ex.StackTrace);                
             }
 
         }
@@ -105,6 +72,99 @@ namespace SSMP
         private void btnCapNhatQuanLy_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnCapNhat_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                ht = new HoTro();
+                SqlCommand command = new SqlCommand();
+                int maNguoiDung = ht.LayGiaTriTruongKhoaVuaChen("Users", "UserId");
+                for (int i = 0; i < dataGridViewDanhSach.Rows.Count - 1; i++)
+                {
+                    DataGridViewRow row = dataGridViewDanhSach.Rows[i];                    
+                    // insert PhieuNhapKho                
+                    int maNhaCungCap = ht.LayVeKhoa("Provider", "ProviderId", "ProviderName", row.Cells[0].Value.ToString());
+                    command = new SqlCommand("insert into BillPurchase values(@ngaythang, @giaohang, @maNhacungcap, @manguoiDung)");
+                    command.Parameters.Add("@ngaythang", txtNgayThang.Text);
+                    command.Parameters.Add("@giaohang", row.Cells[8].Value.ToString());
+                    command.Parameters.Add("@maNhacungcap", maNhaCungCap);
+                    command.Parameters.Add("@manguoiDung", maNguoiDung);
+                    ht.CapNhatDuLieu(command);
+
+                    int soLuong = Int32.Parse(row.Cells[1].Value.ToString());
+                    int donvi = ht.LayVeKhoa("Units", "UnitId", "UnitName", row.Cells[4].Value.ToString());
+                    Int64 billPurchaseId = ht.LayGiaTriTruongKhoaVuaChen2("BillPurchase", "BillPurchaseId");
+                    for (int j = 0; j < soLuong; j++)
+                    {
+                        // insert SanPham
+                        int IdtenSp = ht.LayVeKhoa("ProductName", "ProductNameId", "ProdName", row.Cells[0].Value.ToString());
+                        command = new SqlCommand("insert into Product values(" +
+                            "@ngaysx, @ngayHetHan, @IdtenSP, @PurchasePrice, null," +
+                            "null, @statusId, @billPurchaseId, null, @UnitId)");
+                        command.Parameters.Add("@ngaysx", row.Cells[2].Value.ToString());
+                        command.Parameters.Add("@ngayHetHan", row.Cells[3].Value.ToString());
+                        command.Parameters.Add("@IdtenSP", IdtenSp);
+                        command.Parameters.Add("@PurchasePrice", row.Cells[7].Value.ToString());
+                        command.Parameters.Add("@statusId", 1);
+                        command.Parameters.Add("@billPurchaseId", billPurchaseId);
+                        command.Parameters.Add("@UnitId", donvi);
+                        ht.CapNhatDuLieu(command);
+                    }
+                }
+                MessageBox.Show("cap nhat xong");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            clsoLuong.Visible = (!clsoLuong.Visible);
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            clDonVi.Visible = (!clsoLuong.Visible);
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            clngaySanXuat.Visible = (!clngaySanXuat.Visible);
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            clNgayHetHan.Visible = (!clNgayHetHan.Visible);
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            clNhaSx.Visible = (!clNhaSx.Visible);
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            clNguonGoc.Visible = (!clNguonGoc.Visible);
+        }
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+            clGiaMua.Visible = (!clGiaMua.Visible);
+        }
+
+        private void checkBox8_CheckedChanged(object sender, EventArgs e)
+        {
+            clNhanVienGiaoHang.Visible = (!clNhanVienGiaoHang.Visible);
         }
     }
 }
