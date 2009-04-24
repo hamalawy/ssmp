@@ -29,8 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhapHang));
-            this.tcNhapKhoHangHoa = new System.Windows.Forms.TabControl();
+            this.tabQuanLyPhieuNhap = new System.Windows.Forms.TabControl();
             this.tpLapPhieuNhapHangHoa = new System.Windows.Forms.TabPage();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dataGridViewDanhSach = new System.Windows.Forms.DataGridView();
             this.clten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clsoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,50 +81,52 @@
             this.cboNhaCungCap = new System.Windows.Forms.ComboBox();
             this.lblNhaCungCap = new System.Windows.Forms.Label();
             this.tpQuanLyPhieuNhapHangHoa = new System.Windows.Forms.TabPage();
+            this.dataGridViewPhieuNhapHAng = new System.Windows.Forms.DataGridView();
             this.btnTaiLaiTatCaQuanLy = new System.Windows.Forms.Button();
             this.btnCapNhatQuanLy = new System.Windows.Forms.Button();
             this.btnXoaQuanLy = new System.Windows.Forms.Button();
             this.gbTimKiemQuanLy = new System.Windows.Forms.GroupBox();
-            this.chkTatCaTimKiemQuanLy = new System.Windows.Forms.CheckBox();
-            this.chkSanPhamTimKiemQuanLy = new System.Windows.Forms.CheckBox();
-            this.chkTongSoNhoHonTimKiemQuanLy = new System.Windows.Forms.CheckBox();
-            this.chkTongSoLonHonTimKiemQuanLy = new System.Windows.Forms.CheckBox();
-            this.chkNhaCungCapTimKiemQuanLy = new System.Windows.Forms.CheckBox();
-            this.chkSoPhieuTimKiemQuanLy = new System.Windows.Forms.CheckBox();
+            this.chkNguoiLapPhieu = new System.Windows.Forms.CheckBox();
+            this.chkNhacungcap = new System.Windows.Forms.CheckBox();
+            this.cbngaytao = new System.Windows.Forms.CheckBox();
+            this.chkNhanviengh = new System.Windows.Forms.CheckBox();
+            this.checkBoxMaPhieu = new System.Windows.Forms.CheckBox();
             this.btnTimKiemQuanLy = new System.Windows.Forms.Button();
             this.txtTimKiemQuanLy = new System.Windows.Forms.TextBox();
             this.lblTimKiemQuanLy = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewHangHoa = new System.Windows.Forms.DataGridView();
             this.lblDanhSachHangHo = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.lblDanhSachPhieuNhapHang = new System.Windows.Forms.Label();
             this.tpBaoCao = new System.Windows.Forms.TabPage();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.tcNhapKhoHangHoa.SuspendLayout();
+            this.checkBoxMasp = new System.Windows.Forms.CheckBox();
+            this.checkBoxTenSp = new System.Windows.Forms.CheckBox();
+            this.checkBoxDv = new System.Windows.Forms.CheckBox();
+            this.checkBoxNgaySx = new System.Windows.Forms.CheckBox();
+            this.checkBoxNgayHethan = new System.Windows.Forms.CheckBox();
+            this.checkBoxGiaBan = new System.Windows.Forms.CheckBox();
+            this.checkBoxGiaMua = new System.Windows.Forms.CheckBox();
+            this.checkBoxGiamGia = new System.Windows.Forms.CheckBox();
+            this.checkBoxTrangthai = new System.Windows.Forms.CheckBox();
+            this.tabQuanLyPhieuNhap.SuspendLayout();
             this.tpLapPhieuNhapHangHoa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSach)).BeginInit();
             this.tpQuanLyPhieuNhapHangHoa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPhieuNhapHAng)).BeginInit();
             this.gbTimKiemQuanLy.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHangHoa)).BeginInit();
             this.SuspendLayout();
             // 
-            // tcNhapKhoHangHoa
+            // tabQuanLyPhieuNhap
             // 
-            this.tcNhapKhoHangHoa.Controls.Add(this.tpLapPhieuNhapHangHoa);
-            this.tcNhapKhoHangHoa.Controls.Add(this.tpQuanLyPhieuNhapHangHoa);
-            this.tcNhapKhoHangHoa.Controls.Add(this.tpBaoCao);
-            this.tcNhapKhoHangHoa.Location = new System.Drawing.Point(12, 3);
-            this.tcNhapKhoHangHoa.Name = "tcNhapKhoHangHoa";
-            this.tcNhapKhoHangHoa.SelectedIndex = 0;
-            this.tcNhapKhoHangHoa.Size = new System.Drawing.Size(895, 593);
-            this.tcNhapKhoHangHoa.TabIndex = 0;
+            this.tabQuanLyPhieuNhap.Controls.Add(this.tpLapPhieuNhapHangHoa);
+            this.tabQuanLyPhieuNhap.Controls.Add(this.tpQuanLyPhieuNhapHangHoa);
+            this.tabQuanLyPhieuNhap.Controls.Add(this.tpBaoCao);
+            this.tabQuanLyPhieuNhap.Location = new System.Drawing.Point(12, 3);
+            this.tabQuanLyPhieuNhap.Name = "tabQuanLyPhieuNhap";
+            this.tabQuanLyPhieuNhap.SelectedIndex = 0;
+            this.tabQuanLyPhieuNhap.Size = new System.Drawing.Size(891, 593);
+            this.tabQuanLyPhieuNhap.TabIndex = 0;
+            this.tabQuanLyPhieuNhap.Enter += new System.EventHandler(this.tcNhapKhoHangHoa_Enter);
             // 
             // tpLapPhieuNhapHangHoa
             // 
@@ -163,10 +173,114 @@
             this.tpLapPhieuNhapHangHoa.Location = new System.Drawing.Point(4, 22);
             this.tpLapPhieuNhapHangHoa.Name = "tpLapPhieuNhapHangHoa";
             this.tpLapPhieuNhapHangHoa.Padding = new System.Windows.Forms.Padding(3);
-            this.tpLapPhieuNhapHangHoa.Size = new System.Drawing.Size(887, 567);
+            this.tpLapPhieuNhapHangHoa.Size = new System.Drawing.Size(883, 567);
             this.tpLapPhieuNhapHangHoa.TabIndex = 0;
             this.tpLapPhieuNhapHangHoa.Text = "Lập Phiếu nhập Hàng hóa";
             this.tpLapPhieuNhapHangHoa.UseVisualStyleBackColor = true;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Checked = true;
+            this.checkBox8.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox8.Location = new System.Drawing.Point(273, 269);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(125, 17);
+            this.checkBox8.TabIndex = 128;
+            this.checkBox8.Text = "Nhân viên giao hàng";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Checked = true;
+            this.checkBox7.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox7.Location = new System.Drawing.Point(273, 246);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(65, 17);
+            this.checkBox7.TabIndex = 127;
+            this.checkBox7.Text = "Giá mua";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Checked = true;
+            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox6.Location = new System.Drawing.Point(178, 269);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(79, 17);
+            this.checkBox6.TabIndex = 126;
+            this.checkBox6.Text = "Nguồn gốc";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Checked = true;
+            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox5.Location = new System.Drawing.Point(178, 246);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(89, 17);
+            this.checkBox5.TabIndex = 125;
+            this.checkBox5.Text = "Nhà sản xuất";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Checked = true;
+            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox4.Location = new System.Drawing.Point(87, 269);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(90, 17);
+            this.checkBox4.TabIndex = 124;
+            this.checkBox4.Text = "Ngày hết hạn";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox3.Location = new System.Drawing.Point(87, 246);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(94, 17);
+            this.checkBox3.TabIndex = 123;
+            this.checkBox3.Text = "Ngày sản xuất";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Location = new System.Drawing.Point(18, 269);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(57, 17);
+            this.checkBox2.TabIndex = 122;
+            this.checkBox2.Text = "Đơn vị";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(18, 246);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(68, 17);
+            this.checkBox1.TabIndex = 121;
+            this.checkBox1.Text = "Số lượng";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // dataGridViewDanhSach
             // 
@@ -503,25 +617,46 @@
             // 
             // tpQuanLyPhieuNhapHangHoa
             // 
+            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.checkBoxTrangthai);
+            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.checkBoxGiamGia);
+            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.checkBoxGiaMua);
+            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.checkBoxGiaBan);
+            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.checkBoxNgayHethan);
+            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.checkBoxNgaySx);
+            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.checkBoxDv);
+            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.checkBoxTenSp);
+            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.checkBoxMasp);
+            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.dataGridViewPhieuNhapHAng);
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.btnTaiLaiTatCaQuanLy);
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.btnCapNhatQuanLy);
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.btnXoaQuanLy);
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.gbTimKiemQuanLy);
-            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.dataGridView2);
+            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.dataGridViewHangHoa);
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.lblDanhSachHangHo);
-            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.listView1);
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.lblDanhSachPhieuNhapHang);
             this.tpQuanLyPhieuNhapHangHoa.Location = new System.Drawing.Point(4, 22);
             this.tpQuanLyPhieuNhapHangHoa.Name = "tpQuanLyPhieuNhapHangHoa";
             this.tpQuanLyPhieuNhapHangHoa.Padding = new System.Windows.Forms.Padding(3);
-            this.tpQuanLyPhieuNhapHangHoa.Size = new System.Drawing.Size(887, 567);
+            this.tpQuanLyPhieuNhapHangHoa.Size = new System.Drawing.Size(883, 567);
             this.tpQuanLyPhieuNhapHangHoa.TabIndex = 1;
             this.tpQuanLyPhieuNhapHangHoa.Text = "Quản lý Phiếu nhập Hàng hóa";
             this.tpQuanLyPhieuNhapHangHoa.UseVisualStyleBackColor = true;
+            this.tpQuanLyPhieuNhapHangHoa.Click += new System.EventHandler(this.tpQuanLyPhieuNhapHangHoa_Click);
+            this.tpQuanLyPhieuNhapHangHoa.Enter += new System.EventHandler(this.tpQuanLyPhieuNhapHangHoa_Enter);
+            // 
+            // dataGridViewPhieuNhapHAng
+            // 
+            this.dataGridViewPhieuNhapHAng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPhieuNhapHAng.Location = new System.Drawing.Point(19, 31);
+            this.dataGridViewPhieuNhapHAng.Name = "dataGridViewPhieuNhapHAng";
+            this.dataGridViewPhieuNhapHAng.Size = new System.Drawing.Size(523, 180);
+            this.dataGridViewPhieuNhapHAng.TabIndex = 8;
+            this.dataGridViewPhieuNhapHAng.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPhieuNhapHAng_CellClick);
+            this.dataGridViewPhieuNhapHAng.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPhieuNhapHAng_CellContentClick);
             // 
             // btnTaiLaiTatCaQuanLy
             // 
-            this.btnTaiLaiTatCaQuanLy.Location = new System.Drawing.Point(212, 186);
+            this.btnTaiLaiTatCaQuanLy.Location = new System.Drawing.Point(290, 223);
             this.btnTaiLaiTatCaQuanLy.Name = "btnTaiLaiTatCaQuanLy";
             this.btnTaiLaiTatCaQuanLy.Size = new System.Drawing.Size(80, 23);
             this.btnTaiLaiTatCaQuanLy.TabIndex = 7;
@@ -530,7 +665,7 @@
             // 
             // btnCapNhatQuanLy
             // 
-            this.btnCapNhatQuanLy.Location = new System.Drawing.Point(298, 186);
+            this.btnCapNhatQuanLy.Location = new System.Drawing.Point(376, 223);
             this.btnCapNhatQuanLy.Name = "btnCapNhatQuanLy";
             this.btnCapNhatQuanLy.Size = new System.Drawing.Size(75, 23);
             this.btnCapNhatQuanLy.TabIndex = 6;
@@ -540,7 +675,7 @@
             // 
             // btnXoaQuanLy
             // 
-            this.btnXoaQuanLy.Location = new System.Drawing.Point(379, 186);
+            this.btnXoaQuanLy.Location = new System.Drawing.Point(457, 223);
             this.btnXoaQuanLy.Name = "btnXoaQuanLy";
             this.btnXoaQuanLy.Size = new System.Drawing.Size(75, 23);
             this.btnXoaQuanLy.TabIndex = 5;
@@ -549,88 +684,91 @@
             // 
             // gbTimKiemQuanLy
             // 
-            this.gbTimKiemQuanLy.Controls.Add(this.chkTatCaTimKiemQuanLy);
-            this.gbTimKiemQuanLy.Controls.Add(this.chkSanPhamTimKiemQuanLy);
-            this.gbTimKiemQuanLy.Controls.Add(this.chkTongSoNhoHonTimKiemQuanLy);
-            this.gbTimKiemQuanLy.Controls.Add(this.chkTongSoLonHonTimKiemQuanLy);
-            this.gbTimKiemQuanLy.Controls.Add(this.chkNhaCungCapTimKiemQuanLy);
-            this.gbTimKiemQuanLy.Controls.Add(this.chkSoPhieuTimKiemQuanLy);
+            this.gbTimKiemQuanLy.Controls.Add(this.chkNguoiLapPhieu);
+            this.gbTimKiemQuanLy.Controls.Add(this.chkNhacungcap);
+            this.gbTimKiemQuanLy.Controls.Add(this.cbngaytao);
+            this.gbTimKiemQuanLy.Controls.Add(this.chkNhanviengh);
+            this.gbTimKiemQuanLy.Controls.Add(this.checkBoxMaPhieu);
             this.gbTimKiemQuanLy.Controls.Add(this.btnTimKiemQuanLy);
             this.gbTimKiemQuanLy.Controls.Add(this.txtTimKiemQuanLy);
             this.gbTimKiemQuanLy.Controls.Add(this.lblTimKiemQuanLy);
             this.gbTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gbTimKiemQuanLy.Location = new System.Drawing.Point(472, 15);
+            this.gbTimKiemQuanLy.Location = new System.Drawing.Point(559, 16);
             this.gbTimKiemQuanLy.Name = "gbTimKiemQuanLy";
             this.gbTimKiemQuanLy.Size = new System.Drawing.Size(325, 165);
             this.gbTimKiemQuanLy.TabIndex = 4;
             this.gbTimKiemQuanLy.TabStop = false;
             this.gbTimKiemQuanLy.Text = "TÌM KIẾM:";
             // 
-            // chkTatCaTimKiemQuanLy
+            // chkNguoiLapPhieu
             // 
-            this.chkTatCaTimKiemQuanLy.AutoSize = true;
-            this.chkTatCaTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkTatCaTimKiemQuanLy.Location = new System.Drawing.Point(211, 76);
-            this.chkTatCaTimKiemQuanLy.Name = "chkTatCaTimKiemQuanLy";
-            this.chkTatCaTimKiemQuanLy.Size = new System.Drawing.Size(57, 17);
-            this.chkTatCaTimKiemQuanLy.TabIndex = 8;
-            this.chkTatCaTimKiemQuanLy.Text = "Tất cả";
-            this.chkTatCaTimKiemQuanLy.UseVisualStyleBackColor = true;
+            this.chkNguoiLapPhieu.AutoSize = true;
+            this.chkNguoiLapPhieu.Checked = true;
+            this.chkNguoiLapPhieu.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkNguoiLapPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.chkNguoiLapPhieu.Location = new System.Drawing.Point(219, 76);
+            this.chkNguoiLapPhieu.Name = "chkNguoiLapPhieu";
+            this.chkNguoiLapPhieu.Size = new System.Drawing.Size(100, 17);
+            this.chkNguoiLapPhieu.TabIndex = 7;
+            this.chkNguoiLapPhieu.Text = "Người lập phiếu";
+            this.chkNguoiLapPhieu.UseVisualStyleBackColor = true;
+            this.chkNguoiLapPhieu.CheckedChanged += new System.EventHandler(this.chkNguoiLapPhieu_CheckedChanged);
             // 
-            // chkSanPhamTimKiemQuanLy
+            // chkNhacungcap
             // 
-            this.chkSanPhamTimKiemQuanLy.AutoSize = true;
-            this.chkSanPhamTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkSanPhamTimKiemQuanLy.Location = new System.Drawing.Point(239, 52);
-            this.chkSanPhamTimKiemQuanLy.Name = "chkSanPhamTimKiemQuanLy";
-            this.chkSanPhamTimKiemQuanLy.Size = new System.Drawing.Size(74, 17);
-            this.chkSanPhamTimKiemQuanLy.TabIndex = 7;
-            this.chkSanPhamTimKiemQuanLy.Text = "Sản phẩm";
-            this.chkSanPhamTimKiemQuanLy.UseVisualStyleBackColor = true;
+            this.chkNhacungcap.AutoSize = true;
+            this.chkNhacungcap.Checked = true;
+            this.chkNhacungcap.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkNhacungcap.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.chkNhacungcap.Location = new System.Drawing.Point(101, 76);
+            this.chkNhacungcap.Name = "chkNhacungcap";
+            this.chkNhacungcap.Size = new System.Drawing.Size(94, 17);
+            this.chkNhacungcap.TabIndex = 6;
+            this.chkNhacungcap.Text = "Nhà cung cấp";
+            this.chkNhacungcap.UseVisualStyleBackColor = true;
+            this.chkNhacungcap.CheckedChanged += new System.EventHandler(this.chkNhacungcap_CheckedChanged);
             // 
-            // chkTongSoNhoHonTimKiemQuanLy
+            // cbngaytao
             // 
-            this.chkTongSoNhoHonTimKiemQuanLy.AutoSize = true;
-            this.chkTongSoNhoHonTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkTongSoNhoHonTimKiemQuanLy.Location = new System.Drawing.Point(138, 76);
-            this.chkTongSoNhoHonTimKiemQuanLy.Name = "chkTongSoNhoHonTimKiemQuanLy";
-            this.chkTongSoNhoHonTimKiemQuanLy.Size = new System.Drawing.Size(67, 17);
-            this.chkTongSoNhoHonTimKiemQuanLy.TabIndex = 6;
-            this.chkTongSoNhoHonTimKiemQuanLy.Text = "Nhỏ hơn";
-            this.chkTongSoNhoHonTimKiemQuanLy.UseVisualStyleBackColor = true;
+            this.cbngaytao.AutoSize = true;
+            this.cbngaytao.Checked = true;
+            this.cbngaytao.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbngaytao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbngaytao.Location = new System.Drawing.Point(35, 76);
+            this.cbngaytao.Name = "cbngaytao";
+            this.cbngaytao.Size = new System.Drawing.Size(69, 17);
+            this.cbngaytao.TabIndex = 5;
+            this.cbngaytao.Text = "Ngày tạo";
+            this.cbngaytao.UseVisualStyleBackColor = true;
+            this.cbngaytao.CheckedChanged += new System.EventHandler(this.cbngaytao_CheckedChanged);
             // 
-            // chkTongSoLonHonTimKiemQuanLy
+            // chkNhanviengh
             // 
-            this.chkTongSoLonHonTimKiemQuanLy.AutoSize = true;
-            this.chkTongSoLonHonTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkTongSoLonHonTimKiemQuanLy.Location = new System.Drawing.Point(64, 76);
-            this.chkTongSoLonHonTimKiemQuanLy.Name = "chkTongSoLonHonTimKiemQuanLy";
-            this.chkTongSoLonHonTimKiemQuanLy.Size = new System.Drawing.Size(65, 17);
-            this.chkTongSoLonHonTimKiemQuanLy.TabIndex = 5;
-            this.chkTongSoLonHonTimKiemQuanLy.Text = "Lớn hơn";
-            this.chkTongSoLonHonTimKiemQuanLy.UseVisualStyleBackColor = true;
+            this.chkNhanviengh.AutoSize = true;
+            this.chkNhanviengh.Checked = true;
+            this.chkNhanviengh.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkNhanviengh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.chkNhanviengh.Location = new System.Drawing.Point(101, 52);
+            this.chkNhanviengh.Name = "chkNhanviengh";
+            this.chkNhanviengh.Size = new System.Drawing.Size(125, 17);
+            this.chkNhanviengh.TabIndex = 4;
+            this.chkNhanviengh.Text = "Nhân viên giao hàng";
+            this.chkNhanviengh.UseVisualStyleBackColor = true;
+            this.chkNhanviengh.CheckedChanged += new System.EventHandler(this.chkNhanviengh_CheckedChanged);
             // 
-            // chkNhaCungCapTimKiemQuanLy
+            // checkBoxMaPhieu
             // 
-            this.chkNhaCungCapTimKiemQuanLy.AutoSize = true;
-            this.chkNhaCungCapTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkNhaCungCapTimKiemQuanLy.Location = new System.Drawing.Point(138, 52);
-            this.chkNhaCungCapTimKiemQuanLy.Name = "chkNhaCungCapTimKiemQuanLy";
-            this.chkNhaCungCapTimKiemQuanLy.Size = new System.Drawing.Size(94, 17);
-            this.chkNhaCungCapTimKiemQuanLy.TabIndex = 4;
-            this.chkNhaCungCapTimKiemQuanLy.Text = "Nhà cung cấp";
-            this.chkNhaCungCapTimKiemQuanLy.UseVisualStyleBackColor = true;
-            // 
-            // chkSoPhieuTimKiemQuanLy
-            // 
-            this.chkSoPhieuTimKiemQuanLy.AutoSize = true;
-            this.chkSoPhieuTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkSoPhieuTimKiemQuanLy.Location = new System.Drawing.Point(64, 52);
-            this.chkSoPhieuTimKiemQuanLy.Name = "chkSoPhieuTimKiemQuanLy";
-            this.chkSoPhieuTimKiemQuanLy.Size = new System.Drawing.Size(68, 17);
-            this.chkSoPhieuTimKiemQuanLy.TabIndex = 3;
-            this.chkSoPhieuTimKiemQuanLy.Text = "Số phiếu";
-            this.chkSoPhieuTimKiemQuanLy.UseVisualStyleBackColor = true;
+            this.checkBoxMaPhieu.AutoSize = true;
+            this.checkBoxMaPhieu.Checked = true;
+            this.checkBoxMaPhieu.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxMaPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.checkBoxMaPhieu.Location = new System.Drawing.Point(34, 52);
+            this.checkBoxMaPhieu.Name = "checkBoxMaPhieu";
+            this.checkBoxMaPhieu.Size = new System.Drawing.Size(70, 17);
+            this.checkBoxMaPhieu.TabIndex = 3;
+            this.checkBoxMaPhieu.Text = "Mã phiếu";
+            this.checkBoxMaPhieu.UseVisualStyleBackColor = true;
+            this.checkBoxMaPhieu.CheckedChanged += new System.EventHandler(this.checkBoxMaPhieu_CheckedChanged);
             // 
             // btnTimKiemQuanLy
             // 
@@ -660,31 +798,23 @@
             this.lblTimKiemQuanLy.TabIndex = 0;
             this.lblTimKiemQuanLy.Text = "Tìm kiếm:";
             // 
-            // dataGridView2
+            // dataGridViewHangHoa
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(19, 243);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(778, 305);
-            this.dataGridView2.TabIndex = 3;
+            this.dataGridViewHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHangHoa.Location = new System.Drawing.Point(19, 275);
+            this.dataGridViewHangHoa.Name = "dataGridViewHangHoa";
+            this.dataGridViewHangHoa.Size = new System.Drawing.Size(862, 273);
+            this.dataGridViewHangHoa.TabIndex = 3;
             // 
             // lblDanhSachHangHo
             // 
             this.lblDanhSachHangHo.AutoSize = true;
             this.lblDanhSachHangHo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDanhSachHangHo.Location = new System.Drawing.Point(16, 217);
+            this.lblDanhSachHangHo.Location = new System.Drawing.Point(16, 250);
             this.lblDanhSachHangHo.Name = "lblDanhSachHangHo";
             this.lblDanhSachHangHo.Size = new System.Drawing.Size(152, 13);
             this.lblDanhSachHangHo.TabIndex = 2;
             this.lblDanhSachHangHo.Text = "DANH SÁCH HÀNG HÓA:";
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(19, 31);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(435, 149);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // lblDanhSachPhieuNhapHang
             // 
@@ -700,121 +830,134 @@
             // 
             this.tpBaoCao.Location = new System.Drawing.Point(4, 22);
             this.tpBaoCao.Name = "tpBaoCao";
-            this.tpBaoCao.Size = new System.Drawing.Size(887, 567);
+            this.tpBaoCao.Size = new System.Drawing.Size(883, 567);
             this.tpBaoCao.TabIndex = 2;
             this.tpBaoCao.Text = "Báo cáo";
             this.tpBaoCao.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // checkBoxMasp
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(18, 246);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(68, 17);
-            this.checkBox1.TabIndex = 121;
-            this.checkBox1.Text = "Số lượng";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBoxMasp.AutoSize = true;
+            this.checkBoxMasp.Checked = true;
+            this.checkBoxMasp.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxMasp.Location = new System.Drawing.Point(559, 200);
+            this.checkBoxMasp.Name = "checkBoxMasp";
+            this.checkBoxMasp.Size = new System.Drawing.Size(90, 17);
+            this.checkBoxMasp.TabIndex = 9;
+            this.checkBoxMasp.Text = "Mã sản phẩm";
+            this.checkBoxMasp.UseVisualStyleBackColor = true;
+            this.checkBoxMasp.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged);
             // 
-            // checkBox2
+            // checkBoxTenSp
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Location = new System.Drawing.Point(18, 269);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(57, 17);
-            this.checkBox2.TabIndex = 122;
-            this.checkBox2.Text = "Đơn vị";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.checkBoxTenSp.AutoSize = true;
+            this.checkBoxTenSp.Checked = true;
+            this.checkBoxTenSp.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxTenSp.Location = new System.Drawing.Point(559, 223);
+            this.checkBoxTenSp.Name = "checkBoxTenSp";
+            this.checkBoxTenSp.Size = new System.Drawing.Size(94, 17);
+            this.checkBoxTenSp.TabIndex = 10;
+            this.checkBoxTenSp.Text = "Tên sản phẩm";
+            this.checkBoxTenSp.UseVisualStyleBackColor = true;
+            this.checkBoxTenSp.CheckedChanged += new System.EventHandler(this.checkBox10_CheckedChanged);
             // 
-            // checkBox3
+            // checkBoxDv
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Checked = true;
-            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.Location = new System.Drawing.Point(87, 246);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(94, 17);
-            this.checkBox3.TabIndex = 123;
-            this.checkBox3.Text = "Ngày sản xuất";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            this.checkBoxDv.AutoSize = true;
+            this.checkBoxDv.Checked = true;
+            this.checkBoxDv.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxDv.Location = new System.Drawing.Point(559, 246);
+            this.checkBoxDv.Name = "checkBoxDv";
+            this.checkBoxDv.Size = new System.Drawing.Size(57, 17);
+            this.checkBoxDv.TabIndex = 11;
+            this.checkBoxDv.Text = "Đơn vị";
+            this.checkBoxDv.UseVisualStyleBackColor = true;
+            this.checkBoxDv.CheckedChanged += new System.EventHandler(this.checkBox11_CheckedChanged);
             // 
-            // checkBox4
+            // checkBoxNgaySx
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Checked = true;
-            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox4.Location = new System.Drawing.Point(87, 269);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(90, 17);
-            this.checkBox4.TabIndex = 124;
-            this.checkBox4.Text = "Ngày hết hạn";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            this.checkBoxNgaySx.AutoSize = true;
+            this.checkBoxNgaySx.Checked = true;
+            this.checkBoxNgaySx.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxNgaySx.Location = new System.Drawing.Point(668, 200);
+            this.checkBoxNgaySx.Name = "checkBoxNgaySx";
+            this.checkBoxNgaySx.Size = new System.Drawing.Size(94, 17);
+            this.checkBoxNgaySx.TabIndex = 12;
+            this.checkBoxNgaySx.Text = "Ngày sản xuất";
+            this.checkBoxNgaySx.UseVisualStyleBackColor = true;
+            this.checkBoxNgaySx.CheckedChanged += new System.EventHandler(this.checkBox12_CheckedChanged);
             // 
-            // checkBox5
+            // checkBoxNgayHethan
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Checked = true;
-            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox5.Location = new System.Drawing.Point(178, 246);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(89, 17);
-            this.checkBox5.TabIndex = 125;
-            this.checkBox5.Text = "Nhà sản xuất";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            this.checkBoxNgayHethan.AutoSize = true;
+            this.checkBoxNgayHethan.Checked = true;
+            this.checkBoxNgayHethan.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxNgayHethan.Location = new System.Drawing.Point(668, 223);
+            this.checkBoxNgayHethan.Name = "checkBoxNgayHethan";
+            this.checkBoxNgayHethan.Size = new System.Drawing.Size(90, 17);
+            this.checkBoxNgayHethan.TabIndex = 13;
+            this.checkBoxNgayHethan.Text = "Ngày hết hạn";
+            this.checkBoxNgayHethan.UseVisualStyleBackColor = true;
+            this.checkBoxNgayHethan.CheckedChanged += new System.EventHandler(this.checkBox13_CheckedChanged);
             // 
-            // checkBox6
+            // checkBoxGiaBan
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Checked = true;
-            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox6.Location = new System.Drawing.Point(178, 269);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(79, 17);
-            this.checkBox6.TabIndex = 126;
-            this.checkBox6.Text = "Nguồn gốc";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
+            this.checkBoxGiaBan.AutoSize = true;
+            this.checkBoxGiaBan.Checked = true;
+            this.checkBoxGiaBan.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxGiaBan.Location = new System.Drawing.Point(668, 246);
+            this.checkBoxGiaBan.Name = "checkBoxGiaBan";
+            this.checkBoxGiaBan.Size = new System.Drawing.Size(63, 17);
+            this.checkBoxGiaBan.TabIndex = 14;
+            this.checkBoxGiaBan.Text = "Giá bán";
+            this.checkBoxGiaBan.UseVisualStyleBackColor = true;
+            this.checkBoxGiaBan.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
             // 
-            // checkBox7
+            // checkBoxGiaMua
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Checked = true;
-            this.checkBox7.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox7.Location = new System.Drawing.Point(273, 246);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(65, 17);
-            this.checkBox7.TabIndex = 127;
-            this.checkBox7.Text = "Giá mua";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
+            this.checkBoxGiaMua.AutoSize = true;
+            this.checkBoxGiaMua.Checked = true;
+            this.checkBoxGiaMua.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxGiaMua.Location = new System.Drawing.Point(778, 200);
+            this.checkBoxGiaMua.Name = "checkBoxGiaMua";
+            this.checkBoxGiaMua.Size = new System.Drawing.Size(65, 17);
+            this.checkBoxGiaMua.TabIndex = 15;
+            this.checkBoxGiaMua.Text = "Giá mua";
+            this.checkBoxGiaMua.UseVisualStyleBackColor = true;
+            this.checkBoxGiaMua.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged);
             // 
-            // checkBox8
+            // checkBoxGiamGia
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Checked = true;
-            this.checkBox8.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox8.Location = new System.Drawing.Point(273, 269);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(125, 17);
-            this.checkBox8.TabIndex = 128;
-            this.checkBox8.Text = "Nhân viên giao hàng";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
+            this.checkBoxGiamGia.AutoSize = true;
+            this.checkBoxGiamGia.Checked = true;
+            this.checkBoxGiamGia.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxGiamGia.Location = new System.Drawing.Point(778, 223);
+            this.checkBoxGiamGia.Name = "checkBoxGiamGia";
+            this.checkBoxGiamGia.Size = new System.Drawing.Size(67, 17);
+            this.checkBoxGiamGia.TabIndex = 16;
+            this.checkBoxGiamGia.Text = "Giảm giá";
+            this.checkBoxGiamGia.UseVisualStyleBackColor = true;
+            this.checkBoxGiamGia.CheckedChanged += new System.EventHandler(this.checkBox16_CheckedChanged);
+            // 
+            // checkBoxTrangthai
+            // 
+            this.checkBoxTrangthai.AutoSize = true;
+            this.checkBoxTrangthai.Checked = true;
+            this.checkBoxTrangthai.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxTrangthai.Location = new System.Drawing.Point(778, 246);
+            this.checkBoxTrangthai.Name = "checkBoxTrangthai";
+            this.checkBoxTrangthai.Size = new System.Drawing.Size(74, 17);
+            this.checkBoxTrangthai.TabIndex = 17;
+            this.checkBoxTrangthai.Text = "Trạng thái";
+            this.checkBoxTrangthai.UseVisualStyleBackColor = true;
+            this.checkBoxTrangthai.CheckedChanged += new System.EventHandler(this.checkBox17_CheckedChanged);
             // 
             // frmNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 608);
-            this.Controls.Add(this.tcNhapKhoHangHoa);
+            this.ClientSize = new System.Drawing.Size(902, 608);
+            this.Controls.Add(this.tabQuanLyPhieuNhap);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -822,22 +965,23 @@
             this.Name = "frmNhapHang";
             this.Text = "Nhập Kho Hàng Hóa";
             this.Load += new System.EventHandler(this.frmNhapHang_Load);
-            this.tcNhapKhoHangHoa.ResumeLayout(false);
+            this.tabQuanLyPhieuNhap.ResumeLayout(false);
             this.tpLapPhieuNhapHangHoa.ResumeLayout(false);
             this.tpLapPhieuNhapHangHoa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSach)).EndInit();
             this.tpQuanLyPhieuNhapHangHoa.ResumeLayout(false);
             this.tpQuanLyPhieuNhapHangHoa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPhieuNhapHAng)).EndInit();
             this.gbTimKiemQuanLy.ResumeLayout(false);
             this.gbTimKiemQuanLy.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHangHoa)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tcNhapKhoHangHoa;
+        private System.Windows.Forms.TabControl tabQuanLyPhieuNhap;
         private System.Windows.Forms.TabPage tpLapPhieuNhapHangHoa;
         private System.Windows.Forms.TabPage tpQuanLyPhieuNhapHangHoa;
         private System.Windows.Forms.Label lblSoPhieuNhapHang;
@@ -861,18 +1005,16 @@
         private System.Windows.Forms.Label lblNhaCungCap;
         private System.Windows.Forms.Label lblDanhSachPhieuNhapHang;
         private System.Windows.Forms.Label lblDanhSachHangHo;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridViewHangHoa;
         private System.Windows.Forms.GroupBox gbTimKiemQuanLy;
         private System.Windows.Forms.TextBox txtTimKiemQuanLy;
         private System.Windows.Forms.Label lblTimKiemQuanLy;
-        private System.Windows.Forms.CheckBox chkSoPhieuTimKiemQuanLy;
+        private System.Windows.Forms.CheckBox checkBoxMaPhieu;
         private System.Windows.Forms.Button btnTimKiemQuanLy;
-        private System.Windows.Forms.CheckBox chkTongSoNhoHonTimKiemQuanLy;
-        private System.Windows.Forms.CheckBox chkTongSoLonHonTimKiemQuanLy;
-        private System.Windows.Forms.CheckBox chkNhaCungCapTimKiemQuanLy;
-        private System.Windows.Forms.CheckBox chkTatCaTimKiemQuanLy;
-        private System.Windows.Forms.CheckBox chkSanPhamTimKiemQuanLy;
+        private System.Windows.Forms.CheckBox chkNhacungcap;
+        private System.Windows.Forms.CheckBox cbngaytao;
+        private System.Windows.Forms.CheckBox chkNhanviengh;
+        private System.Windows.Forms.CheckBox chkNguoiLapPhieu;
         private System.Windows.Forms.Button btnCapNhatQuanLy;
         private System.Windows.Forms.Button btnXoaQuanLy;
         private System.Windows.Forms.Button btnTaiLaiTatCaQuanLy;
@@ -907,6 +1049,16 @@
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.DataGridView dataGridViewPhieuNhapHAng;
+        private System.Windows.Forms.CheckBox checkBoxTrangthai;
+        private System.Windows.Forms.CheckBox checkBoxGiamGia;
+        private System.Windows.Forms.CheckBox checkBoxGiaMua;
+        private System.Windows.Forms.CheckBox checkBoxGiaBan;
+        private System.Windows.Forms.CheckBox checkBoxNgayHethan;
+        private System.Windows.Forms.CheckBox checkBoxNgaySx;
+        private System.Windows.Forms.CheckBox checkBoxDv;
+        private System.Windows.Forms.CheckBox checkBoxTenSp;
+        private System.Windows.Forms.CheckBox checkBoxMasp;
 
 
 

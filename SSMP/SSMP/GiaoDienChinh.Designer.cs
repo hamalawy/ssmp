@@ -145,6 +145,7 @@
                         | System.Windows.Forms.Keys.N)));
             this.tsmiDangNhap.Size = new System.Drawing.Size(216, 22);
             this.tsmiDangNhap.Text = "Đăng &nhập...";
+            this.tsmiDangNhap.Click += new System.EventHandler(this.tsmiDangNhap_Click);
             // 
             // tsmiDoiMatKhau
             // 
@@ -205,6 +206,7 @@
             this.tsmiQuanLyHoaDonBanHang.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.tsmiQuanLyHoaDonBanHang.Size = new System.Drawing.Size(269, 22);
             this.tsmiQuanLyHoaDonBanHang.Text = "&Quản lý Hóa đơn Bán hàng...";
+            this.tsmiQuanLyHoaDonBanHang.Click += new System.EventHandler(this.tsmiQuanLyHoaDonBanHang_Click);
             // 
             // toolStripMenuItem6
             // 
@@ -217,6 +219,7 @@
             this.tsmiBaoCaoBanHang.Name = "tsmiBaoCaoBanHang";
             this.tsmiBaoCaoBanHang.Size = new System.Drawing.Size(269, 22);
             this.tsmiBaoCaoBanHang.Text = "&Báo cáo...";
+            this.tsmiBaoCaoBanHang.Click += new System.EventHandler(this.tsmiBaoCaoBanHang_Click);
             // 
             // tsmiNhapHang
             // 
@@ -247,6 +250,7 @@
                         | System.Windows.Forms.Keys.K)));
             this.tsmiQuanLyPhieuNhapHang.Size = new System.Drawing.Size(285, 22);
             this.tsmiQuanLyPhieuNhapHang.Text = "&Quản lý Phiếu nhập hàng";
+            this.tsmiQuanLyPhieuNhapHang.Click += new System.EventHandler(this.tsmiQuanLyPhieuNhapHang_Click);
             // 
             // toolStripMenuItem8
             // 
@@ -259,6 +263,7 @@
             this.tsmiBaoCaoNhapHang.Name = "tsmiBaoCaoNhapHang";
             this.tsmiBaoCaoNhapHang.Size = new System.Drawing.Size(285, 22);
             this.tsmiBaoCaoNhapHang.Text = "&Báo cáo...";
+            this.tsmiBaoCaoNhapHang.Click += new System.EventHandler(this.tsmiBaoCaoNhapHang_Click);
             // 
             // tsmiQuanLyDanhMuc
             // 
@@ -523,6 +528,7 @@
             this.tsbDangNhap.Name = "tsbDangNhap";
             this.tsbDangNhap.Size = new System.Drawing.Size(24, 24);
             this.tsbDangNhap.Text = "Đăng nhập";
+            this.tsbDangNhap.Click += new System.EventHandler(this.tsbDangNhap_Click);
             // 
             // tsDangXuat
             // 
@@ -694,7 +700,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmGiaoDienChinh_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmGiaoDienChinh_FormClosing);
-            this.Load += new System.EventHandler(this.frmGiaoDienChinh_Load);
             this.msChinh.ResumeLayout(false);
             this.msChinh.PerformLayout();
             this.tsChinh.ResumeLayout(false);
