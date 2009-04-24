@@ -94,7 +94,6 @@ namespace SSMP
             }
             catch (Exception ex)
             {
-                return;
                 MessageBox.Show(ex.Message);
             }
         }
@@ -128,7 +127,6 @@ namespace SSMP
             }
             catch (Exception ex)
             {
-                return;
                 MessageBox.Show(ex.Message);
             }
         }
@@ -188,8 +186,9 @@ namespace SSMP
             }
             catch (Exception ex)
             {
-                return gt;
                 MessageBox.Show(ex.Message);
+                return gt;
+                
             }
             finally
             {
@@ -352,5 +351,14 @@ namespace SSMP
             }
             return null;
         }
+
+        public static bool isEmpty(String s)
+        {
+            if (s.Equals("") || s.Equals(null)) return true;
+            return false;
+        }
+
+
+
     }
 }
