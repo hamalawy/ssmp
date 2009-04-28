@@ -37,6 +37,16 @@ namespace SSMP
             NHibernateSessionManager.Instance.GetSession();
         }
 
+        public void enableMenu(int role) {
+           
+            tsmiBanHang.Enabled = true;
+        }
+
+        public void disableMenu(int role)
+        {
+            tsmiBanHang.Enabled = false;
+        }
+
         private void tsmiCauHinh_Click(object sender, EventArgs e)
         {
             if (frmConfig == null)
@@ -488,14 +498,32 @@ namespace SSMP
             {
                 frmDangNhap = new DangNhap();
                 frmDangNhap.MdiParent = this;
+                frmDangNhap.setGiaoDienChinh(this);
                 frmDangNhap.Show();
             }
             if (frmDangNhap.IsDisposed)
             {
                 frmDangNhap = new DangNhap();
+                frmDangNhap.setGiaoDienChinh(this);
                 frmDangNhap.MdiParent = this;
                 frmDangNhap.Show();
             }
+        }
+
+        private void tsmiDangXuat_Click(object sender, EventArgs e)
+        {
+            DangNhap.idNguoiDung = 0;
+            DangNhap.tenDangNhap = null;
+            DangNhap.quyenNguoiDung = 0;
+            MessageBox.Show(this, "Đăng xuất thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void tsDangXuat_Click(object sender, EventArgs e)
+        {
+            DangNhap.idNguoiDung = 0;
+            DangNhap.tenDangNhap = null;
+            DangNhap.quyenNguoiDung = 0;
+            MessageBox.Show(this, "Đăng xuất thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

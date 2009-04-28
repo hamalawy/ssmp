@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoiMatKhau));
             this.gbDoiMatKhau = new System.Windows.Forms.GroupBox();
-            this.picDoiMatKhau = new System.Windows.Forms.PictureBox();
-            this.lblMatKhauCu = new System.Windows.Forms.Label();
-            this.txtMatKhauCu = new System.Windows.Forms.TextBox();
-            this.txtXacNhanLaiMatKhau = new System.Windows.Forms.TextBox();
-            this.lblXacNhanMatKhauMoi = new System.Windows.Forms.Label();
-            this.txtMatKhauMoi = new System.Windows.Forms.TextBox();
-            this.lblMatKhauMoi = new System.Windows.Forms.Label();
-            this.btnDoiMatKhau = new System.Windows.Forms.Button();
             this.btnXoaTrang = new System.Windows.Forms.Button();
             this.imglDoiMatKhau = new System.Windows.Forms.ImageList(this.components);
+            this.btnDoiMatKhau = new System.Windows.Forms.Button();
+            this.txtMatKhauMoi = new System.Windows.Forms.TextBox();
+            this.lblMatKhauMoi = new System.Windows.Forms.Label();
+            this.txtXacNhanLaiMatKhau = new System.Windows.Forms.TextBox();
+            this.lblXacNhanMatKhauMoi = new System.Windows.Forms.Label();
+            this.txtMatKhauCu = new System.Windows.Forms.TextBox();
+            this.lblMatKhauCu = new System.Windows.Forms.Label();
+            this.picDoiMatKhau = new System.Windows.Forms.PictureBox();
             this.gbDoiMatKhau.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDoiMatKhau)).BeginInit();
             this.SuspendLayout();
@@ -62,81 +62,6 @@
             this.gbDoiMatKhau.TabIndex = 0;
             this.gbDoiMatKhau.TabStop = false;
             // 
-            // picDoiMatKhau
-            // 
-            this.picDoiMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picDoiMatKhau.Image = global::SSMP.Properties.Resources.user1_preferences;
-            this.picDoiMatKhau.Location = new System.Drawing.Point(27, 72);
-            this.picDoiMatKhau.Name = "picDoiMatKhau";
-            this.picDoiMatKhau.Size = new System.Drawing.Size(56, 48);
-            this.picDoiMatKhau.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDoiMatKhau.TabIndex = 0;
-            this.picDoiMatKhau.TabStop = false;
-            // 
-            // lblMatKhauCu
-            // 
-            this.lblMatKhauCu.AutoSize = true;
-            this.lblMatKhauCu.Location = new System.Drawing.Point(127, 63);
-            this.lblMatKhauCu.Name = "lblMatKhauCu";
-            this.lblMatKhauCu.Size = new System.Drawing.Size(70, 13);
-            this.lblMatKhauCu.TabIndex = 1;
-            this.lblMatKhauCu.Text = "Mật khẩu cũ:";
-            // 
-            // txtMatKhauCu
-            // 
-            this.txtMatKhauCu.Location = new System.Drawing.Point(255, 60);
-            this.txtMatKhauCu.Name = "txtMatKhauCu";
-            this.txtMatKhauCu.PasswordChar = '*';
-            this.txtMatKhauCu.Size = new System.Drawing.Size(168, 20);
-            this.txtMatKhauCu.TabIndex = 2;
-            // 
-            // txtXacNhanLaiMatKhau
-            // 
-            this.txtXacNhanLaiMatKhau.Location = new System.Drawing.Point(255, 112);
-            this.txtXacNhanLaiMatKhau.Name = "txtXacNhanLaiMatKhau";
-            this.txtXacNhanLaiMatKhau.PasswordChar = '*';
-            this.txtXacNhanLaiMatKhau.Size = new System.Drawing.Size(168, 20);
-            this.txtXacNhanLaiMatKhau.TabIndex = 4;
-            // 
-            // lblXacNhanMatKhauMoi
-            // 
-            this.lblXacNhanMatKhauMoi.AutoSize = true;
-            this.lblXacNhanMatKhauMoi.Location = new System.Drawing.Point(127, 115);
-            this.lblXacNhanMatKhauMoi.Name = "lblXacNhanMatKhauMoi";
-            this.lblXacNhanMatKhauMoi.Size = new System.Drawing.Size(122, 13);
-            this.lblXacNhanMatKhauMoi.TabIndex = 3;
-            this.lblXacNhanMatKhauMoi.Text = "Xác nhận mật khẩu mới:";
-            // 
-            // txtMatKhauMoi
-            // 
-            this.txtMatKhauMoi.Location = new System.Drawing.Point(255, 86);
-            this.txtMatKhauMoi.Name = "txtMatKhauMoi";
-            this.txtMatKhauMoi.PasswordChar = '*';
-            this.txtMatKhauMoi.Size = new System.Drawing.Size(168, 20);
-            this.txtMatKhauMoi.TabIndex = 6;
-            // 
-            // lblMatKhauMoi
-            // 
-            this.lblMatKhauMoi.AutoSize = true;
-            this.lblMatKhauMoi.Location = new System.Drawing.Point(127, 89);
-            this.lblMatKhauMoi.Name = "lblMatKhauMoi";
-            this.lblMatKhauMoi.Size = new System.Drawing.Size(70, 13);
-            this.lblMatKhauMoi.TabIndex = 5;
-            this.lblMatKhauMoi.Text = "Mật khẩu cũ:";
-            // 
-            // btnDoiMatKhau
-            // 
-            this.btnDoiMatKhau.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoiMatKhau.ImageIndex = 1;
-            this.btnDoiMatKhau.ImageList = this.imglDoiMatKhau;
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(164, 161);
-            this.btnDoiMatKhau.Name = "btnDoiMatKhau";
-            this.btnDoiMatKhau.Size = new System.Drawing.Size(97, 23);
-            this.btnDoiMatKhau.TabIndex = 7;
-            this.btnDoiMatKhau.Text = "Đổi &mật khẩu";
-            this.btnDoiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDoiMatKhau.UseVisualStyleBackColor = true;
-            // 
             // btnXoaTrang
             // 
             this.btnXoaTrang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -157,6 +82,82 @@
             this.imglDoiMatKhau.TransparentColor = System.Drawing.Color.Transparent;
             this.imglDoiMatKhau.Images.SetKeyName(0, "undo.png");
             this.imglDoiMatKhau.Images.SetKeyName(1, "user1_preferences.png");
+            // 
+            // btnDoiMatKhau
+            // 
+            this.btnDoiMatKhau.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDoiMatKhau.ImageIndex = 1;
+            this.btnDoiMatKhau.ImageList = this.imglDoiMatKhau;
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(164, 161);
+            this.btnDoiMatKhau.Name = "btnDoiMatKhau";
+            this.btnDoiMatKhau.Size = new System.Drawing.Size(97, 23);
+            this.btnDoiMatKhau.TabIndex = 7;
+            this.btnDoiMatKhau.Text = "Đổi &mật khẩu";
+            this.btnDoiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDoiMatKhau.UseVisualStyleBackColor = true;
+            this.btnDoiMatKhau.Click += new System.EventHandler(this.btnDoiMatKhau_Click);
+            // 
+            // txtMatKhauMoi
+            // 
+            this.txtMatKhauMoi.Location = new System.Drawing.Point(255, 86);
+            this.txtMatKhauMoi.Name = "txtMatKhauMoi";
+            this.txtMatKhauMoi.PasswordChar = '*';
+            this.txtMatKhauMoi.Size = new System.Drawing.Size(168, 20);
+            this.txtMatKhauMoi.TabIndex = 6;
+            // 
+            // lblMatKhauMoi
+            // 
+            this.lblMatKhauMoi.AutoSize = true;
+            this.lblMatKhauMoi.Location = new System.Drawing.Point(127, 89);
+            this.lblMatKhauMoi.Name = "lblMatKhauMoi";
+            this.lblMatKhauMoi.Size = new System.Drawing.Size(74, 13);
+            this.lblMatKhauMoi.TabIndex = 5;
+            this.lblMatKhauMoi.Text = "Mật khẩu mới:";
+            // 
+            // txtXacNhanLaiMatKhau
+            // 
+            this.txtXacNhanLaiMatKhau.Location = new System.Drawing.Point(255, 112);
+            this.txtXacNhanLaiMatKhau.Name = "txtXacNhanLaiMatKhau";
+            this.txtXacNhanLaiMatKhau.PasswordChar = '*';
+            this.txtXacNhanLaiMatKhau.Size = new System.Drawing.Size(168, 20);
+            this.txtXacNhanLaiMatKhau.TabIndex = 4;
+            // 
+            // lblXacNhanMatKhauMoi
+            // 
+            this.lblXacNhanMatKhauMoi.AutoSize = true;
+            this.lblXacNhanMatKhauMoi.Location = new System.Drawing.Point(127, 115);
+            this.lblXacNhanMatKhauMoi.Name = "lblXacNhanMatKhauMoi";
+            this.lblXacNhanMatKhauMoi.Size = new System.Drawing.Size(122, 13);
+            this.lblXacNhanMatKhauMoi.TabIndex = 3;
+            this.lblXacNhanMatKhauMoi.Text = "Xác nhận mật khẩu mới:";
+            // 
+            // txtMatKhauCu
+            // 
+            this.txtMatKhauCu.Location = new System.Drawing.Point(255, 60);
+            this.txtMatKhauCu.Name = "txtMatKhauCu";
+            this.txtMatKhauCu.PasswordChar = '*';
+            this.txtMatKhauCu.Size = new System.Drawing.Size(168, 20);
+            this.txtMatKhauCu.TabIndex = 2;
+            // 
+            // lblMatKhauCu
+            // 
+            this.lblMatKhauCu.AutoSize = true;
+            this.lblMatKhauCu.Location = new System.Drawing.Point(127, 63);
+            this.lblMatKhauCu.Name = "lblMatKhauCu";
+            this.lblMatKhauCu.Size = new System.Drawing.Size(70, 13);
+            this.lblMatKhauCu.TabIndex = 1;
+            this.lblMatKhauCu.Text = "Mật khẩu cũ:";
+            // 
+            // picDoiMatKhau
+            // 
+            this.picDoiMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picDoiMatKhau.Image = global::SSMP.Properties.Resources.user1_preferences;
+            this.picDoiMatKhau.Location = new System.Drawing.Point(27, 72);
+            this.picDoiMatKhau.Name = "picDoiMatKhau";
+            this.picDoiMatKhau.Size = new System.Drawing.Size(56, 48);
+            this.picDoiMatKhau.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picDoiMatKhau.TabIndex = 0;
+            this.picDoiMatKhau.TabStop = false;
             // 
             // frmDoiMatKhau
             // 
