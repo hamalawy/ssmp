@@ -163,6 +163,7 @@
                         | System.Windows.Forms.Keys.X)));
             this.tsmiDangXuat.Size = new System.Drawing.Size(216, 22);
             this.tsmiDangXuat.Text = "Đăng &xuất";
+            this.tsmiDangXuat.Click += new System.EventHandler(this.tsmiDangXuat_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -538,6 +539,7 @@
             this.tsDangXuat.Name = "tsDangXuat";
             this.tsDangXuat.Size = new System.Drawing.Size(24, 24);
             this.tsDangXuat.Text = "Đăng xuất";
+            this.tsDangXuat.Click += new System.EventHandler(this.tsDangXuat_Click);
             // 
             // toolStripSeparator2
             // 
