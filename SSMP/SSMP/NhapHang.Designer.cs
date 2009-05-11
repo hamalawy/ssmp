@@ -81,6 +81,15 @@
             this.cboNhaCungCap = new System.Windows.Forms.ComboBox();
             this.lblNhaCungCap = new System.Windows.Forms.Label();
             this.tpQuanLyPhieuNhapHangHoa = new System.Windows.Forms.TabPage();
+            this.checkBoxTrangthai = new System.Windows.Forms.CheckBox();
+            this.checkBoxGiamGia = new System.Windows.Forms.CheckBox();
+            this.checkBoxGiaMua = new System.Windows.Forms.CheckBox();
+            this.checkBoxGiaBan = new System.Windows.Forms.CheckBox();
+            this.checkBoxNgayHethan = new System.Windows.Forms.CheckBox();
+            this.checkBoxNgaySx = new System.Windows.Forms.CheckBox();
+            this.checkBoxDv = new System.Windows.Forms.CheckBox();
+            this.checkBoxTenSp = new System.Windows.Forms.CheckBox();
+            this.checkBoxMasp = new System.Windows.Forms.CheckBox();
             this.dataGridViewPhieuNhapHAng = new System.Windows.Forms.DataGridView();
             this.btnTaiLaiTatCaQuanLy = new System.Windows.Forms.Button();
             this.btnCapNhatQuanLy = new System.Windows.Forms.Button();
@@ -98,15 +107,13 @@
             this.lblDanhSachHangHo = new System.Windows.Forms.Label();
             this.lblDanhSachPhieuNhapHang = new System.Windows.Forms.Label();
             this.tpBaoCao = new System.Windows.Forms.TabPage();
-            this.checkBoxMasp = new System.Windows.Forms.CheckBox();
-            this.checkBoxTenSp = new System.Windows.Forms.CheckBox();
-            this.checkBoxDv = new System.Windows.Forms.CheckBox();
-            this.checkBoxNgaySx = new System.Windows.Forms.CheckBox();
-            this.checkBoxNgayHethan = new System.Windows.Forms.CheckBox();
-            this.checkBoxGiaBan = new System.Windows.Forms.CheckBox();
-            this.checkBoxGiaMua = new System.Windows.Forms.CheckBox();
-            this.checkBoxGiamGia = new System.Windows.Forms.CheckBox();
-            this.checkBoxTrangthai = new System.Windows.Forms.CheckBox();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.checkBoxNgay = new System.Windows.Forms.CheckBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabQuanLyPhieuNhap.SuspendLayout();
             this.tpLapPhieuNhapHangHoa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSach)).BeginInit();
@@ -114,6 +121,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPhieuNhapHAng)).BeginInit();
             this.gbTimKiemQuanLy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHangHoa)).BeginInit();
+            this.tpBaoCao.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabQuanLyPhieuNhap
@@ -121,11 +129,12 @@
             this.tabQuanLyPhieuNhap.Controls.Add(this.tpLapPhieuNhapHangHoa);
             this.tabQuanLyPhieuNhap.Controls.Add(this.tpQuanLyPhieuNhapHangHoa);
             this.tabQuanLyPhieuNhap.Controls.Add(this.tpBaoCao);
-            this.tabQuanLyPhieuNhap.Location = new System.Drawing.Point(12, 3);
+            this.tabQuanLyPhieuNhap.Location = new System.Drawing.Point(1, 2);
             this.tabQuanLyPhieuNhap.Name = "tabQuanLyPhieuNhap";
             this.tabQuanLyPhieuNhap.SelectedIndex = 0;
-            this.tabQuanLyPhieuNhap.Size = new System.Drawing.Size(891, 593);
+            this.tabQuanLyPhieuNhap.Size = new System.Drawing.Size(902, 594);
             this.tabQuanLyPhieuNhap.TabIndex = 0;
+            this.tabQuanLyPhieuNhap.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabQuanLyPhieuNhap_Selected);
             this.tabQuanLyPhieuNhap.Enter += new System.EventHandler(this.tcNhapKhoHangHoa_Enter);
             // 
             // tpLapPhieuNhapHangHoa
@@ -644,6 +653,123 @@
             this.tpQuanLyPhieuNhapHangHoa.Click += new System.EventHandler(this.tpQuanLyPhieuNhapHangHoa_Click);
             this.tpQuanLyPhieuNhapHangHoa.Enter += new System.EventHandler(this.tpQuanLyPhieuNhapHangHoa_Enter);
             // 
+            // checkBoxTrangthai
+            // 
+            this.checkBoxTrangthai.AutoSize = true;
+            this.checkBoxTrangthai.Checked = true;
+            this.checkBoxTrangthai.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxTrangthai.Location = new System.Drawing.Point(778, 246);
+            this.checkBoxTrangthai.Name = "checkBoxTrangthai";
+            this.checkBoxTrangthai.Size = new System.Drawing.Size(74, 17);
+            this.checkBoxTrangthai.TabIndex = 17;
+            this.checkBoxTrangthai.Text = "Trạng thái";
+            this.checkBoxTrangthai.UseVisualStyleBackColor = true;
+            this.checkBoxTrangthai.CheckedChanged += new System.EventHandler(this.checkBox17_CheckedChanged);
+            // 
+            // checkBoxGiamGia
+            // 
+            this.checkBoxGiamGia.AutoSize = true;
+            this.checkBoxGiamGia.Checked = true;
+            this.checkBoxGiamGia.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxGiamGia.Location = new System.Drawing.Point(778, 223);
+            this.checkBoxGiamGia.Name = "checkBoxGiamGia";
+            this.checkBoxGiamGia.Size = new System.Drawing.Size(67, 17);
+            this.checkBoxGiamGia.TabIndex = 16;
+            this.checkBoxGiamGia.Text = "Giảm giá";
+            this.checkBoxGiamGia.UseVisualStyleBackColor = true;
+            this.checkBoxGiamGia.CheckedChanged += new System.EventHandler(this.checkBox16_CheckedChanged);
+            // 
+            // checkBoxGiaMua
+            // 
+            this.checkBoxGiaMua.AutoSize = true;
+            this.checkBoxGiaMua.Checked = true;
+            this.checkBoxGiaMua.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxGiaMua.Location = new System.Drawing.Point(778, 200);
+            this.checkBoxGiaMua.Name = "checkBoxGiaMua";
+            this.checkBoxGiaMua.Size = new System.Drawing.Size(65, 17);
+            this.checkBoxGiaMua.TabIndex = 15;
+            this.checkBoxGiaMua.Text = "Giá mua";
+            this.checkBoxGiaMua.UseVisualStyleBackColor = true;
+            this.checkBoxGiaMua.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged);
+            // 
+            // checkBoxGiaBan
+            // 
+            this.checkBoxGiaBan.AutoSize = true;
+            this.checkBoxGiaBan.Checked = true;
+            this.checkBoxGiaBan.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxGiaBan.Location = new System.Drawing.Point(668, 246);
+            this.checkBoxGiaBan.Name = "checkBoxGiaBan";
+            this.checkBoxGiaBan.Size = new System.Drawing.Size(63, 17);
+            this.checkBoxGiaBan.TabIndex = 14;
+            this.checkBoxGiaBan.Text = "Giá bán";
+            this.checkBoxGiaBan.UseVisualStyleBackColor = true;
+            this.checkBoxGiaBan.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
+            // 
+            // checkBoxNgayHethan
+            // 
+            this.checkBoxNgayHethan.AutoSize = true;
+            this.checkBoxNgayHethan.Checked = true;
+            this.checkBoxNgayHethan.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxNgayHethan.Location = new System.Drawing.Point(668, 223);
+            this.checkBoxNgayHethan.Name = "checkBoxNgayHethan";
+            this.checkBoxNgayHethan.Size = new System.Drawing.Size(90, 17);
+            this.checkBoxNgayHethan.TabIndex = 13;
+            this.checkBoxNgayHethan.Text = "Ngày hết hạn";
+            this.checkBoxNgayHethan.UseVisualStyleBackColor = true;
+            this.checkBoxNgayHethan.CheckedChanged += new System.EventHandler(this.checkBox13_CheckedChanged);
+            // 
+            // checkBoxNgaySx
+            // 
+            this.checkBoxNgaySx.AutoSize = true;
+            this.checkBoxNgaySx.Checked = true;
+            this.checkBoxNgaySx.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxNgaySx.Location = new System.Drawing.Point(668, 200);
+            this.checkBoxNgaySx.Name = "checkBoxNgaySx";
+            this.checkBoxNgaySx.Size = new System.Drawing.Size(94, 17);
+            this.checkBoxNgaySx.TabIndex = 12;
+            this.checkBoxNgaySx.Text = "Ngày sản xuất";
+            this.checkBoxNgaySx.UseVisualStyleBackColor = true;
+            this.checkBoxNgaySx.CheckedChanged += new System.EventHandler(this.checkBox12_CheckedChanged);
+            // 
+            // checkBoxDv
+            // 
+            this.checkBoxDv.AutoSize = true;
+            this.checkBoxDv.Checked = true;
+            this.checkBoxDv.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxDv.Location = new System.Drawing.Point(559, 246);
+            this.checkBoxDv.Name = "checkBoxDv";
+            this.checkBoxDv.Size = new System.Drawing.Size(57, 17);
+            this.checkBoxDv.TabIndex = 11;
+            this.checkBoxDv.Text = "Đơn vị";
+            this.checkBoxDv.UseVisualStyleBackColor = true;
+            this.checkBoxDv.CheckedChanged += new System.EventHandler(this.checkBox11_CheckedChanged);
+            // 
+            // checkBoxTenSp
+            // 
+            this.checkBoxTenSp.AutoSize = true;
+            this.checkBoxTenSp.Checked = true;
+            this.checkBoxTenSp.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxTenSp.Location = new System.Drawing.Point(559, 223);
+            this.checkBoxTenSp.Name = "checkBoxTenSp";
+            this.checkBoxTenSp.Size = new System.Drawing.Size(94, 17);
+            this.checkBoxTenSp.TabIndex = 10;
+            this.checkBoxTenSp.Text = "Tên sản phẩm";
+            this.checkBoxTenSp.UseVisualStyleBackColor = true;
+            this.checkBoxTenSp.CheckedChanged += new System.EventHandler(this.checkBox10_CheckedChanged);
+            // 
+            // checkBoxMasp
+            // 
+            this.checkBoxMasp.AutoSize = true;
+            this.checkBoxMasp.Checked = true;
+            this.checkBoxMasp.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxMasp.Location = new System.Drawing.Point(559, 200);
+            this.checkBoxMasp.Name = "checkBoxMasp";
+            this.checkBoxMasp.Size = new System.Drawing.Size(90, 17);
+            this.checkBoxMasp.TabIndex = 9;
+            this.checkBoxMasp.Text = "Mã sản phẩm";
+            this.checkBoxMasp.UseVisualStyleBackColor = true;
+            this.checkBoxMasp.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged);
+            // 
             // dataGridViewPhieuNhapHAng
             // 
             this.dataGridViewPhieuNhapHAng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -828,129 +954,88 @@
             // 
             // tpBaoCao
             // 
+            this.tpBaoCao.Controls.Add(this.label5);
+            this.tpBaoCao.Controls.Add(this.label4);
+            this.tpBaoCao.Controls.Add(this.button1);
+            this.tpBaoCao.Controls.Add(this.dateTimePicker2);
+            this.tpBaoCao.Controls.Add(this.dateTimePicker1);
+            this.tpBaoCao.Controls.Add(this.checkBoxNgay);
+            this.tpBaoCao.Controls.Add(this.crystalReportViewer1);
             this.tpBaoCao.Location = new System.Drawing.Point(4, 22);
             this.tpBaoCao.Name = "tpBaoCao";
-            this.tpBaoCao.Size = new System.Drawing.Size(883, 567);
+            this.tpBaoCao.Size = new System.Drawing.Size(894, 568);
             this.tpBaoCao.TabIndex = 2;
             this.tpBaoCao.Text = "Báo cáo";
             this.tpBaoCao.UseVisualStyleBackColor = true;
             // 
-            // checkBoxMasp
+            // crystalReportViewer1
             // 
-            this.checkBoxMasp.AutoSize = true;
-            this.checkBoxMasp.Checked = true;
-            this.checkBoxMasp.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxMasp.Location = new System.Drawing.Point(559, 200);
-            this.checkBoxMasp.Name = "checkBoxMasp";
-            this.checkBoxMasp.Size = new System.Drawing.Size(90, 17);
-            this.checkBoxMasp.TabIndex = 9;
-            this.checkBoxMasp.Text = "Mã sản phẩm";
-            this.checkBoxMasp.UseVisualStyleBackColor = true;
-            this.checkBoxMasp.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged);
+            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.DisplayGroupTree = false;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 73);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.SelectionFormula = "";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(894, 494);
+            this.crystalReportViewer1.TabIndex = 0;
+            this.crystalReportViewer1.ViewTimeSelectionFormula = "";
+            this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
             // 
-            // checkBoxTenSp
+            // checkBoxNgay
             // 
-            this.checkBoxTenSp.AutoSize = true;
-            this.checkBoxTenSp.Checked = true;
-            this.checkBoxTenSp.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxTenSp.Location = new System.Drawing.Point(559, 223);
-            this.checkBoxTenSp.Name = "checkBoxTenSp";
-            this.checkBoxTenSp.Size = new System.Drawing.Size(94, 17);
-            this.checkBoxTenSp.TabIndex = 10;
-            this.checkBoxTenSp.Text = "Tên sản phẩm";
-            this.checkBoxTenSp.UseVisualStyleBackColor = true;
-            this.checkBoxTenSp.CheckedChanged += new System.EventHandler(this.checkBox10_CheckedChanged);
+            this.checkBoxNgay.AutoSize = true;
+            this.checkBoxNgay.Location = new System.Drawing.Point(21, 25);
+            this.checkBoxNgay.Name = "checkBoxNgay";
+            this.checkBoxNgay.Size = new System.Drawing.Size(127, 17);
+            this.checkBoxNgay.TabIndex = 1;
+            this.checkBoxNgay.Text = "Xem theo ngày  nhập";
+            this.checkBoxNgay.UseVisualStyleBackColor = true;
+            this.checkBoxNgay.CheckedChanged += new System.EventHandler(this.checkBoxNgay_CheckedChanged);
             // 
-            // checkBoxDv
+            // dateTimePicker1
             // 
-            this.checkBoxDv.AutoSize = true;
-            this.checkBoxDv.Checked = true;
-            this.checkBoxDv.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxDv.Location = new System.Drawing.Point(559, 246);
-            this.checkBoxDv.Name = "checkBoxDv";
-            this.checkBoxDv.Size = new System.Drawing.Size(57, 17);
-            this.checkBoxDv.TabIndex = 11;
-            this.checkBoxDv.Text = "Đơn vị";
-            this.checkBoxDv.UseVisualStyleBackColor = true;
-            this.checkBoxDv.CheckedChanged += new System.EventHandler(this.checkBox11_CheckedChanged);
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(198, 20);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 2;
             // 
-            // checkBoxNgaySx
+            // dateTimePicker2
             // 
-            this.checkBoxNgaySx.AutoSize = true;
-            this.checkBoxNgaySx.Checked = true;
-            this.checkBoxNgaySx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxNgaySx.Location = new System.Drawing.Point(668, 200);
-            this.checkBoxNgaySx.Name = "checkBoxNgaySx";
-            this.checkBoxNgaySx.Size = new System.Drawing.Size(94, 17);
-            this.checkBoxNgaySx.TabIndex = 12;
-            this.checkBoxNgaySx.Text = "Ngày sản xuất";
-            this.checkBoxNgaySx.UseVisualStyleBackColor = true;
-            this.checkBoxNgaySx.CheckedChanged += new System.EventHandler(this.checkBox12_CheckedChanged);
+            this.dateTimePicker2.Enabled = false;
+            this.dateTimePicker2.Location = new System.Drawing.Point(466, 20);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 3;
             // 
-            // checkBoxNgayHethan
+            // button1
             // 
-            this.checkBoxNgayHethan.AutoSize = true;
-            this.checkBoxNgayHethan.Checked = true;
-            this.checkBoxNgayHethan.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxNgayHethan.Location = new System.Drawing.Point(668, 223);
-            this.checkBoxNgayHethan.Name = "checkBoxNgayHethan";
-            this.checkBoxNgayHethan.Size = new System.Drawing.Size(90, 17);
-            this.checkBoxNgayHethan.TabIndex = 13;
-            this.checkBoxNgayHethan.Text = "Ngày hết hạn";
-            this.checkBoxNgayHethan.UseVisualStyleBackColor = true;
-            this.checkBoxNgayHethan.CheckedChanged += new System.EventHandler(this.checkBox13_CheckedChanged);
+            this.button1.Location = new System.Drawing.Point(698, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Xem Báo cáo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // checkBoxGiaBan
+            // label4
             // 
-            this.checkBoxGiaBan.AutoSize = true;
-            this.checkBoxGiaBan.Checked = true;
-            this.checkBoxGiaBan.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxGiaBan.Location = new System.Drawing.Point(668, 246);
-            this.checkBoxGiaBan.Name = "checkBoxGiaBan";
-            this.checkBoxGiaBan.Size = new System.Drawing.Size(63, 17);
-            this.checkBoxGiaBan.TabIndex = 14;
-            this.checkBoxGiaBan.Text = "Giá bán";
-            this.checkBoxGiaBan.UseVisualStyleBackColor = true;
-            this.checkBoxGiaBan.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(155, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Từ :";
             // 
-            // checkBoxGiaMua
+            // label5
             // 
-            this.checkBoxGiaMua.AutoSize = true;
-            this.checkBoxGiaMua.Checked = true;
-            this.checkBoxGiaMua.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxGiaMua.Location = new System.Drawing.Point(778, 200);
-            this.checkBoxGiaMua.Name = "checkBoxGiaMua";
-            this.checkBoxGiaMua.Size = new System.Drawing.Size(65, 17);
-            this.checkBoxGiaMua.TabIndex = 15;
-            this.checkBoxGiaMua.Text = "Giá mua";
-            this.checkBoxGiaMua.UseVisualStyleBackColor = true;
-            this.checkBoxGiaMua.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged);
-            // 
-            // checkBoxGiamGia
-            // 
-            this.checkBoxGiamGia.AutoSize = true;
-            this.checkBoxGiamGia.Checked = true;
-            this.checkBoxGiamGia.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxGiamGia.Location = new System.Drawing.Point(778, 223);
-            this.checkBoxGiamGia.Name = "checkBoxGiamGia";
-            this.checkBoxGiamGia.Size = new System.Drawing.Size(67, 17);
-            this.checkBoxGiamGia.TabIndex = 16;
-            this.checkBoxGiamGia.Text = "Giảm giá";
-            this.checkBoxGiamGia.UseVisualStyleBackColor = true;
-            this.checkBoxGiamGia.CheckedChanged += new System.EventHandler(this.checkBox16_CheckedChanged);
-            // 
-            // checkBoxTrangthai
-            // 
-            this.checkBoxTrangthai.AutoSize = true;
-            this.checkBoxTrangthai.Checked = true;
-            this.checkBoxTrangthai.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxTrangthai.Location = new System.Drawing.Point(778, 246);
-            this.checkBoxTrangthai.Name = "checkBoxTrangthai";
-            this.checkBoxTrangthai.Size = new System.Drawing.Size(74, 17);
-            this.checkBoxTrangthai.TabIndex = 17;
-            this.checkBoxTrangthai.Text = "Trạng thái";
-            this.checkBoxTrangthai.UseVisualStyleBackColor = true;
-            this.checkBoxTrangthai.CheckedChanged += new System.EventHandler(this.checkBox17_CheckedChanged);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(422, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Đến :";
             // 
             // frmNhapHang
             // 
@@ -975,6 +1060,8 @@
             this.gbTimKiemQuanLy.ResumeLayout(false);
             this.gbTimKiemQuanLy.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHangHoa)).EndInit();
+            this.tpBaoCao.ResumeLayout(false);
+            this.tpBaoCao.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1059,6 +1146,13 @@
         private System.Windows.Forms.CheckBox checkBoxDv;
         private System.Windows.Forms.CheckBox checkBoxTenSp;
         private System.Windows.Forms.CheckBox checkBoxMasp;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private System.Windows.Forms.CheckBox checkBoxNgay;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
 
 
 
