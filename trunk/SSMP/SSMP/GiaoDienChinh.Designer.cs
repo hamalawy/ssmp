@@ -554,6 +554,7 @@
             this.tsdbBanHang.Name = "tsdbBanHang";
             this.tsdbBanHang.Size = new System.Drawing.Size(24, 24);
             this.tsdbBanHang.Text = "Bán hàng";
+            this.tsdbBanHang.Click += new System.EventHandler(this.tsdbBanHang_Click);
             // 
             // toolStripSeparator4
             // 
@@ -568,6 +569,7 @@
             this.tsdbNhapHang.Name = "tsdbNhapHang";
             this.tsdbNhapHang.Size = new System.Drawing.Size(24, 24);
             this.tsdbNhapHang.Text = "Nhập hàng";
+            this.tsdbNhapHang.Click += new System.EventHandler(this.tsdbNhapHang_Click);
             // 
             // toolStripSeparator8
             // 

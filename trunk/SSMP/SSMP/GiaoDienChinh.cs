@@ -28,7 +28,6 @@ namespace SSMP
         public frmDanhMucSanPham DanhMucSanPham;
         public DangNhap frmDangNhap;
 
-
         public string MaNguoiDung;
 
         public frmGiaoDienChinh()
@@ -524,6 +523,45 @@ namespace SSMP
             DangNhap.tenDangNhap = null;
             DangNhap.quyenNguoiDung = 0;
             MessageBox.Show(this, "Đăng xuất thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void tsdbBanHang_Click(object sender, EventArgs e)
+        {
+            if (frmBanHang == null)
+            {
+                frmBanHang = new BanHang();
+                frmBanHang.MdiParent = this;
+                frmBanHang.Show();
+            }
+            if (frmBanHang.IsDisposed)
+            {
+                frmBanHang = new BanHang();
+                frmBanHang.MdiParent = this;
+                frmBanHang.Show();
+            }
+            frmBanHang.setSelectedTab(0);
+        }
+
+        private void tsdbNhapHang_Click(object sender, EventArgs e)
+        {
+            if (NhapHang == null)
+            {
+                NhapHang = new frmNhapHang();
+                NhapHang.MdiParent = this;
+                NhapHang.Show();
+            }
+            if (NhapHang.IsDisposed)
+            {
+                NhapHang = new frmNhapHang();
+                NhapHang.MdiParent = this;
+                NhapHang.Show();
+            }
+            NhapHang.setSelectedTab(0);
+        }
+
+        private void báoCáoNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
