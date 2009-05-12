@@ -12,7 +12,7 @@ namespace SSMP.Core.Domain
 
 
         private System.DateTime _CreateDate;
-        private System.Int32 _CustomersId;
+        private System.Int32 _CustomerId;
         private System.Int32 _UserId;
         private IList<Product> _Products = new List<Product>();
 
@@ -30,9 +30,9 @@ namespace SSMP.Core.Domain
              set { _CreateDate = value;}
          }
 
-         public virtual System.Int32 CustomersId {
-             get { return _CustomersId; }
-             set { _CustomersId = value;}
+         public virtual System.Int32 CustomerId {
+             get { return _CustomerId; }
+             set { _CustomerId = value;}
          }
 
          public virtual System.Int32 UserId {

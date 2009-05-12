@@ -8,7 +8,6 @@
     <property name="ProdDesc" column="ProdDesc" type="System.String" not-null="false" length="255"/>
     <property name="CategoryId" column="CategoryId" type="System.Int32" not-null="true" />
     <property name="ManId" column="ManId" type="System.Int32" not-null="true" />
-    <property name="UnitId" column="UnitId" type="System.Int32" not-null="true" />
     <many-to-one name="CategoryIdLookup" column="CategoryId" class="Category"  update="0"  insert="0" />
     <many-to-one name="ManIdLookup" column="ManId" class="Manufacturer"  update="0"  insert="0" />
     <many-to-one name="UnitIdLookup" column="UnitId" class="Unit"  update="0"  insert="0" />

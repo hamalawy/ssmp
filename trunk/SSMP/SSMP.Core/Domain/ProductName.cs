@@ -9,13 +9,10 @@ namespace SSMP.Core.Domain
     [Serializable]
     public class ProductName : DomainObject<System.Int32>
     {
-
-
         private System.String _ProdName;
         private System.String _ProdDesc;
         private System.Int32 _CategoryId;
         private System.Int32 _ManId;
-        private System.Int32 _UnitId;
         private Category _CategoryIdLookup;
         private Manufacturer _ManIdLookup;
         private Unit _UnitIdLookup;
@@ -23,6 +20,7 @@ namespace SSMP.Core.Domain
 
         public ProductName()
         {
+
         }
 
         public ProductName(System.Int32 id)
@@ -30,56 +28,57 @@ namespace SSMP.Core.Domain
             base.ID = id;
         }
 
-         public virtual System.String ProdName {
+         public virtual System.String ProdName 
+         {
              get { return _ProdName; }
              set { _ProdName = value;}
          }
 
-         public virtual System.String ProdDesc {
+         public virtual System.String ProdDesc 
+         {
              get { return _ProdDesc; }
              set { _ProdDesc = value;}
          }
 
-         public virtual System.Int32 CategoryId {
+         public virtual System.Int32 CategoryId 
+         {
              get { return _CategoryId; }
              set { _CategoryId = value;}
          }
 
-         public virtual System.Int32 ManId {
+         public virtual System.Int32 ManId 
+         {
              get { return _ManId; }
              set { _ManId = value;}
          }
 
-         public virtual System.Int32 UnitId {
-             get { return _UnitId; }
-             set { _UnitId = value;}
-         }
-
-         public virtual Category CategoryIdLookup{
+         public virtual Category CategoryIdLookup
+         {
              get { return _CategoryIdLookup; }
              set { _CategoryIdLookup = value;}
          }
 
-         public virtual Manufacturer ManIdLookup{
+         public virtual Manufacturer ManIdLookup
+         {
              get { return _ManIdLookup; }
              set { _ManIdLookup = value;}
          }
 
-         public virtual Unit UnitIdLookup{
+         public virtual Unit UnitIdLookup
+         {
              get { return _UnitIdLookup; }
              set { _UnitIdLookup = value;}
          }
 
-         public virtual IList<Product> Products{
+         public virtual IList<Product> Products
+         {
              get { return _Products; }
              set { _Products = value; }
          }
-
 
         public override int GetHashCode()
         {
             return ID.GetHashCode();
         }
-
      }
 }

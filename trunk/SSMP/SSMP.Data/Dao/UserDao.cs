@@ -34,6 +34,7 @@ namespace SSMP.Data.Dao
 
             //Criteria for query totalsize
             ICriteria criteriaSize = CreateCriteriaByParam(entity);
+
             criteriaSize.SetProjection(Projections.Count(DBConstants.ID));
             searchResult.SearchSize = criteriaSize.UniqueResult<System.Int32>();
 
@@ -48,12 +49,101 @@ namespace SSMP.Data.Dao
             {
                 if (entity.ID != 0)
                 {
-                    criteria.Add(Restrictions.Eq("ID", entity.ID));
+                    if (entity.Username == null && entity.FullName == null && entity.Email == null)
+                    {
+                        criteria.Add(Restrictions.Eq("ID", entity.ID));
+                    }
+                    else if (entity.Username != null && entity.FullName == null && entity.Email == null)
+                    {
+                        criteria.Add(
+                            Restrictions.Or(
+                                Restrictions.Eq("ID", entity.ID),
+                                Restrictions.Like("Username", entity.Username, MatchMode.Anywhere)));
+                    }
+                    else if (entity.Username != null && entity.FullName != null && entity.Email == null)
+                    {
+                        criteria.Add(
+                            Restrictions.Or(
+                                Restrictions.Or(
+                                    Restrictions.Eq("ID", entity.ID)
+                                    , Restrictions.Like("Username", entity.Username, MatchMode.Anywhere))
+                                        , Restrictions.Like("FullName", entity.FullName, MatchMode.Anywhere)));
+                    }
+                    else if (entity.Username != null && entity.FullName != null && entity.Email != null)
+                    {
+                        criteria.Add(
+                            Restrictions.Or(
+                                Restrictions.Or(
+                                    Restrictions.Or(
+                                        Restrictions.Eq("ID", entity.ID)
+                                        , Restrictions.Like("Username", entity.Username, MatchMode.Anywhere))
+                                            , Restrictions.Like("FullName", entity.FullName, MatchMode.Anywhere))
+                                                , Restrictions.Like("Email", entity.Email, MatchMode.Anywhere)));
+                    }
+                    else if (entity.Username == null && entity.FullName != null && entity.Email == null)
+                    {
+                        criteria.Add(
+                            Restrictions.Or(
+                                Restrictions.Eq("ID", entity.ID)
+                                    , Restrictions.Like("FullName", entity.FullName, MatchMode.Anywhere)));
+                    }
+                    else if (entity.Username == null && entity.FullName != null && entity.Email != null)
+                    {
+                        criteria.Add(
+                            Restrictions.Or(
+                                Restrictions.Or(
+                                    Restrictions.Eq("ID", entity.ID)
+                                        , Restrictions.Like("FullName", entity.FullName, MatchMode.Anywhere))
+                                            , Restrictions.Like("Email", entity.Email, MatchMode.Anywhere)));
+                    }
+                    else if (entity.Username == null && entity.FullName == null && entity.Email != null)
+                    {
+                        criteria.Add(
+                            Restrictions.Or(
+                                Restrictions.Eq("ID", entity.ID)
+                                , Restrictions.Like("Email", entity.Email, MatchMode.Anywhere)));
+                    }
                 }
-
-                if (entity.Username != null)
+                else
                 {
-                    criteria.Add(Restrictions.Like("Username", entity.Username, MatchMode.Anywhere));
+                    if (entity.Username != null && entity.FullName == null && entity.Email == null)
+                    {
+                        criteria.Add(
+                            Restrictions.Like("Username", entity.Username, MatchMode.Anywhere));
+                    }
+                    else if (entity.Username != null && entity.FullName != null && entity.Email == null)
+                    {
+                        criteria.Add(
+                            Restrictions.Or(
+                                 Restrictions.Like("Username", entity.Username, MatchMode.Anywhere)
+                                 , Restrictions.Like("FullName", entity.FullName, MatchMode.Anywhere)));
+                    }
+                    else if (entity.Username != null && entity.FullName != null && entity.Email != null)
+                    {
+                        criteria.Add(
+                            Restrictions.Or(
+                                Restrictions.Or(
+                                    Restrictions.Like("Username", entity.Username, MatchMode.Anywhere)
+                                        , Restrictions.Like("FullName", entity.FullName, MatchMode.Anywhere))
+                                            , Restrictions.Like("Email", entity.Email, MatchMode.Anywhere)));
+                    }
+                    else if (entity.Username == null && entity.FullName != null && entity.Email == null)
+                    {
+                        criteria.Add(
+                            Restrictions.Like("FullName", entity.FullName, MatchMode.Anywhere));
+                    }
+                    else if (entity.Username == null && entity.FullName != null && entity.Email != null)
+                    {
+                        criteria.Add(
+                            Restrictions.Or(
+                                   Restrictions.Like("FullName", entity.FullName, MatchMode.Anywhere)
+                                    , Restrictions.Like("Email", entity.Email, MatchMode.Anywhere)));
+                    }
+                    else if (entity.Username == null && entity.FullName == null && entity.Email != null)
+                    {
+                        criteria.Add(
+                            Restrictions.Like("Email", entity.Email, MatchMode.Anywhere));
+                    }
                 }
             }
 
