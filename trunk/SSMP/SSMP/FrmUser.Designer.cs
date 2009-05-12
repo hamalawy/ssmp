@@ -38,10 +38,7 @@
             this.chkSearchEmail = new System.Windows.Forms.CheckBox();
             this.chkDispIdCardNo = new System.Windows.Forms.CheckBox();
             this.chkDispTelNo = new System.Windows.Forms.CheckBox();
-            this.chkSearchTelNo = new System.Windows.Forms.CheckBox();
-            this.chkSearchIdCardNo = new System.Windows.Forms.CheckBox();
             this.chkDispDOB = new System.Windows.Forms.CheckBox();
-            this.chkSearchDOB = new System.Windows.Forms.CheckBox();
             this.panelGridUser = new System.Windows.Forms.Panel();
             this.bindingNavigatorUser = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -75,11 +72,8 @@
             this.chkDispUserId = new System.Windows.Forms.CheckBox();
             this.chkDispAll = new System.Windows.Forms.CheckBox();
             this.lblDisplay = new System.Windows.Forms.Label();
-            this.chkSearchUserTitle = new System.Windows.Forms.CheckBox();
             this.lblUserList = new System.Windows.Forms.Label();
             this.chkSearchAll = new System.Windows.Forms.CheckBox();
-            this.chkSearchUserRole = new System.Windows.Forms.CheckBox();
-            this.chkSearchUserStatus = new System.Windows.Forms.CheckBox();
             this.chkSearchUsername = new System.Windows.Forms.CheckBox();
             this.chkSearchUserId = new System.Windows.Forms.CheckBox();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -87,15 +81,14 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.lblSearch = new System.Windows.Forms.Label();
             this.gbUserInfo = new System.Windows.Forms.GroupBox();
+            this.dateTimeDOB = new System.Windows.Forms.DateTimePicker();
             this.cbbUserRole = new System.Windows.Forms.ComboBox();
-            this.btnCalendar = new System.Windows.Forms.Button();
             this.rdFemale = new System.Windows.Forms.RadioButton();
             this.rdMale = new System.Windows.Forms.RadioButton();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtTelNo = new System.Windows.Forms.TextBox();
             this.txtIdCardNo = new System.Windows.Forms.TextBox();
-            this.txtDOB = new System.Windows.Forms.TextBox();
             this.lblTelNo = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -145,10 +138,7 @@
             this.tpUserManagement.Controls.Add(this.chkSearchEmail);
             this.tpUserManagement.Controls.Add(this.chkDispIdCardNo);
             this.tpUserManagement.Controls.Add(this.chkDispTelNo);
-            this.tpUserManagement.Controls.Add(this.chkSearchTelNo);
-            this.tpUserManagement.Controls.Add(this.chkSearchIdCardNo);
             this.tpUserManagement.Controls.Add(this.chkDispDOB);
-            this.tpUserManagement.Controls.Add(this.chkSearchDOB);
             this.tpUserManagement.Controls.Add(this.panelGridUser);
             this.tpUserManagement.Controls.Add(this.chkSearchFullname);
             this.tpUserManagement.Controls.Add(this.chkDispFullname);
@@ -162,11 +152,8 @@
             this.tpUserManagement.Controls.Add(this.chkDispUserId);
             this.tpUserManagement.Controls.Add(this.chkDispAll);
             this.tpUserManagement.Controls.Add(this.lblDisplay);
-            this.tpUserManagement.Controls.Add(this.chkSearchUserTitle);
             this.tpUserManagement.Controls.Add(this.lblUserList);
             this.tpUserManagement.Controls.Add(this.chkSearchAll);
-            this.tpUserManagement.Controls.Add(this.chkSearchUserRole);
-            this.tpUserManagement.Controls.Add(this.chkSearchUserStatus);
             this.tpUserManagement.Controls.Add(this.chkSearchUsername);
             this.tpUserManagement.Controls.Add(this.chkSearchUserId);
             this.tpUserManagement.Controls.Add(this.btnSearch);
@@ -185,7 +172,7 @@
             // chkDispAddress
             // 
             this.chkDispAddress.AutoSize = true;
-            this.chkDispAddress.Location = new System.Drawing.Point(584, 212);
+            this.chkDispAddress.Location = new System.Drawing.Point(584, 172);
             this.chkDispAddress.Name = "chkDispAddress";
             this.chkDispAddress.Size = new System.Drawing.Size(59, 17);
             this.chkDispAddress.TabIndex = 54;
@@ -196,7 +183,7 @@
             // chkDispSex
             // 
             this.chkDispSex.AutoSize = true;
-            this.chkDispSex.Location = new System.Drawing.Point(584, 188);
+            this.chkDispSex.Location = new System.Drawing.Point(584, 148);
             this.chkDispSex.Name = "chkDispSex";
             this.chkDispSex.Size = new System.Drawing.Size(66, 17);
             this.chkDispSex.TabIndex = 53;
@@ -207,7 +194,7 @@
             // chkDispEmail
             // 
             this.chkDispEmail.AutoSize = true;
-            this.chkDispEmail.Location = new System.Drawing.Point(474, 212);
+            this.chkDispEmail.Location = new System.Drawing.Point(474, 172);
             this.chkDispEmail.Name = "chkDispEmail";
             this.chkDispEmail.Size = new System.Drawing.Size(51, 17);
             this.chkDispEmail.TabIndex = 1;
@@ -218,7 +205,7 @@
             // chkSearchEmail
             // 
             this.chkSearchEmail.AutoSize = true;
-            this.chkSearchEmail.Location = new System.Drawing.Point(397, 105);
+            this.chkSearchEmail.Location = new System.Drawing.Point(777, 59);
             this.chkSearchEmail.Name = "chkSearchEmail";
             this.chkSearchEmail.Size = new System.Drawing.Size(51, 17);
             this.chkSearchEmail.TabIndex = 1;
@@ -228,7 +215,7 @@
             // chkDispIdCardNo
             // 
             this.chkDispIdCardNo.AutoSize = true;
-            this.chkDispIdCardNo.Location = new System.Drawing.Point(777, 188);
+            this.chkDispIdCardNo.Location = new System.Drawing.Point(777, 148);
             this.chkDispIdCardNo.Name = "chkDispIdCardNo";
             this.chkDispIdCardNo.Size = new System.Drawing.Size(111, 17);
             this.chkDispIdCardNo.TabIndex = 1;
@@ -239,7 +226,7 @@
             // chkDispTelNo
             // 
             this.chkDispTelNo.AutoSize = true;
-            this.chkDispTelNo.Location = new System.Drawing.Point(397, 212);
+            this.chkDispTelNo.Location = new System.Drawing.Point(397, 172);
             this.chkDispTelNo.Name = "chkDispTelNo";
             this.chkDispTelNo.Size = new System.Drawing.Size(74, 17);
             this.chkDispTelNo.TabIndex = 1;
@@ -247,30 +234,10 @@
             this.chkDispTelNo.UseVisualStyleBackColor = true;
             this.chkDispTelNo.CheckedChanged += new System.EventHandler(this.chkDispTelNo_CheckedChanged);
             // 
-            // chkSearchTelNo
-            // 
-            this.chkSearchTelNo.AutoSize = true;
-            this.chkSearchTelNo.Location = new System.Drawing.Point(777, 81);
-            this.chkSearchTelNo.Name = "chkSearchTelNo";
-            this.chkSearchTelNo.Size = new System.Drawing.Size(74, 17);
-            this.chkSearchTelNo.TabIndex = 1;
-            this.chkSearchTelNo.Text = "Điện thoại";
-            this.chkSearchTelNo.UseVisualStyleBackColor = true;
-            // 
-            // chkSearchIdCardNo
-            // 
-            this.chkSearchIdCardNo.AutoSize = true;
-            this.chkSearchIdCardNo.Location = new System.Drawing.Point(663, 81);
-            this.chkSearchIdCardNo.Name = "chkSearchIdCardNo";
-            this.chkSearchIdCardNo.Size = new System.Drawing.Size(111, 17);
-            this.chkSearchIdCardNo.TabIndex = 1;
-            this.chkSearchIdCardNo.Text = "Số CMT/Passport";
-            this.chkSearchIdCardNo.UseVisualStyleBackColor = true;
-            // 
             // chkDispDOB
             // 
             this.chkDispDOB.AutoSize = true;
-            this.chkDispDOB.Location = new System.Drawing.Point(663, 188);
+            this.chkDispDOB.Location = new System.Drawing.Point(663, 148);
             this.chkDispDOB.Name = "chkDispDOB";
             this.chkDispDOB.Size = new System.Drawing.Size(73, 17);
             this.chkDispDOB.TabIndex = 1;
@@ -278,23 +245,13 @@
             this.chkDispDOB.UseVisualStyleBackColor = true;
             this.chkDispDOB.CheckedChanged += new System.EventHandler(this.chkDispDOB_CheckedChanged);
             // 
-            // chkSearchDOB
-            // 
-            this.chkSearchDOB.AutoSize = true;
-            this.chkSearchDOB.Location = new System.Drawing.Point(584, 81);
-            this.chkSearchDOB.Name = "chkSearchDOB";
-            this.chkSearchDOB.Size = new System.Drawing.Size(73, 17);
-            this.chkSearchDOB.TabIndex = 1;
-            this.chkSearchDOB.Text = "Ngày sinh";
-            this.chkSearchDOB.UseVisualStyleBackColor = true;
-            // 
             // panelGridUser
             // 
             this.panelGridUser.Controls.Add(this.bindingNavigatorUser);
             this.panelGridUser.Controls.Add(this.gvUser);
-            this.panelGridUser.Location = new System.Drawing.Point(332, 252);
+            this.panelGridUser.Location = new System.Drawing.Point(332, 216);
             this.panelGridUser.Name = "panelGridUser";
-            this.panelGridUser.Size = new System.Drawing.Size(691, 248);
+            this.panelGridUser.Size = new System.Drawing.Size(691, 284);
             this.panelGridUser.TabIndex = 52;
             // 
             // bindingNavigatorUser
@@ -323,7 +280,7 @@
             this.toolStripBtnUpdate,
             this.toolStripBtnDelete,
             this.toolStripLblTotal});
-            this.bindingNavigatorUser.Location = new System.Drawing.Point(0, 223);
+            this.bindingNavigatorUser.Location = new System.Drawing.Point(0, 259);
             this.bindingNavigatorUser.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigatorUser.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigatorUser.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -482,7 +439,7 @@
             this.gvUser.MultiSelect = false;
             this.gvUser.Name = "gvUser";
             this.gvUser.ReadOnly = true;
-            this.gvUser.Size = new System.Drawing.Size(691, 222);
+            this.gvUser.Size = new System.Drawing.Size(691, 256);
             this.gvUser.TabIndex = 23;
             // 
             // chkSearchFullname
@@ -498,7 +455,7 @@
             // chkDispFullname
             // 
             this.chkDispFullname.AutoSize = true;
-            this.chkDispFullname.Location = new System.Drawing.Point(584, 164);
+            this.chkDispFullname.Location = new System.Drawing.Point(584, 124);
             this.chkDispFullname.Name = "chkDispFullname";
             this.chkDispFullname.Size = new System.Drawing.Size(73, 17);
             this.chkDispFullname.TabIndex = 49;
@@ -520,7 +477,7 @@
             this.btnReloadAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReloadAll.ImageIndex = 6;
             this.btnReloadAll.ImageList = this.imglQuanLyNguoiDung;
-            this.btnReloadAll.Location = new System.Drawing.Point(792, 217);
+            this.btnReloadAll.Location = new System.Drawing.Point(792, 177);
             this.btnReloadAll.Name = "btnReloadAll";
             this.btnReloadAll.Size = new System.Drawing.Size(100, 23);
             this.btnReloadAll.TabIndex = 47;
@@ -548,7 +505,7 @@
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrint.ImageIndex = 5;
             this.btnPrint.ImageList = this.imglQuanLyNguoiDung;
-            this.btnPrint.Location = new System.Drawing.Point(898, 217);
+            this.btnPrint.Location = new System.Drawing.Point(898, 177);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(58, 23);
             this.btnPrint.TabIndex = 45;
@@ -559,7 +516,7 @@
             // chkDispUserTitle
             // 
             this.chkDispUserTitle.AutoSize = true;
-            this.chkDispUserTitle.Location = new System.Drawing.Point(777, 164);
+            this.chkDispUserTitle.Location = new System.Drawing.Point(777, 124);
             this.chkDispUserTitle.Name = "chkDispUserTitle";
             this.chkDispUserTitle.Size = new System.Drawing.Size(66, 17);
             this.chkDispUserTitle.TabIndex = 43;
@@ -570,7 +527,7 @@
             // chkDispUserRole
             // 
             this.chkDispUserRole.AutoSize = true;
-            this.chkDispUserRole.Location = new System.Drawing.Point(474, 187);
+            this.chkDispUserRole.Location = new System.Drawing.Point(474, 147);
             this.chkDispUserRole.Name = "chkDispUserRole";
             this.chkDispUserRole.Size = new System.Drawing.Size(110, 17);
             this.chkDispUserRole.TabIndex = 41;
@@ -581,7 +538,7 @@
             // chkDispUserStatus
             // 
             this.chkDispUserStatus.AutoSize = true;
-            this.chkDispUserStatus.Location = new System.Drawing.Point(397, 187);
+            this.chkDispUserStatus.Location = new System.Drawing.Point(397, 147);
             this.chkDispUserStatus.Name = "chkDispUserStatus";
             this.chkDispUserStatus.Size = new System.Drawing.Size(74, 17);
             this.chkDispUserStatus.TabIndex = 40;
@@ -592,7 +549,7 @@
             // chkDispUsername
             // 
             this.chkDispUsername.AutoSize = true;
-            this.chkDispUsername.Location = new System.Drawing.Point(663, 164);
+            this.chkDispUsername.Location = new System.Drawing.Point(663, 124);
             this.chkDispUsername.Name = "chkDispUsername";
             this.chkDispUsername.Size = new System.Drawing.Size(100, 17);
             this.chkDispUsername.TabIndex = 39;
@@ -606,7 +563,7 @@
             this.chkDispUserId.Checked = true;
             this.chkDispUserId.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkDispUserId.Enabled = false;
-            this.chkDispUserId.Location = new System.Drawing.Point(474, 164);
+            this.chkDispUserId.Location = new System.Drawing.Point(474, 124);
             this.chkDispUserId.Name = "chkDispUserId";
             this.chkDispUserId.Size = new System.Drawing.Size(97, 17);
             this.chkDispUserId.TabIndex = 38;
@@ -618,7 +575,7 @@
             this.chkDispAll.AutoSize = true;
             this.chkDispAll.Checked = true;
             this.chkDispAll.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkDispAll.Location = new System.Drawing.Point(397, 164);
+            this.chkDispAll.Location = new System.Drawing.Point(397, 124);
             this.chkDispAll.Name = "chkDispAll";
             this.chkDispAll.Size = new System.Drawing.Size(57, 17);
             this.chkDispAll.TabIndex = 37;
@@ -629,28 +586,18 @@
             // lblDisplay
             // 
             this.lblDisplay.AutoSize = true;
-            this.lblDisplay.Location = new System.Drawing.Point(339, 165);
+            this.lblDisplay.Location = new System.Drawing.Point(339, 125);
             this.lblDisplay.Name = "lblDisplay";
             this.lblDisplay.Size = new System.Drawing.Size(46, 13);
             this.lblDisplay.TabIndex = 36;
             this.lblDisplay.Text = "Hiển thị:";
-            // 
-            // chkSearchUserTitle
-            // 
-            this.chkSearchUserTitle.AutoSize = true;
-            this.chkSearchUserTitle.Location = new System.Drawing.Point(777, 59);
-            this.chkSearchUserTitle.Name = "chkSearchUserTitle";
-            this.chkSearchUserTitle.Size = new System.Drawing.Size(66, 17);
-            this.chkSearchUserTitle.TabIndex = 35;
-            this.chkSearchUserTitle.Text = "Chức vụ";
-            this.chkSearchUserTitle.UseVisualStyleBackColor = true;
             // 
             // lblUserList
             // 
             this.lblUserList.AutoSize = true;
             this.lblUserList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblUserList.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblUserList.Location = new System.Drawing.Point(338, 139);
+            this.lblUserList.Location = new System.Drawing.Point(338, 99);
             this.lblUserList.Name = "lblUserList";
             this.lblUserList.Size = new System.Drawing.Size(167, 13);
             this.lblUserList.TabIndex = 33;
@@ -665,26 +612,7 @@
             this.chkSearchAll.TabIndex = 32;
             this.chkSearchAll.Text = "Tất cả";
             this.chkSearchAll.UseVisualStyleBackColor = true;
-            // 
-            // chkSearchUserRole
-            // 
-            this.chkSearchUserRole.AutoSize = true;
-            this.chkSearchUserRole.Location = new System.Drawing.Point(474, 82);
-            this.chkSearchUserRole.Name = "chkSearchUserRole";
-            this.chkSearchUserRole.Size = new System.Drawing.Size(110, 17);
-            this.chkSearchUserRole.TabIndex = 30;
-            this.chkSearchUserRole.Text = "Nhóm người dùng";
-            this.chkSearchUserRole.UseVisualStyleBackColor = true;
-            // 
-            // chkSearchUserStatus
-            // 
-            this.chkSearchUserStatus.AutoSize = true;
-            this.chkSearchUserStatus.Location = new System.Drawing.Point(397, 82);
-            this.chkSearchUserStatus.Name = "chkSearchUserStatus";
-            this.chkSearchUserStatus.Size = new System.Drawing.Size(74, 17);
-            this.chkSearchUserStatus.TabIndex = 29;
-            this.chkSearchUserStatus.Text = "Trạng thái";
-            this.chkSearchUserStatus.UseVisualStyleBackColor = true;
+            this.chkSearchAll.CheckedChanged += new System.EventHandler(this.chkSearchAll_CheckedChanged);
             // 
             // chkSearchUsername
             // 
@@ -728,7 +656,7 @@
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.ImageIndex = 4;
             this.btnClose.ImageList = this.imglQuanLyNguoiDung;
-            this.btnClose.Location = new System.Drawing.Point(962, 217);
+            this.btnClose.Location = new System.Drawing.Point(962, 177);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(61, 23);
             this.btnClose.TabIndex = 22;
@@ -747,15 +675,14 @@
             // 
             // gbUserInfo
             // 
+            this.gbUserInfo.Controls.Add(this.dateTimeDOB);
             this.gbUserInfo.Controls.Add(this.cbbUserRole);
-            this.gbUserInfo.Controls.Add(this.btnCalendar);
             this.gbUserInfo.Controls.Add(this.rdFemale);
             this.gbUserInfo.Controls.Add(this.rdMale);
             this.gbUserInfo.Controls.Add(this.txtAddress);
             this.gbUserInfo.Controls.Add(this.txtEmail);
             this.gbUserInfo.Controls.Add(this.txtTelNo);
             this.gbUserInfo.Controls.Add(this.txtIdCardNo);
-            this.gbUserInfo.Controls.Add(this.txtDOB);
             this.gbUserInfo.Controls.Add(this.lblTelNo);
             this.gbUserInfo.Controls.Add(this.lblAddress);
             this.gbUserInfo.Controls.Add(this.lblEmail);
@@ -786,22 +713,22 @@
             this.gbUserInfo.TabStop = false;
             this.gbUserInfo.Text = "THÔNG TIN NGƯỜI DÙNG:";
             // 
+            // dateTimeDOB
+            // 
+            this.dateTimeDOB.CustomFormat = "dd/MM/yyyy";
+            this.dateTimeDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimeDOB.Location = new System.Drawing.Point(119, 260);
+            this.dateTimeDOB.Name = "dateTimeDOB";
+            this.dateTimeDOB.Size = new System.Drawing.Size(172, 20);
+            this.dateTimeDOB.TabIndex = 1;
+            // 
             // cbbUserRole
             // 
             this.cbbUserRole.FormattingEnabled = true;
-            this.cbbUserRole.Location = new System.Drawing.Point(117, 210);
+            this.cbbUserRole.Location = new System.Drawing.Point(118, 210);
             this.cbbUserRole.Name = "cbbUserRole";
-            this.cbbUserRole.Size = new System.Drawing.Size(173, 21);
+            this.cbbUserRole.Size = new System.Drawing.Size(172, 21);
             this.cbbUserRole.TabIndex = 24;
-            // 
-            // btnCalendar
-            // 
-            this.btnCalendar.Location = new System.Drawing.Point(267, 259);
-            this.btnCalendar.Name = "btnCalendar";
-            this.btnCalendar.Size = new System.Drawing.Size(23, 23);
-            this.btnCalendar.TabIndex = 23;
-            this.btnCalendar.UseVisualStyleBackColor = true;
-            this.btnCalendar.Click += new System.EventHandler(this.btnCalendar_Click);
             // 
             // rdFemale
             // 
@@ -853,13 +780,6 @@
             this.txtIdCardNo.Name = "txtIdCardNo";
             this.txtIdCardNo.Size = new System.Drawing.Size(171, 20);
             this.txtIdCardNo.TabIndex = 21;
-            // 
-            // txtDOB
-            // 
-            this.txtDOB.Location = new System.Drawing.Point(119, 261);
-            this.txtDOB.Name = "txtDOB";
-            this.txtDOB.Size = new System.Drawing.Size(142, 20);
-            this.txtDOB.TabIndex = 21;
             // 
             // lblTelNo
             // 
@@ -928,7 +848,7 @@
             // cbbUserTitle
             // 
             this.cbbUserTitle.FormattingEnabled = true;
-            this.cbbUserTitle.Location = new System.Drawing.Point(118, 156);
+            this.cbbUserTitle.Location = new System.Drawing.Point(119, 156);
             this.cbbUserTitle.Name = "cbbUserTitle";
             this.cbbUserTitle.Size = new System.Drawing.Size(171, 21);
             this.cbbUserTitle.TabIndex = 17;
@@ -973,7 +893,7 @@
             this.cbbUserStatus.Items.AddRange(new object[] {
             "Khóa",
             "Không Khóa"});
-            this.cbbUserStatus.Location = new System.Drawing.Point(117, 183);
+            this.cbbUserStatus.Location = new System.Drawing.Point(119, 183);
             this.cbbUserStatus.Name = "cbbUserStatus";
             this.cbbUserStatus.Size = new System.Drawing.Size(81, 21);
             this.cbbUserStatus.TabIndex = 11;
@@ -992,7 +912,7 @@
             this.txtPasswordConfirm.Location = new System.Drawing.Point(119, 130);
             this.txtPasswordConfirm.Name = "txtPasswordConfirm";
             this.txtPasswordConfirm.PasswordChar = '*';
-            this.txtPasswordConfirm.Size = new System.Drawing.Size(172, 20);
+            this.txtPasswordConfirm.Size = new System.Drawing.Size(171, 20);
             this.txtPasswordConfirm.TabIndex = 7;
             // 
             // lblPasswordConfirm
@@ -1009,7 +929,7 @@
             this.txtPassword.Location = new System.Drawing.Point(119, 104);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(172, 20);
+            this.txtPassword.Size = new System.Drawing.Size(171, 20);
             this.txtPassword.TabIndex = 5;
             // 
             // lblPassword
@@ -1102,8 +1022,6 @@
         private System.Windows.Forms.TabPage tpUserManagement;
         private System.Windows.Forms.Label lblUserList;
         private System.Windows.Forms.CheckBox chkSearchAll;
-        private System.Windows.Forms.CheckBox chkSearchUserRole;
-        private System.Windows.Forms.CheckBox chkSearchUserStatus;
         private System.Windows.Forms.CheckBox chkSearchUsername;
         private System.Windows.Forms.CheckBox chkSearchUserId;
         private System.Windows.Forms.Button btnSearch;
@@ -1129,7 +1047,6 @@
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.TextBox txtUserId;
         private System.Windows.Forms.Label lblUserId;
-        private System.Windows.Forms.CheckBox chkSearchUserTitle;
         private System.Windows.Forms.Label lblDisplay;
         private System.Windows.Forms.CheckBox chkDispUserTitle;
         private System.Windows.Forms.CheckBox chkDispUserRole;
@@ -1172,13 +1089,8 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtTelNo;
         private System.Windows.Forms.TextBox txtIdCardNo;
-        private System.Windows.Forms.TextBox txtDOB;
         private System.Windows.Forms.RadioButton rdFemale;
         private System.Windows.Forms.RadioButton rdMale;
-        private System.Windows.Forms.Button btnCalendar;
-        private System.Windows.Forms.CheckBox chkSearchTelNo;
-        private System.Windows.Forms.CheckBox chkSearchIdCardNo;
-        private System.Windows.Forms.CheckBox chkSearchDOB;
         private System.Windows.Forms.CheckBox chkSearchEmail;
         private System.Windows.Forms.CheckBox chkDispEmail;
         private System.Windows.Forms.CheckBox chkDispIdCardNo;
@@ -1187,6 +1099,7 @@
         private System.Windows.Forms.CheckBox chkDispAddress;
         private System.Windows.Forms.CheckBox chkDispSex;
         private System.Windows.Forms.ComboBox cbbUserRole;
+        private System.Windows.Forms.DateTimePicker dateTimeDOB;
 
     }
 }
