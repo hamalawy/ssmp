@@ -29,12 +29,15 @@ namespace SSMP
         private const int DEFAULT_LIMIT = 10;
 
         //
-        private User userEntity;
         private static readonly ILog logger = LogManager.GetLogger(typeof(FrmUser));
+        private User searchEntity;
+        private SearchParam searchParam;
         private IList<User> currentListUser;
+        private List<Int32> listPages;
         private DataSet dataSetUser;
         private int MODE;
         private int updateUserId;
+        
 
         public FrmUser()
         {
@@ -54,7 +57,29 @@ namespace SSMP
         {
             try
             {
-                RefreshGridViewUsers();
+                //Create column of gridview
+                ContructGridViewColumn();
+
+                //Get all user
+                searchParam = new SearchParam();
+                searchParam.Start = DEFAULT_START;
+                searchParam.Limit = DEFAULT_LIMIT;
+                searchParam.SortBy = DEFAULT_SORT_BY;
+                searchParam.SortDir = DEFAULT_SORT_DIR;
+
+                searchEntity = new User();
+
+                SearchResult<User> searchResult = userManager.GetUserListByParam(searchEntity, searchParam);
+                currentListUser = searchResult.SearchList;
+
+                //Binding list user to gridview
+                IList2DataTable(currentListUser, dataSetUser.Tables["User"]);
+
+                //
+                listPages = new List<Int32>();
+                BindingDataToBindingNagivator(searchResult.SearchSize, 0);
+
+                //Binding value for combobox
                 cbbUserTitle.DataSource = userTitleManager.GetAll();
                 cbbUserTitle.DisplayMember = "UserTitleName";
                 cbbUserTitle.ValueMember = "ID";
@@ -79,6 +104,37 @@ namespace SSMP
         }
 
         #region Binding Data
+
+        private void BindingDataToBindingNagivator(int sizeOfList, int position)
+        {
+            int totalPage = 0;
+
+            if (sizeOfList % DEFAULT_LIMIT > 0)
+            {
+                totalPage = (int)sizeOfList / DEFAULT_LIMIT + 1;
+            }
+            else
+            {
+                totalPage = (int)sizeOfList / DEFAULT_LIMIT;
+            }
+
+            logger.Debug("sizeOfList = " + sizeOfList);
+            logger.Debug("totalPage = " + totalPage);
+
+            listPages.Clear();
+
+            for (int i = 0; i < totalPage; i++)
+            {
+                listPages.Add(i);
+            }
+
+            bindingNavigatorUser.BindingSource = new BindingSource(listPages, "");
+            bindingNavigatorUser.BindingSource.Position = position;
+            bindingNavigatorUser.BindingSource.PositionChanged += new EventHandler(BindingSource_PositionChanged);
+
+            //Set total of number user in bindingNavigator
+            toolStripLblTotal.Text = "Tổng số người dùng: " + sizeOfList;
+        }
 
         private void BindingDataToForm(User entity, SearchParam searchParam, int position)
         {
@@ -180,9 +236,118 @@ namespace SSMP
             }
         }
 
+        private void ContructGridViewColumn()
+        {
+            //Create DataTable of User
+            DataTable dataTableUser = new DataTable("User");
+            dataTableUser.Columns.Add("UserId", typeof(int));
+            dataTableUser.Columns.Add("Username", typeof(string));
+            dataTableUser.Columns.Add("FullName", typeof(string));
+            dataTableUser.Columns.Add("Email", typeof(string));
+            dataTableUser.Columns.Add("Birthday", typeof(DateTime));
+            dataTableUser.Columns.Add("IdCardNo", typeof(string));
+            dataTableUser.Columns.Add("Sex", typeof(byte));
+            dataTableUser.Columns.Add("TelNo", typeof(string));
+            dataTableUser.Columns.Add("Address", typeof(string));
+            dataTableUser.Columns.Add("UserTitleId", typeof(int));
+            dataTableUser.Columns.Add("UserTitle", typeof(string));
+            dataTableUser.Columns.Add("UserRoleId", typeof(int));
+            dataTableUser.Columns.Add("UserRole", typeof(string));
+            dataTableUser.Columns.Add("UserStatusId", typeof(int));
+            dataTableUser.Columns.Add("UserStatus", typeof(string));
+            
+            //Create DataSet of User
+            dataSetUser = new DataSet();
+            dataSetUser.Tables.Add(dataTableUser);
+
+            //Config detail of column in grid view
+            gvUser.DataSource = dataSetUser;
+            gvUser.DataMember = "User";
+            gvUser.Columns["UserId"].HeaderText = "Mã người dùng";
+            gvUser.Columns["Username"].HeaderText = "Tên đăng nhập";
+            gvUser.Columns["FullName"].HeaderText = "Họ và tên";
+            gvUser.Columns["Email"].HeaderText = "Email";
+            gvUser.Columns["Birthday"].HeaderText = "Ngày sinh";
+            gvUser.Columns["IdCardNo"].HeaderText = "Số CMT/Passport";
+            gvUser.Columns["Sex"].HeaderText = "Giới tính";
+            gvUser.Columns["TelNo"].HeaderText = "Điện thoại";
+            gvUser.Columns["Address"].HeaderText = "Địa chỉ";
+            gvUser.Columns["UserTitleId"].Visible = false;
+            gvUser.Columns["UserTitle"].HeaderText = "Chức vụ";
+            gvUser.Columns["UserRoleId"].Visible = false;
+            gvUser.Columns["UserRole"].HeaderText = "Nhóm người dùng";
+            gvUser.Columns["UserStatusId"].Visible = false;
+            gvUser.Columns["UserStatus"].HeaderText = "Trạng thái"; 
+        }
+
+        private void IList2DataTable(IList<User> listUser, DataTable dataTableUser)
+        {
+            if (listUser != null)
+            {
+                foreach (User objUser in listUser)
+                {
+                    DataRow rowTemp = dataTableUser.NewRow();
+
+                    rowTemp["UserId"] = objUser.ID;
+                    rowTemp["Username"] = objUser.Username;
+                    rowTemp["FullName"] = objUser.FullName;
+                    rowTemp["Email"] = objUser.Email;
+                    rowTemp["Birthday"] = objUser.Birthday;
+                    rowTemp["IdCardNo"] = objUser.IdCardNo;
+                    rowTemp["Sex"] = objUser.Sex;
+                    rowTemp["TelNo"] = objUser.TelNo;
+                    rowTemp["Address"] = objUser.Address;
+                    rowTemp["UserTitleId"] = objUser.UserTitleIdLookup.ID;
+                    rowTemp["UserTitle"] = objUser.UserTitleIdLookup.UserTitleName;
+                    rowTemp["UserRoleId"] = objUser.UserRoleIdLookup.ID;
+                    rowTemp["UserRole"] = objUser.UserRoleIdLookup.UserRoleName;
+                    rowTemp["UserStatusId"] = objUser.UserStatusIdLookup.ID;
+                    rowTemp["UserStatus"] = objUser.UserStatusIdLookup.UserStatusName;
+
+                    dataTableUser.Rows.Add(rowTemp);
+                }
+            }
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            string strSearch = txtSearch.Text.Trim(); ;
+            searchEntity = new User();
 
+            if (chkSearchUserId.Checked == true)
+            {
+                int idSearch = 0;
+
+                if (Int32.TryParse(strSearch, out idSearch))
+                {
+                    searchEntity = new User(Int32.Parse(strSearch));
+                }
+                else
+                {
+                    searchEntity = new User(-1);
+                }
+            }
+            else
+            {
+                searchEntity = new User();
+            }
+
+            if (chkSearchEmail.Checked == true)
+            {
+                searchEntity.Email = strSearch;
+            }
+
+            if (chkSearchFullname.Checked == true)
+            {
+                searchEntity.FullName = strSearch;
+            }
+
+            if (chkSearchUsername.Checked == true)
+            {
+                searchEntity.Username = strSearch;
+            }
+
+            BindingDataToForm(searchEntity, searchParam, 0);
         }
 
         private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
@@ -223,7 +388,7 @@ namespace SSMP
             searchParam.SortBy = DEFAULT_SORT_BY;
             searchParam.SortDir = DEFAULT_SORT_DIR;
 
-            this.BindingDataToForm(userEntity, searchParam, position);
+            this.BindingDataToForm(searchEntity, searchParam, position);
         }
 
         public void RefreshGridViewUsers()
@@ -241,21 +406,6 @@ namespace SSMP
             bindingNavigatorUser.BindingSource.PositionChanged += new EventHandler(BindingSource_PositionChanged);
         }
 
-
-
-        #endregion
-
-        #region Set DOB
-        private void btnCalendar_Click(object sender, EventArgs e)
-        {
-            FrmCalendar frmCalendar = new FrmCalendar(this);
-            frmCalendar.ShowDialog(this);
-        }
-
-        public void setDOB(string dob)
-        {
-            txtDOB.Text = dob;
-        }
         #endregion
 
         private void btnAddUpdate_Click(object sender, EventArgs e)
@@ -294,7 +444,7 @@ namespace SSMP
                 int valueTitle = (int)cbbUserTitle.SelectedValue;
                 int valueRole = (int)cbbUserRole.SelectedValue;
                 byte valueSex = rdMale.Checked == true ? (byte)1 : (byte)0;
-                DateTime dateDOB = DateTime.Parse(txtDOB.Text.Trim());
+                DateTime dateDOB = dateTimeDOB.Value;
                 string strIdCardNo = txtIdCardNo.Text.Trim();
                 string strTelNo = txtTelNo.Text.Trim();
                 string strEmail = txtEmail.Text.Trim();
@@ -471,11 +621,11 @@ namespace SSMP
         {
             if (chk.Checked)
             {
-                gridView.Columns["" + columnName + ""].Visible = true;
+                gridView.Columns[columnName].Visible = true;
             }
             else
             {
-                gridView.Columns["" + columnName + ""].Visible = false;
+                gridView.Columns[columnName].Visible = false;
             }
         }
 
@@ -497,7 +647,7 @@ namespace SSMP
         private void BindingUserToForm(int rowIndex)
         {
             txtAddress.Text = (string)gvUser.Rows[rowIndex].Cells["Address"].Value;
-            txtDOB.Text = ((DateTime)gvUser.Rows[rowIndex].Cells["Birthday"].Value).ToString(Constants.DATETIME_FORMAT);
+            dateTimeDOB.Value = (DateTime)gvUser.Rows[rowIndex].Cells["Birthday"].Value;
             txtEmail.Text = (string)gvUser.Rows[rowIndex].Cells["Email"].Value;
             txtFullname.Text = (string)gvUser.Rows[rowIndex].Cells["Fullname"].Value;
             txtIdCardNo.Text = (string)gvUser.Rows[rowIndex].Cells["IdCardNo"].Value;
@@ -514,7 +664,7 @@ namespace SSMP
         private void ResetForm()
         {
             txtAddress.ResetText();
-            txtDOB.ResetText();
+            dateTimeDOB.ResetText();
             txtEmail.ResetText();
             txtFullname.ResetText();
             txtIdCardNo.ResetText();
@@ -531,6 +681,42 @@ namespace SSMP
         private void btnClear_Click(object sender, EventArgs e)
         {
             this.ResetForm();
+        }
+
+        private void chkSearchAll_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkSearchAll.Checked == true)
+            {
+                DisplaySearchAll();
+            }
+            else
+            {
+                
+                chkSearchEmail.Checked = false;
+                chkSearchFullname.Checked = false;
+                //chkSearchIdCardNo.Checked = false;
+                //chkSearchTelNo.Checked = false;
+                //chkSearchDOB.Checked = false;
+                chkSearchUserId.Checked = false;
+                chkSearchUsername.Checked = false;
+                //chkSearchUserRole.Checked = false;
+                //chkSearchUserStatus.Checked = false;
+                //chkSearchUserTitle.Checked = false;
+            }
+        }
+
+        private void DisplaySearchAll()
+        {
+            //chkSearchDOB.Checked = true;
+            chkSearchEmail.Checked = true;
+            chkSearchFullname.Checked = true;
+            //chkSearchIdCardNo.Checked = true;
+            //chkSearchTelNo.Checked = true;
+            chkSearchUserId.Checked = true;
+            chkSearchUsername.Checked = true;
+            //chkSearchUserRole.Checked = true;
+            //chkSearchUserStatus.Checked = true;
+            //chkSearchUserTitle.Checked = true;
         }
     }
 }
