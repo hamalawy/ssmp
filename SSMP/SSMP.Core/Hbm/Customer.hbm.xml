@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SSMP.Core" namespace="SSMP.Core.Domain">
     <class name="Customer" table="Customer" >
-    <id name="ID" type="System.Int32" column="CustomersId">
+    <id name="ID" type="System.Int32" column="CustomerId">
         <generator class="identity"/>
     </id>
-    <property name="CustomersName" column="CustomersName" type="System.String" not-null="true" length="100"/>
+    <property name="CustomerName" column="CustomersName" type="System.String" not-null="true" length="100"/>
     <property name="Address" column="Address" type="System.String" not-null="false" length="255"/>
     <property name="Sex" column="Sex" type="System.Byte" not-null="false" />
     <property name="Email" column="Email" type="System.String" not-null="false" length="50"/>
@@ -13,8 +13,8 @@
     <property name="PrivilegePoint" column="PrivilegePoint" type="System.Int32" not-null="false" />
     <property name="TelNo" column="TelNo" type="System.String" not-null="false" length="20"/>
     <bag name="BillSales" table="BillSale" inverse="true" lazy="true" cascade="delete">
-    <key column="CustomersId" />
-    <one-to-many class="BillSale"/>
+      <key column="CustomerId" />
+      <one-to-many class="BillSale"/>
     </bag>
  </class>
 </hibernate-mapping>

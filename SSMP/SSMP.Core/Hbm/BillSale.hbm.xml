@@ -5,7 +5,7 @@
         <generator class="identity"/>
     </id>
     <property name="CreateDate" column="CreateDate" type="System.DateTime" not-null="true" />
-    <property name="CustomersId" column="CustomersId" type="System.Int32" not-null="true" />
+    <property name="CustomerId" column="CustomerId" type="System.Int32" not-null="true" />
     <property name="UserId" column="UserId" type="System.Int32" not-null="true" />
     <bag name="Products" table="Product" inverse="true" lazy="true" cascade="delete">
     <key column="BillSaleId" />

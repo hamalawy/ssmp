@@ -6,9 +6,9 @@
     </id>
     <property name="UnitName" column="UnitName" type="System.String" not-null="true" length="100"/>
     <property name="UnitDesc" column="UnitDesc" type="System.String" not-null="false" length="255"/>
-    <bag name="ProductNames" table="ProductName" inverse="true" lazy="true" cascade="delete">
-    <key column="UnitId" />
-    <one-to-many class="ProductName"/>
+    <bag name="Products" table="Product" inverse="true" lazy="true" cascade="delete">
+      <key column="UnitId" />
+      <one-to-many class="Product"/>
     </bag>
  </class>
 </hibernate-mapping>

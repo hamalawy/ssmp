@@ -9,11 +9,9 @@ namespace SSMP.Core.Domain
     [Serializable]
     public class Unit : DomainObject<System.Int32>
     {
-
-
         private System.String _UnitName;
         private System.String _UnitDesc;
-        private IList<ProductName> _ProductNames = new List<ProductName>();
+        private IList<Product> _Products = new List<Product>();
 
         public Unit()
         {
@@ -24,26 +22,27 @@ namespace SSMP.Core.Domain
             base.ID = id;
         }
 
-         public virtual System.String UnitName {
+         public virtual System.String UnitName 
+         {
              get { return _UnitName; }
              set { _UnitName = value;}
          }
 
-         public virtual System.String UnitDesc {
+         public virtual System.String UnitDesc 
+         {
              get { return _UnitDesc; }
              set { _UnitDesc = value;}
          }
 
-         public virtual IList<ProductName> ProductNames{
-             get { return _ProductNames; }
-             set { _ProductNames = value; }
+         public virtual IList<Product> Products
+         {
+             get { return _Products; }
+             set { _Products = value; }
          }
-
 
         public override int GetHashCode()
         {
             return ID.GetHashCode();
         }
-
      }
 }

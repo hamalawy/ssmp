@@ -13,6 +13,7 @@
     <property name="StatusId" column="StatusId" type="System.Int32" not-null="true" />
     <property name="BillPurchaseId" column="BillPurchaseId" type="System.Int64" not-null="true" />
     <property name="BillSaleId" column="BillSaleId" type="System.Int64" not-null="false" />
+    <property name="UnitId" column="UnitId" type="System.Int32" not-null="true" />
     <many-to-one name="BillPurchaseIdLookup" column="BillPurchaseId" class="BillPurchase"  update="0"  insert="0" />
     <many-to-one name="BillSaleIdLookup" column="BillSaleId" class="BillSale"  update="0"  insert="0" />
  </class>

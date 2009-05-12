@@ -9,8 +9,6 @@ namespace SSMP.Core.Domain
     [Serializable]
     public class Product : DomainObject<System.Int64>
     {
-
-
         private System.DateTime? _MfgDate;
         private System.DateTime? _ExpDate;
         private System.Int32? _ProductNameId;
@@ -20,6 +18,7 @@ namespace SSMP.Core.Domain
         private System.Int32 _StatusId;
         private System.Int64 _BillPurchaseId;
         private System.Int64? _BillSaleId;
+        private System.Int32 _UnitId;
         private BillPurchase _BillPurchaseIdLookup;
         private BillSale _BillSaleIdLookup;
 
@@ -77,6 +76,12 @@ namespace SSMP.Core.Domain
              set { _BillSaleId = value;}
          }
 
+        public virtual System.Int32 UnitId
+        {
+            get { return _UnitId; }
+            set { _UnitId = value; }
+        }
+
          public virtual BillPurchase BillPurchaseIdLookup{
              get { return _BillPurchaseIdLookup; }
              set { _BillPurchaseIdLookup = value;}
@@ -86,7 +91,6 @@ namespace SSMP.Core.Domain
              get { return _BillSaleIdLookup; }
              set { _BillSaleIdLookup = value;}
          }
-
 
         public override int GetHashCode()
         {

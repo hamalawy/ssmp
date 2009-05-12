@@ -11,7 +11,7 @@ namespace SSMP.Core.Domain
     {
 
 
-        private System.String _CustomersName;
+        private System.String _CustomerName;
         private System.String _Address;
         private System.Byte? _Sex;
         private System.String _Email;
@@ -30,9 +30,9 @@ namespace SSMP.Core.Domain
             base.ID = id;
         }
 
-         public virtual System.String CustomersName {
-             get { return _CustomersName; }
-             set { _CustomersName = value;}
+         public virtual System.String CustomerName {
+             get { return _CustomerName; }
+             set { _CustomerName = value;}
          }
 
          public virtual System.String Address {
