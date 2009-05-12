@@ -107,13 +107,13 @@
             this.lblDanhSachHangHo = new System.Windows.Forms.Label();
             this.lblDanhSachPhieuNhapHang = new System.Windows.Forms.Label();
             this.tpBaoCao = new System.Windows.Forms.TabPage();
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.checkBoxNgay = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.checkBoxNgay = new System.Windows.Forms.CheckBox();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tabQuanLyPhieuNhap.SuspendLayout();
             this.tpLapPhieuNhapHangHoa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSach)).BeginInit();
@@ -182,7 +182,7 @@
             this.tpLapPhieuNhapHangHoa.Location = new System.Drawing.Point(4, 22);
             this.tpLapPhieuNhapHangHoa.Name = "tpLapPhieuNhapHangHoa";
             this.tpLapPhieuNhapHangHoa.Padding = new System.Windows.Forms.Padding(3);
-            this.tpLapPhieuNhapHangHoa.Size = new System.Drawing.Size(883, 567);
+            this.tpLapPhieuNhapHangHoa.Size = new System.Drawing.Size(894, 568);
             this.tpLapPhieuNhapHangHoa.TabIndex = 0;
             this.tpLapPhieuNhapHangHoa.Text = "Lập Phiếu nhập Hàng hóa";
             this.tpLapPhieuNhapHangHoa.UseVisualStyleBackColor = true;
@@ -646,7 +646,7 @@
             this.tpQuanLyPhieuNhapHangHoa.Location = new System.Drawing.Point(4, 22);
             this.tpQuanLyPhieuNhapHangHoa.Name = "tpQuanLyPhieuNhapHangHoa";
             this.tpQuanLyPhieuNhapHangHoa.Padding = new System.Windows.Forms.Padding(3);
-            this.tpQuanLyPhieuNhapHangHoa.Size = new System.Drawing.Size(883, 567);
+            this.tpQuanLyPhieuNhapHangHoa.Size = new System.Drawing.Size(894, 568);
             this.tpQuanLyPhieuNhapHangHoa.TabIndex = 1;
             this.tpQuanLyPhieuNhapHangHoa.Text = "Quản lý Phiếu nhập Hàng hóa";
             this.tpQuanLyPhieuNhapHangHoa.UseVisualStyleBackColor = true;
@@ -968,6 +968,65 @@
             this.tpBaoCao.Text = "Báo cáo";
             this.tpBaoCao.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(422, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Đến :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(155, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Từ :";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(698, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(85, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Xem Báo cáo";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker2.Enabled = false;
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(466, 20);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 3;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(198, 20);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 2;
+            // 
+            // checkBoxNgay
+            // 
+            this.checkBoxNgay.AutoSize = true;
+            this.checkBoxNgay.Location = new System.Drawing.Point(21, 25);
+            this.checkBoxNgay.Name = "checkBoxNgay";
+            this.checkBoxNgay.Size = new System.Drawing.Size(127, 17);
+            this.checkBoxNgay.TabIndex = 1;
+            this.checkBoxNgay.Text = "Xem theo ngày  nhập";
+            this.checkBoxNgay.UseVisualStyleBackColor = true;
+            this.checkBoxNgay.CheckedChanged += new System.EventHandler(this.checkBoxNgay_CheckedChanged);
+            // 
             // crystalReportViewer1
             // 
             this.crystalReportViewer1.ActiveViewIndex = -1;
@@ -981,61 +1040,6 @@
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
-            // 
-            // checkBoxNgay
-            // 
-            this.checkBoxNgay.AutoSize = true;
-            this.checkBoxNgay.Location = new System.Drawing.Point(21, 25);
-            this.checkBoxNgay.Name = "checkBoxNgay";
-            this.checkBoxNgay.Size = new System.Drawing.Size(127, 17);
-            this.checkBoxNgay.TabIndex = 1;
-            this.checkBoxNgay.Text = "Xem theo ngày  nhập";
-            this.checkBoxNgay.UseVisualStyleBackColor = true;
-            this.checkBoxNgay.CheckedChanged += new System.EventHandler(this.checkBoxNgay_CheckedChanged);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(198, 20);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 2;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Enabled = false;
-            this.dateTimePicker2.Location = new System.Drawing.Point(466, 20);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(698, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Xem Báo cáo";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(155, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Từ :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(422, 25);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Đến :";
             // 
             // frmNhapHang
             // 
