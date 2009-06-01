@@ -100,16 +100,17 @@ namespace SSMP
 
         public void CapNhatDuLieu(SqlCommand cmd)
         {
-            try
-            {
+            //try
+            //{
                 cmd.Connection = KetNoi();
                 cmd.Connection.Open();
                 cmd.ExecuteNonQuery();
-            }
+            //}
+        /*
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-            }
+            }*/
         }
 
         public void TaiDuLieu(ComboBox cbo, string TenBang, string TruongKhoa, string TruongHienThi)
@@ -358,7 +359,33 @@ namespace SSMP
             return false;
         }
 
+        public DateTime toSQLDateTime(String s)
+        {
+            try
+            {
+                String[] dateTimeS = null;
+                if (s.LastIndexOf("-") > 0)
+                {
+                    dateTimeS = s.Split('-');
+                }
+                else if (s.LastIndexOf("/") > 0)
+                {
+                    dateTimeS = s.Split('/');
+                }
+                return new DateTime(Int32.Parse(dateTimeS[2]), Int32.Parse(dateTimeS[1]), Int32.Parse(dateTimeS[0]));
+            }
+            catch (Exception e) {
+                return new DateTime(1990, 1, 1);
+            }
+        }
 
+        public static void baoLoi(String s) {
+            MessageBox.Show(s, "Báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning) ;
+        }
+
+        public static void thongBao(string s) {
+            MessageBox.Show(s, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
     }
 }
