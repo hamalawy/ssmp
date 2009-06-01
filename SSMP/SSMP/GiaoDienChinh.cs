@@ -320,15 +320,17 @@ namespace SSMP
             {
                 NhapHang = new frmNhapHang();
                 NhapHang.MdiParent = this;
+                NhapHang.setSelectedTab(0);
                 NhapHang.Show();
             }
             if (NhapHang.IsDisposed)
             {
                 NhapHang = new frmNhapHang();
                 NhapHang.MdiParent = this;
+                NhapHang.setSelectedTab(0);
                 NhapHang.Show();
             }
-            NhapHang.setSelectedTab(0);
+            
         }
 
         private void tsmiQuanLyChucVu_Click(object sender, EventArgs e)
@@ -396,15 +398,17 @@ namespace SSMP
             {
                 frmBanHang = new BanHang();
                 frmBanHang.MdiParent = this;
+                frmBanHang.setSelectedTab(0);
                 frmBanHang.Show();
             }
             if (frmBanHang.IsDisposed)
             {
                 frmBanHang = new BanHang();
                 frmBanHang.MdiParent = this;
+                frmBanHang.setSelectedTab(0);
                 frmBanHang.Show();
             }
-            frmBanHang.setSelectedTab(0);
+            
         }
 
         private void tsmiQuanLyPhieuNhapHang_Click(object sender, EventArgs e)
@@ -413,15 +417,17 @@ namespace SSMP
             {
                 NhapHang = new frmNhapHang();
                 NhapHang.MdiParent = this;
+                NhapHang.setSelectedTab(1);
                 NhapHang.Show();
             }
             if (NhapHang.IsDisposed)
             {
                 NhapHang = new frmNhapHang();
                 NhapHang.MdiParent = this;
+                NhapHang.setSelectedTab(1);
                 NhapHang.Show();
             }
-            NhapHang.setSelectedTab(1);
+            
         }
 
         private void tsmiBaoCaoNhapHang_Click(object sender, EventArgs e)
@@ -430,15 +436,17 @@ namespace SSMP
             {
                 NhapHang = new frmNhapHang();
                 NhapHang.MdiParent = this;
+                NhapHang.setSelectedTab(2);
                 NhapHang.Show();
             }
             if (NhapHang.IsDisposed)
             {
                 NhapHang = new frmNhapHang();
                 NhapHang.MdiParent = this;
+                NhapHang.setSelectedTab(2);
                 NhapHang.Show();
             }
-            NhapHang.setSelectedTab(2);
+            
         }
 
         private void tsmiQuanLyHoaDonBanHang_Click(object sender, EventArgs e)
@@ -447,15 +455,17 @@ namespace SSMP
             {
                 frmBanHang = new BanHang();
                 frmBanHang.MdiParent = this;
+                frmBanHang.setSelectedTab(1);
                 frmBanHang.Show();
             }
             if (frmBanHang.IsDisposed)
             {
                 frmBanHang = new BanHang();
                 frmBanHang.MdiParent = this;
+                frmBanHang.setSelectedTab(1);
                 frmBanHang.Show();
             }
-            frmBanHang.setSelectedTab(1);
+            
         }
 
         private void tsmiBaoCaoBanHang_Click(object sender, EventArgs e)
@@ -464,15 +474,17 @@ namespace SSMP
             {
                 frmBanHang = new BanHang();
                 frmBanHang.MdiParent = this;
+                frmBanHang.setSelectedTab(2);
                 frmBanHang.Show();
             }
             if (frmBanHang.IsDisposed)
             {
                 frmBanHang = new BanHang();
                 frmBanHang.MdiParent = this;
+                frmBanHang.setSelectedTab(2);
                 frmBanHang.Show();
             }
-            frmBanHang.setSelectedTab(2);
+            
         }
 
         private void tsmiDangNhap_Click(object sender, EventArgs e)
@@ -531,15 +543,17 @@ namespace SSMP
             {
                 frmBanHang = new BanHang();
                 frmBanHang.MdiParent = this;
+                frmBanHang.setSelectedTab(0);
                 frmBanHang.Show();
             }
             if (frmBanHang.IsDisposed)
             {
                 frmBanHang = new BanHang();
                 frmBanHang.MdiParent = this;
+                frmBanHang.setSelectedTab(0);
                 frmBanHang.Show();
             }
-            frmBanHang.setSelectedTab(0);
+            
         }
 
         private void tsdbNhapHang_Click(object sender, EventArgs e)
@@ -548,15 +562,17 @@ namespace SSMP
             {
                 NhapHang = new frmNhapHang();
                 NhapHang.MdiParent = this;
+                NhapHang.setSelectedTab(0);
                 NhapHang.Show();
             }
             if (NhapHang.IsDisposed)
             {
                 NhapHang = new frmNhapHang();
                 NhapHang.MdiParent = this;
+                NhapHang.setSelectedTab(0);
                 NhapHang.Show();
             }
-            NhapHang.setSelectedTab(0);
+            
         }
 
         private void báoCáoNhậpToolStripMenuItem_Click(object sender, EventArgs e)

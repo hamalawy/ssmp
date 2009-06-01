@@ -66,7 +66,6 @@
             this.cboLoaiSanPham = new System.Windows.Forms.ComboBox();
             this.lblLoaiSanPham = new System.Windows.Forms.Label();
             this.btnXoaCacTruong = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnDuaVaoPhieuNhap = new System.Windows.Forms.Button();
             this.txtGiaMua = new System.Windows.Forms.TextBox();
@@ -91,9 +90,6 @@
             this.checkBoxTenSp = new System.Windows.Forms.CheckBox();
             this.checkBoxMasp = new System.Windows.Forms.CheckBox();
             this.dataGridViewPhieuNhapHAng = new System.Windows.Forms.DataGridView();
-            this.btnTaiLaiTatCaQuanLy = new System.Windows.Forms.Button();
-            this.btnCapNhatQuanLy = new System.Windows.Forms.Button();
-            this.btnXoaQuanLy = new System.Windows.Forms.Button();
             this.gbTimKiemQuanLy = new System.Windows.Forms.GroupBox();
             this.chkNguoiLapPhieu = new System.Windows.Forms.CheckBox();
             this.chkNhacungcap = new System.Windows.Forms.CheckBox();
@@ -135,7 +131,8 @@
             this.tabQuanLyPhieuNhap.Size = new System.Drawing.Size(902, 594);
             this.tabQuanLyPhieuNhap.TabIndex = 0;
             this.tabQuanLyPhieuNhap.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabQuanLyPhieuNhap_Selected);
-            this.tabQuanLyPhieuNhap.Enter += new System.EventHandler(this.tcNhapKhoHangHoa_Enter);
+            this.tabQuanLyPhieuNhap.Enter += new System.EventHandler(this.tabNhapKhoHangHoa_Enter);
+            this.tabQuanLyPhieuNhap.SelectedIndexChanged += new System.EventHandler(this.tabQuanLyPhieuNhap_SelectedIndexChanged);
             // 
             // tpLapPhieuNhapHangHoa
             // 
@@ -165,7 +162,6 @@
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.cboLoaiSanPham);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.lblLoaiSanPham);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.btnXoaCacTruong);
-            this.tpLapPhieuNhapHangHoa.Controls.Add(this.btnXoa);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.btnCapNhat);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.btnDuaVaoPhieuNhap);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.txtGiaMua);
@@ -379,6 +375,8 @@
             // 
             // ngayHetHan
             // 
+            this.ngayHetHan.CustomFormat = "dd/MM/yyyy";
+            this.ngayHetHan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ngayHetHan.Location = new System.Drawing.Point(128, 169);
             this.ngayHetHan.Name = "ngayHetHan";
             this.ngayHetHan.Size = new System.Drawing.Size(200, 20);
@@ -386,6 +384,8 @@
             // 
             // ngaySanXuat
             // 
+            this.ngaySanXuat.CustomFormat = "dd/MM/yyyy";
+            this.ngaySanXuat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ngaySanXuat.Location = new System.Drawing.Point(128, 141);
             this.ngaySanXuat.Name = "ngaySanXuat";
             this.ngaySanXuat.Size = new System.Drawing.Size(200, 20);
@@ -493,21 +493,13 @@
             // 
             // btnXoaCacTruong
             // 
-            this.btnXoaCacTruong.Location = new System.Drawing.Point(675, 255);
+            this.btnXoaCacTruong.Location = new System.Drawing.Point(617, 255);
             this.btnXoaCacTruong.Name = "btnXoaCacTruong";
             this.btnXoaCacTruong.Size = new System.Drawing.Size(88, 23);
             this.btnXoaCacTruong.TabIndex = 80;
             this.btnXoaCacTruong.Text = "Xóa các &trường";
             this.btnXoaCacTruong.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(605, 255);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(64, 23);
-            this.btnXoa.TabIndex = 79;
-            this.btnXoa.Text = "&Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoaCacTruong.Click += new System.EventHandler(this.btnXoaCacTruong_Click);
             // 
             // btnCapNhat
             // 
@@ -636,9 +628,6 @@
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.checkBoxTenSp);
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.checkBoxMasp);
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.dataGridViewPhieuNhapHAng);
-            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.btnTaiLaiTatCaQuanLy);
-            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.btnCapNhatQuanLy);
-            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.btnXoaQuanLy);
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.gbTimKiemQuanLy);
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.dataGridViewHangHoa);
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.lblDanhSachHangHo);
@@ -775,38 +764,10 @@
             this.dataGridViewPhieuNhapHAng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPhieuNhapHAng.Location = new System.Drawing.Point(19, 31);
             this.dataGridViewPhieuNhapHAng.Name = "dataGridViewPhieuNhapHAng";
-            this.dataGridViewPhieuNhapHAng.Size = new System.Drawing.Size(523, 180);
+            this.dataGridViewPhieuNhapHAng.Size = new System.Drawing.Size(523, 209);
             this.dataGridViewPhieuNhapHAng.TabIndex = 8;
             this.dataGridViewPhieuNhapHAng.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPhieuNhapHAng_CellClick);
             this.dataGridViewPhieuNhapHAng.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPhieuNhapHAng_CellContentClick);
-            // 
-            // btnTaiLaiTatCaQuanLy
-            // 
-            this.btnTaiLaiTatCaQuanLy.Location = new System.Drawing.Point(290, 223);
-            this.btnTaiLaiTatCaQuanLy.Name = "btnTaiLaiTatCaQuanLy";
-            this.btnTaiLaiTatCaQuanLy.Size = new System.Drawing.Size(80, 23);
-            this.btnTaiLaiTatCaQuanLy.TabIndex = 7;
-            this.btnTaiLaiTatCaQuanLy.Text = "Tải lại tất cả";
-            this.btnTaiLaiTatCaQuanLy.UseVisualStyleBackColor = true;
-            // 
-            // btnCapNhatQuanLy
-            // 
-            this.btnCapNhatQuanLy.Location = new System.Drawing.Point(376, 223);
-            this.btnCapNhatQuanLy.Name = "btnCapNhatQuanLy";
-            this.btnCapNhatQuanLy.Size = new System.Drawing.Size(75, 23);
-            this.btnCapNhatQuanLy.TabIndex = 6;
-            this.btnCapNhatQuanLy.Text = "&Cập nhật";
-            this.btnCapNhatQuanLy.UseVisualStyleBackColor = true;
-            this.btnCapNhatQuanLy.Click += new System.EventHandler(this.btnCapNhatQuanLy_Click);
-            // 
-            // btnXoaQuanLy
-            // 
-            this.btnXoaQuanLy.Location = new System.Drawing.Point(457, 223);
-            this.btnXoaQuanLy.Name = "btnXoaQuanLy";
-            this.btnXoaQuanLy.Size = new System.Drawing.Size(75, 23);
-            this.btnXoaQuanLy.TabIndex = 5;
-            this.btnXoaQuanLy.Text = "&Xóa";
-            this.btnXoaQuanLy.UseVisualStyleBackColor = true;
             // 
             // gbTimKiemQuanLy
             // 
@@ -905,6 +866,7 @@
             this.btnTimKiemQuanLy.TabIndex = 2;
             this.btnTimKiemQuanLy.Text = "Tìm &kiếm";
             this.btnTimKiemQuanLy.UseVisualStyleBackColor = true;
+            this.btnTimKiemQuanLy.Click += new System.EventHandler(this.btnTimKiemQuanLy_Click);
             // 
             // txtTimKiemQuanLy
             // 
@@ -1080,7 +1042,6 @@
         private System.Windows.Forms.ComboBox cboLoaiSanPham;
         private System.Windows.Forms.Label lblLoaiSanPham;
         private System.Windows.Forms.Button btnXoaCacTruong;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnDuaVaoPhieuNhap;
         private System.Windows.Forms.TextBox txtGiaMua;
@@ -1106,9 +1067,6 @@
         private System.Windows.Forms.CheckBox cbngaytao;
         private System.Windows.Forms.CheckBox chkNhanviengh;
         private System.Windows.Forms.CheckBox chkNguoiLapPhieu;
-        private System.Windows.Forms.Button btnCapNhatQuanLy;
-        private System.Windows.Forms.Button btnXoaQuanLy;
-        private System.Windows.Forms.Button btnTaiLaiTatCaQuanLy;
         private System.Windows.Forms.TabPage tpBaoCao;
         private System.Windows.Forms.TextBox txtNhanVienGiaoHang;
         private System.Windows.Forms.ComboBox cboNhaSanXuat;
