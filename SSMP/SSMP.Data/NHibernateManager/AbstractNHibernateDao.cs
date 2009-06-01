@@ -66,6 +66,7 @@ namespace SSMP.Data
             }
 
             criteria.Add(example);
+            example.EnableLike(MatchMode.Anywhere);
 
             return criteria.List<T>() as List<T>;
         }
