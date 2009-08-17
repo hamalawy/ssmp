@@ -15,7 +15,7 @@ namespace SSMP.Core.Domain
         private System.Int32 _ManId;
         private Category _CategoryIdLookup;
         private Manufacturer _ManIdLookup;
-        private Unit _UnitIdLookup;
+        //private Unit _UnitIdLookup;
         private IList<Product> _Products = new List<Product>();
 
         public ProductName()
@@ -64,11 +64,11 @@ namespace SSMP.Core.Domain
              set { _ManIdLookup = value;}
          }
 
-         public virtual Unit UnitIdLookup
-         {
-             get { return _UnitIdLookup; }
-             set { _UnitIdLookup = value;}
-         }
+         //public virtual Unit UnitIdLookup
+         //{
+         //    get { return _UnitIdLookup; }
+         //    set { _UnitIdLookup = value;}
+         //}
 
          public virtual IList<Product> Products
          {

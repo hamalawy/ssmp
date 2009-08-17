@@ -305,7 +305,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(36, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -347,7 +347,7 @@
             // toolStripLblPage
             // 
             this.toolStripLblPage.Name = "toolStripLblPage";
-            this.toolStripLblPage.Size = new System.Drawing.Size(31, 22);
+            this.toolStripLblPage.Size = new System.Drawing.Size(33, 22);
             this.toolStripLblPage.Text = "Page";
             // 
             // bindingNavigatorPositionItem
@@ -428,7 +428,7 @@
             // 
             this.toolStripLblTotal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLblTotal.Name = "toolStripLblTotal";
-            this.toolStripLblTotal.Size = new System.Drawing.Size(106, 22);
+            this.toolStripLblTotal.Size = new System.Drawing.Size(118, 22);
             this.toolStripLblTotal.Text = "Tổng sồ người dùng:";
             // 
             // gvUser
