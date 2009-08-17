@@ -22,6 +22,14 @@ namespace SSMP.Core.Domain
         private BillPurchase _BillPurchaseIdLookup;
         private BillSale _BillSaleIdLookup;
 
+        private ProductName _ProductNameIdLookup;
+
+
+        private ProductStatus _ProductStatusIdLookup;
+
+        private Unit _UnitIdLookup;
+
+
         public Product()
         {
         }
@@ -29,6 +37,22 @@ namespace SSMP.Core.Domain
         public Product(System.Int64 id)
         {
             base.ID = id;
+        }
+
+        public virtual ProductName ProductNameIdLookup
+        {
+            get { return _ProductNameIdLookup; }
+            set { _ProductNameIdLookup = value; }
+        }
+        public virtual ProductStatus ProductStatusIdLookup
+        {
+            get { return _ProductStatusIdLookup; }
+            set { _ProductStatusIdLookup = value; }
+        }
+        public virtual Unit UnitIdLookup
+        {
+            get { return _UnitIdLookup; }
+            set { _UnitIdLookup = value; }
         }
 
          public virtual System.DateTime? MfgDate {
@@ -91,6 +115,9 @@ namespace SSMP.Core.Domain
              get { return _BillSaleIdLookup; }
              set { _BillSaleIdLookup = value;}
          }
+        
+
+
 
         public override int GetHashCode()
         {

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using SSMP.Core.Domain;
+using SSMP.Core.Utils;
 
 namespace SSMP.Core.DataInterfaces
 {
@@ -11,6 +12,6 @@ namespace SSMP.Core.DataInterfaces
     /// </summary>
     public interface IProductNameDao : IDao<ProductName, System.Int32>
     {
-
+        SearchResult<ProductName> GetProductNameListByParam(ProductName entity, SearchParam searchParam);
     }
 }
