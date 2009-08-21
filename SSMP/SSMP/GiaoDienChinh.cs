@@ -21,7 +21,7 @@ namespace SSMP
         public FrmUser QuanLyNguoiDung;
         public frmQuanLyDonVi QuanLyDonVi;
         public frmDanhMucNhaSanXuat DanhMucNhaSanXuat;
-        public frmQuanLyHanhDong QuanLyHanhDong;
+        public FrmAction frmAction;
         public frmNhapHang NhapHang;
         public BanHang frmBanHang;
         public FrmUserTitle QuanLyChucVu;
@@ -300,17 +300,17 @@ namespace SSMP
 
         private void tsmiQuanLyHanhDong_Click(object sender, EventArgs e)
         {
-            if (QuanLyHanhDong == null)
+            if (frmAction == null)
             {
-                QuanLyHanhDong = new frmQuanLyHanhDong();
-                QuanLyHanhDong.MdiParent = this;
-                QuanLyHanhDong.Show();
+                frmAction = new FrmAction();
+                frmAction.MdiParent = this;
+                frmAction.Show();
             }
-            if (QuanLyHanhDong.IsDisposed)
+            if (frmAction.IsDisposed)
             {
-                QuanLyHanhDong = new frmQuanLyHanhDong();
-                QuanLyHanhDong.MdiParent = this;
-                QuanLyHanhDong.Show();
+                frmAction = new FrmAction();
+                frmAction.MdiParent = this;
+                frmAction.Show();
             }
         }
 
