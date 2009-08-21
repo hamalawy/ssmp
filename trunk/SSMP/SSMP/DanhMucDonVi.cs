@@ -2,225 +2,440 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using SSMP.Data.Manager;
+using SSMP.Core.Domain;
+using SSMP.Core.Utils;
+using log4net;
 
 namespace SSMP
 {
-    public partial class frmQuanLyDonVi : Form
+    public partial class FrmUnit : Form
     {
-        SqlConnection conn;
-        SqlDataAdapter da;
-        SqlCommand cmd;
-        DataSet ds;
-        SqlDataReader dr;
-        HoTro ht;
+        //Manager object
+        private UnitManager unitManager;
 
-        public frmQuanLyDonVi()
+        //Constant variable
+        private const string DEFAULT_SORT_BY = "ID";
+        private const string DEFAULT_SORT_DIR = "ASC";
+        private const int DEFAULT_START = 0;
+        private const int DEFAULT_LIMIT = 10;
+
+        //
+        private static readonly ILog logger = LogManager.GetLogger(typeof(FrmUnit));
+        private Unit searchEntity;
+        private SearchParam searchParam;
+        private DataSet dataSetUnit;
+        private List<Int32> listPages;
+        private bool isAdd;
+
+        public FrmUnit()
         {
             InitializeComponent();
+
+            //
+            unitManager = new UnitManager();
         }
 
-        private void frmQuanLyDonVi_Load(object sender, EventArgs e)
+        private void FrmUnit_Load(object sender, EventArgs e)
         {
-            this.Location = new Point((this.MdiParent.ClientSize.Width-this.Width)/2,(this.MdiParent.ClientSize.Height-this.Height)/2-50);
+            //
+            ContructGridViewColumn();
 
-            ht = new HoTro();
-            conn = ht.KetNoi();
-            string CauLenh = "select "+DanhSachTruong()+" from DonVi";
-            ht.HienThiVaoDataGridView(dgvQuanLy, CauLenh);
+            //Get all user
+            searchParam = new SearchParam();
+            searchParam.Start = DEFAULT_START;
+            searchParam.Limit = DEFAULT_LIMIT;
+            searchParam.SortBy = DEFAULT_SORT_BY;
+            searchParam.SortDir = DEFAULT_SORT_DIR;
+
+            //
+            searchEntity = new Unit();
+
+            //
+            SearchResult<Unit> searchResult = unitManager.GetUnitListByParam(searchEntity, searchParam);
+
+            //Binding list userrole to gridview
+            IList2DataTable(searchResult.SearchList, dataSetUnit.Tables["Unit"]);
+
+            //Binding list to navigator
+            listPages = new List<Int32>();
+            BindingDataToBindingNagivator(searchResult.SearchSize, 0);
+
+            //
+            isAdd = true;
         }
 
-        private string DanhSachTruong()
+        private void ContructGridViewColumn()
         {
-            string dst = "";
-            if (chkTatCaHienThiQuanLy.Checked)
-                dst = "MaDonVi as [Mã Đơn vị], DonVi as [Đơn vị], MoTa as [Mô tả]";
+            //Create DataTable of Unit
+            DataTable dataTableUnit = new DataTable("Unit");
+            dataTableUnit.Columns.Add("UnitId", typeof(int));
+            dataTableUnit.Columns.Add("UnitName", typeof(string));
+            dataTableUnit.Columns.Add("UnitDesc", typeof(string));
+
+            //Create DataSet of Unit
+            dataSetUnit = new DataSet();
+            dataSetUnit.Tables.Add(dataTableUnit);
+
+            //Config detail of column in grid view
+            gvUnit.DataSource = dataSetUnit;
+            gvUnit.DataMember = "Unit";
+            gvUnit.Columns["UnitId"].HeaderText = "Mã đơn vị";
+            gvUnit.Columns["UnitName"].HeaderText = "Tên đơn vị";
+            gvUnit.Columns["UnitDesc"].HeaderText = "Mô tả";
+        }
+
+        private void IList2DataTable(IList<Unit> listUnit, DataTable dataTableUnit)
+        {
+            if (listUnit != null)
+            {
+                dataTableUnit.Clear();
+
+                foreach (Unit objUnit in listUnit)
+                {
+                    DataRow rowTemp = dataTableUnit.NewRow();
+
+                    rowTemp["UnitId"] = objUnit.ID;
+                    rowTemp["UnitName"] = objUnit.UnitName;
+                    rowTemp["UnitDesc"] = objUnit.UnitDesc;
+
+                    dataTableUnit.Rows.Add(rowTemp);
+                }
+            }
+        }
+
+        private void BindingDataToBindingNagivator(int sizeOfList, int position)
+        {
+            int totalPage = 0;
+
+            if (sizeOfList % DEFAULT_LIMIT > 0)
+            {
+                totalPage = (int)sizeOfList / DEFAULT_LIMIT + 1;
+            }
             else
             {
-                dst = "MaDonVi as [Mã Đơn vị]";
-                if (chkDonViHienThiQuanLy.Checked)
-                    dst += ", DonVi as [Đơn vị]";
-                if (chkMoTaHienThiQuanLy.Checked)
-                    dst += ", MoTa as [Mô tả]";
+                totalPage = (int)sizeOfList / DEFAULT_LIMIT;
             }
-            return dst;
+
+            logger.Debug("sizeOfList = " + sizeOfList);
+            logger.Debug("totalPage = " + totalPage);
+
+            listPages.Clear();
+
+            for (int i = 0; i < totalPage; i++)
+            {
+                listPages.Add(i);
+            }
+
+            bindingNavigatorUnit.BindingSource = new BindingSource(listPages, "");
+            bindingNavigatorUnit.BindingSource.Position = position;
+            bindingNavigatorUnit.BindingSource.PositionChanged += new EventHandler(BindingSource_PositionChanged);
+
+            //Set total of number user in bindingNavigator
+            toolStripLblTotal.Text = "Tổng số đơn vị: " + sizeOfList;
         }
 
-        private string DieuKienTimKiem()
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            string Dk = "";
-            if (chkTatCaTimKiemQuanLy.Checked)
-                Dk = " where MaDonVi like '%" + txtTimKiemQuanLy.Text + "%' or DonVi like N'%" + txtTimKiemQuanLy.Text + "%' or MoTa like N'%" + txtTimKiemQuanLy.Text + "%'";
+            if (isAdd)
+            {
+                Unit entity = new Unit();
+                entity.UnitName = txtUnitName.Text.Trim();
+                entity.UnitDesc = txtUnitDesc.Text.Trim();
+
+                unitManager.SaveOrUpdate(entity);
+                RefreshGridView(new Unit());
+                ResetForm();
+                SetFormReadOnly(true);
+            }
             else
             {
-                if (chkMaDonViTimKiemQuanLy.Checked)
-                    Dk += " or MaDonVi like '%" + txtTimKiemQuanLy.Text + "%'";
-                if (chkDonViTimKiemQuanLy.Checked)
-                    Dk += " or DonVi like N'%" + txtTimKiemQuanLy.Text + "%'";
-                if (chkMoTaTimKiemQuanLy.Checked)
-                    Dk += " or MoTa like N'%" + txtTimKiemQuanLy.Text + "%'";
+                Unit entity = new Unit(Int32.Parse(txtUnitID.Text));
+                entity.UnitName = txtUnitName.Text.Trim();
+                entity.UnitDesc = txtUnitDesc.Text.Trim();
 
-                if (Dk.Trim().Length > 0)
-                    Dk = " where " + Dk.Substring(4);
+                unitManager.SaveOrUpdate(entity);
+                RefreshGridView(new Unit());
+                ResetForm();
+                SetFormReadOnly(true);
             }
-            return Dk;
         }
 
-        private void btnTaiLaiToanBoQuanLy_Click(object sender, EventArgs e)
+        #region Binding Navigator Event
+
+        private void toolStripBtnAdd_Click(object sender, EventArgs e)
         {
-            string CauLenh = "select " + DanhSachTruong() + " from DonVi";
-            ht.HienThiVaoDataGridView(dgvQuanLy, CauLenh);
+            isAdd = true;
+            ResetForm();
+            SetFormReadOnly(false);
+            //toolStripBtnEdit.Enabled = false;
+            //toolStripBtnDelete.Enabled = false;
         }
 
-        private void btnTaiLaiQuanLy_Click(object sender, EventArgs e)
+        private void toolStripBtnEdit_Click(object sender, EventArgs e)
         {
-            string CauLenh = "select " + DanhSachTruong() + " from DonVi "+HoTro.DieuKienTaiLai(dgvQuanLy,"MaDonVi");
-            ht.HienThiVaoDataGridView(dgvQuanLy, CauLenh);
+            isAdd = false;
+            SetFormReadOnly(false);
         }
 
-        private void btnDongQuanLy_Click(object sender, EventArgs e)
+        private void toolStripBtnDelete_Click(object sender, EventArgs e)
+        {
+            if (gvUnit.SelectedCells.Count > 0)
+            {
+                int selectedRowIndex = gvUnit.SelectedCells[0].RowIndex;
+                int deleteUnitId = (int)gvUnit.Rows[selectedRowIndex].Cells["UnitId"].Value;
+                string deleteUnitName = (string)gvUnit.Rows[selectedRowIndex].Cells["UnitName"].Value;
+
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa đơn vị [" + deleteUnitName + "] ?", Constants.INFO, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    unitManager.Delete(new Unit(deleteUnitId));
+
+                    //Refresh grid view after delete successfully
+                    RefreshGridView(new Unit());
+                }
+            }
+        }
+
+
+        private void toolStripBtnReload_Click(object sender, EventArgs e)
+        {
+            RefreshGridView(new Unit());
+        }
+
+        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
+        {
+            MoveItem(bindingNavigatorUnit.BindingSource.Position);
+        }
+
+        private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
+        {
+            MoveItem(bindingNavigatorUnit.BindingSource.Position);
+        }
+
+        private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
+        {
+            MoveItem(bindingNavigatorUnit.BindingSource.Position);
+        }
+
+        private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
+        {
+            MoveItem(bindingNavigatorUnit.BindingSource.Position);
+        }
+
+        private void BindingSource_PositionChanged(object sender, EventArgs e)
+        {
+            MoveItem(bindingNavigatorUnit.BindingSource.Position);
+        }
+
+        private void MoveItem(int position)
+        {
+            SearchParam searchParam = new SearchParam();
+            searchParam.Start = bindingNavigatorUnit.BindingSource.Position * DEFAULT_LIMIT;
+            searchParam.Limit = DEFAULT_LIMIT;
+            searchParam.SortBy = DEFAULT_SORT_BY;
+            searchParam.SortDir = DEFAULT_SORT_DIR;
+
+            //this.BindingDataToForm(searchEntity, searchParam, position);
+
+            SearchResult<Unit> searchResult = unitManager.GetUnitListByParam(searchEntity, searchParam);
+
+            //Binding list userrole to gridview
+            IList2DataTable(searchResult.SearchList, dataSetUnit.Tables["Unit"]);
+
+            //
+            BindingDataToBindingNagivator(searchResult.SearchSize, position);
+        }
+
+        #endregion
+
+        private void SetFormReadOnly(bool state)
+        {
+            txtUnitName.ReadOnly = state;
+            txtUnitDesc.ReadOnly = state;
+            btnSave.Enabled = !state;
+            btnReset.Enabled = !state;
+
+            if (state == false && isAdd == true)
+            {
+                toolStripBtnEdit.Enabled = false;
+                toolStripBtnDelete.Enabled = false;
+            }
+            else if (state == true)
+            {
+                toolStripBtnEdit.Enabled = true;
+                toolStripBtnDelete.Enabled = true;
+            }
+        }
+
+        private void ResetForm()
+        {
+            if (isAdd)
+            {
+                txtUnitID.ResetText();
+            }
+
+            txtUnitName.ResetText();
+            txtUnitDesc.ResetText();
+        }
+
+        private void RefreshGridView(Unit searchEntity)
+        {
+            //Get all user
+            searchParam = new SearchParam();
+            searchParam.Start = DEFAULT_START;
+            searchParam.Limit = DEFAULT_LIMIT;
+            searchParam.SortBy = DEFAULT_SORT_BY;
+            searchParam.SortDir = DEFAULT_SORT_DIR;
+
+            //
+            this.searchEntity = searchEntity;
+
+            //
+            SearchResult<Unit> searchResult = unitManager.GetUnitListByParam(searchEntity, searchParam);
+
+            //Binding list userrole to gridview
+            IList2DataTable(searchResult.SearchList, dataSetUnit.Tables["Unit"]);
+
+            //Binding list to navigator
+            listPages = new List<Int32>();
+            BindingDataToBindingNagivator(searchResult.SearchSize, 0);
+        }
+
+        private void gvUnit_SelectionChanged(object sender, EventArgs e)
+        {
+            if (gvUnit.SelectedCells.Count > 0)
+            {
+                int selectedRowIndex = gvUnit.SelectedCells[0].RowIndex;
+                BindingUnitToForm(selectedRowIndex);
+
+                SetFormReadOnly(true);
+            }
+        }
+
+        private void BindingUnitToForm(int rowIndex)
+        {
+            txtUnitID.Text = (int)gvUnit.Rows[rowIndex].Cells["UnitId"].Value + "";
+            txtUnitName.Text = (string)gvUnit.Rows[rowIndex].Cells["UnitName"].Value;
+            txtUnitDesc.Text = (string)gvUnit.Rows[rowIndex].Cells["UnitDesc"].Value;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string strSearch = txtSearch.Text.Trim();
+
+            if (chkSearchUnitID.Checked)
+            {
+                int idSearch = 0;
+
+                if (Int32.TryParse(strSearch, out idSearch))
+                {
+                    searchEntity = new Unit(idSearch);
+                }
+                else
+                {
+                    searchEntity = new Unit(-1);
+                }
+            }
+            else
+            {
+                searchEntity = new Unit();
+            }
+
+            if (chkSearchUnitName.Checked)
+            {
+                searchEntity.UnitName = strSearch;
+            }
+
+            if (chkSearchUnitDesc.Checked)
+            {
+                searchEntity.UnitDesc = strSearch;
+            }
+
+            RefreshGridView(searchEntity);
+        }
+
+        private void chkSearchAll_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkSearchAll.Checked)
+            {
+                chkSearchUnitID.Checked = true;
+                chkSearchUnitName.Checked = true;
+                chkSearchUnitDesc.Checked = true;
+            }
+            else
+            {
+                chkSearchUnitID.Checked = false;
+                chkSearchUnitName.Checked = false;
+                chkSearchUnitDesc.Checked = false;
+            }
+        }
+
+        private void DisplayColumn(DataGridView gridView, CheckBox chk, string columnName)
+        {
+            if (chk.Checked)
+            {
+                gridView.Columns[columnName].Visible = true;
+            }
+            else
+            {
+                gridView.Columns[columnName].Visible = false;
+            }
+        }
+
+        private void chkDispAll_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkDispAll.Checked)
+            {
+                DisplayAllColumn(true);
+            }
+            else
+            {
+                DisplayAllColumn(false);
+            }
+        }
+
+        private void chkDispUnitName_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvUnit, chkDispUnitName, "UnitName");
+        }
+
+        private void chkDispUnitDesc_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvUnit, chkDispUnitDesc, "UnitDesc");
+        }
+
+        private void chkDispUnitID_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvUnit, chkDispUnitID, "UnitID");
+        }
+
+        private void DisplayAllColumn(bool state)
+        {
+            if (state)
+            {
+                //chkDispUnitID.Checked = true;
+                chkDispUnitName.Checked = true;
+                chkDispUnitDesc.Checked = true;
+            }
+            else
+            {
+                //chkDispUnitID.Checked = false;
+                chkDispUnitName.Checked = false;
+                chkDispUnitDesc.Checked = false;
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
-        private void btnTimKiemQuanLy_Click(object sender, EventArgs e)
+        private void btnReset_Click(object sender, EventArgs e)
         {
-            if (txtTimKiemQuanLy.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn chưa nhập vào xâu tìm kiếm!", "Báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtTimKiemQuanLy.Focus();
-                return;
-            }
-
-            if (DieuKienTimKiem().Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn chưa lựa chọn điều kiện tìm kiếm!", "Báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtTimKiemQuanLy.Focus();
-                txtTimKiemQuanLy.SelectAll();
-                return;
-            }
-
-            string CauLenh = "select " + DanhSachTruong() + " from DonVi " + DieuKienTimKiem();
-            ht.HienThiVaoDataGridView(dgvQuanLy, CauLenh);
-        }
-
-        private void dgvQuanLy_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgvQuanLy.Rows[e.RowIndex] == null) return;
-            if (dgvQuanLy.Rows[e.RowIndex].Cells[0].Value == null) return;
-
-            Int32 MaDonVi = (Int32)dgvQuanLy.Rows[e.RowIndex].Cells[0].Value;
-
-            string CauLenh = "select * from DonVi where MaDonVi=" + MaDonVi;
-
-            try
-            {
-                cmd = new SqlCommand(CauLenh, ht.KetNoi());
-                cmd.Connection.Open();
-                dr = cmd.ExecuteReader();
-                if (dr.Read())
-                {
-                    txtMaDonVi.Text = dr.GetInt32(0).ToString();
-                    txtTenDonVi.Text = dr.GetString(1);
-                    txtMoTa.Text = dr.GetString(2);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi đọc dữ liệu trong cơ sở dữ liệu!", "Báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                try
-                {
-                    if (dr != null) dr.Close();
-                    if (cmd != null) cmd.Connection.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi đóng kết nối đến cơ sở dữ liệu!", "Báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        private void btnXoaTrangQuanLy_Click(object sender, EventArgs e)
-        {
-            txtMaDonVi.Text = "";
-            txtTenDonVi.Text = "";
-            txtMoTa.Text = "";
-        }
-
-        private void btnThemQuanLy_Click(object sender, EventArgs e)
-        {
-            //kiem tra ten don vi khac rong
-            if (txtTenDonVi.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn chưa nhập vào tên đơn vị!","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                txtTenDonVi.Focus();
-                return;
-            }
-
-            string CauLenh = "";
-            CauLenh = "insert DonVi(DonVi,MoTa) values(N'"+txtTenDonVi.Text+"',N'"+txtMoTa.Text+"')";
-            //ht.CapNhatDuLieu(CauLenh);
-            CauLenh = "select "+DanhSachTruong()+" from DonVi";
-            ht.HienThiVaoDataGridView(dgvQuanLy,CauLenh);
-        }
-
-        private void dgvQuanLy_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-            int SoDong = 0;
-            SoDong = dgvQuanLy.Rows.Count;
-            if (SoDong > 0)
-                --SoDong;
-            txtTongSoQuanLy.Text = SoDong.ToString();
-        }
-
-        private void btnCapNhatQuanLy_Click(object sender, EventArgs e)
-        {
-            //kiem tra ma don vi khac trong
-            if (txtMaDonVi.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn chưa chọn đơn vị để sửa thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            //kiem tra ten don vi khac rong
-            if (txtTenDonVi.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn chưa nhập vào tên đơn vị!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtTenDonVi.Focus();
-                return;
-            }
-
-            Int32 MaDonVi = Int32.Parse(txtMaDonVi.Text);
-
-            string CauLenh = "";
-            CauLenh = "update DonVi set DonVi=N'" + txtTenDonVi.Text + "',MoTa=N'" + txtMoTa.Text + "' where MaDonVi="+MaDonVi;
-            //ht.CapNhatDuLieu(CauLenh);
-            CauLenh = "select " + DanhSachTruong() + " from DonVi";
-            ht.HienThiVaoDataGridView(dgvQuanLy, CauLenh);
-        }
-
-        private void btnXoaQuanLy_Click(object sender, EventArgs e)
-        {
-            //kiem tra ma don vi khac trong
-            if (txtMaDonVi.Text.Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn chưa chọn đơn vị để sửa thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            Int32 MaDonVi = Int32.Parse(txtMaDonVi.Text);
-
-            string CauLenh = "";
-            CauLenh = "delete DonVi where MaDonVi=" + MaDonVi;
-            //ht.CapNhatDuLieu(CauLenh);
-            CauLenh = "select " + DanhSachTruong() + " from DonVi";
-            ht.HienThiVaoDataGridView(dgvQuanLy, CauLenh);
+            ResetForm();
         }
     }
 }

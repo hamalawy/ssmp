@@ -363,9 +363,9 @@
             this.lblViDuTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblViDuTimKiemQuanLy.Location = new System.Drawing.Point(76, 55);
             this.lblViDuTimKiemQuanLy.Name = "lblViDuTimKiemQuanLy";
-            this.lblViDuTimKiemQuanLy.Size = new System.Drawing.Size(140, 13);
+            this.lblViDuTimKiemQuanLy.Size = new System.Drawing.Size(191, 13);
             this.lblViDuTimKiemQuanLy.TabIndex = 3;
-            this.lblViDuTimKiemQuanLy.Text = "(ví dụ: kế toán, bán hàng...)";
+            this.lblViDuTimKiemQuanLy.Text = "(ví dụ: Đăng nhập, Thêm sản phẩm... )";
             // 
             // btnSearch
             // 
