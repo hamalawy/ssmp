@@ -117,11 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="bindingNavigatorUserTitle.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>16, 5</value>
-  </metadata>
-  <metadata name="bindingNavigatorUserTitle.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>16, 5</value>
+  <metadata name="bindingNavigatorUserStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bindingNavigatorMoveFirstItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -205,21 +202,21 @@
   <data name="toolStripBtnEdit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAx5JREFUOE9VkttP
-        E1kcx0t8wH0wvhr/AH1whXh52EfFoCgmSqKuLhFBCpKoqz54Q41IJMpqohs1Wd0YszEa460rkoK7bZHa
-        lo6I1NJOESi9QYvQQjulczqdy3fPjNi6v+Rzzpw58/vM78xvinQ0ys/31hYvLa5eVKRbR9K6xT8s0RWp
-        97URdICiExXFn4or5rlg7CT7bE9O2/8WW9ts76Y5Evf5Q1JiPotEukCcyyLOEfiiHC50hLHv+nCm4qix
-        +H+Cyqv26dFAROoL5sCERDBhEc6gCHtAQO9oFt3sPLIiYO03YvjRXoy+aoPr/ma47qyq0USbL3bzqYyA
-        gYiEjxGRziL6NYkA61gW/7AZpCIGxCynkXR3AulJzLmfw/pbxZQmqGx3EFUwSAWuCRGDE5Imex/KweYX
-        wAwYMOu9BCHSgdjba+CHXkIK2jB4o5HkBcl5AUNRCR7KUEzGJ00iwuWxYNZzATJvA+8/gsT7o/A9rMer
-        Vr3C3Nq5QhNsu+ogc1TgiylgabKX4onSmTVjdugsZNKHzNgBkHA1OLYZwb+qUNv2Qih0gQoSVDA8pWj4
-        KB8cfyPWf3ohuQYk9AtSnnMYvVuJLwE3ylsdX8tXY8tlB4mnBbD55Ndg35yiZVtBAvXIhvcjSSsZ+WMr
-        nN4wprkcylq+E5S32skM7TdLj9BjfAyvsRmfum5igtmNTKAaCdcZfP6zCgNsSGszR0SUHrMXKihrsZOp
-        VBbeSQVP2zcBXBDD93bB0rwcdvpW6/UKDLhHwNB/w0kFJCdTQW9BsOGYjUSTBLs7s2htLIHQdxsC8zuY
-        to143LQCDU/cqOog2LFARpCowFAQqLZIguBXq4yfy5bhSt0qmNq34/WD47jHRHCHBW57gVseoMEiYl49
-        wqHvBD+d6Mk4PeNKU4+MQ2ZJe0hvkTQO0nW9WUSdSUStujZJCE1E5dUHOtP5LqxtMo2HUhnO6Q3K4zM8
-        xqd5jC0wk85BRf3yaSLBH5qUeZ5Prqzp8uYF65veHC7Vd5vWNP6bKG00kDwN9JpS8g29gazUd839eLDL
-        XFJnrFcF/wHptLhPAhru+gAAAABJRU5ErkJggg==
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAx9JREFUOE9VkttP
+        E1kcx0v2gfVhs6/GP0AfVIiXBx9XDIqyyS6JurpkEaQgifcHb+ySRSJRVhPdqInrZrMxRmO8VZEU1LZI
+        7YURkdrLwEKh0xYoQgvtlM7pdC7fPTNiq7/kc86cOfP7zO/Mb4oMNMp/66st/ra4+qsiwwaSNny97BtD
+        kXZfH0EHqAZJVcdTcdW6wMVOsA925/T9T7G93fF6lidxNsjJicUsEukCcT6LOE8wPM2jpTOCvZdGMhWH
+        zcVfCCovOGdHJyKym8uBCUtgIhL6OQnOkIi+sSx62EVkJcA+YMbInT0Ye9oOzz9b4bm+ukYXbf29R0hl
+        RAxGZbyLSnSWMKBLRNiDWbxgM0hFTYjZTiHp7QLSU1jwPoT9j4oZXVDZ4SKaYIgKPJMShiZlXfYmnINj
+        XAQzaMJ84CzEaCdiry5C8D2GzDkwdLmR5AXJRRG+aRl+ii+m4L0ukeDx2zDvb4EiOCCMH0LizWEM367H
+        k7NGlbn640pdsOOCiyxQwXBMBUuTAxT/NJ1ZK+Z9Z6AQNzLBfSCRavBsM7hbVahtfyQWukAFCSoYmVF1
+        hilvXU8QGzi1lFwDEv4ZKf+vGPurEh9CXpS3uT6Wr8W2cy4ST4tg88nPwD4/Scu2g4TqkY38giStZPTG
+        dvQHIpjlcyhr/UxQ3uYkc7TfLD1Cr/kuAuZmvO++gklmFzKhaiQ8p/Hf31UYZMN6m3kiofSos1BBWauT
+        zKSyCEypuN+xBeA5jNzcCVvzCjjpW+2XKjDoHQVD/41+KiA5hQr6CoLvjjrIdJJgV1cWbY0lEN3XIDJ/
+        gmnfjLtNK9Fwz4uqToIflsiIMhWYCgLNFk0QHLEr+KlsOc7XrYal43s8+/cYbjJRXGeBawHgqh9osElY
+        1I5w4DPBpuO9GbdvXG3qVXDAKusPGW2yzn66rrdKqLNIqNXWFhlcdEpZu68rne/C+ibLRDiV4d3+kDIx
+        J2BiVkBwibl0Dhral08TGUFuUhEEIbmqpjuQF2xsen6w1NhjWdf4MlHaaCJ5Gug1peQTRhNZZexeWLO/
+        21pSZ67XBP8DyKS4O/2rJdkAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="toolStripBtnDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

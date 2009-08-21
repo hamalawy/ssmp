@@ -341,7 +341,7 @@
             this.chkSearchUserStatusName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.chkSearchUserStatusName.Location = new System.Drawing.Point(228, 80);
             this.chkSearchUserStatusName.Name = "chkSearchUserStatusName";
-            this.chkSearchUserStatusName.Size = new System.Drawing.Size(66, 17);
+            this.chkSearchUserStatusName.Size = new System.Drawing.Size(74, 17);
             this.chkSearchUserStatusName.TabIndex = 5;
             this.chkSearchUserStatusName.Text = "Trạng thái";
             this.chkSearchUserStatusName.UseVisualStyleBackColor = true;
@@ -352,7 +352,7 @@
             this.chkSearchUserStatusID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.chkSearchUserStatusID.Location = new System.Drawing.Point(139, 80);
             this.chkSearchUserStatusID.Name = "chkSearchUserStatusID";
-            this.chkSearchUserStatusID.Size = new System.Drawing.Size(83, 17);
+            this.chkSearchUserStatusID.Size = new System.Drawing.Size(88, 17);
             this.chkSearchUserStatusID.TabIndex = 4;
             this.chkSearchUserStatusID.Text = "Mã trạng thái";
             this.chkSearchUserStatusID.UseVisualStyleBackColor = true;
@@ -363,9 +363,9 @@
             this.lblViDuTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblViDuTimKiemQuanLy.Location = new System.Drawing.Point(76, 55);
             this.lblViDuTimKiemQuanLy.Name = "lblViDuTimKiemQuanLy";
-            this.lblViDuTimKiemQuanLy.Size = new System.Drawing.Size(140, 13);
+            this.lblViDuTimKiemQuanLy.Size = new System.Drawing.Size(158, 13);
             this.lblViDuTimKiemQuanLy.TabIndex = 3;
-            this.lblViDuTimKiemQuanLy.Text = "(ví dụ: kế toán, bán hàng...)";
+            this.lblViDuTimKiemQuanLy.Text = "(ví dụ: Hoạt động, Tạm khóa...)";
             // 
             // btnSearch
             // 
@@ -453,7 +453,7 @@
             this.chkDispUserStatusName.AutoSize = true;
             this.chkDispUserStatusName.Location = new System.Drawing.Point(216, 228);
             this.chkDispUserStatusName.Name = "chkDispUserStatusName";
-            this.chkDispUserStatusName.Size = new System.Drawing.Size(66, 17);
+            this.chkDispUserStatusName.Size = new System.Drawing.Size(74, 17);
             this.chkDispUserStatusName.TabIndex = 17;
             this.chkDispUserStatusName.Text = "Trạng thái";
             this.chkDispUserStatusName.UseVisualStyleBackColor = true;
@@ -467,7 +467,7 @@
             this.chkDispUserStatusID.Enabled = false;
             this.chkDispUserStatusID.Location = new System.Drawing.Point(127, 228);
             this.chkDispUserStatusID.Name = "chkDispUserStatusID";
-            this.chkDispUserStatusID.Size = new System.Drawing.Size(83, 17);
+            this.chkDispUserStatusID.Size = new System.Drawing.Size(88, 17);
             this.chkDispUserStatusID.TabIndex = 16;
             this.chkDispUserStatusID.Text = "Mã trạng thái";
             this.chkDispUserStatusID.UseVisualStyleBackColor = true;
@@ -489,7 +489,7 @@
             this.lblDanhSachChucVuQuanLy.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblDanhSachChucVuQuanLy.Location = new System.Drawing.Point(12, 205);
             this.lblDanhSachChucVuQuanLy.Name = "lblDanhSachChucVuQuanLy";
-            this.lblDanhSachChucVuQuanLy.Size = new System.Drawing.Size(142, 13);
+            this.lblDanhSachChucVuQuanLy.Size = new System.Drawing.Size(163, 13);
             this.lblDanhSachChucVuQuanLy.TabIndex = 14;
             this.lblDanhSachChucVuQuanLy.Text = "DANH SÁCH TRẠNG THÁI:";
             // 
@@ -572,7 +572,7 @@
             this.lblChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblChucVu.Location = new System.Drawing.Point(23, 58);
             this.lblChucVu.Name = "lblChucVu";
-            this.lblChucVu.Size = new System.Drawing.Size(50, 13);
+            this.lblChucVu.Size = new System.Drawing.Size(58, 13);
             this.lblChucVu.TabIndex = 2;
             this.lblChucVu.Text = "Trạng thái:";
             // 
@@ -591,7 +591,7 @@
             this.lblMaChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblMaChucVu.Location = new System.Drawing.Point(23, 29);
             this.lblMaChucVu.Name = "lblMaChucVu";
-            this.lblMaChucVu.Size = new System.Drawing.Size(67, 13);
+            this.lblMaChucVu.Size = new System.Drawing.Size(72, 13);
             this.lblMaChucVu.TabIndex = 0;
             this.lblMaChucVu.Text = "Mã trạng thái:";
             // 

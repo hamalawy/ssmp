@@ -13,7 +13,7 @@ namespace SSMP.Data.Manager
     public class UnitManager : IManager<Unit, System.Int32>
     {
         private IUnitDao unitDao;
-        private static readonly ILog logger = LogManager.GetLogger(typeof(UserTitleManager));
+        private static readonly ILog logger = LogManager.GetLogger(typeof(UnitManager));
 
         public UnitManager()
         {
@@ -56,17 +56,77 @@ namespace SSMP.Data.Manager
 
         public Unit SaveOrUpdate(Unit entity)
         {
-            throw new Exception("The method or operation is not implemented.");
+            try
+            {
+                if (entity != null)
+                {
+                    if (entity.ID == 0)
+                    {
+                        unitDao.SaveOrUpdate(entity);
+                    }
+                    else
+                    {
+                        Unit existEntity = unitDao.GetById(entity.ID, false);
+                        existEntity.UnitName = entity.UnitName;
+                        existEntity.UnitDesc = entity.UnitDesc;
+                    }
+
+                    unitDao.CommitChanges();
+                }
+                else
+                {
+                    throw new Exception("User role entity cannot be null");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return entity;
         }
 
         public void Delete(Unit entity)
         {
-            throw new Exception("The method or operation is not implemented.");
+            try
+            {
+                if (entity != null)
+                {
+                    Unit existEntity = unitDao.GetById(entity.ID, false);
+
+                    unitDao.Delete(existEntity);
+                    unitDao.CommitChanges();
+                }
+                else
+                {
+                    throw new Exception("User entity cannot be null");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public SearchResult<Unit> GetByExampleAndPaging(Unit exampleInstance, SearchParam searchParam)
         {
             throw new Exception("The method or operation is not implemented.");
+        }
+
+        public SearchResult<Unit> GetUnitListByParam(Unit entity, SearchParam searchParam)
+        {
+            SearchResult<Unit> searchResult;
+
+            try
+            {
+                searchResult = unitDao.GetUnitListByParam(entity, searchParam);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return searchResult;
         }
 
         #endregion
