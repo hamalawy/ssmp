@@ -10,7 +10,7 @@ using SSMP.Core.DataInterfaces;
 
 namespace SSMP.Data.Manager
 {
-    public class UserStatusManager : IManager<UserStatus, System.Int32> 
+    public class UserStatusManager : IManager<UserStatus, System.Int32>
     {
         private IUserStatusDao userStatusDao;
         private static readonly ILog logger = LogManager.GetLogger(typeof(UserStatusManager));
@@ -56,17 +56,77 @@ namespace SSMP.Data.Manager
 
         public UserStatus SaveOrUpdate(UserStatus entity)
         {
-            throw new Exception("The method or operation is not implemented.");
+            try
+            {
+                if (entity != null)
+                {
+                    if (entity.ID == 0)
+                    {
+                        userStatusDao.SaveOrUpdate(entity);
+                    }
+                    else
+                    {
+                        UserStatus existEntity = userStatusDao.GetById(entity.ID, false);
+                        existEntity.UserStatusName = entity.UserStatusName;
+                        existEntity.UserStatusDesc = entity.UserStatusDesc;
+                    }
+
+                    userStatusDao.CommitChanges();
+                }
+                else
+                {
+                    throw new Exception("User role entity cannot be null");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return entity;
         }
 
         public void Delete(UserStatus entity)
         {
-            throw new Exception("The method or operation is not implemented.");
+            try
+            {
+                if (entity != null)
+                {
+                    UserStatus existEntity = userStatusDao.GetById(entity.ID, false);
+
+                    userStatusDao.Delete(existEntity);
+                    userStatusDao.CommitChanges();
+                }
+                else
+                {
+                    throw new Exception("User entity cannot be null");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public SearchResult<UserStatus> GetByExampleAndPaging(UserStatus exampleInstance, SearchParam searchParam)
         {
             throw new Exception("The method or operation is not implemented.");
+        }
+
+        public SearchResult<UserStatus> GetUserStatusListByParam(UserStatus entity, SearchParam searchParam)
+        {
+            SearchResult<UserStatus> searchResult;
+
+            try
+            {
+                searchResult = userStatusDao.GetUserStatusListByParam(entity, searchParam);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return searchResult;
         }
 
         #endregion
