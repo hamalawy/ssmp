@@ -311,7 +311,7 @@ namespace SSMP
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string strSearch = txtSearch.Text.Trim(); ;
+            string strSearch = txtSearch.Text.Trim();
             searchEntity = new User();
 
             if (chkSearchUserId.Checked == true)

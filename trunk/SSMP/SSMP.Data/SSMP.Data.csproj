@@ -53,6 +53,7 @@
     <Compile Include="Dao\CountryDao.cs" />
     <Compile Include="Dao\CustomerDao.cs" />
     <Compile Include="LogUtils\LogConstants.cs" />
+    <Compile Include="Manager\CountryManager.cs" />
     <Compile Include="Manager\UserStatusManager.cs" />
     <Compile Include="Manager\UserRoleManager.cs" />
     <Compile Include="Manager\IManager.cs" />

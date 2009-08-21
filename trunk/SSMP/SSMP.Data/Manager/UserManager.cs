@@ -126,13 +126,13 @@ namespace SSMP.Data.Manager
             return searchResult;
         }
 
-        public SearchResult<User> GetUserListByParam(User entity, SearchParam searcParam)
+        public SearchResult<User> GetUserListByParam(User entity, SearchParam searchParam)
         {
             SearchResult<User> searchResult;
 
             try
             {
-                searchResult = userDao.GetUserListByParam(entity, searcParam);
+                searchResult = userDao.GetUserListByParam(entity, searchParam);
             }
             catch (Exception ex)
             {

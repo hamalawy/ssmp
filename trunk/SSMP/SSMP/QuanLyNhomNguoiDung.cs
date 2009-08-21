@@ -7,224 +7,437 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
+using SSMP.Data.Manager;
+using SSMP.Core.Domain;
+using SSMP.Core.Utils;
+using log4net;
 
 namespace SSMP
 {
-    public partial class frmQuanLyNhomNguoiDung : Form
+    public partial class FrmUserRole : Form
     {
-        SqlConnection conn;
-        SqlDataAdapter da;
-        SqlDataReader dr;
-        DataSet ds;
-        SqlCommand cmd;
-        HoTro ht;
+        //Manager object
+        private UserRoleManager userRoleManager;
 
-        public frmQuanLyNhomNguoiDung()
+        //Constant variable
+        private const string DEFAULT_SORT_BY = "ID";
+        private const string DEFAULT_SORT_DIR = "ASC";
+        private const int DEFAULT_START = 0;
+        private const int DEFAULT_LIMIT = 10;
+
+        //
+        private static readonly ILog logger = LogManager.GetLogger(typeof(FrmUserRole));
+        private UserRole searchEntity;
+        private SearchParam searchParam;
+        private DataSet dataSetUserRole;
+        private List<Int32> listPages;
+        private bool isAdd;
+
+        public FrmUserRole()
         {
             InitializeComponent();
+
+            //
+            userRoleManager = new UserRoleManager();
         }
 
-        private string DanhSachTruong()
+        private void FrmUserRole_Load(object sender, EventArgs e)
         {
-            string dst = "";
-            if (chkTatCaHienThiQuanLy.Checked)
-                dst = "MaNhomNguoiDung as [Mã Nhóm người dùng], NhomNguoiDung as [Nhóm người dùng], MoTa as [Mô tả]";
+            //
+            ContructGridViewColumn();
+
+            //Get all user
+            searchParam = new SearchParam();
+            searchParam.Start = DEFAULT_START;
+            searchParam.Limit = DEFAULT_LIMIT;
+            searchParam.SortBy = DEFAULT_SORT_BY;
+            searchParam.SortDir = DEFAULT_SORT_DIR;
+
+            //
+            searchEntity = new UserRole();
+
+            //
+            SearchResult<UserRole> searchResult = userRoleManager.GetUserRoleListByParam(searchEntity, searchParam);
+
+            //Binding list userrole to gridview
+            IList2DataTable(searchResult.SearchList, dataSetUserRole.Tables["UserRole"]);
+
+            //Binding list to navigator
+            listPages = new List<Int32>();
+            BindingDataToBindingNagivator(searchResult.SearchSize, 0);
+
+            //
+            isAdd = true;
+        }
+
+        private void ContructGridViewColumn()
+        {
+            //Create DataTable of UserRole
+            DataTable dataTableUserRole = new DataTable("UserRole");
+            dataTableUserRole.Columns.Add("UserRoleId", typeof(int));
+            dataTableUserRole.Columns.Add("UserRoleName", typeof(string));
+            dataTableUserRole.Columns.Add("UserRoleDesc", typeof(string));
+
+            //Create DataSet of UserRole
+            dataSetUserRole = new DataSet();
+            dataSetUserRole.Tables.Add(dataTableUserRole);
+
+            //Config detail of column in grid view
+            gvUserRole.DataSource = dataSetUserRole;
+            gvUserRole.DataMember = "UserRole";
+            gvUserRole.Columns["UserRoleId"].HeaderText = "Mã nhóm người dùng";
+            gvUserRole.Columns["UserRoleName"].HeaderText = "Tên nhóm người dùng";
+            gvUserRole.Columns["UserRoleDesc"].HeaderText = "Mô tả";            
+        }
+
+        private void IList2DataTable(IList<UserRole> listUserRole, DataTable dataTableUserRole)
+        {
+            if (listUserRole != null)
+            {
+                dataTableUserRole.Clear();
+
+                foreach (UserRole objUserRole in listUserRole)
+                {
+                    DataRow rowTemp = dataTableUserRole.NewRow();
+
+                    rowTemp["UserRoleId"] = objUserRole.ID;
+                    rowTemp["UserRoleName"] = objUserRole.UserRoleName;
+                    rowTemp["UserRoleDesc"] = objUserRole.UserRoleDesc;
+
+                    dataTableUserRole.Rows.Add(rowTemp);
+                }
+            }
+        }
+
+        private void BindingDataToBindingNagivator(int sizeOfList, int position)
+        {
+            int totalPage = 0;
+
+            if (sizeOfList % DEFAULT_LIMIT > 0)
+            {
+                totalPage = (int)sizeOfList / DEFAULT_LIMIT + 1;
+            }
             else
             {
-                dst = "MaNhomNguoiDung as [Mã Nhóm người dùng]";
-                if (chkNhomNguoiDungHienThiQuanLy.Checked)
-                    dst += ", NhomNguoiDung as [Nhóm người dùng]";
-                if (chkMoTaHienThiQuanLy.Checked)
-                    dst += ", MoTa as [Mô tả]";
+                totalPage = (int)sizeOfList / DEFAULT_LIMIT;
             }
-            return dst;
+
+            logger.Debug("sizeOfList = " + sizeOfList);
+            logger.Debug("totalPage = " + totalPage);
+
+            listPages.Clear();
+
+            for (int i = 0; i < totalPage; i++)
+            {
+                listPages.Add(i);
+            }
+
+            bindingNavigatorUserRole.BindingSource = new BindingSource(listPages, "");
+            bindingNavigatorUserRole.BindingSource.Position = position;
+            bindingNavigatorUserRole.BindingSource.PositionChanged += new EventHandler(BindingSource_PositionChanged);
+
+            //Set total of number user in bindingNavigator
+            toolStripLblTotal.Text = "Tổng số nhóm người dùng: " + sizeOfList;
         }
 
-        private string DieuKienTimKiem()
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            string Dk = "";
-            if (chkTatCaTimKiemQuanLy.Checked)
-                Dk = " where MaNhomNguoiDung like '%" + txtTimKiemQuanLy.Text + "%' or NhomNguoiDung like N'%" + txtTimKiemQuanLy.Text + "%' or MoTa like N'%" + txtTimKiemQuanLy.Text + "%'";
+            if (isAdd)
+            {
+                UserRole entity = new UserRole();
+                entity.UserRoleName = txtUserRoleName.Text.Trim();
+                entity.UserRoleDesc = txtUserRoleDesc.Text.Trim();
+
+                userRoleManager.SaveOrUpdate(entity);
+                RefreshGridView(new UserRole());
+                ResetForm();
+                SetFormReadOnly(true);
+            }
             else
             {
-                if (chkMaNhomNguoiDungTimKiemQuanLy.Checked)
-                    Dk += " or MaNhomNguoiDung like '%" + txtTimKiemQuanLy.Text + "%'";
-                if (chkNhomNguoiDungTimKiemQuanLy.Checked)
-                    Dk += " or NhomNguoiDung like N'%" + txtTimKiemQuanLy.Text + "%'";
-                if (chkMoTaTimKiemQuanLy.Checked)
-                    Dk += " or MoTa like N'%" + txtTimKiemQuanLy.Text + "%'";
+                UserRole entity = new UserRole(Int32.Parse(txtUserRoleID.Text));
+                entity.UserRoleName = txtUserRoleName.Text.Trim();
+                entity.UserRoleDesc = txtUserRoleDesc.Text.Trim();
 
-                if (Dk.Trim().Length > 0)
-                    Dk = " where " + Dk.Substring(4);
+                userRoleManager.SaveOrUpdate(entity);
+                RefreshGridView(new UserRole());
+                ResetForm();
+                SetFormReadOnly(true);
             }
-            return Dk;
         }
 
-        private void frmQuanLyNhomNguoiDung_Load(object sender, EventArgs e)
+        #region Binding Navigator Event
+
+        private void toolStripBtnAdd_Click(object sender, EventArgs e)
         {
-            this.Location = new Point((this.MdiParent.ClientSize.Width-this.Width)/2,(this.MdiParent.ClientSize.Height-this.Height)/2-50);
-
-            ht = new HoTro();
-            conn = ht.KetNoi();
-
-            string CauLenh = "select "+DanhSachTruong()+" from NhomNguoiDung";
-            ht.HienThiVaoDataGridView(dgvQuanLy, CauLenh);
+            isAdd = true;
+            ResetForm();            
+            SetFormReadOnly(false);
+            //toolStripBtnEdit.Enabled = false;
+            //toolStripBtnDelete.Enabled = false;
         }
 
-        private void btnTaiLaiToanBoQuanLy_Click(object sender, EventArgs e)
+        private void toolStripBtnEdit_Click(object sender, EventArgs e)
         {
-            string CauLenh = "select " + DanhSachTruong() + " from NhomNguoiDung";
-            ht.HienThiVaoDataGridView(dgvQuanLy, CauLenh);
+            isAdd = false;
+            SetFormReadOnly(false);            
         }
 
-        private void btnTaiLaiQuanLy_Click(object sender, EventArgs e)
+        private void toolStripBtnDelete_Click(object sender, EventArgs e)
         {
-            string CauLenh = "select " + DanhSachTruong() + " from NhomNguoiDung " + DieuKienTimKiem();
-            ht.HienThiVaoDataGridView(dgvQuanLy, CauLenh);
-        }
-
-        private void btnTimKiemQuanLy_Click(object sender, EventArgs e)
-        {
-            if (txtTimKiemQuanLy.Text.Trim().Length == 0)
+            if (gvUserRole.SelectedCells.Count > 0)
             {
-                MessageBox.Show("Bạn chưa nhập vào xâu tìm kiếm!", "Báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtTimKiemQuanLy.Focus();
-                return;
-            }
+                int selectedRowIndex = gvUserRole.SelectedCells[0].RowIndex;
+                int deleteUserRoleId = (int)gvUserRole.Rows[selectedRowIndex].Cells["UserRoleId"].Value;
+                string deleteUserRoleName = (string)gvUserRole.Rows[selectedRowIndex].Cells["UserRoleName"].Value;
 
-            if (DieuKienTimKiem().Trim().Length == 0)
-            {
-                MessageBox.Show("Bạn chưa lựa chọn điều kiện tìm kiếm!", "Báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtTimKiemQuanLy.Focus();
-                txtTimKiemQuanLy.SelectAll();
-                return;
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa nhóm người dùng [" + deleteUserRoleName + "] ?", Constants.INFO, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    userRoleManager.Delete(new UserRole(deleteUserRoleId));
+                    
+                    //Refresh grid view after delete successfully
+                    RefreshGridView(new UserRole());
+                }
             }
-
-            string CauLenh = "select " + DanhSachTruong() + " from NhomNguoiDung " + DieuKienTimKiem();
-            ht.HienThiVaoDataGridView(dgvQuanLy, CauLenh);
         }
 
-        private void btnDongQuanLy_Click(object sender, EventArgs e)
+
+        private void toolStripBtnReload_Click(object sender, EventArgs e)
+        {
+            RefreshGridView(new UserRole());
+        }
+
+        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
+        {
+            MoveItem(bindingNavigatorUserRole.BindingSource.Position);
+        }
+
+        private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
+        {
+            MoveItem(bindingNavigatorUserRole.BindingSource.Position);
+        }
+
+        private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
+        {
+            MoveItem(bindingNavigatorUserRole.BindingSource.Position);
+        }
+
+        private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
+        {
+            MoveItem(bindingNavigatorUserRole.BindingSource.Position);
+        }
+
+        private void BindingSource_PositionChanged(object sender, EventArgs e)
+        {
+            MoveItem(bindingNavigatorUserRole.BindingSource.Position);
+        }
+
+        private void MoveItem(int position)
+        {
+            SearchParam searchParam = new SearchParam();
+            searchParam.Start = bindingNavigatorUserRole.BindingSource.Position * DEFAULT_LIMIT;
+            searchParam.Limit = DEFAULT_LIMIT;
+            searchParam.SortBy = DEFAULT_SORT_BY;
+            searchParam.SortDir = DEFAULT_SORT_DIR;
+
+            //this.BindingDataToForm(searchEntity, searchParam, position);
+
+            SearchResult<UserRole> searchResult = userRoleManager.GetUserRoleListByParam(searchEntity, searchParam);
+
+            //Binding list userrole to gridview
+            IList2DataTable(searchResult.SearchList, dataSetUserRole.Tables["UserRole"]);
+
+            //
+            BindingDataToBindingNagivator(searchResult.SearchSize, position);
+        }
+
+        #endregion
+
+        private void SetFormReadOnly(bool state)
+        {
+            txtUserRoleName.ReadOnly = state;
+            txtUserRoleDesc.ReadOnly = state;
+            btnSave.Enabled = !state;
+            btnReset.Enabled = !state;
+
+            if (state == false && isAdd == true)
+            {
+                toolStripBtnEdit.Enabled = false;
+                toolStripBtnDelete.Enabled = false;
+            }
+            else if (state == true)
+            {
+                toolStripBtnEdit.Enabled = true;
+                toolStripBtnDelete.Enabled = true;
+            }
+        }
+
+        private void ResetForm()
+        {
+            if (isAdd)
+            {
+                txtUserRoleID.ResetText();
+            }
+            
+            txtUserRoleName.ResetText();
+            txtUserRoleDesc.ResetText();
+        }
+
+        private void RefreshGridView(UserRole searchEntity)
+        {
+            //Get all user
+            searchParam = new SearchParam();
+            searchParam.Start = DEFAULT_START;
+            searchParam.Limit = DEFAULT_LIMIT;
+            searchParam.SortBy = DEFAULT_SORT_BY;
+            searchParam.SortDir = DEFAULT_SORT_DIR;
+
+            //
+            this.searchEntity = searchEntity;
+
+            //
+            SearchResult<UserRole> searchResult = userRoleManager.GetUserRoleListByParam(searchEntity, searchParam);
+
+            //Binding list userrole to gridview
+            IList2DataTable(searchResult.SearchList, dataSetUserRole.Tables["UserRole"]);
+
+            //Binding list to navigator
+            listPages = new List<Int32>();
+            BindingDataToBindingNagivator(searchResult.SearchSize, 0);
+        }
+
+        private void gvUserRole_SelectionChanged(object sender, EventArgs e)
+        {
+            if (gvUserRole.SelectedCells.Count > 0)
+            {
+                int selectedRowIndex = gvUserRole.SelectedCells[0].RowIndex;
+                BindingUserRoleToForm(selectedRowIndex);
+
+                SetFormReadOnly(true);
+            }
+        }
+
+        private void BindingUserRoleToForm(int rowIndex)
+        {
+            txtUserRoleID.Text = (int)gvUserRole.Rows[rowIndex].Cells["UserRoleId"].Value + "";
+            txtUserRoleName.Text = (string)gvUserRole.Rows[rowIndex].Cells["UserRoleName"].Value;
+            txtUserRoleDesc.Text = (string)gvUserRole.Rows[rowIndex].Cells["UserRoleDesc"].Value;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string strSearch = txtSearch.Text.Trim();            
+
+            if (chkSearchUserRoleID.Checked)
+            {
+                int idSearch = 0;
+
+                if (Int32.TryParse(strSearch, out idSearch))
+                {
+                    searchEntity = new UserRole(idSearch);
+                }
+                else
+                {
+                    searchEntity = new UserRole(-1);
+                }
+            }
+            else
+            {
+                searchEntity = new UserRole();
+            }
+
+            if (chkSearchUserRoleName.Checked)
+            {
+                searchEntity.UserRoleName = strSearch;
+            }
+
+            if (chkSearchUserRoleDesc.Checked)
+            {
+                searchEntity.UserRoleDesc = strSearch;   
+            }
+
+            RefreshGridView(searchEntity);
+        }
+
+        private void chkSearchAll_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkSearchAll.Checked)
+            {
+                chkSearchUserRoleID.Checked = true;
+                chkSearchUserRoleName.Checked = true;
+                chkSearchUserRoleDesc.Checked = true;
+            }
+            else
+            {
+                chkSearchUserRoleID.Checked = false;
+                chkSearchUserRoleName.Checked = false;
+                chkSearchUserRoleDesc.Checked = false;
+            }
+        }
+
+        private void DisplayColumn(DataGridView gridView, CheckBox chk, string columnName)
+        {
+            if (chk.Checked)
+            {
+                gridView.Columns[columnName].Visible = true;
+            }
+            else
+            {
+                gridView.Columns[columnName].Visible = false;
+            }
+        }
+
+        private void chkDispAll_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkDispAll.Checked)
+            {
+                DisplayAllColumn(true);
+            }
+            else
+            {
+                DisplayAllColumn(false);
+            }
+        }
+
+        private void chkDispUserRoleName_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvUserRole, chkDispUserRoleName, "UserRoleName");
+        }
+
+        private void chkDispUserDesc_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvUserRole, chkDispUserRoleDesc, "UserRoleDesc");
+        }
+
+        private void chkDispUserRoleID_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvUserRole, chkDispUserRoleID, "UserRoleID");
+        }
+
+        private void DisplayAllColumn(bool state)
+        {
+            if (state)
+            {
+                //chkDispUserRoleID.Checked = true;
+                chkDispUserRoleName.Checked = true;
+                chkDispUserRoleDesc.Checked = true;
+            }
+            else
+            {
+                //chkDispUserRoleID.Checked = false;
+                chkDispUserRoleName.Checked = false;
+                chkDispUserRoleDesc.Checked = false;
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
-        private void btnThemQuanLy_Click(object sender, EventArgs e)
+        private void btnReset_Click(object sender, EventArgs e)
         {
-            //kiem tra nhom nguoi dung khac rong
-            //if (txtTenNhomNguoiDung.Text.Trim().Length == 0)
-            //{
-            //    MessageBox.Show("Bạn chưa cung cấp nhóm người dùng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    txtTenNhomNguoiDung.Focus();
-            //    return;
-            //}
-
-            //string CauLenh = "";
-            //CauLenh = "insert NhomNguoiDung(NhomNguoiDung,MoTa) values(N'" + txtTenNhomNguoiDung.Text + "',N'" + txtMoTa.Text + "')";
-            //ht.CapNhatDuLieu(CauLenh);
-
-            //CauLenh = "select " + DanhSachTruong() + " from NhomNguoiDung";
-            //ht.HienThiVaoDataGridView(dgvQuanLy, CauLenh);
+            ResetForm();
         }
-
-        private void btnCapNhatQuanLy_Click(object sender, EventArgs e)
-        {
-            //kiem tra ma nhom nguoi dung khac trong
-            //if (txtMaNhomNguoiDung.Text.Trim().Length == 0)
-            //{
-            //    MessageBox.Show("Bạn chưa loại sản phẩm để cập nhật thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-
-            ////kiem tra nhom nguoi dung khac rong
-            //if (txtTenNhomNguoiDung.Text.Trim().Length == 0)
-            //{
-            //    MessageBox.Show("Bạn chưa cung cấp tên loại sản phẩm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    txtTenNhomNguoiDung.Focus();
-            //    return;
-            //}
-
-            //Int32 MaNhomNguoiDung = Int32.Parse(txtMaNhomNguoiDung.Text);
-            //string CauLenh = "";
-            //CauLenh = "update NhomNguoiDung set NhomNguoiDung=N'" + txtTenNhomNguoiDung.Text + "', MoTa=N'" + txtMoTa.Text + "' where MaNhomNguoiDung=" + MaNhomNguoiDung;
-            //ht.CapNhatDuLieu(CauLenh);
-
-            //CauLenh = "select " + DanhSachTruong() + " from NhomNguoiDung";
-            //ht.HienThiVaoDataGridView(dgvQuanLy, CauLenh);
-        }
-
-        private void btnXoaQuanLy_Click(object sender, EventArgs e)
-        {
-            //kiem tra ma loai san pham khac trong
-            //if (txtMaNhomNguoiDung.Text.Trim().Length == 0)
-            //{
-            //    MessageBox.Show("Bạn chưa loại sản phẩm để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-
-            //Int32 MaNhomNguoiDung = Int32.Parse(txtMaNhomNguoiDung.Text);
-            //string CauLenh = "";
-            //CauLenh = "delete NhomNguoiDung where MaNhomNguoiDung=" + MaNhomNguoiDung;
-            //ht.CapNhatDuLieu(CauLenh);
-
-            //CauLenh = "select " + DanhSachTruong() + " from NhomNguoiDung";
-            //ht.HienThiVaoDataGridView(dgvQuanLy, CauLenh);
-        }
-
-        private void dgvQuanLy_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgvQuanLy.Rows[e.RowIndex] == null) return;
-            if (dgvQuanLy.Rows[e.RowIndex].Cells[0].Value == null) return;
-
-            Int32 MaNhomNguoiDung = (Int32)dgvQuanLy.Rows[e.RowIndex].Cells[0].Value;
-
-            string CauLenh = "select * from NhomNguoiDung where MaNhomNguoiDung=" + MaNhomNguoiDung;
-
-            try
-            {
-                cmd = new SqlCommand(CauLenh, ht.KetNoi());
-                cmd.Connection.Open();
-                dr = cmd.ExecuteReader();
-                if (dr.Read())
-                {
-                    txtMaNhomNguoiDung.Text = dr.GetInt32(0).ToString();
-                    txtTenNhomNguoiDung.Text = dr.GetString(1);
-                    txtMoTa.Text = dr.GetString(2);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi đọc dữ liệu trong cơ sở dữ liệu!", "Báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                try
-                {
-                    if (dr != null) dr.Close();
-                    if (cmd != null) cmd.Connection.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi đóng kết nối đến cơ sở dữ liệu!", "Báo lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        private void dgvQuanLy_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-            int SoDong = 0;
-            SoDong = dgvQuanLy.Rows.Count;
-            if (SoDong > 0)
-                --SoDong;
-            txtTongSoQuanLy.Text = SoDong.ToString();
-        }
-
-        private void btnXoaTrangQuanLy_Click(object sender, EventArgs e)
-        {
-            txtMaNhomNguoiDung.Text = "";
-            txtTenNhomNguoiDung.Text = "";
-            txtMoTa.Text = "";
-        }
-
     }
 }

@@ -15,7 +15,7 @@ namespace SSMP
         public FrmConfig frmConfig;
         public frmDoiMatKhau DoiMatKhau;
         public frmDanhMucQuocGia DanhMucQuocGia;
-        public frmQuanLyNhomNguoiDung QuanLyNhomNguoiDung;
+        public FrmUserRole QuanLyNhomNguoiDung;
         public frmDanhMucLoaiSanPham DanhMucLoaiSanPham;
         public frmDanhMucNhaCungCap DanhMucNhaCungCap;
         public FrmUser QuanLyNguoiDung;
@@ -24,7 +24,7 @@ namespace SSMP
         public frmQuanLyHanhDong QuanLyHanhDong;
         public frmNhapHang NhapHang;
         public BanHang frmBanHang;
-        public frmQuanLyChucVu QuanLyChucVu;
+        public FrmUserTitle QuanLyChucVu;
         public frmDanhMucSanPham DanhMucSanPham;
         public DangNhap frmDangNhap;
 
@@ -132,13 +132,13 @@ namespace SSMP
         {
             if (QuanLyNhomNguoiDung == null)
             {
-                QuanLyNhomNguoiDung = new frmQuanLyNhomNguoiDung();
+                QuanLyNhomNguoiDung = new FrmUserRole();
                 QuanLyNhomNguoiDung.MdiParent = this;
                 QuanLyNhomNguoiDung.Show();
             }
             if (QuanLyNhomNguoiDung.IsDisposed)
             {
-                QuanLyNhomNguoiDung = new frmQuanLyNhomNguoiDung();
+                QuanLyNhomNguoiDung = new FrmUserRole();
                 QuanLyNhomNguoiDung.MdiParent = this;
                 QuanLyNhomNguoiDung.Show();
             }
@@ -337,13 +337,13 @@ namespace SSMP
         {
             if (QuanLyChucVu == null)
             {
-                QuanLyChucVu = new frmQuanLyChucVu();
+                QuanLyChucVu = new FrmUserTitle();
                 QuanLyChucVu.MdiParent = this;
                 QuanLyChucVu.Show();
             }
             if (QuanLyChucVu.IsDisposed)
             {
-                QuanLyChucVu = new frmQuanLyChucVu();
+                QuanLyChucVu = new FrmUserTitle();
                 QuanLyChucVu.MdiParent = this;
                 QuanLyChucVu.Show();
             }

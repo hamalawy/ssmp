@@ -56,17 +56,77 @@ namespace SSMP.Data.Manager
 
         public UserRole SaveOrUpdate(UserRole entity)
         {
-            throw new Exception("The method or operation is not implemented.");
+            try
+            {
+                if (entity != null)
+                {
+                    if (entity.ID == 0)
+                    {
+                        userRoleDao.SaveOrUpdate(entity);
+                    }
+                    else
+                    {
+                        UserRole existEntity = userRoleDao.GetById(entity.ID, false);
+                        existEntity.UserRoleName = entity.UserRoleName;
+                        existEntity.UserRoleDesc = entity.UserRoleDesc;
+                    }
+                    
+                    userRoleDao.CommitChanges();
+                }
+                else
+                {
+                    throw new Exception("User role entity cannot be null");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return entity;
         }
 
         public void Delete(UserRole entity)
         {
-            throw new Exception("The method or operation is not implemented.");
+            try
+            {
+                if (entity != null)
+                {
+                    UserRole existEntity = userRoleDao.GetById(entity.ID, false);
+
+                    userRoleDao.Delete(existEntity);
+                    userRoleDao.CommitChanges();
+                }
+                else
+                {
+                    throw new Exception("User entity cannot be null");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public SearchResult<UserRole> GetByExampleAndPaging(UserRole exampleInstance, SearchParam searchParam)
         {
             throw new Exception("The method or operation is not implemented.");
+        }
+
+        public SearchResult<UserRole> GetUserRoleListByParam(UserRole entity, SearchParam searchParam)
+        {
+            SearchResult<UserRole> searchResult;
+
+            try
+            {
+                searchResult = userRoleDao.GetUserRoleListByParam(entity, searchParam);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return searchResult;
         }
 
         #endregion
