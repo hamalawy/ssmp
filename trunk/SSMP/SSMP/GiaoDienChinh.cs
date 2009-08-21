@@ -27,6 +27,7 @@ namespace SSMP
         public FrmUserTitle QuanLyChucVu;
         public frmDanhMucSanPham DanhMucSanPham;
         public DangNhap frmDangNhap;
+        public FrmUserStatus frmUserStatus;
 
         public string MaNguoiDung;
 
@@ -578,6 +579,22 @@ namespace SSMP
         private void báoCáoNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripMenuItemUserStatus_Click(object sender, EventArgs e)
+        {
+            if (frmUserStatus == null)
+            {
+                frmUserStatus = new FrmUserStatus();
+                frmUserStatus.MdiParent = this;
+                frmUserStatus.Show();
+            }
+            if (frmUserStatus.IsDisposed)
+            {
+                frmUserStatus = new FrmUserStatus();
+                frmUserStatus.MdiParent = this;
+                frmUserStatus.Show();
+            }
         }
     }
 }
