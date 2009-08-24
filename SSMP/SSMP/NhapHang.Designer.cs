@@ -418,8 +418,9 @@
             // 
             // cboNguonGoc
             // 
+            this.cboNguonGoc.Enabled = false;
             this.cboNguonGoc.FormattingEnabled = true;
-            this.cboNguonGoc.Location = new System.Drawing.Point(441, 220);
+            this.cboNguonGoc.Location = new System.Drawing.Point(441, 193);
             this.cboNguonGoc.Name = "cboNguonGoc";
             this.cboNguonGoc.Size = new System.Drawing.Size(158, 21);
             this.cboNguonGoc.TabIndex = 102;
@@ -427,7 +428,7 @@
             // lblNguonGoc
             // 
             this.lblNguonGoc.AutoSize = true;
-            this.lblNguonGoc.Location = new System.Drawing.Point(351, 223);
+            this.lblNguonGoc.Location = new System.Drawing.Point(352, 193);
             this.lblNguonGoc.Name = "lblNguonGoc";
             this.lblNguonGoc.Size = new System.Drawing.Size(63, 13);
             this.lblNguonGoc.TabIndex = 101;
@@ -440,6 +441,7 @@
             this.cboNhaSanXuat.Name = "cboNhaSanXuat";
             this.cboNhaSanXuat.Size = new System.Drawing.Size(158, 21);
             this.cboNhaSanXuat.TabIndex = 100;
+            this.cboNhaSanXuat.SelectedIndexChanged += new System.EventHandler(this.cboNhaSanXuat_SelectedIndexChanged);
             // 
             // lblNhaSanXuat
             // 
@@ -602,7 +604,7 @@
             // cboNhaCungCap
             // 
             this.cboNhaCungCap.FormattingEnabled = true;
-            this.cboNhaCungCap.Location = new System.Drawing.Point(441, 185);
+            this.cboNhaCungCap.Location = new System.Drawing.Point(441, 220);
             this.cboNhaCungCap.Name = "cboNhaCungCap";
             this.cboNhaCungCap.Size = new System.Drawing.Size(158, 21);
             this.cboNhaCungCap.TabIndex = 51;
@@ -610,7 +612,7 @@
             // lblNhaCungCap
             // 
             this.lblNhaCungCap.AutoSize = true;
-            this.lblNhaCungCap.Location = new System.Drawing.Point(351, 193);
+            this.lblNhaCungCap.Location = new System.Drawing.Point(346, 220);
             this.lblNhaCungCap.Name = "lblNhaCungCap";
             this.lblNhaCungCap.Size = new System.Drawing.Size(78, 13);
             this.lblNhaCungCap.TabIndex = 50;

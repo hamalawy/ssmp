@@ -54,7 +54,7 @@ namespace SSMP
         private DataSet dataSetProduct;
         private DataSet dataSetProductName;
         private int MODE;
-        private int updateProductId;
+        private Int64 updateProductId;
 
 
         public frmDanhMucSanPham()
@@ -146,9 +146,7 @@ namespace SSMP
                 listPages = new List<Int32>();
                 listPagesProductName = new List<Int32>();
                 BindingDataToBindingNagivator(searchResult.SearchSize, 0);
-                BindingDataToBindingNagivatorProductName(searchResultProductName.SearchSize, 0);
-
-                
+                BindingDataToBindingNagivatorProductName(searchResultProductName.SearchSize, 0);                
 
                 //Binding value for combobox
                 comboBoxTenSanPham.DataSource = productNameManager.GetAll();
@@ -182,6 +180,15 @@ namespace SSMP
                 cboTrangThai.DataSource = productStatusManager.GetAll();
                 cboTrangThai.DisplayMember = "StatusName";
                 cboTrangThai.ValueMember = "ID";
+
+                int khoa = Int32.Parse(cboTenSanPham.SelectedValue.ToString());
+                ProductName productName = productNameManager.GetById(khoa, true);
+                cboLoaiSanPham.SelectedValue = productName.CategoryIdLookup.ID;
+                cboNhaSanXuat.SelectedValue = productName.ManIdLookup.ID;
+                Manufacturer man = manufacturerManager.GetById(productName.ManIdLookup.ID, true);
+                cboNguonGoc.SelectedValue = man.CountryIdLookup.ID;
+
+
                 //Display all column in gridview
                 DisplayAll();
             }
@@ -558,9 +565,7 @@ namespace SSMP
             searchParam.Limit = DEFAULT_LIMIT;
             searchParam.SortBy = DEFAULT_SORT_BY;
             searchParam.SortDir = DEFAULT_SORT_DIR;
-
             this.BindingDataToForm(entity, searchParam, 0);
-
             bindingNavigatorProduct.BindingSource.PositionChanged += new EventHandler(BindingSource_PositionChanged);
         }
 
@@ -570,11 +575,11 @@ namespace SSMP
         {/*
             try
             {
-                Product userEntity;
+                Product productEntity;
 
                 if (MODE == Constants.MODE.ADD)
                 {
-                    userEntity = new Product();
+                    productEntity = new Product();
                 }
                 else if (MODE == Constants.MODE.UPDATE)
                 {
@@ -588,11 +593,11 @@ namespace SSMP
                         }
                     }
 
-                    userEntity = currentListProduct[idxInList];
+                    productEntity = currentListProduct[idxInList];
                 }
                 else
                 {
-                    userEntity = new Product();
+                    productEntity = new Product();
                 }
 
                 string strFullname = txtFullname.Text.Trim();
@@ -614,30 +619,30 @@ namespace SSMP
                 }
                 else
                 {
-                    userEntity.FullName = strFullname;
-                    userEntity.Productname = strProductname;
-                    userEntity.Password = new HoTro().DoiSangMaMD5(strPassword);
-                    userEntity.ProductTitleId = valueTitle;
-                    userEntity.ProductRoleId = valueRole;
-                    userEntity.ProductStatusId = DBConstants.Product.ACTIVE;
-                    userEntity.Sex = valueSex;
-                    userEntity.Birthday = dateDOB;
-                    userEntity.IdCardNo = strIdCardNo;
-                    userEntity.TelNo = strTelNo;
-                    userEntity.Email = strEmail;
-                    userEntity.Address = strAddress;
+                    productEntity.FullName = strFullname;
+                    productEntity.Productname = strProductname;
+                    productEntity.Password = new HoTro().DoiSangMaMD5(strPassword);
+                    productEntity.ProductTitleId = valueTitle;
+                    productEntity.ProductRoleId = valueRole;
+                    productEntity.ProductStatusId = DBConstants.Product.ACTIVE;
+                    productEntity.Sex = valueSex;
+                    productEntity.Birthday = dateDOB;
+                    productEntity.IdCardNo = strIdCardNo;
+                    productEntity.TelNo = strTelNo;
+                    productEntity.Email = strEmail;
+                    productEntity.Address = strAddress;
 
                     //Do save new entity
-                    productManager.SaveOrUpdate(userEntity);
+                    productManager.SaveOrUpdate(productEntity);
 
                     //Show message success
                     if (MODE == Constants.MODE.ADD)
                     {
-                        MessageBox.Show("Tạo mới người dùng [" + userEntity.ID + " ] thành công", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Tạo mới người dùng [" + productEntity.ID + " ] thành công", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else if (MODE == Constants.MODE.UPDATE)
                     {
-                        MessageBox.Show("Cập nhật người dùng [" + userEntity.ID + " ] thành công", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Cập nhật người dùng [" + productEntity.ID + " ] thành công", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         MODE = Constants.MODE.ADD;
                         btnAddUpdate.Text = "Thêm";
                         this.ResetForm();
@@ -799,73 +804,53 @@ namespace SSMP
             //chkDispIdCardNo.Checked = true;
         }
 
+        private void BindingProductNameToForm(int rowIndex)
+        {
+            try
+            {
+                txtId.Text = (Int32)gvSanPham.Rows[rowIndex].Cells["ProductNameId"].Value + "";
+                comboBoxTenSanPham.Text = (string)gvSanPham.Rows[rowIndex].Cells["ProdName"].Value + "";
+                ProductName prdName = productNameManager.GetById(Int32.Parse(txtId.Text), true);
+                comboBoxLoaiSanPham.SelectedValue = prdName.CategoryIdLookup.ID;
+                txtMoTaQuanLySanPham.Text = (string)gvSanPham.Rows[rowIndex].Cells["ProdDesc"].Value + "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+            }
+        }
+
         private void BindingProductToForm(int rowIndex)
         {
+            try
+            {
+                textBoxMaSanPham.Text = (Int64)gvSanPhamDanhMuc.Rows[rowIndex].Cells["ProductId"].Value + "";
+                if (!gvSanPhamDanhMuc.Rows[rowIndex].Cells["SalePrice"].Value.ToString().Equals(""))
+                    textBoxGiaBan.Text = (string)gvSanPhamDanhMuc.Rows[rowIndex].Cells["SalePrice"].Value + "";
+                else textBoxGiaBan.Text = "";
+                if (!gvSanPhamDanhMuc.Rows[rowIndex].Cells["Discount"].Value.ToString().Equals(""))
+                    textBoxGiamGia.Text = (string)gvSanPhamDanhMuc.Rows[rowIndex].Cells["Discount"].Value + "";
+                else textBoxGiamGia.Text = "";
+                textBoxGiaMua.Text = (string)gvSanPhamDanhMuc.Rows[rowIndex].Cells["PurchasePrice"].Value + "";
+                Object productNameId = gvSanPhamDanhMuc.Rows[rowIndex].Cells["ProductNameId"].Value;
+                cboTenSanPham.SelectedValue = productNameId;
+                cboTrangThai.SelectedValue = gvSanPhamDanhMuc.Rows[rowIndex].Cells["StatusId"].Value;
+                cboDonVi.SelectedValue = gvSanPhamDanhMuc.Rows[rowIndex].Cells["UnitId"].Value;
+                dateTimePickerSx.Value = (DateTime)gvSanPhamDanhMuc.Rows[rowIndex].Cells["MfgDate"].Value;
+                dateTimePickerHetHan.Value = (DateTime)gvSanPhamDanhMuc.Rows[rowIndex].Cells["ExpDate"].Value;
 
-            textBoxMaSanPham.Text = (Int64)gvSanPhamDanhMuc.Rows[rowIndex].Cells["ProductId"].Value + "";
-            //textBoxMota.Text = (string)gvSanPhamDanhMuc.Rows[rowIndex].Cells["ProductId"].Value + "";
+                ProductName prdName = productNameManager.GetById((int)productNameId, true);
+                cboLoaiSanPham.SelectedValue = prdName.CategoryIdLookup.ID;
+                int manId = prdName.ManIdLookup.ID;
+                cboNhaSanXuat.SelectedValue = manId;
 
-            if (!gvSanPhamDanhMuc.Rows[rowIndex].Cells["SalePrice"].Value.ToString().Equals(""))
-                textBoxGiaBan.Text = (string)gvSanPhamDanhMuc.Rows[rowIndex].Cells["SalePrice"].Value + "";
-            else textBoxGiaBan.Text = "";
-            if (!gvSanPhamDanhMuc.Rows[rowIndex].Cells["Discount"].Value.ToString().Equals(""))
-                textBoxGiamGia.Text = (string)gvSanPhamDanhMuc.Rows[rowIndex].Cells["Discount"].Value + "";
-            else textBoxGiamGia.Text = "";
-            textBoxGiaMua.Text = (string)gvSanPhamDanhMuc.Rows[rowIndex].Cells["PurchasePrice"].Value + "";
-            Object productNameId = gvSanPhamDanhMuc.Rows[rowIndex].Cells["ProductNameId"].Value ; 
-            cboTenSanPham.SelectedValue = productNameId;
-            cboTrangThai.SelectedValue = gvSanPhamDanhMuc.Rows[rowIndex].Cells["StatusId"].Value;
-            cboDonVi.SelectedValue = gvSanPhamDanhMuc.Rows[rowIndex].Cells["UnitId"].Value;
-            //cboLoaiSanPham.SelectedValue = gvSanPhamDanhMuc.Rows[rowIndex].Cells["ProductRoleId"].Value;
-            //cboNguonGoc.SelectedValue = gvSanPhamDanhMuc.Rows[rowIndex].Cells["ProductRoleId"].Value;
-            //cboNhaSanXuat.SelectedValue = gvSanPhamDanhMuc.Rows[rowIndex].Cells["ProductRoleId"].Value;
-
-            dateTimePickerSx.Value = (DateTime)gvSanPhamDanhMuc.Rows[rowIndex].Cells["MfgDate"].Value;
-            dateTimePickerHetHan.Value = (DateTime)gvSanPhamDanhMuc.Rows[rowIndex].Cells["ExpDate"].Value;
-
-            ProductName prdName = productNameManager.GetById((int)productNameId, true);
-            cboLoaiSanPham.SelectedValue = prdName.CategoryIdLookup.ID;
-            int manId = prdName.ManIdLookup.ID;
-            cboNhaSanXuat.SelectedValue = manId;
-
-            Manufacturer manu = manufacturerManager.GetById(manId, false);
-            cboNguonGoc.SelectedValue = manu.CountryIdLookup.ID;
-
-            /*
-            rowTemp["ProductId"] = objProduct.ID;
-            rowTemp["MfgDate"] = objProduct.MfgDate;
-            rowTemp["ExpDate"] = objProduct.ExpDate;
-            rowTemp["ProductNameId"] = objProduct.ProductNameIdLookup.ID;
-            rowTemp["ProdName"] = objProduct.ProductNameIdLookup.ProdName;
-            rowTemp["PurchasePrice"] = objProduct.PurchasePrice;
-            rowTemp["SalePrice"] = objProduct.SalePrice;
-            rowTemp["Discount"] = objProduct.Discount;
-            rowTemp["StatusId"] = objProduct.ProductStatusIdLookup.ID;
-            rowTemp["Status"] = objProduct.ProductStatusIdLookup.StatusName;
-            rowTemp["BillPurchaseId"] = objProduct.BillPurchaseId;
-            if (objProduct.BillSaleId != null) rowTemp["BillSaleId"] = objProduct.BillSaleId;
-            rowTemp["UnitId"] = objProduct.UnitIdLookup.ID;
-            rowTemp["Unit"] = objProduct.UnitIdLookup.UnitName;
-            dataTableProduct.Rows.Add(rowTemp);
-            */
-            /*
-             gvSanPhamDanhMuc.Rows[selectedRowIndex].Cells["ProductId"].Value;
-
-            txtAddress.Text = (string)gvSanPhamDanhMuc.Rows[rowIndex].Cells["Address"].Value;
-            dateTimeDOB.Value = (DateTime)gvSanPhamDanhMuc.Rows[rowIndex].Cells["Birthday"].Value;
-            txtEmail.Text = (string)gvSanPhamDanhMuc.Rows[rowIndex].Cells["Email"].Value;
-            txtFullname.Text = (string)gvSanPhamDanhMuc.Rows[rowIndex].Cells["Fullname"].Value;
-            txtIdCardNo.Text = (string)gvSanPhamDanhMuc.Rows[rowIndex].Cells["IdCardNo"].Value;
-            txtTelNo.Text = (string)gvSanPhamDanhMuc.Rows[rowIndex].Cells["TelNo"].Value;
-            txtProductId.Text = (int)gvSanPhamDanhMuc.Rows[rowIndex].Cells["ProductId"].Value + "";
-            txtProductname.Text = (string)gvSanPhamDanhMuc.Rows[rowIndex].Cells["Productname"].Value;
-            cbbProductRole.SelectedValue = gvSanPhamDanhMuc.Rows[rowIndex].Cells["ProductRoleId"].Value;
-            cbbProductStatus.SelectedValue = gvSanPhamDanhMuc.Rows[rowIndex].Cells["ProductStatusId"].Value;
-            cbbProductTitle.SelectedValue = gvSanPhamDanhMuc.Rows[rowIndex].Cells["ProductTitleId"].Value;
-            rdMale.Checked = (byte)gvSanPhamDanhMuc.Rows[rowIndex].Cells["Sex"].Value == 1 ? true : false;
-            rdFemale.Checked = (byte)gvSanPhamDanhMuc.Rows[rowIndex].Cells["Sex"].Value == 0 ? true : false;
-            */
-
+                Manufacturer manu = manufacturerManager.GetById(manId, false);
+                cboNguonGoc.SelectedValue = manu.CountryIdLookup.ID;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+            }
         }
 
         private void ResetForm()
@@ -1016,48 +1001,110 @@ namespace SSMP
 
         private void btnThemQuanLy_Click(object sender, EventArgs e)
         {
-            //if (!KiemTraDuLieu()) return;
+            try
+            {
+                Product productEntity;
 
-            //string CauLenh = "";
+                if (MODE == Constants.MODE.ADD)
+                {
+                    productEntity = new Product();
+                }
+                else if (MODE == Constants.MODE.UPDATE)
+                {
+                    int idxInList = -1;
 
-            ////cap nhat du lieu trong bang SanPham
-            //CauLenh = "insert SanPham(TenSanPham,MaLoaiSanPham,MoTa) values(N'" + txtTenSanPham.Text + "'," + cboLoaiSanPham.SelectedValue.ToString() + ",N'" + txtMoTa.Text + "')";
-            //ht.CapNhatDuLieu(CauLenh);
+                    foreach (Product objProduct in currentListProduct)
+                    {
+                        if (objProduct.ID == updateProductId)
+                        {
+                            idxInList = currentListProduct.IndexOf(objProduct);
+                        }
+                    }
 
-            //Int32 MaSanPham = 0;
-            //MaSanPham = ht.LayGiaTriTruongKhoaVuaChen("SanPham", "MaSanPham");
+                    productEntity = currentListProduct[idxInList];
+                }
+                else
+                {
+                    productEntity = new Product();
+                }
+                int IdName = (int) cboTenSanPham.SelectedValue ;
+                DateTime ngaySX = dateTimePickerSx.Value;
+                DateTime ngayHH = dateTimePickerHetHan.Value;
+                String giaMua = textBoxGiaMua.Text;
+                String giaBan = textBoxGiaBan.Text;
+                int giamGia = 0;
+                int donViId = (int) cboDonVi.SelectedValue;
+                int trangThaiId = (int)cboTrangThai.SelectedValue;
+                try
+                {
+                    Int64.Parse(giaMua);
+                    Int64.Parse(giaBan);
+                    giamGia = Int32.Parse(textBoxGiamGia.Text);
+                }
+                catch (Exception ex) {
+                    MessageBox.Show("Giá nhập không đúng. Vui lòng nhập lại", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                productEntity.ProductNameId = IdName;
+                productEntity.MfgDate = ngaySX;
+                productEntity.ExpDate = ngayHH;
+                productEntity.PurchasePrice = giaMua;
+                productEntity.SalePrice = giaBan;
+                productEntity.Discount = giamGia;
+                productEntity.UnitId = donViId;
+                productEntity.StatusId = trangThaiId;
 
-            //Int32 MaDonVi=0, MaQuocGia=0, MaNhaSanXuat=0;
-            //MaDonVi = (Int32)cboDonVi.SelectedValue;
-            //MaQuocGia = (Int32)cboNguonGoc.SelectedValue;
-            //MaNhaSanXuat = (Int32)cboNhaSanXuat.SelectedValue;
+                //Do save new entity
+                MessageBox.Show("11:" + productEntity.ID);
+                productManager.SaveOrUpdate(productEntity);
+                MessageBox.Show("22");
+                //Show message success
+                if (MODE == Constants.MODE.ADD)
+                {
+                    MessageBox.Show("Thêm sản phẩm [" + productEntity.ID + " ] thành công", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (MODE == Constants.MODE.UPDATE)
+                {
+                    MessageBox.Show("Cập nhật sản phẩm [" + productEntity.ID + " ] thành công", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MODE = Constants.MODE.ADD;
+                    btnThemQuanLy.Text = "&Thêm mới";
+                    this.ResetForm();
+                }
 
-            //CauLenh = "insert ChiTietSanPham(MaSanPham,MaDonVi,MaQuocGia,MaNhaSanXuat) values(" + MaSanPham + "," + MaDonVi + "," + MaQuocGia + "," + MaNhaSanXuat + ")";
-            //ht.CapNhatDuLieu(CauLenh);
+                //Refresh grid view after insert successfully
+                this.RefreshGridViewProducts();
+                
+            }
+            catch (Exception ex)
+            {
+                logger.Debug(ex.Message);
+                logger.Debug(ex.StackTrace);
+                MessageBox.Show(ex.Message);
+            }
 
-            //CauLenh = "select SanPham.MaSanPham as [Mã sản phẩm], SanPham.TenSanPham as [Tên sản phẩm], LoaiSanPham.LoaiSanPham as [Loại sản phẩm], DonVi.DonVi as [Đơn vị], QuocGia.QuocGia as [Quốc gia], NhaSanXuat.TenNhaSanXuat [Nhà sản xuất], SanPham.MoTa as [Mô tả] from SanPham, LoaiSanPham, DonVi, QuocGia, NhaSanXuat, ChiTietSanPham where (SanPham.MaLoaiSanPham=LoaiSanPham.MaLoaiSanPham) and (SanPham.MaSanPham=ChiTietSanPham.MaSanPham) and (QuocGia.MaQuocGia=ChiTietSanPham.MaQuocGia)and (DonVi.MaDonVi=ChiTietSanPham.MaDonVi) and (NhaSanXuat.MaNhaSanXuat=ChiTietSanPham.MaNhaSanXuat)";
-            //ht.HienThiVaoDataGridView(dgvQuanLy, CauLenh);
+            
         }
 
         private void dgvQuanLy_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            //textBoxMaSanPham.Text = gvSanPhamDanhMuc.Rows[e.RowIndex].Cells[0].Value.ToString();
-            //textBoxMota.Text = gvSanPhamDanhMuc.Rows[e.RowIndex].Cells[6].Value.ToString();
-
             if (gvSanPhamDanhMuc.SelectedCells.Count > 0)
             {
-                btnThemQuanLy.TextAlign = ContentAlignment.MiddleRight;
-                btnThemQuanLy.Text = "&Cập Nhật";
-                btnThemQuanLy.ImageIndex = 2;
-                int selectedRowIndex = gvSanPhamDanhMuc.SelectedCells[0].RowIndex;
-                BindingProductToForm(selectedRowIndex);
-            }
+                try
+                {
+                    btnThemQuanLy.TextAlign = ContentAlignment.MiddleRight;
+                    btnThemQuanLy.Text = "&Cập Nhật";
+                    btnThemQuanLy.ImageIndex = 2;
+                    int selectedRowIndex = gvSanPhamDanhMuc.SelectedCells[0].RowIndex;
+                    BindingProductToForm(selectedRowIndex);
+                    MODE = Constants.MODE.UPDATE;
+                    updateProductId = (Int64)gvSanPhamDanhMuc.Rows[selectedRowIndex].Cells["ProductId"].Value;
 
-            ////txtTenSanPham.Text = gvSanPhamDanhMuc.Rows[e.RowIndex].Cells[1].Value.ToString();
-            //cboLoaiSanPham.SelectedIndex = cboLoaiSanPham.FindStringExact(gvSanPhamDanhMuc.Rows[e.RowIndex].Cells[2].Value.ToString());
-            //cboDonVi.SelectedIndex = cboDonVi.FindStringExact(gvSanPhamDanhMuc.Rows[e.RowIndex].Cells[3].Value.ToString());
-            //cboNguonGoc.SelectedIndex = cboNguonGoc.FindStringExact(gvSanPhamDanhMuc.Rows[e.RowIndex].Cells[4].Value.ToString());
-            //cboNhaSanXuat.SelectedIndex = cboNhaSanXuat.FindStringExact(gvSanPhamDanhMuc.Rows[e.RowIndex].Cells[5].Value.ToString());
+                }
+                catch (Exception ex) {
+                    MessageBox.Show(ex.Message);
+                }
+                
+            }
         }
 
         private void btnCapNhatQuanLy_Click(object sender, EventArgs e)
@@ -1103,21 +1150,26 @@ namespace SSMP
             textBoxGiaMua.Text = "";
             textBoxMota.Text = "";
             
-            cboTenSanPham.SelectedIndex = -1;
-            cboTrangThai.SelectedIndex = -1;
-            cboDonVi.SelectedIndex = -1;
-            cboLoaiSanPham.SelectedIndex = -1;
-            cboNguonGoc.SelectedIndex = -1;
-            cboNhaSanXuat.SelectedIndex = -1;
-
-            
+            cboTenSanPham.SelectedIndex = 0;
+            cboTrangThai.SelectedIndex = 0;
+            cboDonVi.SelectedIndex = 0;
+  
+            MODE = Constants.MODE.ADD;
+            updateProductId = 0;
         }
 
         private void btnTaiLaiQuanLy_Click(object sender, EventArgs e)
         {
-            string CauLenh = "";
-            CauLenh = "select SanPham.MaSanPham as [Mã sản phẩm], SanPham.TenSanPham as [Tên sản phẩm], LoaiSanPham.LoaiSanPham as [Loại sản phẩm], DonVi.DonVi as [Đơn vị], QuocGia.QuocGia as [Quốc gia], NhaSanXuat.TenNhaSanXuat [Nhà sản xuất], SanPham.MoTa as [Mô tả] from SanPham, LoaiSanPham, DonVi, QuocGia, NhaSanXuat, ChiTietSanPham where (SanPham.MaLoaiSanPham=LoaiSanPham.MaLoaiSanPham) and (SanPham.MaSanPham=ChiTietSanPham.MaSanPham) and (QuocGia.MaQuocGia=ChiTietSanPham.MaQuocGia)and (DonVi.MaDonVi=ChiTietSanPham.MaDonVi) and (NhaSanXuat.MaNhaSanXuat=ChiTietSanPham.MaNhaSanXuat)";
-            ht.HienThiVaoDataGridView(gvSanPhamDanhMuc, CauLenh);
+            searchEntity = new Product();
+            SearchResult<Product> searchResult = productManager.GetProductListByParam(searchEntity, searchParam);
+            currentListProduct = searchResult.SearchList;
+
+            //Binding list product to gridview
+            dataSetProduct.Clear();
+            IList2DataTable(currentListProduct, dataSetProduct.Tables["Product"]);
+
+            listPages = new List<Int32>();
+            BindingDataToBindingNagivator(searchResult.SearchSize, 0);
         }
 
         private void btnDongQuanLy_Click_1(object sender, EventArgs e)
@@ -1159,6 +1211,47 @@ namespace SSMP
         private void bindingNavigatorMoveNextItem_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void gvSanPhamDanhMuc_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void cboLoaiSanPham_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cboTenSanPham_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                int khoa = Int32.Parse(cboTenSanPham.SelectedValue.ToString());
+                ProductName productName = productNameManager.GetById(khoa, true);
+                cboLoaiSanPham.SelectedValue = productName.CategoryIdLookup.ID;
+                cboNhaSanXuat.SelectedValue = productName.ManIdLookup.ID;
+                Manufacturer man = manufacturerManager.GetById(productName.ManIdLookup.ID, true) ;
+                cboNguonGoc.SelectedValue = man.CountryIdLookup.ID;
+            }
+            catch (Exception ex) {
+                // MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void gvSanPham_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (gvSanPham.SelectedCells.Count > 0)
+            {
+                btnThemQuanLySanPham.TextAlign = ContentAlignment.MiddleRight;
+                btnThemQuanLySanPham.Text = "&Cập Nhật";
+                btnThemQuanLySanPham.ImageIndex = 2;
+                int selectedRowIndex = gvSanPham.SelectedCells[0].RowIndex;
+                BindingProductNameToForm(selectedRowIndex);
+               // MODE = Constants.MODE.UPDATE;
+                //updateProductId = (Int64)gvSanPhamDanhMuc.Rows[selectedRowIndex].Cells["ProductId"].Value;
+            }
         }
     }
 }
