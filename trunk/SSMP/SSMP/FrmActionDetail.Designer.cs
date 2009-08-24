@@ -1,6 +1,6 @@
 ﻿namespace SSMP
 {
-    partial class FrmCategory
+    partial class FrmActionDetail
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategory));
-            this.tcQuanLyCategory = new System.Windows.Forms.TabControl();
-            this.tpQuanLyCategory = new System.Windows.Forms.TabPage();
-            this.bindingNavigatorCategory = new System.Windows.Forms.BindingNavigator(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmActionDetail));
+            this.tcQuanLyActionDetail = new System.Windows.Forms.TabControl();
+            this.tpQuanLyActionDetail = new System.Windows.Forms.TabPage();
+            this.panelActionDetail = new System.Windows.Forms.Panel();
+            this.bindingNavigatorActionDetail = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -48,13 +49,12 @@
             this.toolStripBtnEdit = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripLblTotal = new System.Windows.Forms.ToolStripLabel();
-            this.panelCategory = new System.Windows.Forms.Panel();
-            this.gvCategory = new System.Windows.Forms.DataGridView();
+            this.gvActionDetail = new System.Windows.Forms.DataGridView();
             this.gbTimKiemQuanLy = new System.Windows.Forms.GroupBox();
             this.chkSearchAll = new System.Windows.Forms.CheckBox();
-            this.chkSearchCategoryDesc = new System.Windows.Forms.CheckBox();
-            this.chkSearchCategoryName = new System.Windows.Forms.CheckBox();
-            this.chkSearchCategoryID = new System.Windows.Forms.CheckBox();
+            this.chkSearchActionDetailDesc = new System.Windows.Forms.CheckBox();
+            this.chkSearchActionDetailName = new System.Windows.Forms.CheckBox();
+            this.chkSearchActionDetailID = new System.Windows.Forms.CheckBox();
             this.lblViDuTimKiemQuanLy = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -62,68 +62,77 @@
             this.btnInAnQuanLy = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.chkDispAll = new System.Windows.Forms.CheckBox();
-            this.chkDispCategoryDesc = new System.Windows.Forms.CheckBox();
-            this.chkDispCategoryName = new System.Windows.Forms.CheckBox();
-            this.chkDispCategoryID = new System.Windows.Forms.CheckBox();
+            this.chkDispActionDetailDesc = new System.Windows.Forms.CheckBox();
+            this.chkDispActionDetailName = new System.Windows.Forms.CheckBox();
+            this.chkDispActionDetailID = new System.Windows.Forms.CheckBox();
             this.lblHienThiQuanLy = new System.Windows.Forms.Label();
-            this.lblDanhSachCategoryQuanLy = new System.Windows.Forms.Label();
-            this.gbThongTinCategory = new System.Windows.Forms.GroupBox();
+            this.lblDanhSachActionDetailQuanLy = new System.Windows.Forms.Label();
+            this.gbThongTinActionDetail = new System.Windows.Forms.GroupBox();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txtCategoryDesc = new System.Windows.Forms.TextBox();
+            this.txtActionDetailDesc = new System.Windows.Forms.TextBox();
             this.lblMoTa = new System.Windows.Forms.Label();
-            this.txtCategoryName = new System.Windows.Forms.TextBox();
-            this.lblCategory = new System.Windows.Forms.Label();
-            this.txtCategoryID = new System.Windows.Forms.TextBox();
-            this.lblMaCategory = new System.Windows.Forms.Label();
-            this.tcQuanLyCategory.SuspendLayout();
-            this.tpQuanLyCategory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorCategory)).BeginInit();
-            this.bindingNavigatorCategory.SuspendLayout();
-            this.panelCategory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvCategory)).BeginInit();
+            this.txtActionDetailName = new System.Windows.Forms.TextBox();
+            this.lblActionDetail = new System.Windows.Forms.Label();
+            this.txtActionDetailID = new System.Windows.Forms.TextBox();
+            this.lblMaActionDetail = new System.Windows.Forms.Label();
+            this.tcQuanLyActionDetail.SuspendLayout();
+            this.tpQuanLyActionDetail.SuspendLayout();
+            this.panelActionDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorActionDetail)).BeginInit();
+            this.bindingNavigatorActionDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvActionDetail)).BeginInit();
             this.gbTimKiemQuanLy.SuspendLayout();
-            this.gbThongTinCategory.SuspendLayout();
+            this.gbThongTinActionDetail.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tcQuanLyCategory
+            // tcQuanLyActionDetail
             // 
-            this.tcQuanLyCategory.Controls.Add(this.tpQuanLyCategory);
-            this.tcQuanLyCategory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tcQuanLyCategory.Location = new System.Drawing.Point(0, 0);
-            this.tcQuanLyCategory.Name = "tcQuanLyCategory";
-            this.tcQuanLyCategory.SelectedIndex = 0;
-            this.tcQuanLyCategory.Size = new System.Drawing.Size(826, 560);
-            this.tcQuanLyCategory.TabIndex = 0;
+            this.tcQuanLyActionDetail.Controls.Add(this.tpQuanLyActionDetail);
+            this.tcQuanLyActionDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcQuanLyActionDetail.Location = new System.Drawing.Point(0, 0);
+            this.tcQuanLyActionDetail.Name = "tcQuanLyActionDetail";
+            this.tcQuanLyActionDetail.SelectedIndex = 0;
+            this.tcQuanLyActionDetail.Size = new System.Drawing.Size(826, 560);
+            this.tcQuanLyActionDetail.TabIndex = 0;
             // 
-            // tpQuanLyCategory
+            // tpQuanLyActionDetail
             // 
-            this.tpQuanLyCategory.Controls.Add(this.panelCategory);
-            this.tpQuanLyCategory.Controls.Add(this.gbTimKiemQuanLy);
-            this.tpQuanLyCategory.Controls.Add(this.btnInAnQuanLy);
-            this.tpQuanLyCategory.Controls.Add(this.btnClose);
-            this.tpQuanLyCategory.Controls.Add(this.chkDispAll);
-            this.tpQuanLyCategory.Controls.Add(this.chkDispCategoryDesc);
-            this.tpQuanLyCategory.Controls.Add(this.chkDispCategoryName);
-            this.tpQuanLyCategory.Controls.Add(this.chkDispCategoryID);
-            this.tpQuanLyCategory.Controls.Add(this.lblHienThiQuanLy);
-            this.tpQuanLyCategory.Controls.Add(this.lblDanhSachCategoryQuanLy);
-            this.tpQuanLyCategory.Controls.Add(this.gbThongTinCategory);
-            this.tpQuanLyCategory.Location = new System.Drawing.Point(4, 22);
-            this.tpQuanLyCategory.Name = "tpQuanLyCategory";
-            this.tpQuanLyCategory.Padding = new System.Windows.Forms.Padding(3);
-            this.tpQuanLyCategory.Size = new System.Drawing.Size(818, 534);
-            this.tpQuanLyCategory.TabIndex = 0;
-            this.tpQuanLyCategory.Text = "Quản lý Loại sản phẩm";
-            this.tpQuanLyCategory.UseVisualStyleBackColor = true;
+            this.tpQuanLyActionDetail.Controls.Add(this.panelActionDetail);
+            this.tpQuanLyActionDetail.Controls.Add(this.gbTimKiemQuanLy);
+            this.tpQuanLyActionDetail.Controls.Add(this.btnInAnQuanLy);
+            this.tpQuanLyActionDetail.Controls.Add(this.btnClose);
+            this.tpQuanLyActionDetail.Controls.Add(this.chkDispAll);
+            this.tpQuanLyActionDetail.Controls.Add(this.chkDispActionDetailDesc);
+            this.tpQuanLyActionDetail.Controls.Add(this.chkDispActionDetailName);
+            this.tpQuanLyActionDetail.Controls.Add(this.chkDispActionDetailID);
+            this.tpQuanLyActionDetail.Controls.Add(this.lblHienThiQuanLy);
+            this.tpQuanLyActionDetail.Controls.Add(this.lblDanhSachActionDetailQuanLy);
+            this.tpQuanLyActionDetail.Controls.Add(this.gbThongTinActionDetail);
+            this.tpQuanLyActionDetail.Location = new System.Drawing.Point(4, 22);
+            this.tpQuanLyActionDetail.Name = "tpQuanLyActionDetail";
+            this.tpQuanLyActionDetail.Padding = new System.Windows.Forms.Padding(3);
+            this.tpQuanLyActionDetail.Size = new System.Drawing.Size(818, 534);
+            this.tpQuanLyActionDetail.TabIndex = 0;
+            this.tpQuanLyActionDetail.Text = "Quản lý Dấu vết";
+            this.tpQuanLyActionDetail.UseVisualStyleBackColor = true;
             // 
-            // bindingNavigatorCategory
+            // panelActionDetail
             // 
-            this.bindingNavigatorCategory.AddNewItem = null;
-            this.bindingNavigatorCategory.CountItem = this.bindingNavigatorCountItem;
-            this.bindingNavigatorCategory.DeleteItem = null;
-            this.bindingNavigatorCategory.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigatorCategory.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.panelActionDetail.Controls.Add(this.bindingNavigatorActionDetail);
+            this.panelActionDetail.Controls.Add(this.gvActionDetail);
+            this.panelActionDetail.Location = new System.Drawing.Point(15, 253);
+            this.panelActionDetail.Name = "panelActionDetail";
+            this.panelActionDetail.Size = new System.Drawing.Size(787, 267);
+            this.panelActionDetail.TabIndex = 27;
+            // 
+            // bindingNavigatorActionDetail
+            // 
+            this.bindingNavigatorActionDetail.AddNewItem = null;
+            this.bindingNavigatorActionDetail.CountItem = this.bindingNavigatorCountItem;
+            this.bindingNavigatorActionDetail.DeleteItem = null;
+            this.bindingNavigatorActionDetail.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigatorActionDetail.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -139,15 +148,15 @@
             this.toolStripBtnEdit,
             this.toolStripBtnDelete,
             this.toolStripLblTotal});
-            this.bindingNavigatorCategory.Location = new System.Drawing.Point(0, 242);
-            this.bindingNavigatorCategory.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bindingNavigatorCategory.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bindingNavigatorCategory.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bindingNavigatorCategory.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bindingNavigatorCategory.Name = "bindingNavigatorCategory";
-            this.bindingNavigatorCategory.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigatorCategory.Size = new System.Drawing.Size(787, 25);
-            this.bindingNavigatorCategory.TabIndex = 28;
+            this.bindingNavigatorActionDetail.Location = new System.Drawing.Point(0, 242);
+            this.bindingNavigatorActionDetail.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bindingNavigatorActionDetail.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bindingNavigatorActionDetail.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bindingNavigatorActionDetail.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bindingNavigatorActionDetail.Name = "bindingNavigatorActionDetail";
+            this.bindingNavigatorActionDetail.PositionItem = this.bindingNavigatorPositionItem;
+            this.bindingNavigatorActionDetail.Size = new System.Drawing.Size(787, 25);
+            this.bindingNavigatorActionDetail.TabIndex = 14;
             // 
             // bindingNavigatorCountItem
             // 
@@ -224,6 +233,7 @@
             this.toolStripBtnReload.Name = "toolStripBtnReload";
             this.toolStripBtnReload.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtnReload.ToolTipText = "Tải lại";
+            this.toolStripBtnReload.Click += new System.EventHandler(this.toolStripBtnReload_Click);
             // 
             // toolStripSeparator1
             // 
@@ -233,29 +243,35 @@
             // toolStripBtnAdd
             // 
             this.toolStripBtnAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnAdd.Enabled = false;
             this.toolStripBtnAdd.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnAdd.Image")));
             this.toolStripBtnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnAdd.Name = "toolStripBtnAdd";
             this.toolStripBtnAdd.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtnAdd.ToolTipText = "Thêm mới";
+            this.toolStripBtnAdd.Click += new System.EventHandler(this.toolStripBtnAdd_Click);
             // 
             // toolStripBtnEdit
             // 
             this.toolStripBtnEdit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnEdit.Enabled = false;
             this.toolStripBtnEdit.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnEdit.Image")));
             this.toolStripBtnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnEdit.Name = "toolStripBtnEdit";
             this.toolStripBtnEdit.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtnEdit.ToolTipText = "Sửa";
+            this.toolStripBtnEdit.Click += new System.EventHandler(this.toolStripBtnEdit_Click);
             // 
             // toolStripBtnDelete
             // 
             this.toolStripBtnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripBtnDelete.Enabled = false;
             this.toolStripBtnDelete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripBtnDelete.Image")));
             this.toolStripBtnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripBtnDelete.Name = "toolStripBtnDelete";
             this.toolStripBtnDelete.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtnDelete.ToolTipText = "Xóa";
+            this.toolStripBtnDelete.Click += new System.EventHandler(this.toolStripBtnDelete_Click);
             // 
             // toolStripLblTotal
             // 
@@ -265,45 +281,36 @@
             this.toolStripLblTotal.Size = new System.Drawing.Size(79, 22);
             this.toolStripLblTotal.Text = "Tổng số dòng: ";
             // 
-            // panelCategory
+            // gvActionDetail
             // 
-            this.panelCategory.Controls.Add(this.bindingNavigatorCategory);
-            this.panelCategory.Controls.Add(this.gvCategory);
-            this.panelCategory.Location = new System.Drawing.Point(15, 253);
-            this.panelCategory.Name = "panelCategory";
-            this.panelCategory.Size = new System.Drawing.Size(787, 267);
-            this.panelCategory.TabIndex = 27;
-            // 
-            // gvCategory
-            // 
-            this.gvCategory.AllowUserToAddRows = false;
-            this.gvCategory.AllowUserToDeleteRows = false;
-            this.gvCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvCategory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gvCategory.Location = new System.Drawing.Point(0, 0);
-            this.gvCategory.MultiSelect = false;
-            this.gvCategory.Name = "gvCategory";
-            this.gvCategory.ReadOnly = true;
-            this.gvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvCategory.Size = new System.Drawing.Size(787, 282);
-            this.gvCategory.TabIndex = 13;
-            this.gvCategory.SelectionChanged += new System.EventHandler(this.gvCategory_SelectionChanged);
+            this.gvActionDetail.AllowUserToAddRows = false;
+            this.gvActionDetail.AllowUserToDeleteRows = false;
+            this.gvActionDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gvActionDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvActionDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gvActionDetail.Location = new System.Drawing.Point(0, 0);
+            this.gvActionDetail.MultiSelect = false;
+            this.gvActionDetail.Name = "gvActionDetail";
+            this.gvActionDetail.ReadOnly = true;
+            this.gvActionDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gvActionDetail.Size = new System.Drawing.Size(787, 267);
+            this.gvActionDetail.TabIndex = 13;
+            this.gvActionDetail.SelectionChanged += new System.EventHandler(this.gvActionDetail_SelectionChanged);
             // 
             // gbTimKiemQuanLy
             // 
             this.gbTimKiemQuanLy.Controls.Add(this.chkSearchAll);
-            this.gbTimKiemQuanLy.Controls.Add(this.chkSearchCategoryDesc);
-            this.gbTimKiemQuanLy.Controls.Add(this.chkSearchCategoryName);
-            this.gbTimKiemQuanLy.Controls.Add(this.chkSearchCategoryID);
+            this.gbTimKiemQuanLy.Controls.Add(this.chkSearchActionDetailDesc);
+            this.gbTimKiemQuanLy.Controls.Add(this.chkSearchActionDetailName);
+            this.gbTimKiemQuanLy.Controls.Add(this.chkSearchActionDetailID);
             this.gbTimKiemQuanLy.Controls.Add(this.lblViDuTimKiemQuanLy);
             this.gbTimKiemQuanLy.Controls.Add(this.btnSearch);
             this.gbTimKiemQuanLy.Controls.Add(this.txtSearch);
             this.gbTimKiemQuanLy.Controls.Add(this.lblTimKiemQuanLy);
             this.gbTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gbTimKiemQuanLy.Location = new System.Drawing.Point(384, 6);
+            this.gbTimKiemQuanLy.Location = new System.Drawing.Point(363, 6);
             this.gbTimKiemQuanLy.Name = "gbTimKiemQuanLy";
-            this.gbTimKiemQuanLy.Size = new System.Drawing.Size(418, 191);
+            this.gbTimKiemQuanLy.Size = new System.Drawing.Size(439, 191);
             this.gbTimKiemQuanLy.TabIndex = 26;
             this.gbTimKiemQuanLy.TabStop = false;
             this.gbTimKiemQuanLy.Text = "TÌM KIẾM:";
@@ -320,38 +327,38 @@
             this.chkSearchAll.UseVisualStyleBackColor = true;
             this.chkSearchAll.CheckedChanged += new System.EventHandler(this.chkSearchAll_CheckedChanged);
             // 
-            // chkSearchCategoryDesc
+            // chkSearchActionDetailDesc
             // 
-            this.chkSearchCategoryDesc.AutoSize = true;
-            this.chkSearchCategoryDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkSearchCategoryDesc.Location = new System.Drawing.Point(356, 80);
-            this.chkSearchCategoryDesc.Name = "chkSearchCategoryDesc";
-            this.chkSearchCategoryDesc.Size = new System.Drawing.Size(53, 17);
-            this.chkSearchCategoryDesc.TabIndex = 6;
-            this.chkSearchCategoryDesc.Text = "Mô tả";
-            this.chkSearchCategoryDesc.UseVisualStyleBackColor = true;
+            this.chkSearchActionDetailDesc.AutoSize = true;
+            this.chkSearchActionDetailDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.chkSearchActionDetailDesc.Location = new System.Drawing.Point(310, 80);
+            this.chkSearchActionDetailDesc.Name = "chkSearchActionDetailDesc";
+            this.chkSearchActionDetailDesc.Size = new System.Drawing.Size(53, 17);
+            this.chkSearchActionDetailDesc.TabIndex = 6;
+            this.chkSearchActionDetailDesc.Text = "Mô tả";
+            this.chkSearchActionDetailDesc.UseVisualStyleBackColor = true;
             // 
-            // chkSearchCategoryName
+            // chkSearchActionDetailName
             // 
-            this.chkSearchCategoryName.AutoSize = true;
-            this.chkSearchCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkSearchCategoryName.Location = new System.Drawing.Point(254, 80);
-            this.chkSearchCategoryName.Name = "chkSearchCategoryName";
-            this.chkSearchCategoryName.Size = new System.Drawing.Size(95, 17);
-            this.chkSearchCategoryName.TabIndex = 5;
-            this.chkSearchCategoryName.Text = "Loại sản phẩm";
-            this.chkSearchCategoryName.UseVisualStyleBackColor = true;
+            this.chkSearchActionDetailName.AutoSize = true;
+            this.chkSearchActionDetailName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.chkSearchActionDetailName.Location = new System.Drawing.Point(228, 80);
+            this.chkSearchActionDetailName.Name = "chkSearchActionDetailName";
+            this.chkSearchActionDetailName.Size = new System.Drawing.Size(64, 17);
+            this.chkSearchActionDetailName.TabIndex = 5;
+            this.chkSearchActionDetailName.Text = "Dấu vết";
+            this.chkSearchActionDetailName.UseVisualStyleBackColor = true;
             // 
-            // chkSearchCategoryID
+            // chkSearchActionDetailID
             // 
-            this.chkSearchCategoryID.AutoSize = true;
-            this.chkSearchCategoryID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkSearchCategoryID.Location = new System.Drawing.Point(139, 80);
-            this.chkSearchCategoryID.Name = "chkSearchCategoryID";
-            this.chkSearchCategoryID.Size = new System.Drawing.Size(109, 17);
-            this.chkSearchCategoryID.TabIndex = 4;
-            this.chkSearchCategoryID.Text = "Mã loại sản phẩm";
-            this.chkSearchCategoryID.UseVisualStyleBackColor = true;
+            this.chkSearchActionDetailID.AutoSize = true;
+            this.chkSearchActionDetailID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.chkSearchActionDetailID.Location = new System.Drawing.Point(139, 80);
+            this.chkSearchActionDetailID.Name = "chkSearchActionDetailID";
+            this.chkSearchActionDetailID.Size = new System.Drawing.Size(80, 17);
+            this.chkSearchActionDetailID.TabIndex = 4;
+            this.chkSearchActionDetailID.Text = "Mã dấu vết";
+            this.chkSearchActionDetailID.UseVisualStyleBackColor = true;
             // 
             // lblViDuTimKiemQuanLy
             // 
@@ -359,9 +366,9 @@
             this.lblViDuTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblViDuTimKiemQuanLy.Location = new System.Drawing.Point(76, 55);
             this.lblViDuTimKiemQuanLy.Name = "lblViDuTimKiemQuanLy";
-            this.lblViDuTimKiemQuanLy.Size = new System.Drawing.Size(135, 13);
+            this.lblViDuTimKiemQuanLy.Size = new System.Drawing.Size(158, 13);
             this.lblViDuTimKiemQuanLy.TabIndex = 3;
-            this.lblViDuTimKiemQuanLy.Text = "(ví dụ: (Ví dụ: sữa, rượu... )";
+            this.lblViDuTimKiemQuanLy.Text = "(ví dụ: Hoạt động, Tạm khóa...)";
             // 
             // btnSearch
             // 
@@ -433,41 +440,41 @@
             this.chkDispAll.UseVisualStyleBackColor = true;
             this.chkDispAll.CheckedChanged += new System.EventHandler(this.chkDispAll_CheckedChanged);
             // 
-            // chkDispCategoryDesc
+            // chkDispActionDetailDesc
             // 
-            this.chkDispCategoryDesc.AutoSize = true;
-            this.chkDispCategoryDesc.Location = new System.Drawing.Point(339, 228);
-            this.chkDispCategoryDesc.Name = "chkDispCategoryDesc";
-            this.chkDispCategoryDesc.Size = new System.Drawing.Size(53, 17);
-            this.chkDispCategoryDesc.TabIndex = 18;
-            this.chkDispCategoryDesc.Text = "Mô tả";
-            this.chkDispCategoryDesc.UseVisualStyleBackColor = true;
-            this.chkDispCategoryDesc.CheckedChanged += new System.EventHandler(this.chkDispCategoryDesc_CheckedChanged);
+            this.chkDispActionDetailDesc.AutoSize = true;
+            this.chkDispActionDetailDesc.Location = new System.Drawing.Point(288, 228);
+            this.chkDispActionDetailDesc.Name = "chkDispActionDetailDesc";
+            this.chkDispActionDetailDesc.Size = new System.Drawing.Size(53, 17);
+            this.chkDispActionDetailDesc.TabIndex = 18;
+            this.chkDispActionDetailDesc.Text = "Mô tả";
+            this.chkDispActionDetailDesc.UseVisualStyleBackColor = true;
+            this.chkDispActionDetailDesc.CheckedChanged += new System.EventHandler(this.chkDispActionDetailDesc_CheckedChanged);
             // 
-            // chkDispCategoryName
+            // chkDispActionDetailName
             // 
-            this.chkDispCategoryName.AutoSize = true;
-            this.chkDispCategoryName.Location = new System.Drawing.Point(242, 228);
-            this.chkDispCategoryName.Name = "chkDispCategoryName";
-            this.chkDispCategoryName.Size = new System.Drawing.Size(95, 17);
-            this.chkDispCategoryName.TabIndex = 17;
-            this.chkDispCategoryName.Text = "Loại sản phẩm";
-            this.chkDispCategoryName.UseVisualStyleBackColor = true;
-            this.chkDispCategoryName.CheckedChanged += new System.EventHandler(this.chkDispCategoryName_CheckedChanged);
+            this.chkDispActionDetailName.AutoSize = true;
+            this.chkDispActionDetailName.Location = new System.Drawing.Point(216, 228);
+            this.chkDispActionDetailName.Name = "chkDispActionDetailName";
+            this.chkDispActionDetailName.Size = new System.Drawing.Size(64, 17);
+            this.chkDispActionDetailName.TabIndex = 17;
+            this.chkDispActionDetailName.Text = "Dấu vết";
+            this.chkDispActionDetailName.UseVisualStyleBackColor = true;
+            this.chkDispActionDetailName.CheckedChanged += new System.EventHandler(this.chkDispActionDetailName_CheckedChanged);
             // 
-            // chkDispCategoryID
+            // chkDispActionDetailID
             // 
-            this.chkDispCategoryID.AutoSize = true;
-            this.chkDispCategoryID.Checked = true;
-            this.chkDispCategoryID.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkDispCategoryID.Enabled = false;
-            this.chkDispCategoryID.Location = new System.Drawing.Point(127, 228);
-            this.chkDispCategoryID.Name = "chkDispCategoryID";
-            this.chkDispCategoryID.Size = new System.Drawing.Size(109, 17);
-            this.chkDispCategoryID.TabIndex = 16;
-            this.chkDispCategoryID.Text = "Mã loại sản phẩm";
-            this.chkDispCategoryID.UseVisualStyleBackColor = true;
-            this.chkDispCategoryID.CheckedChanged += new System.EventHandler(this.chkDispCategoryID_CheckedChanged);
+            this.chkDispActionDetailID.AutoSize = true;
+            this.chkDispActionDetailID.Checked = true;
+            this.chkDispActionDetailID.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkDispActionDetailID.Enabled = false;
+            this.chkDispActionDetailID.Location = new System.Drawing.Point(127, 228);
+            this.chkDispActionDetailID.Name = "chkDispActionDetailID";
+            this.chkDispActionDetailID.Size = new System.Drawing.Size(80, 17);
+            this.chkDispActionDetailID.TabIndex = 16;
+            this.chkDispActionDetailID.Text = "Mã dấu vết";
+            this.chkDispActionDetailID.UseVisualStyleBackColor = true;
+            this.chkDispActionDetailID.CheckedChanged += new System.EventHandler(this.chkDispActionDetailID_CheckedChanged);
             // 
             // lblHienThiQuanLy
             // 
@@ -478,41 +485,41 @@
             this.lblHienThiQuanLy.TabIndex = 15;
             this.lblHienThiQuanLy.Text = "Hiển thị:";
             // 
-            // lblDanhSachCategoryQuanLy
+            // lblDanhSachActionDetailQuanLy
             // 
-            this.lblDanhSachCategoryQuanLy.AutoSize = true;
-            this.lblDanhSachCategoryQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDanhSachCategoryQuanLy.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblDanhSachCategoryQuanLy.Location = new System.Drawing.Point(12, 205);
-            this.lblDanhSachCategoryQuanLy.Name = "lblDanhSachCategoryQuanLy";
-            this.lblDanhSachCategoryQuanLy.Size = new System.Drawing.Size(183, 13);
-            this.lblDanhSachCategoryQuanLy.TabIndex = 14;
-            this.lblDanhSachCategoryQuanLy.Text = "DANH SÁCH LOẠI SẢN PHẨM:";
+            this.lblDanhSachActionDetailQuanLy.AutoSize = true;
+            this.lblDanhSachActionDetailQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblDanhSachActionDetailQuanLy.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblDanhSachActionDetailQuanLy.Location = new System.Drawing.Point(12, 205);
+            this.lblDanhSachActionDetailQuanLy.Name = "lblDanhSachActionDetailQuanLy";
+            this.lblDanhSachActionDetailQuanLy.Size = new System.Drawing.Size(141, 13);
+            this.lblDanhSachActionDetailQuanLy.TabIndex = 14;
+            this.lblDanhSachActionDetailQuanLy.Text = "DANH SÁCH DẤU VẾT:";
             // 
-            // gbThongTinCategory
+            // gbThongTinActionDetail
             // 
-            this.gbThongTinCategory.Controls.Add(this.btnReset);
-            this.gbThongTinCategory.Controls.Add(this.btnSave);
-            this.gbThongTinCategory.Controls.Add(this.txtCategoryDesc);
-            this.gbThongTinCategory.Controls.Add(this.lblMoTa);
-            this.gbThongTinCategory.Controls.Add(this.txtCategoryName);
-            this.gbThongTinCategory.Controls.Add(this.lblCategory);
-            this.gbThongTinCategory.Controls.Add(this.txtCategoryID);
-            this.gbThongTinCategory.Controls.Add(this.lblMaCategory);
-            this.gbThongTinCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gbThongTinCategory.Location = new System.Drawing.Point(15, 6);
-            this.gbThongTinCategory.Name = "gbThongTinCategory";
-            this.gbThongTinCategory.Size = new System.Drawing.Size(363, 191);
-            this.gbThongTinCategory.TabIndex = 0;
-            this.gbThongTinCategory.TabStop = false;
-            this.gbThongTinCategory.Text = "THÔNG TIN LOẠI SẢN PHẨM:";
+            this.gbThongTinActionDetail.Controls.Add(this.btnReset);
+            this.gbThongTinActionDetail.Controls.Add(this.btnSave);
+            this.gbThongTinActionDetail.Controls.Add(this.txtActionDetailDesc);
+            this.gbThongTinActionDetail.Controls.Add(this.lblMoTa);
+            this.gbThongTinActionDetail.Controls.Add(this.txtActionDetailName);
+            this.gbThongTinActionDetail.Controls.Add(this.lblActionDetail);
+            this.gbThongTinActionDetail.Controls.Add(this.txtActionDetailID);
+            this.gbThongTinActionDetail.Controls.Add(this.lblMaActionDetail);
+            this.gbThongTinActionDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gbThongTinActionDetail.Location = new System.Drawing.Point(15, 6);
+            this.gbThongTinActionDetail.Name = "gbThongTinActionDetail";
+            this.gbThongTinActionDetail.Size = new System.Drawing.Size(332, 191);
+            this.gbThongTinActionDetail.TabIndex = 0;
+            this.gbThongTinActionDetail.TabStop = false;
+            this.gbThongTinActionDetail.Text = "THÔNG TIN DẤU VẾT:";
             // 
             // btnReset
             // 
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnReset.Image = global::SSMP.Properties.Resources.cross;
+            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
             this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReset.Location = new System.Drawing.Point(252, 158);
+            this.btnReset.Location = new System.Drawing.Point(224, 158);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(80, 23);
             this.btnReset.TabIndex = 27;
@@ -524,9 +531,9 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSave.Image = global::SSMP.Properties.Resources.disk;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(166, 158);
+            this.btnSave.Location = new System.Drawing.Point(138, 158);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(80, 23);
             this.btnSave.TabIndex = 26;
@@ -534,15 +541,15 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtCategoryDesc
+            // txtActionDetailDesc
             // 
-            this.txtCategoryDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtCategoryDesc.Location = new System.Drawing.Point(124, 84);
-            this.txtCategoryDesc.Multiline = true;
-            this.txtCategoryDesc.Name = "txtCategoryDesc";
-            this.txtCategoryDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtCategoryDesc.Size = new System.Drawing.Size(208, 65);
-            this.txtCategoryDesc.TabIndex = 5;
+            this.txtActionDetailDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtActionDetailDesc.Location = new System.Drawing.Point(96, 84);
+            this.txtActionDetailDesc.Multiline = true;
+            this.txtActionDetailDesc.Name = "txtActionDetailDesc";
+            this.txtActionDetailDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtActionDetailDesc.Size = new System.Drawing.Size(208, 65);
+            this.txtActionDetailDesc.TabIndex = 5;
             // 
             // lblMoTa
             // 
@@ -554,106 +561,105 @@
             this.lblMoTa.TabIndex = 4;
             this.lblMoTa.Text = "Mô tả:";
             // 
-            // txtCategoryName
+            // txtActionDetailName
             // 
-            this.txtCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtCategoryName.Location = new System.Drawing.Point(124, 55);
-            this.txtCategoryName.Name = "txtCategoryName";
-            this.txtCategoryName.Size = new System.Drawing.Size(208, 20);
-            this.txtCategoryName.TabIndex = 3;
+            this.txtActionDetailName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtActionDetailName.Location = new System.Drawing.Point(96, 55);
+            this.txtActionDetailName.Name = "txtActionDetailName";
+            this.txtActionDetailName.Size = new System.Drawing.Size(208, 20);
+            this.txtActionDetailName.TabIndex = 3;
             // 
-            // lblCategory
+            // lblActionDetail
             // 
-            this.lblCategory.AutoSize = true;
-            this.lblCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblCategory.Location = new System.Drawing.Point(23, 58);
-            this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(79, 13);
-            this.lblCategory.TabIndex = 2;
-            this.lblCategory.Text = "Loại sản phẩm:";
+            this.lblActionDetail.AutoSize = true;
+            this.lblActionDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblActionDetail.Location = new System.Drawing.Point(23, 58);
+            this.lblActionDetail.Name = "lblActionDetail";
+            this.lblActionDetail.Size = new System.Drawing.Size(48, 13);
+            this.lblActionDetail.TabIndex = 2;
+            this.lblActionDetail.Text = "Dấu vết:";
             // 
-            // txtCategoryID
+            // txtActionDetailID
             // 
-            this.txtCategoryID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtCategoryID.Location = new System.Drawing.Point(125, 26);
-            this.txtCategoryID.Name = "txtCategoryID";
-            this.txtCategoryID.ReadOnly = true;
-            this.txtCategoryID.Size = new System.Drawing.Size(100, 20);
-            this.txtCategoryID.TabIndex = 1;
+            this.txtActionDetailID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtActionDetailID.Location = new System.Drawing.Point(96, 26);
+            this.txtActionDetailID.Name = "txtActionDetailID";
+            this.txtActionDetailID.ReadOnly = true;
+            this.txtActionDetailID.Size = new System.Drawing.Size(100, 20);
+            this.txtActionDetailID.TabIndex = 1;
             // 
-            // lblMaCategory
+            // lblMaActionDetail
             // 
-            this.lblMaCategory.AutoSize = true;
-            this.lblMaCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblMaCategory.Location = new System.Drawing.Point(23, 29);
-            this.lblMaCategory.Name = "lblMaCategory";
-            this.lblMaCategory.Size = new System.Drawing.Size(93, 13);
-            this.lblMaCategory.TabIndex = 0;
-            this.lblMaCategory.Text = "Mã loại sản phẩm:";
+            this.lblMaActionDetail.AutoSize = true;
+            this.lblMaActionDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblMaActionDetail.Location = new System.Drawing.Point(23, 29);
+            this.lblMaActionDetail.Name = "lblMaActionDetail";
+            this.lblMaActionDetail.Size = new System.Drawing.Size(64, 13);
+            this.lblMaActionDetail.TabIndex = 0;
+            this.lblMaActionDetail.Text = "Mã dấu vết:";
             // 
-            // FrmCategory
+            // FrmActionDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 560);
-            this.Controls.Add(this.tcQuanLyCategory);
+            this.Controls.Add(this.tcQuanLyActionDetail);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmCategory";
-            this.Text = "Quản Lý Loại Sản Phẩm";
-            this.Load += new System.EventHandler(this.FrmCategory_Load);
-            this.tcQuanLyCategory.ResumeLayout(false);
-            this.tpQuanLyCategory.ResumeLayout(false);
-            this.tpQuanLyCategory.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorCategory)).EndInit();
-            this.bindingNavigatorCategory.ResumeLayout(false);
-            this.bindingNavigatorCategory.PerformLayout();
-            this.panelCategory.ResumeLayout(false);
-            this.panelCategory.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvCategory)).EndInit();
+            this.Name = "FrmActionDetail";
+            this.Text = "Quản Lý Dấu vết";
+            this.Load += new System.EventHandler(this.FrmActionDetail_Load);
+            this.tcQuanLyActionDetail.ResumeLayout(false);
+            this.tpQuanLyActionDetail.ResumeLayout(false);
+            this.tpQuanLyActionDetail.PerformLayout();
+            this.panelActionDetail.ResumeLayout(false);
+            this.panelActionDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorActionDetail)).EndInit();
+            this.bindingNavigatorActionDetail.ResumeLayout(false);
+            this.bindingNavigatorActionDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvActionDetail)).EndInit();
             this.gbTimKiemQuanLy.ResumeLayout(false);
             this.gbTimKiemQuanLy.PerformLayout();
-            this.gbThongTinCategory.ResumeLayout(false);
-            this.gbThongTinCategory.PerformLayout();
+            this.gbThongTinActionDetail.ResumeLayout(false);
+            this.gbThongTinActionDetail.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tcQuanLyCategory;
-        private System.Windows.Forms.TabPage tpQuanLyCategory;
-        private System.Windows.Forms.GroupBox gbThongTinCategory;
-        private System.Windows.Forms.TextBox txtCategoryName;
-        private System.Windows.Forms.Label lblCategory;
-        private System.Windows.Forms.TextBox txtCategoryID;
-        private System.Windows.Forms.Label lblMaCategory;
-        private System.Windows.Forms.TextBox txtCategoryDesc;
+        private System.Windows.Forms.TabControl tcQuanLyActionDetail;
+        private System.Windows.Forms.TabPage tpQuanLyActionDetail;
+        private System.Windows.Forms.GroupBox gbThongTinActionDetail;
+        private System.Windows.Forms.TextBox txtActionDetailName;
+        private System.Windows.Forms.Label lblActionDetail;
+        private System.Windows.Forms.TextBox txtActionDetailID;
+        private System.Windows.Forms.Label lblMaActionDetail;
+        private System.Windows.Forms.TextBox txtActionDetailDesc;
         private System.Windows.Forms.Label lblMoTa;
-        private System.Windows.Forms.Label lblDanhSachCategoryQuanLy;
+        private System.Windows.Forms.Label lblDanhSachActionDetailQuanLy;
         private System.Windows.Forms.Label lblHienThiQuanLy;
-        private System.Windows.Forms.CheckBox chkDispCategoryID;
-        private System.Windows.Forms.CheckBox chkDispCategoryName;
+        private System.Windows.Forms.CheckBox chkDispActionDetailID;
+        private System.Windows.Forms.CheckBox chkDispActionDetailName;
         private System.Windows.Forms.CheckBox chkDispAll;
-        private System.Windows.Forms.CheckBox chkDispCategoryDesc;
+        private System.Windows.Forms.CheckBox chkDispActionDetailDesc;
         private System.Windows.Forms.Button btnInAnQuanLy;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.GroupBox gbTimKiemQuanLy;
         private System.Windows.Forms.CheckBox chkSearchAll;
-        private System.Windows.Forms.CheckBox chkSearchCategoryDesc;
-        private System.Windows.Forms.CheckBox chkSearchCategoryName;
-        private System.Windows.Forms.CheckBox chkSearchCategoryID;
+        private System.Windows.Forms.CheckBox chkSearchActionDetailDesc;
+        private System.Windows.Forms.CheckBox chkSearchActionDetailName;
+        private System.Windows.Forms.CheckBox chkSearchActionDetailID;
         private System.Windows.Forms.Label lblViDuTimKiemQuanLy;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblTimKiemQuanLy;
-        private System.Windows.Forms.Panel panelCategory;
-        private System.Windows.Forms.DataGridView gvCategory;
-        private System.Windows.Forms.BindingNavigator bindingNavigatorCategory;
+        private System.Windows.Forms.Panel panelActionDetail;
+        private System.Windows.Forms.BindingNavigator bindingNavigatorActionDetail;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
@@ -669,5 +675,6 @@
         private System.Windows.Forms.ToolStripButton toolStripBtnEdit;
         private System.Windows.Forms.ToolStripButton toolStripBtnDelete;
         private System.Windows.Forms.ToolStripLabel toolStripLblTotal;
+        private System.Windows.Forms.DataGridView gvActionDetail;
     }
 }

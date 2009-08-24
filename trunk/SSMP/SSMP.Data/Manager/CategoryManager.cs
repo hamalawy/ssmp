@@ -56,17 +56,77 @@ namespace SSMP.Data.Manager
 
         public Category SaveOrUpdate(Category entity)
         {
-            throw new Exception("The method or operation is not implemented.");
+            try
+            {
+                if (entity != null)
+                {
+                    if (entity.ID == 0)
+                    {
+                        categoryDao.SaveOrUpdate(entity);
+                    }
+                    else
+                    {
+                        Category existEntity = categoryDao.GetById(entity.ID, false);
+                        existEntity.CategoryName = entity.CategoryName;
+                        existEntity.CategoryDesc = entity.CategoryDesc;
+                    }
+
+                    categoryDao.CommitChanges();
+                }
+                else
+                {
+                    throw new Exception("User role entity cannot be null");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return entity;
         }
 
         public void Delete(Category entity)
         {
-            throw new Exception("The method or operation is not implemented.");
+            try
+            {
+                if (entity != null)
+                {
+                    Category existEntity = categoryDao.GetById(entity.ID, false);
+
+                    categoryDao.Delete(existEntity);
+                    categoryDao.CommitChanges();
+                }
+                else
+                {
+                    throw new Exception("User entity cannot be null");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public SearchResult<Category> GetByExampleAndPaging(Category exampleInstance, SearchParam searchParam)
         {
             throw new Exception("The method or operation is not implemented.");
+        }
+
+        public SearchResult<Category> GetCategoryListByParam(Category entity, SearchParam searchParam)
+        {
+            SearchResult<Category> searchResult;
+
+            try
+            {
+                searchResult = categoryDao.GetCategoryListByParam(entity, searchParam);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return searchResult;
         }
 
         #endregion

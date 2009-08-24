@@ -31,55 +31,30 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGiaoDienChinh));
             this.msChinh = new System.Windows.Forms.MenuStrip();
             this.tsmiHeThong = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCauHinh = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiDangNhap = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiDoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiDangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiThoat = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBanHang = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiLapPhieuBanHang = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiQuanLyHoaDonBanHang = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiBaoCaoBanHang = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiNhapHang = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiLapPhieuNhapHangHoa = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiQuanLyPhieuNhapHang = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiBaoCaoNhapHang = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiQuanLyDanhMuc = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiDanhMucSanPham = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiDanhMucLoaiSanPham = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiDanhMucDonVi = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiDanhMucNhaCungCap = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiDanhMucNhaSanXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiDanhMucQuocGia = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiQuanTri = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiQuanLyNguoiDung = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiQuanLyNhomNguoiDung = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiQuanLyChucVu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiQuanLyHanhDong = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiQuanLyDauVet = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCuaSo = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiXepTheoTangThangDung = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiXepTheoTangNamNgang = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiXepChongLenNhau = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiXapXepCacBieuTuong = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiDongTatCaCuaSo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiTroGiup = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiHuongDanSuDung = new System.Windows.Forms.ToolStripMenuItem();
             this.tsChinh = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.ssChinh = new System.Windows.Forms.StatusStrip();
             this.tsbDangNhap = new System.Windows.Forms.ToolStripButton();
             this.tsDangXuat = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsdbBanHang = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsdbNhapHang = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbDanhMucSanPham = new System.Windows.Forms.ToolStripButton();
             this.tsbDanhMucLoaiSanPham = new System.Windows.Forms.ToolStripButton();
             this.tsbDanhMucNhaCungCap = new System.Windows.Forms.ToolStripButton();
@@ -88,12 +63,38 @@
             this.tsmiDanhMucHoaDonBanHangEx = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDanhMucHoaDonNhapHangEx = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbDanhMucQuocGia = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbTroGiup = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbThoat = new System.Windows.Forms.ToolStripButton();
-            this.ssChinh = new System.Windows.Forms.StatusStrip();
+            this.tsmiCauHinh = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDangNhap = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDangXuat = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiThoat = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiLapPhieuBanHang = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiQuanLyHoaDonBanHang = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiBaoCaoBanHang = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiLapPhieuNhapHangHoa = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiQuanLyPhieuNhapHang = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiBaoCaoNhapHang = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDanhMucSanPham = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDanhMucLoaiSanPham = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemProductStatus = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDanhMucDonVi = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDanhMucNhaCungCap = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDanhMucNhaSanXuat = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDanhMucQuocGia = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiQuanLyNguoiDung = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiQuanLyNhomNguoiDung = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiQuanLyChucVu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemUserStatus = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiQuanLyHanhDong = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiQuanLyDauVet = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiXepTheoTangThangDung = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiXepTheoTangNamNgang = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiXepChongLenNhau = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiXapXepCacBieuTuong = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDongTatCaCuaSo = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiHuongDanSuDung = new System.Windows.Forms.ToolStripMenuItem();
             this.msChinh.SuspendLayout();
             this.tsChinh.SuspendLayout();
             this.SuspendLayout();
@@ -128,57 +129,10 @@
             this.tsmiHeThong.Size = new System.Drawing.Size(63, 20);
             this.tsmiHeThong.Text = "&Hệ thống";
             // 
-            // tsmiCauHinh
-            // 
-            this.tsmiCauHinh.Image = global::SSMP.Properties.Resources.wrench;
-            this.tsmiCauHinh.Name = "tsmiCauHinh";
-            this.tsmiCauHinh.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.C)));
-            this.tsmiCauHinh.Size = new System.Drawing.Size(208, 22);
-            this.tsmiCauHinh.Text = "&Cấu hình...";
-            this.tsmiCauHinh.Click += new System.EventHandler(this.tsmiCauHinh_Click);
-            // 
-            // tsmiDangNhap
-            // 
-            this.tsmiDangNhap.Image = global::SSMP.Properties.Resources.user1_preferences;
-            this.tsmiDangNhap.Name = "tsmiDangNhap";
-            this.tsmiDangNhap.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.N)));
-            this.tsmiDangNhap.Size = new System.Drawing.Size(208, 22);
-            this.tsmiDangNhap.Text = "Đăng &nhập...";
-            this.tsmiDangNhap.Click += new System.EventHandler(this.tsmiDangNhap_Click);
-            // 
-            // tsmiDoiMatKhau
-            // 
-            this.tsmiDoiMatKhau.Image = global::SSMP.Properties.Resources.document_edit;
-            this.tsmiDoiMatKhau.Name = "tsmiDoiMatKhau";
-            this.tsmiDoiMatKhau.Size = new System.Drawing.Size(208, 22);
-            this.tsmiDoiMatKhau.Text = "Đổi &mật khẩu...";
-            this.tsmiDoiMatKhau.Click += new System.EventHandler(this.tsmiDoiMatKhau_Click);
-            // 
-            // tsmiDangXuat
-            // 
-            this.tsmiDangXuat.Image = global::SSMP.Properties.Resources.user1_back;
-            this.tsmiDangXuat.Name = "tsmiDangXuat";
-            this.tsmiDangXuat.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.X)));
-            this.tsmiDangXuat.Size = new System.Drawing.Size(208, 22);
-            this.tsmiDangXuat.Text = "Đăng &xuất";
-            this.tsmiDangXuat.Click += new System.EventHandler(this.tsmiDangXuat_Click);
-            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(205, 6);
-            // 
-            // tsmiThoat
-            // 
-            this.tsmiThoat.Image = global::SSMP.Properties.Resources.exit;
-            this.tsmiThoat.Name = "tsmiThoat";
-            this.tsmiThoat.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.tsmiThoat.Size = new System.Drawing.Size(208, 22);
-            this.tsmiThoat.Text = "&Thoát";
-            this.tsmiThoat.Click += new System.EventHandler(this.tsmiThoat_Click);
             // 
             // tsmiBanHang
             // 
@@ -191,37 +145,10 @@
             this.tsmiBanHang.Size = new System.Drawing.Size(64, 20);
             this.tsmiBanHang.Text = "&Bán hàng";
             // 
-            // tsmiLapPhieuBanHang
-            // 
-            this.tsmiLapPhieuBanHang.Image = global::SSMP.Properties.Resources.text_rich_colored;
-            this.tsmiLapPhieuBanHang.Name = "tsmiLapPhieuBanHang";
-            this.tsmiLapPhieuBanHang.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.J)));
-            this.tsmiLapPhieuBanHang.Size = new System.Drawing.Size(253, 22);
-            this.tsmiLapPhieuBanHang.Text = "&Lập phiếu Bán hàng";
-            this.tsmiLapPhieuBanHang.Click += new System.EventHandler(this.tsmiLapPhieuBanHang_Click);
-            // 
-            // tsmiQuanLyHoaDonBanHang
-            // 
-            this.tsmiQuanLyHoaDonBanHang.Image = global::SSMP.Properties.Resources.documents;
-            this.tsmiQuanLyHoaDonBanHang.Name = "tsmiQuanLyHoaDonBanHang";
-            this.tsmiQuanLyHoaDonBanHang.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.tsmiQuanLyHoaDonBanHang.Size = new System.Drawing.Size(253, 22);
-            this.tsmiQuanLyHoaDonBanHang.Text = "&Quản lý Hóa đơn Bán hàng...";
-            this.tsmiQuanLyHoaDonBanHang.Click += new System.EventHandler(this.tsmiQuanLyHoaDonBanHang_Click);
-            // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
             this.toolStripMenuItem6.Size = new System.Drawing.Size(250, 6);
-            // 
-            // tsmiBaoCaoBanHang
-            // 
-            this.tsmiBaoCaoBanHang.Image = global::SSMP.Properties.Resources.clipboard;
-            this.tsmiBaoCaoBanHang.Name = "tsmiBaoCaoBanHang";
-            this.tsmiBaoCaoBanHang.Size = new System.Drawing.Size(253, 22);
-            this.tsmiBaoCaoBanHang.Text = "&Báo cáo...";
-            this.tsmiBaoCaoBanHang.Click += new System.EventHandler(this.tsmiBaoCaoBanHang_Click);
             // 
             // tsmiNhapHang
             // 
@@ -234,44 +161,17 @@
             this.tsmiNhapHang.Size = new System.Drawing.Size(71, 20);
             this.tsmiNhapHang.Text = "&Nhập hàng";
             // 
-            // tsmiLapPhieuNhapHangHoa
-            // 
-            this.tsmiLapPhieuNhapHangHoa.Image = global::SSMP.Properties.Resources.text_rich_colored;
-            this.tsmiLapPhieuNhapHangHoa.Name = "tsmiLapPhieuNhapHangHoa";
-            this.tsmiLapPhieuNhapHangHoa.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.U)));
-            this.tsmiLapPhieuNhapHangHoa.Size = new System.Drawing.Size(265, 22);
-            this.tsmiLapPhieuNhapHangHoa.Text = "&Lập Phiếu nhập Hàng hóa";
-            this.tsmiLapPhieuNhapHangHoa.Click += new System.EventHandler(this.tsmiLapPhieuNhapHangHoa_Click);
-            // 
-            // tsmiQuanLyPhieuNhapHang
-            // 
-            this.tsmiQuanLyPhieuNhapHang.Image = global::SSMP.Properties.Resources.documents;
-            this.tsmiQuanLyPhieuNhapHang.Name = "tsmiQuanLyPhieuNhapHang";
-            this.tsmiQuanLyPhieuNhapHang.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.K)));
-            this.tsmiQuanLyPhieuNhapHang.Size = new System.Drawing.Size(265, 22);
-            this.tsmiQuanLyPhieuNhapHang.Text = "&Quản lý Phiếu nhập hàng";
-            this.tsmiQuanLyPhieuNhapHang.Click += new System.EventHandler(this.tsmiQuanLyPhieuNhapHang_Click);
-            // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
             this.toolStripMenuItem8.Size = new System.Drawing.Size(262, 6);
-            // 
-            // tsmiBaoCaoNhapHang
-            // 
-            this.tsmiBaoCaoNhapHang.Image = global::SSMP.Properties.Resources.clipboard;
-            this.tsmiBaoCaoNhapHang.Name = "tsmiBaoCaoNhapHang";
-            this.tsmiBaoCaoNhapHang.Size = new System.Drawing.Size(265, 22);
-            this.tsmiBaoCaoNhapHang.Text = "&Báo cáo...";
-            this.tsmiBaoCaoNhapHang.Click += new System.EventHandler(this.tsmiBaoCaoNhapHang_Click);
             // 
             // tsmiQuanLyDanhMuc
             // 
             this.tsmiQuanLyDanhMuc.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiDanhMucSanPham,
             this.tsmiDanhMucLoaiSanPham,
+            this.toolStripMenuItemProductStatus,
             this.tsmiDanhMucDonVi,
             this.toolStripSeparator1,
             this.tsmiDanhMucNhaCungCap,
@@ -282,75 +182,15 @@
             this.tsmiQuanLyDanhMuc.Size = new System.Drawing.Size(106, 20);
             this.tsmiQuanLyDanhMuc.Text = "Quản lý &Danh mục";
             // 
-            // tsmiDanhMucSanPham
-            // 
-            this.tsmiDanhMucSanPham.Image = global::SSMP.Properties.Resources.package;
-            this.tsmiDanhMucSanPham.Name = "tsmiDanhMucSanPham";
-            this.tsmiDanhMucSanPham.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.P)));
-            this.tsmiDanhMucSanPham.Size = new System.Drawing.Size(271, 22);
-            this.tsmiDanhMucSanPham.Text = "Danh mục Sản &phẩm...";
-            this.tsmiDanhMucSanPham.Click += new System.EventHandler(this.tsmiDanhMucSanPham_Click);
-            // 
-            // tsmiDanhMucLoaiSanPham
-            // 
-            this.tsmiDanhMucLoaiSanPham.Image = global::SSMP.Properties.Resources.cube_yellow;
-            this.tsmiDanhMucLoaiSanPham.Name = "tsmiDanhMucLoaiSanPham";
-            this.tsmiDanhMucLoaiSanPham.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.L)));
-            this.tsmiDanhMucLoaiSanPham.Size = new System.Drawing.Size(271, 22);
-            this.tsmiDanhMucLoaiSanPham.Text = "Danh mục &Loại sản phẩm...";
-            this.tsmiDanhMucLoaiSanPham.Click += new System.EventHandler(this.tsmiDanhMucLoaiSanPham_Click);
-            // 
-            // tsmiDanhMucDonVi
-            // 
-            this.tsmiDanhMucDonVi.Image = global::SSMP.Properties.Resources.weight2;
-            this.tsmiDanhMucDonVi.Name = "tsmiDanhMucDonVi";
-            this.tsmiDanhMucDonVi.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.V)));
-            this.tsmiDanhMucDonVi.Size = new System.Drawing.Size(271, 22);
-            this.tsmiDanhMucDonVi.Text = "Danh mục Đơn &vị...";
-            this.tsmiDanhMucDonVi.Click += new System.EventHandler(this.tsmiDanhMucDonVi_Click);
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(268, 6);
             // 
-            // tsmiDanhMucNhaCungCap
-            // 
-            this.tsmiDanhMucNhaCungCap.Image = global::SSMP.Properties.Resources.office_building;
-            this.tsmiDanhMucNhaCungCap.Name = "tsmiDanhMucNhaCungCap";
-            this.tsmiDanhMucNhaCungCap.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.M)));
-            this.tsmiDanhMucNhaCungCap.Size = new System.Drawing.Size(271, 22);
-            this.tsmiDanhMucNhaCungCap.Text = "Danh mục Nhà &cung cấp...";
-            this.tsmiDanhMucNhaCungCap.Click += new System.EventHandler(this.tsmiDanhMucNhaCungCap_Click);
-            // 
-            // tsmiDanhMucNhaSanXuat
-            // 
-            this.tsmiDanhMucNhaSanXuat.Image = global::SSMP.Properties.Resources.factory;
-            this.tsmiDanhMucNhaSanXuat.Name = "tsmiDanhMucNhaSanXuat";
-            this.tsmiDanhMucNhaSanXuat.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.T)));
-            this.tsmiDanhMucNhaSanXuat.Size = new System.Drawing.Size(271, 22);
-            this.tsmiDanhMucNhaSanXuat.Text = "Danh mục Nhà &sản xuất...";
-            this.tsmiDanhMucNhaSanXuat.Click += new System.EventHandler(this.tsmiDanhMucNhaSanXuat_Click);
-            // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(268, 6);
-            // 
-            // tsmiDanhMucQuocGia
-            // 
-            this.tsmiDanhMucQuocGia.Image = global::SSMP.Properties.Resources.web;
-            this.tsmiDanhMucQuocGia.Name = "tsmiDanhMucQuocGia";
-            this.tsmiDanhMucQuocGia.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.R)));
-            this.tsmiDanhMucQuocGia.Size = new System.Drawing.Size(271, 22);
-            this.tsmiDanhMucQuocGia.Text = "Danh mục &Quốc gia...";
-            this.tsmiDanhMucQuocGia.Click += new System.EventHandler(this.tsmiDanhMucQuocGia_Click);
             // 
             // tsmiQuanTri
             // 
@@ -366,59 +206,10 @@
             this.tsmiQuanTri.Size = new System.Drawing.Size(58, 20);
             this.tsmiQuanTri.Text = "Quản &trị";
             // 
-            // tsmiQuanLyNguoiDung
-            // 
-            this.tsmiQuanLyNguoiDung.Image = global::SSMP.Properties.Resources.user1;
-            this.tsmiQuanLyNguoiDung.Name = "tsmiQuanLyNguoiDung";
-            this.tsmiQuanLyNguoiDung.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.A)));
-            this.tsmiQuanLyNguoiDung.Size = new System.Drawing.Size(278, 22);
-            this.tsmiQuanLyNguoiDung.Text = "Quản lý &Người dùng...";
-            this.tsmiQuanLyNguoiDung.Click += new System.EventHandler(this.tsmiQuanLyNguoiDung_Click);
-            // 
-            // tsmiQuanLyNhomNguoiDung
-            // 
-            this.tsmiQuanLyNhomNguoiDung.Image = global::SSMP.Properties.Resources.users1;
-            this.tsmiQuanLyNhomNguoiDung.Name = "tsmiQuanLyNhomNguoiDung";
-            this.tsmiQuanLyNhomNguoiDung.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.B)));
-            this.tsmiQuanLyNhomNguoiDung.Size = new System.Drawing.Size(278, 22);
-            this.tsmiQuanLyNhomNguoiDung.Text = "Quản lý Nh&óm người dùng...";
-            this.tsmiQuanLyNhomNguoiDung.Click += new System.EventHandler(this.tsmiQuanLyNhomNguoiDung_Click);
-            // 
-            // tsmiQuanLyChucVu
-            // 
-            this.tsmiQuanLyChucVu.Image = global::SSMP.Properties.Resources.users1;
-            this.tsmiQuanLyChucVu.Name = "tsmiQuanLyChucVu";
-            this.tsmiQuanLyChucVu.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.F)));
-            this.tsmiQuanLyChucVu.Size = new System.Drawing.Size(278, 22);
-            this.tsmiQuanLyChucVu.Text = "Quản lý &Chức vụ";
-            this.tsmiQuanLyChucVu.Click += new System.EventHandler(this.tsmiQuanLyChucVu_Click);
-            // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(275, 6);
-            // 
-            // tsmiQuanLyHanhDong
-            // 
-            this.tsmiQuanLyHanhDong.Image = global::SSMP.Properties.Resources.supp_48;
-            this.tsmiQuanLyHanhDong.Name = "tsmiQuanLyHanhDong";
-            this.tsmiQuanLyHanhDong.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.G)));
-            this.tsmiQuanLyHanhDong.Size = new System.Drawing.Size(278, 22);
-            this.tsmiQuanLyHanhDong.Text = "Quản lý &Hành động...";
-            this.tsmiQuanLyHanhDong.Click += new System.EventHandler(this.tsmiQuanLyHanhDong_Click);
-            // 
-            // tsmiQuanLyDauVet
-            // 
-            this.tsmiQuanLyDauVet.Image = global::SSMP.Properties.Resources.videocamera;
-            this.tsmiQuanLyDauVet.Name = "tsmiQuanLyDauVet";
-            this.tsmiQuanLyDauVet.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
-                        | System.Windows.Forms.Keys.D)));
-            this.tsmiQuanLyDauVet.Size = new System.Drawing.Size(278, 22);
-            this.tsmiQuanLyDauVet.Text = "Quản lý &Dấu vết";
             // 
             // tsmiCuaSo
             // 
@@ -433,50 +224,10 @@
             this.tsmiCuaSo.Size = new System.Drawing.Size(53, 20);
             this.tsmiCuaSo.Text = "&Cửa sổ";
             // 
-            // tsmiXepTheoTangThangDung
-            // 
-            this.tsmiXepTheoTangThangDung.Image = global::SSMP.Properties.Resources.windows;
-            this.tsmiXepTheoTangThangDung.Name = "tsmiXepTheoTangThangDung";
-            this.tsmiXepTheoTangThangDung.Size = new System.Drawing.Size(187, 22);
-            this.tsmiXepTheoTangThangDung.Text = "Xếp lát  &thẳng đứng";
-            this.tsmiXepTheoTangThangDung.Click += new System.EventHandler(this.tsmiXepTheoTangThangDung_Click);
-            // 
-            // tsmiXepTheoTangNamNgang
-            // 
-            this.tsmiXepTheoTangNamNgang.Image = global::SSMP.Properties.Resources.windows;
-            this.tsmiXepTheoTangNamNgang.Name = "tsmiXepTheoTangNamNgang";
-            this.tsmiXepTheoTangNamNgang.Size = new System.Drawing.Size(187, 22);
-            this.tsmiXepTheoTangNamNgang.Text = "Xếp lát nằm &ngang";
-            this.tsmiXepTheoTangNamNgang.Click += new System.EventHandler(this.tsmiXepTheoTangNamNgang_Click);
-            // 
-            // tsmiXepChongLenNhau
-            // 
-            this.tsmiXepChongLenNhau.Image = global::SSMP.Properties.Resources.windows;
-            this.tsmiXepChongLenNhau.Name = "tsmiXepChongLenNhau";
-            this.tsmiXepChongLenNhau.Size = new System.Drawing.Size(187, 22);
-            this.tsmiXepChongLenNhau.Text = "Xếp chồng &lên nhau";
-            this.tsmiXepChongLenNhau.Click += new System.EventHandler(this.tsmiXepChongLenNhau_Click);
-            // 
-            // tsmiXapXepCacBieuTuong
-            // 
-            this.tsmiXapXepCacBieuTuong.Image = global::SSMP.Properties.Resources.windows;
-            this.tsmiXapXepCacBieuTuong.Name = "tsmiXapXepCacBieuTuong";
-            this.tsmiXapXepCacBieuTuong.Size = new System.Drawing.Size(187, 22);
-            this.tsmiXapXepCacBieuTuong.Text = "Xắp xếp các &biểu tượng";
-            this.tsmiXapXepCacBieuTuong.Click += new System.EventHandler(this.tsmiXapXepCacBieuTuong_Click);
-            // 
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
             this.toolStripMenuItem9.Size = new System.Drawing.Size(184, 6);
-            // 
-            // tsmiDongTatCaCuaSo
-            // 
-            this.tsmiDongTatCaCuaSo.Image = global::SSMP.Properties.Resources.window_delete;
-            this.tsmiDongTatCaCuaSo.Name = "tsmiDongTatCaCuaSo";
-            this.tsmiDongTatCaCuaSo.Size = new System.Drawing.Size(187, 22);
-            this.tsmiDongTatCaCuaSo.Text = "Đóng tất &cả cửa sổ";
-            this.tsmiDongTatCaCuaSo.Click += new System.EventHandler(this.tsmiDongTatCaCuaSo_Click);
             // 
             // tsmiTroGiup
             // 
@@ -486,14 +237,6 @@
             this.tsmiTroGiup.ShortcutKeys = System.Windows.Forms.Keys.F1;
             this.tsmiTroGiup.Size = new System.Drawing.Size(58, 20);
             this.tsmiTroGiup.Text = "Trợ &giúp";
-            // 
-            // tsmiHuongDanSuDung
-            // 
-            this.tsmiHuongDanSuDung.Image = global::SSMP.Properties.Resources.unknown;
-            this.tsmiHuongDanSuDung.Name = "tsmiHuongDanSuDung";
-            this.tsmiHuongDanSuDung.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.tsmiHuongDanSuDung.Size = new System.Drawing.Size(200, 22);
-            this.tsmiHuongDanSuDung.Text = "&Hướng dẫn sử dụng...";
             // 
             // tsChinh
             // 
@@ -523,6 +266,39 @@
             this.tsChinh.TabIndex = 2;
             this.tsChinh.Text = "tsChinh";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
+            // 
+            // ssChinh
+            // 
+            this.ssChinh.Location = new System.Drawing.Point(0, 244);
+            this.ssChinh.Name = "ssChinh";
+            this.ssChinh.Size = new System.Drawing.Size(715, 22);
+            this.ssChinh.TabIndex = 4;
+            this.ssChinh.Text = "ssChinh";
+            // 
             // tsbDangNhap
             // 
             this.tsbDangNhap.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -543,11 +319,6 @@
             this.tsDangXuat.Text = "Đăng xuất";
             this.tsDangXuat.Click += new System.EventHandler(this.tsDangXuat_Click);
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
             // tsdbBanHang
             // 
             this.tsdbBanHang.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -558,11 +329,6 @@
             this.tsdbBanHang.Text = "Bán hàng";
             this.tsdbBanHang.Click += new System.EventHandler(this.tsdbBanHang_Click);
             // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
-            // 
             // tsdbNhapHang
             // 
             this.tsdbNhapHang.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -572,11 +338,6 @@
             this.tsdbNhapHang.Size = new System.Drawing.Size(24, 24);
             this.tsdbNhapHang.Text = "Nhập hàng";
             this.tsdbNhapHang.Click += new System.EventHandler(this.tsdbNhapHang_Click);
-            // 
-            // toolStripSeparator8
-            // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 27);
             // 
             // tsbDanhMucSanPham
             // 
@@ -653,11 +414,6 @@
             this.tsbDanhMucQuocGia.Text = "Danh mục Quốc gia";
             this.tsbDanhMucQuocGia.Click += new System.EventHandler(this.tsbQuanLyDanhMucQuocGia_Click);
             // 
-            // toolStripSeparator10
-            // 
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 27);
-            // 
             // tsbTroGiup
             // 
             this.tsbTroGiup.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -666,11 +422,6 @@
             this.tsbTroGiup.Name = "tsbTroGiup";
             this.tsbTroGiup.Size = new System.Drawing.Size(24, 24);
             this.tsbTroGiup.Text = "Trợ giúp";
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
             // 
             // tsbThoat
             // 
@@ -682,13 +433,205 @@
             this.tsbThoat.Text = "Thoát";
             this.tsbThoat.Click += new System.EventHandler(this.tsbThoat_Click);
             // 
-            // ssChinh
+            // tsmiCauHinh
             // 
-            this.ssChinh.Location = new System.Drawing.Point(0, 244);
-            this.ssChinh.Name = "ssChinh";
-            this.ssChinh.Size = new System.Drawing.Size(715, 22);
-            this.ssChinh.TabIndex = 4;
-            this.ssChinh.Text = "ssChinh";
+            this.tsmiCauHinh.Image = global::SSMP.Properties.Resources.wrench;
+            this.tsmiCauHinh.Name = "tsmiCauHinh";
+            this.tsmiCauHinh.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+                        | System.Windows.Forms.Keys.C)));
+            this.tsmiCauHinh.Size = new System.Drawing.Size(208, 22);
+            this.tsmiCauHinh.Text = "&Cấu hình...";
+            this.tsmiCauHinh.Click += new System.EventHandler(this.tsmiCauHinh_Click);
+            // 
+            // tsmiDangNhap
+            // 
+            this.tsmiDangNhap.Image = global::SSMP.Properties.Resources.user1_preferences;
+            this.tsmiDangNhap.Name = "tsmiDangNhap";
+            this.tsmiDangNhap.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+                        | System.Windows.Forms.Keys.N)));
+            this.tsmiDangNhap.Size = new System.Drawing.Size(208, 22);
+            this.tsmiDangNhap.Text = "Đăng &nhập...";
+            this.tsmiDangNhap.Click += new System.EventHandler(this.tsmiDangNhap_Click);
+            // 
+            // tsmiDoiMatKhau
+            // 
+            this.tsmiDoiMatKhau.Image = global::SSMP.Properties.Resources.document_edit;
+            this.tsmiDoiMatKhau.Name = "tsmiDoiMatKhau";
+            this.tsmiDoiMatKhau.Size = new System.Drawing.Size(208, 22);
+            this.tsmiDoiMatKhau.Text = "Đổi &mật khẩu...";
+            this.tsmiDoiMatKhau.Click += new System.EventHandler(this.tsmiDoiMatKhau_Click);
+            // 
+            // tsmiDangXuat
+            // 
+            this.tsmiDangXuat.Image = global::SSMP.Properties.Resources.user1_back;
+            this.tsmiDangXuat.Name = "tsmiDangXuat";
+            this.tsmiDangXuat.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+                        | System.Windows.Forms.Keys.X)));
+            this.tsmiDangXuat.Size = new System.Drawing.Size(208, 22);
+            this.tsmiDangXuat.Text = "Đăng &xuất";
+            this.tsmiDangXuat.Click += new System.EventHandler(this.tsmiDangXuat_Click);
+            // 
+            // tsmiThoat
+            // 
+            this.tsmiThoat.Image = global::SSMP.Properties.Resources.exit;
+            this.tsmiThoat.Name = "tsmiThoat";
+            this.tsmiThoat.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.tsmiThoat.Size = new System.Drawing.Size(208, 22);
+            this.tsmiThoat.Text = "&Thoát";
+            this.tsmiThoat.Click += new System.EventHandler(this.tsmiThoat_Click);
+            // 
+            // tsmiLapPhieuBanHang
+            // 
+            this.tsmiLapPhieuBanHang.Image = global::SSMP.Properties.Resources.text_rich_colored;
+            this.tsmiLapPhieuBanHang.Name = "tsmiLapPhieuBanHang";
+            this.tsmiLapPhieuBanHang.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+                        | System.Windows.Forms.Keys.J)));
+            this.tsmiLapPhieuBanHang.Size = new System.Drawing.Size(253, 22);
+            this.tsmiLapPhieuBanHang.Text = "&Lập phiếu Bán hàng";
+            this.tsmiLapPhieuBanHang.Click += new System.EventHandler(this.tsmiLapPhieuBanHang_Click);
+            // 
+            // tsmiQuanLyHoaDonBanHang
+            // 
+            this.tsmiQuanLyHoaDonBanHang.Image = global::SSMP.Properties.Resources.documents;
+            this.tsmiQuanLyHoaDonBanHang.Name = "tsmiQuanLyHoaDonBanHang";
+            this.tsmiQuanLyHoaDonBanHang.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.tsmiQuanLyHoaDonBanHang.Size = new System.Drawing.Size(253, 22);
+            this.tsmiQuanLyHoaDonBanHang.Text = "&Quản lý Hóa đơn Bán hàng...";
+            this.tsmiQuanLyHoaDonBanHang.Click += new System.EventHandler(this.tsmiQuanLyHoaDonBanHang_Click);
+            // 
+            // tsmiBaoCaoBanHang
+            // 
+            this.tsmiBaoCaoBanHang.Image = global::SSMP.Properties.Resources.clipboard;
+            this.tsmiBaoCaoBanHang.Name = "tsmiBaoCaoBanHang";
+            this.tsmiBaoCaoBanHang.Size = new System.Drawing.Size(253, 22);
+            this.tsmiBaoCaoBanHang.Text = "&Báo cáo...";
+            this.tsmiBaoCaoBanHang.Click += new System.EventHandler(this.tsmiBaoCaoBanHang_Click);
+            // 
+            // tsmiLapPhieuNhapHangHoa
+            // 
+            this.tsmiLapPhieuNhapHangHoa.Image = global::SSMP.Properties.Resources.text_rich_colored;
+            this.tsmiLapPhieuNhapHangHoa.Name = "tsmiLapPhieuNhapHangHoa";
+            this.tsmiLapPhieuNhapHangHoa.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+                        | System.Windows.Forms.Keys.U)));
+            this.tsmiLapPhieuNhapHangHoa.Size = new System.Drawing.Size(265, 22);
+            this.tsmiLapPhieuNhapHangHoa.Text = "&Lập Phiếu nhập Hàng hóa";
+            this.tsmiLapPhieuNhapHangHoa.Click += new System.EventHandler(this.tsmiLapPhieuNhapHangHoa_Click);
+            // 
+            // tsmiQuanLyPhieuNhapHang
+            // 
+            this.tsmiQuanLyPhieuNhapHang.Image = global::SSMP.Properties.Resources.documents;
+            this.tsmiQuanLyPhieuNhapHang.Name = "tsmiQuanLyPhieuNhapHang";
+            this.tsmiQuanLyPhieuNhapHang.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+                        | System.Windows.Forms.Keys.K)));
+            this.tsmiQuanLyPhieuNhapHang.Size = new System.Drawing.Size(265, 22);
+            this.tsmiQuanLyPhieuNhapHang.Text = "&Quản lý Phiếu nhập hàng";
+            this.tsmiQuanLyPhieuNhapHang.Click += new System.EventHandler(this.tsmiQuanLyPhieuNhapHang_Click);
+            // 
+            // tsmiBaoCaoNhapHang
+            // 
+            this.tsmiBaoCaoNhapHang.Image = global::SSMP.Properties.Resources.clipboard;
+            this.tsmiBaoCaoNhapHang.Name = "tsmiBaoCaoNhapHang";
+            this.tsmiBaoCaoNhapHang.Size = new System.Drawing.Size(265, 22);
+            this.tsmiBaoCaoNhapHang.Text = "&Báo cáo...";
+            this.tsmiBaoCaoNhapHang.Click += new System.EventHandler(this.tsmiBaoCaoNhapHang_Click);
+            // 
+            // tsmiDanhMucSanPham
+            // 
+            this.tsmiDanhMucSanPham.Image = global::SSMP.Properties.Resources.package;
+            this.tsmiDanhMucSanPham.Name = "tsmiDanhMucSanPham";
+            this.tsmiDanhMucSanPham.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+                        | System.Windows.Forms.Keys.P)));
+            this.tsmiDanhMucSanPham.Size = new System.Drawing.Size(271, 22);
+            this.tsmiDanhMucSanPham.Text = "Danh mục Sản &phẩm...";
+            this.tsmiDanhMucSanPham.Click += new System.EventHandler(this.tsmiDanhMucSanPham_Click);
+            // 
+            // tsmiDanhMucLoaiSanPham
+            // 
+            this.tsmiDanhMucLoaiSanPham.Image = global::SSMP.Properties.Resources.cube_yellow;
+            this.tsmiDanhMucLoaiSanPham.Name = "tsmiDanhMucLoaiSanPham";
+            this.tsmiDanhMucLoaiSanPham.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+                        | System.Windows.Forms.Keys.L)));
+            this.tsmiDanhMucLoaiSanPham.Size = new System.Drawing.Size(271, 22);
+            this.tsmiDanhMucLoaiSanPham.Text = "Danh mục &Loại sản phẩm...";
+            this.tsmiDanhMucLoaiSanPham.Click += new System.EventHandler(this.tsmiDanhMucLoaiSanPham_Click);
+            // 
+            // toolStripMenuItemProductStatus
+            // 
+            this.toolStripMenuItemProductStatus.Image = global::SSMP.Properties.Resources.document;
+            this.toolStripMenuItemProductStatus.Name = "toolStripMenuItemProductStatus";
+            this.toolStripMenuItemProductStatus.Size = new System.Drawing.Size(271, 22);
+            this.toolStripMenuItemProductStatus.Text = "Danh mục Trạng thái sản phẩm";
+            this.toolStripMenuItemProductStatus.Click += new System.EventHandler(this.toolStripMenuItemProductStatus_Click);
+            // 
+            // tsmiDanhMucDonVi
+            // 
+            this.tsmiDanhMucDonVi.Image = global::SSMP.Properties.Resources.weight2;
+            this.tsmiDanhMucDonVi.Name = "tsmiDanhMucDonVi";
+            this.tsmiDanhMucDonVi.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+                        | System.Windows.Forms.Keys.V)));
+            this.tsmiDanhMucDonVi.Size = new System.Drawing.Size(271, 22);
+            this.tsmiDanhMucDonVi.Text = "Danh mục Đơn &vị...";
+            this.tsmiDanhMucDonVi.Click += new System.EventHandler(this.tsmiDanhMucDonVi_Click);
+            // 
+            // tsmiDanhMucNhaCungCap
+            // 
+            this.tsmiDanhMucNhaCungCap.Image = global::SSMP.Properties.Resources.office_building;
+            this.tsmiDanhMucNhaCungCap.Name = "tsmiDanhMucNhaCungCap";
+            this.tsmiDanhMucNhaCungCap.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+                        | System.Windows.Forms.Keys.M)));
+            this.tsmiDanhMucNhaCungCap.Size = new System.Drawing.Size(271, 22);
+            this.tsmiDanhMucNhaCungCap.Text = "Danh mục Nhà &cung cấp...";
+            this.tsmiDanhMucNhaCungCap.Click += new System.EventHandler(this.tsmiDanhMucNhaCungCap_Click);
+            // 
+            // tsmiDanhMucNhaSanXuat
+            // 
+            this.tsmiDanhMucNhaSanXuat.Image = global::SSMP.Properties.Resources.factory;
+            this.tsmiDanhMucNhaSanXuat.Name = "tsmiDanhMucNhaSanXuat";
+            this.tsmiDanhMucNhaSanXuat.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+                        | System.Windows.Forms.Keys.T)));
+            this.tsmiDanhMucNhaSanXuat.Size = new System.Drawing.Size(271, 22);
+            this.tsmiDanhMucNhaSanXuat.Text = "Danh mục Nhà &sản xuất...";
+            this.tsmiDanhMucNhaSanXuat.Click += new System.EventHandler(this.tsmiDanhMucNhaSanXuat_Click);
+            // 
+            // tsmiDanhMucQuocGia
+            // 
+            this.tsmiDanhMucQuocGia.Image = global::SSMP.Properties.Resources.web;
+            this.tsmiDanhMucQuocGia.Name = "tsmiDanhMucQuocGia";
+            this.tsmiDanhMucQuocGia.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+                        | System.Windows.Forms.Keys.R)));
+            this.tsmiDanhMucQuocGia.Size = new System.Drawing.Size(271, 22);
+            this.tsmiDanhMucQuocGia.Text = "Danh mục &Quốc gia...";
+            this.tsmiDanhMucQuocGia.Click += new System.EventHandler(this.tsmiDanhMucQuocGia_Click);
+            // 
+            // tsmiQuanLyNguoiDung
+            // 
+            this.tsmiQuanLyNguoiDung.Image = global::SSMP.Properties.Resources.user1;
+            this.tsmiQuanLyNguoiDung.Name = "tsmiQuanLyNguoiDung";
+            this.tsmiQuanLyNguoiDung.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+                        | System.Windows.Forms.Keys.A)));
+            this.tsmiQuanLyNguoiDung.Size = new System.Drawing.Size(278, 22);
+            this.tsmiQuanLyNguoiDung.Text = "Quản lý &Người dùng...";
+            this.tsmiQuanLyNguoiDung.Click += new System.EventHandler(this.tsmiQuanLyNguoiDung_Click);
+            // 
+            // tsmiQuanLyNhomNguoiDung
+            // 
+            this.tsmiQuanLyNhomNguoiDung.Image = global::SSMP.Properties.Resources.users1;
+            this.tsmiQuanLyNhomNguoiDung.Name = "tsmiQuanLyNhomNguoiDung";
+            this.tsmiQuanLyNhomNguoiDung.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+                        | System.Windows.Forms.Keys.B)));
+            this.tsmiQuanLyNhomNguoiDung.Size = new System.Drawing.Size(278, 22);
+            this.tsmiQuanLyNhomNguoiDung.Text = "Quản lý Nh&óm người dùng...";
+            this.tsmiQuanLyNhomNguoiDung.Click += new System.EventHandler(this.tsmiQuanLyNhomNguoiDung_Click);
+            // 
+            // tsmiQuanLyChucVu
+            // 
+            this.tsmiQuanLyChucVu.Image = global::SSMP.Properties.Resources.users1;
+            this.tsmiQuanLyChucVu.Name = "tsmiQuanLyChucVu";
+            this.tsmiQuanLyChucVu.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+                        | System.Windows.Forms.Keys.F)));
+            this.tsmiQuanLyChucVu.Size = new System.Drawing.Size(278, 22);
+            this.tsmiQuanLyChucVu.Text = "Quản lý &Chức vụ";
+            this.tsmiQuanLyChucVu.Click += new System.EventHandler(this.tsmiQuanLyChucVu_Click);
             // 
             // toolStripMenuItemUserStatus
             // 
@@ -697,6 +640,74 @@
             this.toolStripMenuItemUserStatus.Size = new System.Drawing.Size(278, 22);
             this.toolStripMenuItemUserStatus.Text = "Quản lý Trạng thái";
             this.toolStripMenuItemUserStatus.Click += new System.EventHandler(this.toolStripMenuItemUserStatus_Click);
+            // 
+            // tsmiQuanLyHanhDong
+            // 
+            this.tsmiQuanLyHanhDong.Image = global::SSMP.Properties.Resources.supp_48;
+            this.tsmiQuanLyHanhDong.Name = "tsmiQuanLyHanhDong";
+            this.tsmiQuanLyHanhDong.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+                        | System.Windows.Forms.Keys.G)));
+            this.tsmiQuanLyHanhDong.Size = new System.Drawing.Size(278, 22);
+            this.tsmiQuanLyHanhDong.Text = "Quản lý &Hành động...";
+            this.tsmiQuanLyHanhDong.Click += new System.EventHandler(this.tsmiQuanLyHanhDong_Click);
+            // 
+            // tsmiQuanLyDauVet
+            // 
+            this.tsmiQuanLyDauVet.Image = global::SSMP.Properties.Resources.videocamera;
+            this.tsmiQuanLyDauVet.Name = "tsmiQuanLyDauVet";
+            this.tsmiQuanLyDauVet.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift)
+                        | System.Windows.Forms.Keys.D)));
+            this.tsmiQuanLyDauVet.Size = new System.Drawing.Size(278, 22);
+            this.tsmiQuanLyDauVet.Text = "Quản lý &Dấu vết";
+            this.tsmiQuanLyDauVet.Click += new System.EventHandler(this.tsmiQuanLyDauVet_Click);
+            // 
+            // tsmiXepTheoTangThangDung
+            // 
+            this.tsmiXepTheoTangThangDung.Image = global::SSMP.Properties.Resources.windows;
+            this.tsmiXepTheoTangThangDung.Name = "tsmiXepTheoTangThangDung";
+            this.tsmiXepTheoTangThangDung.Size = new System.Drawing.Size(187, 22);
+            this.tsmiXepTheoTangThangDung.Text = "Xếp lát  &thẳng đứng";
+            this.tsmiXepTheoTangThangDung.Click += new System.EventHandler(this.tsmiXepTheoTangThangDung_Click);
+            // 
+            // tsmiXepTheoTangNamNgang
+            // 
+            this.tsmiXepTheoTangNamNgang.Image = global::SSMP.Properties.Resources.windows;
+            this.tsmiXepTheoTangNamNgang.Name = "tsmiXepTheoTangNamNgang";
+            this.tsmiXepTheoTangNamNgang.Size = new System.Drawing.Size(187, 22);
+            this.tsmiXepTheoTangNamNgang.Text = "Xếp lát nằm &ngang";
+            this.tsmiXepTheoTangNamNgang.Click += new System.EventHandler(this.tsmiXepTheoTangNamNgang_Click);
+            // 
+            // tsmiXepChongLenNhau
+            // 
+            this.tsmiXepChongLenNhau.Image = global::SSMP.Properties.Resources.windows;
+            this.tsmiXepChongLenNhau.Name = "tsmiXepChongLenNhau";
+            this.tsmiXepChongLenNhau.Size = new System.Drawing.Size(187, 22);
+            this.tsmiXepChongLenNhau.Text = "Xếp chồng &lên nhau";
+            this.tsmiXepChongLenNhau.Click += new System.EventHandler(this.tsmiXepChongLenNhau_Click);
+            // 
+            // tsmiXapXepCacBieuTuong
+            // 
+            this.tsmiXapXepCacBieuTuong.Image = global::SSMP.Properties.Resources.windows;
+            this.tsmiXapXepCacBieuTuong.Name = "tsmiXapXepCacBieuTuong";
+            this.tsmiXapXepCacBieuTuong.Size = new System.Drawing.Size(187, 22);
+            this.tsmiXapXepCacBieuTuong.Text = "Xắp xếp các &biểu tượng";
+            this.tsmiXapXepCacBieuTuong.Click += new System.EventHandler(this.tsmiXapXepCacBieuTuong_Click);
+            // 
+            // tsmiDongTatCaCuaSo
+            // 
+            this.tsmiDongTatCaCuaSo.Image = global::SSMP.Properties.Resources.window_delete;
+            this.tsmiDongTatCaCuaSo.Name = "tsmiDongTatCaCuaSo";
+            this.tsmiDongTatCaCuaSo.Size = new System.Drawing.Size(187, 22);
+            this.tsmiDongTatCaCuaSo.Text = "Đóng tất &cả cửa sổ";
+            this.tsmiDongTatCaCuaSo.Click += new System.EventHandler(this.tsmiDongTatCaCuaSo_Click);
+            // 
+            // tsmiHuongDanSuDung
+            // 
+            this.tsmiHuongDanSuDung.Image = global::SSMP.Properties.Resources.unknown;
+            this.tsmiHuongDanSuDung.Name = "tsmiHuongDanSuDung";
+            this.tsmiHuongDanSuDung.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.tsmiHuongDanSuDung.Size = new System.Drawing.Size(200, 22);
+            this.tsmiHuongDanSuDung.Text = "&Hướng dẫn sử dụng...";
             // 
             // frmGiaoDienChinh
             // 
@@ -790,6 +801,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem8;
         private System.Windows.Forms.ToolStripMenuItem tsmiBaoCaoNhapHang;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemUserStatus;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemProductStatus;
     }
 }
 

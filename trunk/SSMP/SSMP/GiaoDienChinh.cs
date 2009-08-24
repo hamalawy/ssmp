@@ -16,7 +16,7 @@ namespace SSMP
         public frmDoiMatKhau DoiMatKhau;
         public frmDanhMucQuocGia DanhMucQuocGia;
         public FrmUserRole QuanLyNhomNguoiDung;
-        public frmDanhMucLoaiSanPham DanhMucLoaiSanPham;
+        public FrmCategory DanhMucLoaiSanPham;
         public frmDanhMucNhaCungCap DanhMucNhaCungCap;
         public FrmUser QuanLyNguoiDung;
         public FrmUnit QuanLyDonVi;
@@ -28,6 +28,8 @@ namespace SSMP
         public frmDanhMucSanPham DanhMucSanPham;
         public DangNhap frmDangNhap;
         public FrmUserStatus frmUserStatus;
+        private FrmProductStatus frmProductStatus;
+        private FrmActionDetail frmActionDetail;
 
         public string MaNguoiDung;
 
@@ -149,13 +151,13 @@ namespace SSMP
         {
             if (DanhMucLoaiSanPham == null)
             {
-                DanhMucLoaiSanPham = new frmDanhMucLoaiSanPham();
+                DanhMucLoaiSanPham = new FrmCategory();
                 DanhMucLoaiSanPham.MdiParent = this;
                 DanhMucLoaiSanPham.Show();
             }
             if (DanhMucLoaiSanPham.IsDisposed)
             {
-                DanhMucLoaiSanPham = new frmDanhMucLoaiSanPham();
+                DanhMucLoaiSanPham = new FrmCategory();
                 DanhMucLoaiSanPham.MdiParent = this;
                 DanhMucLoaiSanPham.Show();
             }
@@ -165,13 +167,13 @@ namespace SSMP
         {
             if (DanhMucLoaiSanPham == null)
             {
-                DanhMucLoaiSanPham = new frmDanhMucLoaiSanPham();
+                DanhMucLoaiSanPham = new FrmCategory();
                 DanhMucLoaiSanPham.MdiParent = this;
                 DanhMucLoaiSanPham.Show();
             }
             if (DanhMucLoaiSanPham.IsDisposed)
             {
-                DanhMucLoaiSanPham = new frmDanhMucLoaiSanPham();
+                DanhMucLoaiSanPham = new FrmCategory();
                 DanhMucLoaiSanPham.MdiParent = this;
                 DanhMucLoaiSanPham.Show();
             }
@@ -594,6 +596,38 @@ namespace SSMP
                 frmUserStatus = new FrmUserStatus();
                 frmUserStatus.MdiParent = this;
                 frmUserStatus.Show();
+            }
+        }
+
+        private void toolStripMenuItemProductStatus_Click(object sender, EventArgs e)
+        {
+            if (frmProductStatus == null)
+            {
+                frmProductStatus = new FrmProductStatus();
+                frmProductStatus.MdiParent = this;
+                frmProductStatus.Show();
+            }
+            if (frmProductStatus.IsDisposed)
+            {
+                frmProductStatus = new FrmProductStatus();
+                frmProductStatus.MdiParent = this;
+                frmProductStatus.Show();
+            }
+        }
+
+        private void tsmiQuanLyDauVet_Click(object sender, EventArgs e)
+        {
+            if (frmActionDetail == null)
+            {
+                frmActionDetail = new FrmActionDetail();
+                frmActionDetail.MdiParent = this;
+                frmActionDetail.Show();
+            }
+            if (frmActionDetail.IsDisposed)
+            {
+                frmActionDetail = new FrmActionDetail();
+                frmActionDetail.MdiParent = this;
+                frmActionDetail.Show();
             }
         }
     }
