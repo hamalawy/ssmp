@@ -19,6 +19,7 @@ namespace SSMP.Core.Domain
         private System.Int64 _BillPurchaseId;
         private System.Int64? _BillSaleId;
         private System.Int32 _UnitId;
+        private System.String _Description;
         private BillPurchase _BillPurchaseIdLookup;
         private BillSale _BillSaleIdLookup;
 
@@ -104,6 +105,12 @@ namespace SSMP.Core.Domain
         {
             get { return _UnitId; }
             set { _UnitId = value; }
+        }
+
+        public virtual System.String Description
+        {
+            get { return _Description; }
+            set { _Description = value; }
         }
 
          public virtual BillPurchase BillPurchaseIdLookup{

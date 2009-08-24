@@ -461,7 +461,7 @@ namespace SSMP
                     rowTemp["CategoryName"] = objProduct.CategoryIdLookup.CategoryName;
                     rowTemp["ManId"] = objProduct.ManIdLookup.ID;
                     rowTemp["ManName"] = objProduct.ManIdLookup.ManName;
-                    rowTemp["ProdDesc"] = objProduct.ProdDesc;
+                    //rowTemp["ProdDesc"] = objProduct.ProdDesc;
                     dataTableProductName.Rows.Add(rowTemp);
                 }
             }

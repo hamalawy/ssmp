@@ -4,8 +4,7 @@
     <id name="ID" type="System.Int32" column="ProductNameId">
         <generator class="identity"/>
     </id>
-    <property name="ProdName" column="ProdName" type="System.String" not-null="true" length="100"/>
-    <property name="ProdDesc" column="ProdDesc" type="System.String" not-null="false" length="255"/>
+    <property name="ProdName" column="ProdName" type="System.String" not-null="true" length="100"/>    
     <property name="CategoryId" column="CategoryId" type="System.Int32" not-null="true" />
     <property name="ManId" column="ManId" type="System.Int32" not-null="true" />
     <many-to-one name="CategoryIdLookup" column="CategoryId" class="Category"  update="0"  insert="0" />
