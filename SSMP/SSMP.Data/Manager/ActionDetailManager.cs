@@ -10,68 +10,70 @@ using SSMP.Core.DataInterfaces;
 
 namespace SSMP.Data.Manager
 {
-    public class ProductStatusManager : IManager<ProductStatus, System.Int32>
+    public class ActionDetailManager : IManager<ActionDetail, System.Int32>
     {
-        private IProductStatusDao productStatusDao;
-        private static readonly ILog logger = LogManager.GetLogger(typeof(ProductStatusManager));
+        private IActionDetailDao actionDetailDao;
+        private static readonly ILog logger = LogManager.GetLogger(typeof(ActionDetailManager));
 
-        public ProductStatusManager()
+        public ActionDetailManager()
         {
-            const string LOCATION = "ProductStatusManager()";
+            const string LOCATION = "ActionDetailManager()";
             logger.Debug(LOCATION + LogConstants.BEGIN);
 
             IDaoFactory daoFactory = new NHibernateDaoFactory();
-            productStatusDao = daoFactory.GetProductStatusDao();
+            actionDetailDao = daoFactory.GetActionDetailDao();
 
             logger.Debug(LOCATION + LogConstants.SEPARATOR + "DaoFactory create successfully");
             logger.Debug(LOCATION + LogConstants.END);
         }
 
-        #region IManager<ProductStatus,int> Members
+        #region IManager<ActionDetail,int> Members
 
-        public ProductStatus GetById(int id, bool shouldLock)
+        public ActionDetail GetById(int id, bool shouldLock)
         {
             throw new Exception("The method or operation is not implemented.");
         }
 
-        public List<ProductStatus> GetAll()
+        public List<ActionDetail> GetAll()
         {
-            return productStatusDao.GetAll();
+            return actionDetailDao.GetAll();
         }
 
-        public List<ProductStatus> GetByExample(ProductStatus exampleInstance, params string[] propertiesToExclude)
-        {
-            throw new Exception("The method or operation is not implemented.");
-        }
-
-        public ProductStatus GetUniqueByExample(ProductStatus exampleInstance, params string[] propertiesToExclude)
+        public List<ActionDetail> GetByExample(ActionDetail exampleInstance, params string[] propertiesToExclude)
         {
             throw new Exception("The method or operation is not implemented.");
         }
 
-        public ProductStatus Save(ProductStatus entity)
+        public ActionDetail GetUniqueByExample(ActionDetail exampleInstance, params string[] propertiesToExclude)
         {
             throw new Exception("The method or operation is not implemented.");
         }
 
-        public ProductStatus SaveOrUpdate(ProductStatus entity)
+        public ActionDetail Save(ActionDetail entity)
+        {
+            throw new Exception("The method or operation is not implemented.");
+        }
+
+        public ActionDetail SaveOrUpdate(ActionDetail entity)
         {
             try
             {
                 if (entity != null)
                 {
-                    if (entity.ID == 0)
+                    if (entity.ID.ActionId == 0 && entity.ID.UserId == 0)
                     {
-                        productStatusDao.SaveOrUpdate(entity);
+                        actionDetailDao.SaveOrUpdate(entity);
                     }
                     else
                     {
-                        ProductStatus existEntity = productStatusDao.GetById(entity.ID, false);
-                        existEntity.StatusName = entity.StatusName;
-                        existEntity.Description = entity.Description;
+                        ActionDetail existEntity = actionDetailDao.GetById(entity.ID, false);
+                        //Chỗ này là copy all property của object update cho object exist, nhưng vì chưa code nên copy thủ công
+                        existEntity.ActionDate = entity.ActionDate;
+                        //existEntity.ActionId = entity.ActionId;
+                        //existEntity.UserId = entity.UserId;
                     }
 
-                    productStatusDao.CommitChanges();
+                    actionDetailDao.CommitChanges();
                 }
                 else
                 {
@@ -86,16 +88,16 @@ namespace SSMP.Data.Manager
             return entity;
         }
 
-        public void Delete(ProductStatus entity)
+        public void Delete(ActionDetail entity)
         {
             try
             {
                 if (entity != null)
                 {
-                    ProductStatus existEntity = productStatusDao.GetById(entity.ID, false);
+                    ActionDetail existEntity = actionDetailDao.GetById(entity.ID, false);
 
-                    productStatusDao.Delete(existEntity);
-                    productStatusDao.CommitChanges();
+                    actionDetailDao.Delete(existEntity);
+                    actionDetailDao.CommitChanges();
                 }
                 else
                 {
@@ -108,18 +110,18 @@ namespace SSMP.Data.Manager
             }
         }
 
-        public SearchResult<ProductStatus> GetByExampleAndPaging(ProductStatus exampleInstance, SearchParam searchParam)
+        public SearchResult<ActionDetail> GetByExampleAndPaging(ActionDetail exampleInstance, SearchParam searchParam)
         {
             throw new Exception("The method or operation is not implemented.");
         }
 
-        public SearchResult<ProductStatus> GetProductStatusListByParam(ProductStatus entity, SearchParam searchParam)
+        public SearchResult<ActionDetail> GetActionDetailListByParam(ActionDetail entity, SearchParam searchParam)
         {
-            SearchResult<ProductStatus> searchResult;
+            SearchResult<ActionDetail> searchResult;
 
             try
             {
-                searchResult = productStatusDao.GetProductStatusListByParam(entity, searchParam);
+                searchResult = actionDetailDao.GetActionDetailListByParam(entity, searchParam);
             }
             catch (Exception ex)
             {

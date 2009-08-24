@@ -1,6 +1,6 @@
 ﻿namespace SSMP
 {
-    partial class FrmCategory
+    partial class FrmProductStatus
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategory));
-            this.tcQuanLyCategory = new System.Windows.Forms.TabControl();
-            this.tpQuanLyCategory = new System.Windows.Forms.TabPage();
-            this.bindingNavigatorCategory = new System.Windows.Forms.BindingNavigator(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductStatus));
+            this.tcQuanLyProductStatus = new System.Windows.Forms.TabControl();
+            this.tpQuanLyProductStatus = new System.Windows.Forms.TabPage();
+            this.panelProductStatus = new System.Windows.Forms.Panel();
+            this.bindingNavigatorProductStatus = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -48,13 +49,12 @@
             this.toolStripBtnEdit = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripLblTotal = new System.Windows.Forms.ToolStripLabel();
-            this.panelCategory = new System.Windows.Forms.Panel();
-            this.gvCategory = new System.Windows.Forms.DataGridView();
+            this.gvProductStatus = new System.Windows.Forms.DataGridView();
             this.gbTimKiemQuanLy = new System.Windows.Forms.GroupBox();
             this.chkSearchAll = new System.Windows.Forms.CheckBox();
-            this.chkSearchCategoryDesc = new System.Windows.Forms.CheckBox();
-            this.chkSearchCategoryName = new System.Windows.Forms.CheckBox();
-            this.chkSearchCategoryID = new System.Windows.Forms.CheckBox();
+            this.chkSearchProductStatusDesc = new System.Windows.Forms.CheckBox();
+            this.chkSearchProductStatusName = new System.Windows.Forms.CheckBox();
+            this.chkSearchProductStatusID = new System.Windows.Forms.CheckBox();
             this.lblViDuTimKiemQuanLy = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -62,68 +62,77 @@
             this.btnInAnQuanLy = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.chkDispAll = new System.Windows.Forms.CheckBox();
-            this.chkDispCategoryDesc = new System.Windows.Forms.CheckBox();
-            this.chkDispCategoryName = new System.Windows.Forms.CheckBox();
-            this.chkDispCategoryID = new System.Windows.Forms.CheckBox();
+            this.chkDispProductStatusDesc = new System.Windows.Forms.CheckBox();
+            this.chkDispProductStatusName = new System.Windows.Forms.CheckBox();
+            this.chkDispProductStatusID = new System.Windows.Forms.CheckBox();
             this.lblHienThiQuanLy = new System.Windows.Forms.Label();
-            this.lblDanhSachCategoryQuanLy = new System.Windows.Forms.Label();
-            this.gbThongTinCategory = new System.Windows.Forms.GroupBox();
+            this.lblDanhSachProductStatusQuanLy = new System.Windows.Forms.Label();
+            this.gbThongTinProductStatus = new System.Windows.Forms.GroupBox();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txtCategoryDesc = new System.Windows.Forms.TextBox();
+            this.txtProductStatusDesc = new System.Windows.Forms.TextBox();
             this.lblMoTa = new System.Windows.Forms.Label();
-            this.txtCategoryName = new System.Windows.Forms.TextBox();
-            this.lblCategory = new System.Windows.Forms.Label();
-            this.txtCategoryID = new System.Windows.Forms.TextBox();
-            this.lblMaCategory = new System.Windows.Forms.Label();
-            this.tcQuanLyCategory.SuspendLayout();
-            this.tpQuanLyCategory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorCategory)).BeginInit();
-            this.bindingNavigatorCategory.SuspendLayout();
-            this.panelCategory.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvCategory)).BeginInit();
+            this.txtProductStatusName = new System.Windows.Forms.TextBox();
+            this.lblProductStatus = new System.Windows.Forms.Label();
+            this.txtProductStatusID = new System.Windows.Forms.TextBox();
+            this.lblMaProductStatus = new System.Windows.Forms.Label();
+            this.tcQuanLyProductStatus.SuspendLayout();
+            this.tpQuanLyProductStatus.SuspendLayout();
+            this.panelProductStatus.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorProductStatus)).BeginInit();
+            this.bindingNavigatorProductStatus.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvProductStatus)).BeginInit();
             this.gbTimKiemQuanLy.SuspendLayout();
-            this.gbThongTinCategory.SuspendLayout();
+            this.gbThongTinProductStatus.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tcQuanLyCategory
+            // tcQuanLyProductStatus
             // 
-            this.tcQuanLyCategory.Controls.Add(this.tpQuanLyCategory);
-            this.tcQuanLyCategory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tcQuanLyCategory.Location = new System.Drawing.Point(0, 0);
-            this.tcQuanLyCategory.Name = "tcQuanLyCategory";
-            this.tcQuanLyCategory.SelectedIndex = 0;
-            this.tcQuanLyCategory.Size = new System.Drawing.Size(826, 560);
-            this.tcQuanLyCategory.TabIndex = 0;
+            this.tcQuanLyProductStatus.Controls.Add(this.tpQuanLyProductStatus);
+            this.tcQuanLyProductStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcQuanLyProductStatus.Location = new System.Drawing.Point(0, 0);
+            this.tcQuanLyProductStatus.Name = "tcQuanLyProductStatus";
+            this.tcQuanLyProductStatus.SelectedIndex = 0;
+            this.tcQuanLyProductStatus.Size = new System.Drawing.Size(826, 560);
+            this.tcQuanLyProductStatus.TabIndex = 0;
             // 
-            // tpQuanLyCategory
+            // tpQuanLyProductStatus
             // 
-            this.tpQuanLyCategory.Controls.Add(this.panelCategory);
-            this.tpQuanLyCategory.Controls.Add(this.gbTimKiemQuanLy);
-            this.tpQuanLyCategory.Controls.Add(this.btnInAnQuanLy);
-            this.tpQuanLyCategory.Controls.Add(this.btnClose);
-            this.tpQuanLyCategory.Controls.Add(this.chkDispAll);
-            this.tpQuanLyCategory.Controls.Add(this.chkDispCategoryDesc);
-            this.tpQuanLyCategory.Controls.Add(this.chkDispCategoryName);
-            this.tpQuanLyCategory.Controls.Add(this.chkDispCategoryID);
-            this.tpQuanLyCategory.Controls.Add(this.lblHienThiQuanLy);
-            this.tpQuanLyCategory.Controls.Add(this.lblDanhSachCategoryQuanLy);
-            this.tpQuanLyCategory.Controls.Add(this.gbThongTinCategory);
-            this.tpQuanLyCategory.Location = new System.Drawing.Point(4, 22);
-            this.tpQuanLyCategory.Name = "tpQuanLyCategory";
-            this.tpQuanLyCategory.Padding = new System.Windows.Forms.Padding(3);
-            this.tpQuanLyCategory.Size = new System.Drawing.Size(818, 534);
-            this.tpQuanLyCategory.TabIndex = 0;
-            this.tpQuanLyCategory.Text = "Quản lý Loại sản phẩm";
-            this.tpQuanLyCategory.UseVisualStyleBackColor = true;
+            this.tpQuanLyProductStatus.Controls.Add(this.panelProductStatus);
+            this.tpQuanLyProductStatus.Controls.Add(this.gbTimKiemQuanLy);
+            this.tpQuanLyProductStatus.Controls.Add(this.btnInAnQuanLy);
+            this.tpQuanLyProductStatus.Controls.Add(this.btnClose);
+            this.tpQuanLyProductStatus.Controls.Add(this.chkDispAll);
+            this.tpQuanLyProductStatus.Controls.Add(this.chkDispProductStatusDesc);
+            this.tpQuanLyProductStatus.Controls.Add(this.chkDispProductStatusName);
+            this.tpQuanLyProductStatus.Controls.Add(this.chkDispProductStatusID);
+            this.tpQuanLyProductStatus.Controls.Add(this.lblHienThiQuanLy);
+            this.tpQuanLyProductStatus.Controls.Add(this.lblDanhSachProductStatusQuanLy);
+            this.tpQuanLyProductStatus.Controls.Add(this.gbThongTinProductStatus);
+            this.tpQuanLyProductStatus.Location = new System.Drawing.Point(4, 22);
+            this.tpQuanLyProductStatus.Name = "tpQuanLyProductStatus";
+            this.tpQuanLyProductStatus.Padding = new System.Windows.Forms.Padding(3);
+            this.tpQuanLyProductStatus.Size = new System.Drawing.Size(818, 534);
+            this.tpQuanLyProductStatus.TabIndex = 0;
+            this.tpQuanLyProductStatus.Text = "Quản lý trạng thái sản phẩm";
+            this.tpQuanLyProductStatus.UseVisualStyleBackColor = true;
             // 
-            // bindingNavigatorCategory
+            // panelProductStatus
             // 
-            this.bindingNavigatorCategory.AddNewItem = null;
-            this.bindingNavigatorCategory.CountItem = this.bindingNavigatorCountItem;
-            this.bindingNavigatorCategory.DeleteItem = null;
-            this.bindingNavigatorCategory.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigatorCategory.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.panelProductStatus.Controls.Add(this.bindingNavigatorProductStatus);
+            this.panelProductStatus.Controls.Add(this.gvProductStatus);
+            this.panelProductStatus.Location = new System.Drawing.Point(15, 253);
+            this.panelProductStatus.Name = "panelProductStatus";
+            this.panelProductStatus.Size = new System.Drawing.Size(787, 267);
+            this.panelProductStatus.TabIndex = 27;
+            // 
+            // bindingNavigatorProductStatus
+            // 
+            this.bindingNavigatorProductStatus.AddNewItem = null;
+            this.bindingNavigatorProductStatus.CountItem = this.bindingNavigatorCountItem;
+            this.bindingNavigatorProductStatus.DeleteItem = null;
+            this.bindingNavigatorProductStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bindingNavigatorProductStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -139,15 +148,15 @@
             this.toolStripBtnEdit,
             this.toolStripBtnDelete,
             this.toolStripLblTotal});
-            this.bindingNavigatorCategory.Location = new System.Drawing.Point(0, 242);
-            this.bindingNavigatorCategory.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bindingNavigatorCategory.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bindingNavigatorCategory.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bindingNavigatorCategory.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bindingNavigatorCategory.Name = "bindingNavigatorCategory";
-            this.bindingNavigatorCategory.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigatorCategory.Size = new System.Drawing.Size(787, 25);
-            this.bindingNavigatorCategory.TabIndex = 28;
+            this.bindingNavigatorProductStatus.Location = new System.Drawing.Point(0, 242);
+            this.bindingNavigatorProductStatus.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bindingNavigatorProductStatus.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bindingNavigatorProductStatus.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bindingNavigatorProductStatus.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bindingNavigatorProductStatus.Name = "bindingNavigatorProductStatus";
+            this.bindingNavigatorProductStatus.PositionItem = this.bindingNavigatorPositionItem;
+            this.bindingNavigatorProductStatus.Size = new System.Drawing.Size(787, 25);
+            this.bindingNavigatorProductStatus.TabIndex = 14;
             // 
             // bindingNavigatorCountItem
             // 
@@ -224,6 +233,7 @@
             this.toolStripBtnReload.Name = "toolStripBtnReload";
             this.toolStripBtnReload.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtnReload.ToolTipText = "Tải lại";
+            this.toolStripBtnReload.Click += new System.EventHandler(this.toolStripBtnReload_Click);
             // 
             // toolStripSeparator1
             // 
@@ -238,6 +248,7 @@
             this.toolStripBtnAdd.Name = "toolStripBtnAdd";
             this.toolStripBtnAdd.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtnAdd.ToolTipText = "Thêm mới";
+            this.toolStripBtnAdd.Click += new System.EventHandler(this.toolStripBtnAdd_Click);
             // 
             // toolStripBtnEdit
             // 
@@ -247,6 +258,7 @@
             this.toolStripBtnEdit.Name = "toolStripBtnEdit";
             this.toolStripBtnEdit.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtnEdit.ToolTipText = "Sửa";
+            this.toolStripBtnEdit.Click += new System.EventHandler(this.toolStripBtnEdit_Click);
             // 
             // toolStripBtnDelete
             // 
@@ -256,6 +268,7 @@
             this.toolStripBtnDelete.Name = "toolStripBtnDelete";
             this.toolStripBtnDelete.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtnDelete.ToolTipText = "Xóa";
+            this.toolStripBtnDelete.Click += new System.EventHandler(this.toolStripBtnDelete_Click);
             // 
             // toolStripLblTotal
             // 
@@ -265,45 +278,36 @@
             this.toolStripLblTotal.Size = new System.Drawing.Size(79, 22);
             this.toolStripLblTotal.Text = "Tổng số dòng: ";
             // 
-            // panelCategory
+            // gvProductStatus
             // 
-            this.panelCategory.Controls.Add(this.bindingNavigatorCategory);
-            this.panelCategory.Controls.Add(this.gvCategory);
-            this.panelCategory.Location = new System.Drawing.Point(15, 253);
-            this.panelCategory.Name = "panelCategory";
-            this.panelCategory.Size = new System.Drawing.Size(787, 267);
-            this.panelCategory.TabIndex = 27;
-            // 
-            // gvCategory
-            // 
-            this.gvCategory.AllowUserToAddRows = false;
-            this.gvCategory.AllowUserToDeleteRows = false;
-            this.gvCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvCategory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gvCategory.Location = new System.Drawing.Point(0, 0);
-            this.gvCategory.MultiSelect = false;
-            this.gvCategory.Name = "gvCategory";
-            this.gvCategory.ReadOnly = true;
-            this.gvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvCategory.Size = new System.Drawing.Size(787, 282);
-            this.gvCategory.TabIndex = 13;
-            this.gvCategory.SelectionChanged += new System.EventHandler(this.gvCategory_SelectionChanged);
+            this.gvProductStatus.AllowUserToAddRows = false;
+            this.gvProductStatus.AllowUserToDeleteRows = false;
+            this.gvProductStatus.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gvProductStatus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvProductStatus.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gvProductStatus.Location = new System.Drawing.Point(0, 0);
+            this.gvProductStatus.MultiSelect = false;
+            this.gvProductStatus.Name = "gvProductStatus";
+            this.gvProductStatus.ReadOnly = true;
+            this.gvProductStatus.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gvProductStatus.Size = new System.Drawing.Size(787, 282);
+            this.gvProductStatus.TabIndex = 13;
+            this.gvProductStatus.SelectionChanged += new System.EventHandler(this.gvProductStatus_SelectionChanged);
             // 
             // gbTimKiemQuanLy
             // 
             this.gbTimKiemQuanLy.Controls.Add(this.chkSearchAll);
-            this.gbTimKiemQuanLy.Controls.Add(this.chkSearchCategoryDesc);
-            this.gbTimKiemQuanLy.Controls.Add(this.chkSearchCategoryName);
-            this.gbTimKiemQuanLy.Controls.Add(this.chkSearchCategoryID);
+            this.gbTimKiemQuanLy.Controls.Add(this.chkSearchProductStatusDesc);
+            this.gbTimKiemQuanLy.Controls.Add(this.chkSearchProductStatusName);
+            this.gbTimKiemQuanLy.Controls.Add(this.chkSearchProductStatusID);
             this.gbTimKiemQuanLy.Controls.Add(this.lblViDuTimKiemQuanLy);
             this.gbTimKiemQuanLy.Controls.Add(this.btnSearch);
             this.gbTimKiemQuanLy.Controls.Add(this.txtSearch);
             this.gbTimKiemQuanLy.Controls.Add(this.lblTimKiemQuanLy);
             this.gbTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gbTimKiemQuanLy.Location = new System.Drawing.Point(384, 6);
+            this.gbTimKiemQuanLy.Location = new System.Drawing.Point(383, 6);
             this.gbTimKiemQuanLy.Name = "gbTimKiemQuanLy";
-            this.gbTimKiemQuanLy.Size = new System.Drawing.Size(418, 191);
+            this.gbTimKiemQuanLy.Size = new System.Drawing.Size(419, 191);
             this.gbTimKiemQuanLy.TabIndex = 26;
             this.gbTimKiemQuanLy.TabStop = false;
             this.gbTimKiemQuanLy.Text = "TÌM KIẾM:";
@@ -320,38 +324,38 @@
             this.chkSearchAll.UseVisualStyleBackColor = true;
             this.chkSearchAll.CheckedChanged += new System.EventHandler(this.chkSearchAll_CheckedChanged);
             // 
-            // chkSearchCategoryDesc
+            // chkSearchProductStatusDesc
             // 
-            this.chkSearchCategoryDesc.AutoSize = true;
-            this.chkSearchCategoryDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkSearchCategoryDesc.Location = new System.Drawing.Point(356, 80);
-            this.chkSearchCategoryDesc.Name = "chkSearchCategoryDesc";
-            this.chkSearchCategoryDesc.Size = new System.Drawing.Size(53, 17);
-            this.chkSearchCategoryDesc.TabIndex = 6;
-            this.chkSearchCategoryDesc.Text = "Mô tả";
-            this.chkSearchCategoryDesc.UseVisualStyleBackColor = true;
+            this.chkSearchProductStatusDesc.AutoSize = true;
+            this.chkSearchProductStatusDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.chkSearchProductStatusDesc.Location = new System.Drawing.Point(355, 80);
+            this.chkSearchProductStatusDesc.Name = "chkSearchProductStatusDesc";
+            this.chkSearchProductStatusDesc.Size = new System.Drawing.Size(53, 17);
+            this.chkSearchProductStatusDesc.TabIndex = 6;
+            this.chkSearchProductStatusDesc.Text = "Mô tả";
+            this.chkSearchProductStatusDesc.UseVisualStyleBackColor = true;
             // 
-            // chkSearchCategoryName
+            // chkSearchProductStatusName
             // 
-            this.chkSearchCategoryName.AutoSize = true;
-            this.chkSearchCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkSearchCategoryName.Location = new System.Drawing.Point(254, 80);
-            this.chkSearchCategoryName.Name = "chkSearchCategoryName";
-            this.chkSearchCategoryName.Size = new System.Drawing.Size(95, 17);
-            this.chkSearchCategoryName.TabIndex = 5;
-            this.chkSearchCategoryName.Text = "Loại sản phẩm";
-            this.chkSearchCategoryName.UseVisualStyleBackColor = true;
+            this.chkSearchProductStatusName.AutoSize = true;
+            this.chkSearchProductStatusName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.chkSearchProductStatusName.Location = new System.Drawing.Point(228, 80);
+            this.chkSearchProductStatusName.Name = "chkSearchProductStatusName";
+            this.chkSearchProductStatusName.Size = new System.Drawing.Size(123, 17);
+            this.chkSearchProductStatusName.TabIndex = 5;
+            this.chkSearchProductStatusName.Text = "Trạng thái sản phẩm";
+            this.chkSearchProductStatusName.UseVisualStyleBackColor = true;
             // 
-            // chkSearchCategoryID
+            // chkSearchProductStatusID
             // 
-            this.chkSearchCategoryID.AutoSize = true;
-            this.chkSearchCategoryID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkSearchCategoryID.Location = new System.Drawing.Point(139, 80);
-            this.chkSearchCategoryID.Name = "chkSearchCategoryID";
-            this.chkSearchCategoryID.Size = new System.Drawing.Size(109, 17);
-            this.chkSearchCategoryID.TabIndex = 4;
-            this.chkSearchCategoryID.Text = "Mã loại sản phẩm";
-            this.chkSearchCategoryID.UseVisualStyleBackColor = true;
+            this.chkSearchProductStatusID.AutoSize = true;
+            this.chkSearchProductStatusID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.chkSearchProductStatusID.Location = new System.Drawing.Point(139, 80);
+            this.chkSearchProductStatusID.Name = "chkSearchProductStatusID";
+            this.chkSearchProductStatusID.Size = new System.Drawing.Size(88, 17);
+            this.chkSearchProductStatusID.TabIndex = 4;
+            this.chkSearchProductStatusID.Text = "Mã trạng thái";
+            this.chkSearchProductStatusID.UseVisualStyleBackColor = true;
             // 
             // lblViDuTimKiemQuanLy
             // 
@@ -359,9 +363,9 @@
             this.lblViDuTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblViDuTimKiemQuanLy.Location = new System.Drawing.Point(76, 55);
             this.lblViDuTimKiemQuanLy.Name = "lblViDuTimKiemQuanLy";
-            this.lblViDuTimKiemQuanLy.Size = new System.Drawing.Size(135, 13);
+            this.lblViDuTimKiemQuanLy.Size = new System.Drawing.Size(158, 13);
             this.lblViDuTimKiemQuanLy.TabIndex = 3;
-            this.lblViDuTimKiemQuanLy.Text = "(ví dụ: (Ví dụ: sữa, rượu... )";
+            this.lblViDuTimKiemQuanLy.Text = "(ví dụ: Hoạt động, Tạm khóa...)";
             // 
             // btnSearch
             // 
@@ -433,41 +437,41 @@
             this.chkDispAll.UseVisualStyleBackColor = true;
             this.chkDispAll.CheckedChanged += new System.EventHandler(this.chkDispAll_CheckedChanged);
             // 
-            // chkDispCategoryDesc
+            // chkDispProductStatusDesc
             // 
-            this.chkDispCategoryDesc.AutoSize = true;
-            this.chkDispCategoryDesc.Location = new System.Drawing.Point(339, 228);
-            this.chkDispCategoryDesc.Name = "chkDispCategoryDesc";
-            this.chkDispCategoryDesc.Size = new System.Drawing.Size(53, 17);
-            this.chkDispCategoryDesc.TabIndex = 18;
-            this.chkDispCategoryDesc.Text = "Mô tả";
-            this.chkDispCategoryDesc.UseVisualStyleBackColor = true;
-            this.chkDispCategoryDesc.CheckedChanged += new System.EventHandler(this.chkDispCategoryDesc_CheckedChanged);
+            this.chkDispProductStatusDesc.AutoSize = true;
+            this.chkDispProductStatusDesc.Location = new System.Drawing.Point(342, 228);
+            this.chkDispProductStatusDesc.Name = "chkDispProductStatusDesc";
+            this.chkDispProductStatusDesc.Size = new System.Drawing.Size(53, 17);
+            this.chkDispProductStatusDesc.TabIndex = 18;
+            this.chkDispProductStatusDesc.Text = "Mô tả";
+            this.chkDispProductStatusDesc.UseVisualStyleBackColor = true;
+            this.chkDispProductStatusDesc.CheckedChanged += new System.EventHandler(this.chkDispProductStatusDesc_CheckedChanged);
             // 
-            // chkDispCategoryName
+            // chkDispProductStatusName
             // 
-            this.chkDispCategoryName.AutoSize = true;
-            this.chkDispCategoryName.Location = new System.Drawing.Point(242, 228);
-            this.chkDispCategoryName.Name = "chkDispCategoryName";
-            this.chkDispCategoryName.Size = new System.Drawing.Size(95, 17);
-            this.chkDispCategoryName.TabIndex = 17;
-            this.chkDispCategoryName.Text = "Loại sản phẩm";
-            this.chkDispCategoryName.UseVisualStyleBackColor = true;
-            this.chkDispCategoryName.CheckedChanged += new System.EventHandler(this.chkDispCategoryName_CheckedChanged);
+            this.chkDispProductStatusName.AutoSize = true;
+            this.chkDispProductStatusName.Location = new System.Drawing.Point(216, 228);
+            this.chkDispProductStatusName.Name = "chkDispProductStatusName";
+            this.chkDispProductStatusName.Size = new System.Drawing.Size(123, 17);
+            this.chkDispProductStatusName.TabIndex = 17;
+            this.chkDispProductStatusName.Text = "Trạng thái sản phẩm";
+            this.chkDispProductStatusName.UseVisualStyleBackColor = true;
+            this.chkDispProductStatusName.CheckedChanged += new System.EventHandler(this.chkDispProductStatusName_CheckedChanged);
             // 
-            // chkDispCategoryID
+            // chkDispProductStatusID
             // 
-            this.chkDispCategoryID.AutoSize = true;
-            this.chkDispCategoryID.Checked = true;
-            this.chkDispCategoryID.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkDispCategoryID.Enabled = false;
-            this.chkDispCategoryID.Location = new System.Drawing.Point(127, 228);
-            this.chkDispCategoryID.Name = "chkDispCategoryID";
-            this.chkDispCategoryID.Size = new System.Drawing.Size(109, 17);
-            this.chkDispCategoryID.TabIndex = 16;
-            this.chkDispCategoryID.Text = "Mã loại sản phẩm";
-            this.chkDispCategoryID.UseVisualStyleBackColor = true;
-            this.chkDispCategoryID.CheckedChanged += new System.EventHandler(this.chkDispCategoryID_CheckedChanged);
+            this.chkDispProductStatusID.AutoSize = true;
+            this.chkDispProductStatusID.Checked = true;
+            this.chkDispProductStatusID.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkDispProductStatusID.Enabled = false;
+            this.chkDispProductStatusID.Location = new System.Drawing.Point(127, 228);
+            this.chkDispProductStatusID.Name = "chkDispProductStatusID";
+            this.chkDispProductStatusID.Size = new System.Drawing.Size(88, 17);
+            this.chkDispProductStatusID.TabIndex = 16;
+            this.chkDispProductStatusID.Text = "Mã trạng thái";
+            this.chkDispProductStatusID.UseVisualStyleBackColor = true;
+            this.chkDispProductStatusID.CheckedChanged += new System.EventHandler(this.chkDispProductStatusID_CheckedChanged);
             // 
             // lblHienThiQuanLy
             // 
@@ -478,41 +482,41 @@
             this.lblHienThiQuanLy.TabIndex = 15;
             this.lblHienThiQuanLy.Text = "Hiển thị:";
             // 
-            // lblDanhSachCategoryQuanLy
+            // lblDanhSachProductStatusQuanLy
             // 
-            this.lblDanhSachCategoryQuanLy.AutoSize = true;
-            this.lblDanhSachCategoryQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDanhSachCategoryQuanLy.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblDanhSachCategoryQuanLy.Location = new System.Drawing.Point(12, 205);
-            this.lblDanhSachCategoryQuanLy.Name = "lblDanhSachCategoryQuanLy";
-            this.lblDanhSachCategoryQuanLy.Size = new System.Drawing.Size(183, 13);
-            this.lblDanhSachCategoryQuanLy.TabIndex = 14;
-            this.lblDanhSachCategoryQuanLy.Text = "DANH SÁCH LOẠI SẢN PHẨM:";
+            this.lblDanhSachProductStatusQuanLy.AutoSize = true;
+            this.lblDanhSachProductStatusQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblDanhSachProductStatusQuanLy.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblDanhSachProductStatusQuanLy.Location = new System.Drawing.Point(12, 205);
+            this.lblDanhSachProductStatusQuanLy.Name = "lblDanhSachProductStatusQuanLy";
+            this.lblDanhSachProductStatusQuanLy.Size = new System.Drawing.Size(231, 13);
+            this.lblDanhSachProductStatusQuanLy.TabIndex = 14;
+            this.lblDanhSachProductStatusQuanLy.Text = "DANH SÁCH TRẠNG THÁI SẢN PHẨM:";
             // 
-            // gbThongTinCategory
+            // gbThongTinProductStatus
             // 
-            this.gbThongTinCategory.Controls.Add(this.btnReset);
-            this.gbThongTinCategory.Controls.Add(this.btnSave);
-            this.gbThongTinCategory.Controls.Add(this.txtCategoryDesc);
-            this.gbThongTinCategory.Controls.Add(this.lblMoTa);
-            this.gbThongTinCategory.Controls.Add(this.txtCategoryName);
-            this.gbThongTinCategory.Controls.Add(this.lblCategory);
-            this.gbThongTinCategory.Controls.Add(this.txtCategoryID);
-            this.gbThongTinCategory.Controls.Add(this.lblMaCategory);
-            this.gbThongTinCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gbThongTinCategory.Location = new System.Drawing.Point(15, 6);
-            this.gbThongTinCategory.Name = "gbThongTinCategory";
-            this.gbThongTinCategory.Size = new System.Drawing.Size(363, 191);
-            this.gbThongTinCategory.TabIndex = 0;
-            this.gbThongTinCategory.TabStop = false;
-            this.gbThongTinCategory.Text = "THÔNG TIN LOẠI SẢN PHẨM:";
+            this.gbThongTinProductStatus.Controls.Add(this.btnReset);
+            this.gbThongTinProductStatus.Controls.Add(this.btnSave);
+            this.gbThongTinProductStatus.Controls.Add(this.txtProductStatusDesc);
+            this.gbThongTinProductStatus.Controls.Add(this.lblMoTa);
+            this.gbThongTinProductStatus.Controls.Add(this.txtProductStatusName);
+            this.gbThongTinProductStatus.Controls.Add(this.lblProductStatus);
+            this.gbThongTinProductStatus.Controls.Add(this.txtProductStatusID);
+            this.gbThongTinProductStatus.Controls.Add(this.lblMaProductStatus);
+            this.gbThongTinProductStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gbThongTinProductStatus.Location = new System.Drawing.Point(15, 6);
+            this.gbThongTinProductStatus.Name = "gbThongTinProductStatus";
+            this.gbThongTinProductStatus.Size = new System.Drawing.Size(362, 191);
+            this.gbThongTinProductStatus.TabIndex = 0;
+            this.gbThongTinProductStatus.TabStop = false;
+            this.gbThongTinProductStatus.Text = "THÔNG TIN TRẠNG THÁI SẢN PHẨM:";
             // 
             // btnReset
             // 
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnReset.Image = global::SSMP.Properties.Resources.cross;
+            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
             this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReset.Location = new System.Drawing.Point(252, 158);
+            this.btnReset.Location = new System.Drawing.Point(265, 158);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(80, 23);
             this.btnReset.TabIndex = 27;
@@ -524,9 +528,9 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSave.Image = global::SSMP.Properties.Resources.disk;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(166, 158);
+            this.btnSave.Location = new System.Drawing.Point(179, 158);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(80, 23);
             this.btnSave.TabIndex = 26;
@@ -534,15 +538,15 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtCategoryDesc
+            // txtProductStatusDesc
             // 
-            this.txtCategoryDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtCategoryDesc.Location = new System.Drawing.Point(124, 84);
-            this.txtCategoryDesc.Multiline = true;
-            this.txtCategoryDesc.Name = "txtCategoryDesc";
-            this.txtCategoryDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtCategoryDesc.Size = new System.Drawing.Size(208, 65);
-            this.txtCategoryDesc.TabIndex = 5;
+            this.txtProductStatusDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtProductStatusDesc.Location = new System.Drawing.Point(137, 84);
+            this.txtProductStatusDesc.Multiline = true;
+            this.txtProductStatusDesc.Name = "txtProductStatusDesc";
+            this.txtProductStatusDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtProductStatusDesc.Size = new System.Drawing.Size(208, 65);
+            this.txtProductStatusDesc.TabIndex = 5;
             // 
             // lblMoTa
             // 
@@ -554,106 +558,105 @@
             this.lblMoTa.TabIndex = 4;
             this.lblMoTa.Text = "Mô tả:";
             // 
-            // txtCategoryName
+            // txtProductStatusName
             // 
-            this.txtCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtCategoryName.Location = new System.Drawing.Point(124, 55);
-            this.txtCategoryName.Name = "txtCategoryName";
-            this.txtCategoryName.Size = new System.Drawing.Size(208, 20);
-            this.txtCategoryName.TabIndex = 3;
+            this.txtProductStatusName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtProductStatusName.Location = new System.Drawing.Point(137, 55);
+            this.txtProductStatusName.Name = "txtProductStatusName";
+            this.txtProductStatusName.Size = new System.Drawing.Size(208, 20);
+            this.txtProductStatusName.TabIndex = 3;
             // 
-            // lblCategory
+            // lblProductStatus
             // 
-            this.lblCategory.AutoSize = true;
-            this.lblCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblCategory.Location = new System.Drawing.Point(23, 58);
-            this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(79, 13);
-            this.lblCategory.TabIndex = 2;
-            this.lblCategory.Text = "Loại sản phẩm:";
+            this.lblProductStatus.AutoSize = true;
+            this.lblProductStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblProductStatus.Location = new System.Drawing.Point(23, 58);
+            this.lblProductStatus.Name = "lblProductStatus";
+            this.lblProductStatus.Size = new System.Drawing.Size(107, 13);
+            this.lblProductStatus.TabIndex = 2;
+            this.lblProductStatus.Text = "Trạng thái sản phẩm:";
             // 
-            // txtCategoryID
+            // txtProductStatusID
             // 
-            this.txtCategoryID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtCategoryID.Location = new System.Drawing.Point(125, 26);
-            this.txtCategoryID.Name = "txtCategoryID";
-            this.txtCategoryID.ReadOnly = true;
-            this.txtCategoryID.Size = new System.Drawing.Size(100, 20);
-            this.txtCategoryID.TabIndex = 1;
+            this.txtProductStatusID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtProductStatusID.Location = new System.Drawing.Point(137, 26);
+            this.txtProductStatusID.Name = "txtProductStatusID";
+            this.txtProductStatusID.ReadOnly = true;
+            this.txtProductStatusID.Size = new System.Drawing.Size(100, 20);
+            this.txtProductStatusID.TabIndex = 1;
             // 
-            // lblMaCategory
+            // lblMaProductStatus
             // 
-            this.lblMaCategory.AutoSize = true;
-            this.lblMaCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblMaCategory.Location = new System.Drawing.Point(23, 29);
-            this.lblMaCategory.Name = "lblMaCategory";
-            this.lblMaCategory.Size = new System.Drawing.Size(93, 13);
-            this.lblMaCategory.TabIndex = 0;
-            this.lblMaCategory.Text = "Mã loại sản phẩm:";
+            this.lblMaProductStatus.AutoSize = true;
+            this.lblMaProductStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblMaProductStatus.Location = new System.Drawing.Point(23, 29);
+            this.lblMaProductStatus.Name = "lblMaProductStatus";
+            this.lblMaProductStatus.Size = new System.Drawing.Size(72, 13);
+            this.lblMaProductStatus.TabIndex = 0;
+            this.lblMaProductStatus.Text = "Mã trạng thái:";
             // 
-            // FrmCategory
+            // FrmProductStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 560);
-            this.Controls.Add(this.tcQuanLyCategory);
+            this.Controls.Add(this.tcQuanLyProductStatus);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmCategory";
-            this.Text = "Quản Lý Loại Sản Phẩm";
-            this.Load += new System.EventHandler(this.FrmCategory_Load);
-            this.tcQuanLyCategory.ResumeLayout(false);
-            this.tpQuanLyCategory.ResumeLayout(false);
-            this.tpQuanLyCategory.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorCategory)).EndInit();
-            this.bindingNavigatorCategory.ResumeLayout(false);
-            this.bindingNavigatorCategory.PerformLayout();
-            this.panelCategory.ResumeLayout(false);
-            this.panelCategory.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gvCategory)).EndInit();
+            this.Name = "FrmProductStatus";
+            this.Text = "Quản Lý Trạng Thái Sản Phẩm";
+            this.Load += new System.EventHandler(this.FrmProductStatus_Load);
+            this.tcQuanLyProductStatus.ResumeLayout(false);
+            this.tpQuanLyProductStatus.ResumeLayout(false);
+            this.tpQuanLyProductStatus.PerformLayout();
+            this.panelProductStatus.ResumeLayout(false);
+            this.panelProductStatus.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorProductStatus)).EndInit();
+            this.bindingNavigatorProductStatus.ResumeLayout(false);
+            this.bindingNavigatorProductStatus.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gvProductStatus)).EndInit();
             this.gbTimKiemQuanLy.ResumeLayout(false);
             this.gbTimKiemQuanLy.PerformLayout();
-            this.gbThongTinCategory.ResumeLayout(false);
-            this.gbThongTinCategory.PerformLayout();
+            this.gbThongTinProductStatus.ResumeLayout(false);
+            this.gbThongTinProductStatus.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tcQuanLyCategory;
-        private System.Windows.Forms.TabPage tpQuanLyCategory;
-        private System.Windows.Forms.GroupBox gbThongTinCategory;
-        private System.Windows.Forms.TextBox txtCategoryName;
-        private System.Windows.Forms.Label lblCategory;
-        private System.Windows.Forms.TextBox txtCategoryID;
-        private System.Windows.Forms.Label lblMaCategory;
-        private System.Windows.Forms.TextBox txtCategoryDesc;
+        private System.Windows.Forms.TabControl tcQuanLyProductStatus;
+        private System.Windows.Forms.TabPage tpQuanLyProductStatus;
+        private System.Windows.Forms.GroupBox gbThongTinProductStatus;
+        private System.Windows.Forms.TextBox txtProductStatusName;
+        private System.Windows.Forms.Label lblProductStatus;
+        private System.Windows.Forms.TextBox txtProductStatusID;
+        private System.Windows.Forms.Label lblMaProductStatus;
+        private System.Windows.Forms.TextBox txtProductStatusDesc;
         private System.Windows.Forms.Label lblMoTa;
-        private System.Windows.Forms.Label lblDanhSachCategoryQuanLy;
+        private System.Windows.Forms.Label lblDanhSachProductStatusQuanLy;
         private System.Windows.Forms.Label lblHienThiQuanLy;
-        private System.Windows.Forms.CheckBox chkDispCategoryID;
-        private System.Windows.Forms.CheckBox chkDispCategoryName;
+        private System.Windows.Forms.CheckBox chkDispProductStatusID;
+        private System.Windows.Forms.CheckBox chkDispProductStatusName;
         private System.Windows.Forms.CheckBox chkDispAll;
-        private System.Windows.Forms.CheckBox chkDispCategoryDesc;
+        private System.Windows.Forms.CheckBox chkDispProductStatusDesc;
         private System.Windows.Forms.Button btnInAnQuanLy;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.GroupBox gbTimKiemQuanLy;
         private System.Windows.Forms.CheckBox chkSearchAll;
-        private System.Windows.Forms.CheckBox chkSearchCategoryDesc;
-        private System.Windows.Forms.CheckBox chkSearchCategoryName;
-        private System.Windows.Forms.CheckBox chkSearchCategoryID;
+        private System.Windows.Forms.CheckBox chkSearchProductStatusDesc;
+        private System.Windows.Forms.CheckBox chkSearchProductStatusName;
+        private System.Windows.Forms.CheckBox chkSearchProductStatusID;
         private System.Windows.Forms.Label lblViDuTimKiemQuanLy;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblTimKiemQuanLy;
-        private System.Windows.Forms.Panel panelCategory;
-        private System.Windows.Forms.DataGridView gvCategory;
-        private System.Windows.Forms.BindingNavigator bindingNavigatorCategory;
+        private System.Windows.Forms.Panel panelProductStatus;
+        private System.Windows.Forms.BindingNavigator bindingNavigatorProductStatus;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
@@ -669,5 +672,6 @@
         private System.Windows.Forms.ToolStripButton toolStripBtnEdit;
         private System.Windows.Forms.ToolStripButton toolStripBtnDelete;
         private System.Windows.Forms.ToolStripLabel toolStripLblTotal;
+        private System.Windows.Forms.DataGridView gvProductStatus;
     }
 }

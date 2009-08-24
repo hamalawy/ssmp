@@ -83,8 +83,8 @@ namespace SSMP
             //Config detail of column in grid view
             gvAction.DataSource = dataSetAction;
             gvAction.DataMember = "Action";
-            gvAction.Columns["ActionId"].HeaderText = "Mã chức vụ";
-            gvAction.Columns["ActionName"].HeaderText = "Tên chức vụ";
+            gvAction.Columns["ActionId"].HeaderText = "Mã hành động";
+            gvAction.Columns["ActionName"].HeaderText = "Tên hành động";
             gvAction.Columns["ActionDesc"].HeaderText = "Mô tả";
         }
 
@@ -135,7 +135,7 @@ namespace SSMP
             bindingNavigatorAction.BindingSource.PositionChanged += new EventHandler(BindingSource_PositionChanged);
 
             //Set total of number user in bindingNavigator
-            toolStripLblTotal.Text = "Tổng số chức vụ: " + sizeOfList;
+            toolStripLblTotal.Text = "Tổng số hành động: " + sizeOfList;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -189,7 +189,7 @@ namespace SSMP
                 int deleteActionId = (int)gvAction.Rows[selectedRowIndex].Cells["ActionId"].Value;
                 string deleteActionName = (string)gvAction.Rows[selectedRowIndex].Cells["ActionName"].Value;
 
-                if (MessageBox.Show("Bạn có chắc chắn muốn xóa chức vụ [" + deleteActionName + "] ?", Constants.INFO, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa hành động [" + deleteActionName + "] ?", Constants.INFO, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     actionManager.Delete(new Action(deleteActionId));
 

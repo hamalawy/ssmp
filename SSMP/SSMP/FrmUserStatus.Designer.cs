@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUserStatus));
-            this.tcQuanLyChucVu = new System.Windows.Forms.TabControl();
-            this.tpQuanLyChucVu = new System.Windows.Forms.TabPage();
+            this.tcQuanLyUserStatus = new System.Windows.Forms.TabControl();
+            this.tpQuanLyUserStatus = new System.Windows.Forms.TabPage();
             this.panelUserStatus = new System.Windows.Forms.Panel();
             this.bindingNavigatorUserStatus = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -66,56 +66,56 @@
             this.chkDispUserStatusName = new System.Windows.Forms.CheckBox();
             this.chkDispUserStatusID = new System.Windows.Forms.CheckBox();
             this.lblHienThiQuanLy = new System.Windows.Forms.Label();
-            this.lblDanhSachChucVuQuanLy = new System.Windows.Forms.Label();
-            this.gbThongTinChucVu = new System.Windows.Forms.GroupBox();
+            this.lblDanhSachUserStatusQuanLy = new System.Windows.Forms.Label();
+            this.gbThongTinUserStatus = new System.Windows.Forms.GroupBox();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtUserStatusDesc = new System.Windows.Forms.TextBox();
             this.lblMoTa = new System.Windows.Forms.Label();
             this.txtUserStatusName = new System.Windows.Forms.TextBox();
-            this.lblChucVu = new System.Windows.Forms.Label();
+            this.lblUserStatus = new System.Windows.Forms.Label();
             this.txtUserStatusID = new System.Windows.Forms.TextBox();
-            this.lblMaChucVu = new System.Windows.Forms.Label();
-            this.tcQuanLyChucVu.SuspendLayout();
-            this.tpQuanLyChucVu.SuspendLayout();
+            this.lblMaUserStatus = new System.Windows.Forms.Label();
+            this.tcQuanLyUserStatus.SuspendLayout();
+            this.tpQuanLyUserStatus.SuspendLayout();
             this.panelUserStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorUserStatus)).BeginInit();
             this.bindingNavigatorUserStatus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvUserStatus)).BeginInit();
             this.gbTimKiemQuanLy.SuspendLayout();
-            this.gbThongTinChucVu.SuspendLayout();
+            this.gbThongTinUserStatus.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tcQuanLyChucVu
+            // tcQuanLyUserStatus
             // 
-            this.tcQuanLyChucVu.Controls.Add(this.tpQuanLyChucVu);
-            this.tcQuanLyChucVu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tcQuanLyChucVu.Location = new System.Drawing.Point(0, 0);
-            this.tcQuanLyChucVu.Name = "tcQuanLyChucVu";
-            this.tcQuanLyChucVu.SelectedIndex = 0;
-            this.tcQuanLyChucVu.Size = new System.Drawing.Size(826, 560);
-            this.tcQuanLyChucVu.TabIndex = 0;
+            this.tcQuanLyUserStatus.Controls.Add(this.tpQuanLyUserStatus);
+            this.tcQuanLyUserStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcQuanLyUserStatus.Location = new System.Drawing.Point(0, 0);
+            this.tcQuanLyUserStatus.Name = "tcQuanLyUserStatus";
+            this.tcQuanLyUserStatus.SelectedIndex = 0;
+            this.tcQuanLyUserStatus.Size = new System.Drawing.Size(826, 560);
+            this.tcQuanLyUserStatus.TabIndex = 0;
             // 
-            // tpQuanLyChucVu
+            // tpQuanLyUserStatus
             // 
-            this.tpQuanLyChucVu.Controls.Add(this.panelUserStatus);
-            this.tpQuanLyChucVu.Controls.Add(this.gbTimKiemQuanLy);
-            this.tpQuanLyChucVu.Controls.Add(this.btnInAnQuanLy);
-            this.tpQuanLyChucVu.Controls.Add(this.btnClose);
-            this.tpQuanLyChucVu.Controls.Add(this.chkDispAll);
-            this.tpQuanLyChucVu.Controls.Add(this.chkDispUserStatusDesc);
-            this.tpQuanLyChucVu.Controls.Add(this.chkDispUserStatusName);
-            this.tpQuanLyChucVu.Controls.Add(this.chkDispUserStatusID);
-            this.tpQuanLyChucVu.Controls.Add(this.lblHienThiQuanLy);
-            this.tpQuanLyChucVu.Controls.Add(this.lblDanhSachChucVuQuanLy);
-            this.tpQuanLyChucVu.Controls.Add(this.gbThongTinChucVu);
-            this.tpQuanLyChucVu.Location = new System.Drawing.Point(4, 22);
-            this.tpQuanLyChucVu.Name = "tpQuanLyChucVu";
-            this.tpQuanLyChucVu.Padding = new System.Windows.Forms.Padding(3);
-            this.tpQuanLyChucVu.Size = new System.Drawing.Size(818, 534);
-            this.tpQuanLyChucVu.TabIndex = 0;
-            this.tpQuanLyChucVu.Text = "Quản lý Trạng thái";
-            this.tpQuanLyChucVu.UseVisualStyleBackColor = true;
+            this.tpQuanLyUserStatus.Controls.Add(this.panelUserStatus);
+            this.tpQuanLyUserStatus.Controls.Add(this.gbTimKiemQuanLy);
+            this.tpQuanLyUserStatus.Controls.Add(this.btnInAnQuanLy);
+            this.tpQuanLyUserStatus.Controls.Add(this.btnClose);
+            this.tpQuanLyUserStatus.Controls.Add(this.chkDispAll);
+            this.tpQuanLyUserStatus.Controls.Add(this.chkDispUserStatusDesc);
+            this.tpQuanLyUserStatus.Controls.Add(this.chkDispUserStatusName);
+            this.tpQuanLyUserStatus.Controls.Add(this.chkDispUserStatusID);
+            this.tpQuanLyUserStatus.Controls.Add(this.lblHienThiQuanLy);
+            this.tpQuanLyUserStatus.Controls.Add(this.lblDanhSachUserStatusQuanLy);
+            this.tpQuanLyUserStatus.Controls.Add(this.gbThongTinUserStatus);
+            this.tpQuanLyUserStatus.Location = new System.Drawing.Point(4, 22);
+            this.tpQuanLyUserStatus.Name = "tpQuanLyUserStatus";
+            this.tpQuanLyUserStatus.Padding = new System.Windows.Forms.Padding(3);
+            this.tpQuanLyUserStatus.Size = new System.Drawing.Size(818, 534);
+            this.tpQuanLyUserStatus.TabIndex = 0;
+            this.tpQuanLyUserStatus.Text = "Quản lý Trạng thái";
+            this.tpQuanLyUserStatus.UseVisualStyleBackColor = true;
             // 
             // panelUserStatus
             // 
@@ -482,34 +482,34 @@
             this.lblHienThiQuanLy.TabIndex = 15;
             this.lblHienThiQuanLy.Text = "Hiển thị:";
             // 
-            // lblDanhSachChucVuQuanLy
+            // lblDanhSachUserStatusQuanLy
             // 
-            this.lblDanhSachChucVuQuanLy.AutoSize = true;
-            this.lblDanhSachChucVuQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDanhSachChucVuQuanLy.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblDanhSachChucVuQuanLy.Location = new System.Drawing.Point(12, 205);
-            this.lblDanhSachChucVuQuanLy.Name = "lblDanhSachChucVuQuanLy";
-            this.lblDanhSachChucVuQuanLy.Size = new System.Drawing.Size(163, 13);
-            this.lblDanhSachChucVuQuanLy.TabIndex = 14;
-            this.lblDanhSachChucVuQuanLy.Text = "DANH SÁCH TRẠNG THÁI:";
+            this.lblDanhSachUserStatusQuanLy.AutoSize = true;
+            this.lblDanhSachUserStatusQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblDanhSachUserStatusQuanLy.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblDanhSachUserStatusQuanLy.Location = new System.Drawing.Point(12, 205);
+            this.lblDanhSachUserStatusQuanLy.Name = "lblDanhSachUserStatusQuanLy";
+            this.lblDanhSachUserStatusQuanLy.Size = new System.Drawing.Size(163, 13);
+            this.lblDanhSachUserStatusQuanLy.TabIndex = 14;
+            this.lblDanhSachUserStatusQuanLy.Text = "DANH SÁCH TRẠNG THÁI:";
             // 
-            // gbThongTinChucVu
+            // gbThongTinUserStatus
             // 
-            this.gbThongTinChucVu.Controls.Add(this.btnReset);
-            this.gbThongTinChucVu.Controls.Add(this.btnSave);
-            this.gbThongTinChucVu.Controls.Add(this.txtUserStatusDesc);
-            this.gbThongTinChucVu.Controls.Add(this.lblMoTa);
-            this.gbThongTinChucVu.Controls.Add(this.txtUserStatusName);
-            this.gbThongTinChucVu.Controls.Add(this.lblChucVu);
-            this.gbThongTinChucVu.Controls.Add(this.txtUserStatusID);
-            this.gbThongTinChucVu.Controls.Add(this.lblMaChucVu);
-            this.gbThongTinChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.gbThongTinChucVu.Location = new System.Drawing.Point(15, 6);
-            this.gbThongTinChucVu.Name = "gbThongTinChucVu";
-            this.gbThongTinChucVu.Size = new System.Drawing.Size(332, 191);
-            this.gbThongTinChucVu.TabIndex = 0;
-            this.gbThongTinChucVu.TabStop = false;
-            this.gbThongTinChucVu.Text = "THÔNG TIN TRẠNG THÁI:";
+            this.gbThongTinUserStatus.Controls.Add(this.btnReset);
+            this.gbThongTinUserStatus.Controls.Add(this.btnSave);
+            this.gbThongTinUserStatus.Controls.Add(this.txtUserStatusDesc);
+            this.gbThongTinUserStatus.Controls.Add(this.lblMoTa);
+            this.gbThongTinUserStatus.Controls.Add(this.txtUserStatusName);
+            this.gbThongTinUserStatus.Controls.Add(this.lblUserStatus);
+            this.gbThongTinUserStatus.Controls.Add(this.txtUserStatusID);
+            this.gbThongTinUserStatus.Controls.Add(this.lblMaUserStatus);
+            this.gbThongTinUserStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.gbThongTinUserStatus.Location = new System.Drawing.Point(15, 6);
+            this.gbThongTinUserStatus.Name = "gbThongTinUserStatus";
+            this.gbThongTinUserStatus.Size = new System.Drawing.Size(332, 191);
+            this.gbThongTinUserStatus.TabIndex = 0;
+            this.gbThongTinUserStatus.TabStop = false;
+            this.gbThongTinUserStatus.Text = "THÔNG TIN TRẠNG THÁI:";
             // 
             // btnReset
             // 
@@ -566,15 +566,15 @@
             this.txtUserStatusName.Size = new System.Drawing.Size(208, 20);
             this.txtUserStatusName.TabIndex = 3;
             // 
-            // lblChucVu
+            // lblUserStatus
             // 
-            this.lblChucVu.AutoSize = true;
-            this.lblChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblChucVu.Location = new System.Drawing.Point(23, 58);
-            this.lblChucVu.Name = "lblChucVu";
-            this.lblChucVu.Size = new System.Drawing.Size(58, 13);
-            this.lblChucVu.TabIndex = 2;
-            this.lblChucVu.Text = "Trạng thái:";
+            this.lblUserStatus.AutoSize = true;
+            this.lblUserStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblUserStatus.Location = new System.Drawing.Point(23, 58);
+            this.lblUserStatus.Name = "lblUserStatus";
+            this.lblUserStatus.Size = new System.Drawing.Size(58, 13);
+            this.lblUserStatus.TabIndex = 2;
+            this.lblUserStatus.Text = "Trạng thái:";
             // 
             // txtUserStatusID
             // 
@@ -585,22 +585,22 @@
             this.txtUserStatusID.Size = new System.Drawing.Size(100, 20);
             this.txtUserStatusID.TabIndex = 1;
             // 
-            // lblMaChucVu
+            // lblMaUserStatus
             // 
-            this.lblMaChucVu.AutoSize = true;
-            this.lblMaChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblMaChucVu.Location = new System.Drawing.Point(23, 29);
-            this.lblMaChucVu.Name = "lblMaChucVu";
-            this.lblMaChucVu.Size = new System.Drawing.Size(72, 13);
-            this.lblMaChucVu.TabIndex = 0;
-            this.lblMaChucVu.Text = "Mã trạng thái:";
+            this.lblMaUserStatus.AutoSize = true;
+            this.lblMaUserStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblMaUserStatus.Location = new System.Drawing.Point(23, 29);
+            this.lblMaUserStatus.Name = "lblMaUserStatus";
+            this.lblMaUserStatus.Size = new System.Drawing.Size(72, 13);
+            this.lblMaUserStatus.TabIndex = 0;
+            this.lblMaUserStatus.Text = "Mã trạng thái:";
             // 
             // FrmUserStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 560);
-            this.Controls.Add(this.tcQuanLyChucVu);
+            this.Controls.Add(this.tcQuanLyUserStatus);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -608,9 +608,9 @@
             this.Name = "FrmUserStatus";
             this.Text = "Quản Lý Trạng Thái";
             this.Load += new System.EventHandler(this.FrmUserStatus_Load);
-            this.tcQuanLyChucVu.ResumeLayout(false);
-            this.tpQuanLyChucVu.ResumeLayout(false);
-            this.tpQuanLyChucVu.PerformLayout();
+            this.tcQuanLyUserStatus.ResumeLayout(false);
+            this.tpQuanLyUserStatus.ResumeLayout(false);
+            this.tpQuanLyUserStatus.PerformLayout();
             this.panelUserStatus.ResumeLayout(false);
             this.panelUserStatus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorUserStatus)).EndInit();
@@ -619,24 +619,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvUserStatus)).EndInit();
             this.gbTimKiemQuanLy.ResumeLayout(false);
             this.gbTimKiemQuanLy.PerformLayout();
-            this.gbThongTinChucVu.ResumeLayout(false);
-            this.gbThongTinChucVu.PerformLayout();
+            this.gbThongTinUserStatus.ResumeLayout(false);
+            this.gbThongTinUserStatus.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tcQuanLyChucVu;
-        private System.Windows.Forms.TabPage tpQuanLyChucVu;
-        private System.Windows.Forms.GroupBox gbThongTinChucVu;
+        private System.Windows.Forms.TabControl tcQuanLyUserStatus;
+        private System.Windows.Forms.TabPage tpQuanLyUserStatus;
+        private System.Windows.Forms.GroupBox gbThongTinUserStatus;
         private System.Windows.Forms.TextBox txtUserStatusName;
-        private System.Windows.Forms.Label lblChucVu;
+        private System.Windows.Forms.Label lblUserStatus;
         private System.Windows.Forms.TextBox txtUserStatusID;
-        private System.Windows.Forms.Label lblMaChucVu;
+        private System.Windows.Forms.Label lblMaUserStatus;
         private System.Windows.Forms.TextBox txtUserStatusDesc;
         private System.Windows.Forms.Label lblMoTa;
-        private System.Windows.Forms.Label lblDanhSachChucVuQuanLy;
+        private System.Windows.Forms.Label lblDanhSachUserStatusQuanLy;
         private System.Windows.Forms.Label lblHienThiQuanLy;
         private System.Windows.Forms.CheckBox chkDispUserStatusID;
         private System.Windows.Forms.CheckBox chkDispUserStatusName;
