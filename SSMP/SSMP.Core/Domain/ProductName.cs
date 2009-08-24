@@ -10,7 +10,6 @@ namespace SSMP.Core.Domain
     public class ProductName : DomainObject<System.Int32>
     {
         private System.String _ProdName;
-        private System.String _ProdDesc;
         private System.Int32 _CategoryId;
         private System.Int32 _ManId;
         private Category _CategoryIdLookup;
@@ -32,12 +31,6 @@ namespace SSMP.Core.Domain
          {
              get { return _ProdName; }
              set { _ProdName = value;}
-         }
-
-         public virtual System.String ProdDesc 
-         {
-             get { return _ProdDesc; }
-             set { _ProdDesc = value;}
          }
 
          public virtual System.Int32 CategoryId 
