@@ -301,7 +301,10 @@
             this.clGiaMua,
             this.clNhanVienGiaoHang});
             this.dataGridViewDanhSach.Location = new System.Drawing.Point(18, 311);
+            this.dataGridViewDanhSach.MultiSelect = false;
             this.dataGridViewDanhSach.Name = "dataGridViewDanhSach";
+            this.dataGridViewDanhSach.ReadOnly = true;
+            this.dataGridViewDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDanhSach.Size = new System.Drawing.Size(863, 253);
             this.dataGridViewDanhSach.TabIndex = 120;
             // 
@@ -315,16 +318,19 @@
             // 
             this.clsoLuong.HeaderText = "Số Lượng";
             this.clsoLuong.Name = "clsoLuong";
+            this.clsoLuong.ReadOnly = true;
             // 
             // clngaySanXuat
             // 
             this.clngaySanXuat.HeaderText = "Ngày Sản Xuất";
             this.clngaySanXuat.Name = "clngaySanXuat";
+            this.clngaySanXuat.ReadOnly = true;
             // 
             // clNgayHetHan
             // 
             this.clNgayHetHan.HeaderText = "Ngày hết hạn";
             this.clNgayHetHan.Name = "clNgayHetHan";
+            this.clNgayHetHan.ReadOnly = true;
             // 
             // clDonVi
             // 
@@ -348,11 +354,13 @@
             // 
             this.clGiaMua.HeaderText = "Giá mua";
             this.clGiaMua.Name = "clGiaMua";
+            this.clGiaMua.ReadOnly = true;
             // 
             // clNhanVienGiaoHang
             // 
             this.clNhanVienGiaoHang.HeaderText = "Nhân Viên Giao Hàng";
             this.clNhanVienGiaoHang.Name = "clNhanVienGiaoHang";
+            this.clNhanVienGiaoHang.ReadOnly = true;
             // 
             // label3
             // 
@@ -765,7 +773,10 @@
             // 
             this.dataGridViewPhieuNhapHAng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPhieuNhapHAng.Location = new System.Drawing.Point(19, 31);
+            this.dataGridViewPhieuNhapHAng.MultiSelect = false;
             this.dataGridViewPhieuNhapHAng.Name = "dataGridViewPhieuNhapHAng";
+            this.dataGridViewPhieuNhapHAng.ReadOnly = true;
+            this.dataGridViewPhieuNhapHAng.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewPhieuNhapHAng.Size = new System.Drawing.Size(523, 209);
             this.dataGridViewPhieuNhapHAng.TabIndex = 8;
             this.dataGridViewPhieuNhapHAng.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPhieuNhapHAng_CellClick);
@@ -892,7 +903,10 @@
             // 
             this.dataGridViewHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHangHoa.Location = new System.Drawing.Point(19, 275);
+            this.dataGridViewHangHoa.MultiSelect = false;
             this.dataGridViewHangHoa.Name = "dataGridViewHangHoa";
+            this.dataGridViewHangHoa.ReadOnly = true;
+            this.dataGridViewHangHoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewHangHoa.Size = new System.Drawing.Size(862, 273);
             this.dataGridViewHangHoa.TabIndex = 3;
             // 
