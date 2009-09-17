@@ -55,7 +55,7 @@ namespace SSMP
         private DataSet dataSetProductName;
         private int MODE;
         private Int64 updateProductId;
-
+        private Int64 updateProductNameId;
 
         public frmDanhMucSanPham()
         {
@@ -149,14 +149,18 @@ namespace SSMP
                 BindingDataToBindingNagivatorProductName(searchResultProductName.SearchSize, 0);                
 
                 //Binding value for combobox
-                comboBoxTenSanPham.DataSource = productNameManager.GetAll();
-                comboBoxTenSanPham.DisplayMember = "ProdName";
-                comboBoxTenSanPham.ValueMember = "ID";
+                //comboBoxTenSanPham.DataSource = productNameManager.GetAll();
+                //comboBoxTenSanPham.DisplayMember = "ProdName";
+                //comboBoxTenSanPham.ValueMember = "ID";
 
                 comboBoxLoaiSanPham.DataSource = categoryManager.GetAll();
                 comboBoxLoaiSanPham.DisplayMember = "CategoryName";
                 comboBoxLoaiSanPham.ValueMember = "ID";
-                
+
+                comboBoxNhasx.DataSource = manufacturerManager.GetAll();
+                comboBoxNhasx.DisplayMember = "ManName";
+                comboBoxNhasx.ValueMember = "ID";
+
                 cboTenSanPham.DataSource = productNameManager.GetAll();
                 cboTenSanPham.DisplayMember = "ProdName";
                 cboTenSanPham.ValueMember = "ID";
@@ -181,22 +185,29 @@ namespace SSMP
                 cboTrangThai.DisplayMember = "StatusName";
                 cboTrangThai.ValueMember = "ID";
 
-                int khoa = Int32.Parse(cboTenSanPham.SelectedValue.ToString());
-                ProductName productName = productNameManager.GetById(khoa, true);
-                cboLoaiSanPham.SelectedValue = productName.CategoryIdLookup.ID;
-                cboNhaSanXuat.SelectedValue = productName.ManIdLookup.ID;
-                Manufacturer man = manufacturerManager.GetById(productName.ManIdLookup.ID, true);
-                cboNguonGoc.SelectedValue = man.CountryIdLookup.ID;
+                //int khoa = Int32.Parse(cboTenSanPham.SelectedValue.ToString());
+                //ProductName productName = productNameManager.GetById(khoa, true);
+                //cboLoaiSanPham.SelectedValue = productName.CategoryIdLookup.ID;
+                //cboNhaSanXuat.SelectedValue = productName.ManIdLookup.ID;
+                //Manufacturer man = manufacturerManager.GetById(productName.ManIdLookup.ID, true);
+                //cboNguonGoc.SelectedValue = man.CountryIdLookup.ID;
 
+                //xoaTrang();
 
                 //Display all column in gridview
                 DisplayAll();
+
+                //BindingProductToForm(0);
+                //updateProductId = (Int64)gvSanPhamDanhMuc.Rows[0].Cells["ProductId"].Value;
+
+                //BindingProductNameToForm(0);
+                //updateProductNameId = (Int32)gvTenSanPham.Rows[0].Cells["ProductNameId"].Value;
             }
             catch (Exception ex)
             {
                 logger.Debug(ex.Message);
                 logger.Debug(ex.StackTrace);
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.StackTrace);
             }
 
         }
@@ -251,16 +262,15 @@ namespace SSMP
                 listPagesProductName.Add(i);
             }
 
-            bindingNavigator1.BindingSource = new BindingSource(listPagesProductName, "");
-            bindingNavigator1.BindingSource.Position = position;
-            bindingNavigator1.BindingSource.PositionChanged += new EventHandler(BindingSource_PositionChanged);
-            toolStripLabeltotalProductName.Text = "Tổng số tên sản phẩm: " + sizeOfList;
+            bindingNavigatorProductName.BindingSource = new BindingSource(listPagesProductName, "");
+            bindingNavigatorProductName.BindingSource.Position = position;
+            bindingNavigatorProductName.BindingSource.PositionChanged += new EventHandler(BindingSource_PositionChangedProductName);
+            //toolStripLabeltotalProductName.Text = "Tổng số tên sản phẩm: " + sizeOfList;
         }
 
         private void BindingDataToForm(Product entity, SearchParam searchParam, int position)
         {
             SearchResult<Product> searchResult = productManager.GetProductListByParam(entity, searchParam);
-
             if (searchResult != null)
             {
                 DataTable dataTableProduct = new DataTable("Product");
@@ -278,6 +288,7 @@ namespace SSMP
                 dataTableProduct.Columns.Add("BillSaleId", typeof(int));
                 dataTableProduct.Columns.Add("UnitId", typeof(int));
                 dataTableProduct.Columns.Add("Unit", typeof(string));
+                dataTableProduct.Columns.Add("Description", typeof(string));
 
                 foreach (Product objProduct in searchResult.SearchList)
                 {
@@ -296,13 +307,12 @@ namespace SSMP
                     if (objProduct.BillSaleId != null) rowTemp["BillSaleId"] = objProduct.BillSaleId;
                     rowTemp["UnitId"] = objProduct.UnitIdLookup.ID;
                     rowTemp["Unit"] = objProduct.UnitIdLookup.UnitName;
+                    rowTemp["Description"] = objProduct.Description;
                     dataTableProduct.Rows.Add(rowTemp);
                 }
-
                 dataSetProduct = new DataSet();
                 dataSetProduct.Tables.Add(dataTableProduct);
                 gvSanPhamDanhMuc.DataSource = dataSetProduct;
-
 
                 gvSanPhamDanhMuc.DataSource = dataSetProduct;
                 gvSanPhamDanhMuc.DataMember = "Product";
@@ -320,11 +330,9 @@ namespace SSMP
                 gvSanPhamDanhMuc.Columns["BillSaleId"].HeaderText = "Mã bán";
                 gvSanPhamDanhMuc.Columns["UnitId"].Visible = false;
                 gvSanPhamDanhMuc.Columns["Unit"].HeaderText = "Đơn vị";
+                gvSanPhamDanhMuc.Columns["Description"].HeaderText = "Mô tả";
 
-                //
                 currentListProduct = searchResult.SearchList;
-
-                //
                 logger.Debug("searchList size = " + searchResult.SearchList.Count);
 
                 List<Int32> listPages = new List<Int32>();
@@ -350,12 +358,71 @@ namespace SSMP
                 bindingNavigatorProduct.BindingSource = new BindingSource(listPages, "");
                 bindingNavigatorProduct.BindingSource.Position = position;
                 bindingNavigatorProduct.BindingSource.PositionChanged += new EventHandler(BindingSource_PositionChanged);
-
-                //Set total of number product in bindingNavigator
                 toolStripLblTotal.Text = "Tổng số sản phẩm: " + searchResult.SearchSize;
             }
         }
 
+        private void BindingDataToFormProductName(ProductName entity, SearchParam searchParam, int position)
+        {
+            SearchResult<ProductName> searchResult = productNameManager.GetProductNameListByParam(entity, searchParam);
+            if (searchResult != null)
+            {
+                DataTable dataTableProductName = new DataTable("ProductName");
+                dataTableProductName.Columns.Add("ProductNameId", typeof(Int32));
+                dataTableProductName.Columns.Add("ProdName", typeof(string));
+                dataTableProductName.Columns.Add("CategoryId", typeof(int));
+                dataTableProductName.Columns.Add("CategoryName", typeof(string));
+                dataTableProductName.Columns.Add("ManId", typeof(int));
+                dataTableProductName.Columns.Add("ManName", typeof(string));
+                foreach (ProductName objProduct in searchResult.SearchList)
+                {
+                    DataRow rowTemp = dataTableProductName.NewRow();
+                    rowTemp["ProductNameId"] = objProduct.ID;
+                    rowTemp["ProdName"] = objProduct.ProdName;
+                    rowTemp["CategoryId"] = objProduct.CategoryIdLookup.ID;
+                    rowTemp["CategoryName"] = objProduct.CategoryIdLookup.CategoryName;
+                    rowTemp["ManId"] = objProduct.ManIdLookup.ID;
+                    rowTemp["ManName"] = objProduct.ManIdLookup.ManName;
+                    dataTableProductName.Rows.Add(rowTemp);
+                }
+                dataSetProductName = new DataSet();
+                dataSetProductName.Tables.Add(dataTableProductName);
+                gvTenSanPham.DataSource = dataSetProductName;
+                gvTenSanPham.DataSource = dataSetProductName;
+                gvTenSanPham.DataMember = "ProductName";
+                gvTenSanPham.Columns["ProductNameId"].HeaderText = "Mã tên sản phẩm";
+                gvTenSanPham.Columns["ProdName"].HeaderText = "Tên sản phẩm";
+                gvTenSanPham.Columns["CategoryId"].Visible = false;
+                gvTenSanPham.Columns["CategoryName"].HeaderText = "Loại sản phẩm";
+                gvTenSanPham.Columns["ManId"].Visible = false;
+                gvTenSanPham.Columns["ManName"].HeaderText = "Nhà sản xuất";
+                currentListProductName = searchResult.SearchList;
+                logger.Debug("searchList size = " + searchResult.SearchList.Count);
+                List<Int32> listPages = new List<Int32>();
+                int totalPage = 0;
+
+                if (searchResult.SearchSize % DEFAULT_LIMIT > 0)
+                {
+                    totalPage = (int)searchResult.SearchSize / DEFAULT_LIMIT + 1;
+                }
+                else
+                {
+                    totalPage = (int)searchResult.SearchSize / DEFAULT_LIMIT;
+                }
+
+                logger.Debug("searchSize = " + searchResult.SearchSize);
+                logger.Debug("totalPage = " + totalPage);
+
+                for (int i = 0; i < totalPage; i++)
+                {
+                    listPages.Add(i);
+                }
+                bindingNavigatorProductName.BindingSource = new BindingSource(listPages, "");
+                bindingNavigatorProductName.BindingSource.Position = position;
+                bindingNavigatorProductName.BindingSource.PositionChanged += new EventHandler(BindingSource_PositionChangedProductName);
+                toolStripLblTotal.Text = "Tổng số tên sản phẩm: " + searchResult.SearchSize;
+            }
+        }
 
         private void ContructGridViewColumn()
         {
@@ -375,6 +442,7 @@ namespace SSMP
             dataTableProduct.Columns.Add("BillSaleId", typeof(int));
             dataTableProduct.Columns.Add("UnitId", typeof(int));
             dataTableProduct.Columns.Add("Unit", typeof(string));
+            dataTableProduct.Columns.Add("Description", typeof(string));
 
             //Create DataSet of Product
             dataSetProduct = new DataSet();
@@ -397,6 +465,7 @@ namespace SSMP
             gvSanPhamDanhMuc.Columns["BillSaleId"].HeaderText = "Mã bán";
             gvSanPhamDanhMuc.Columns["UnitId"].Visible = false;
             gvSanPhamDanhMuc.Columns["Unit"].HeaderText = "Đơn vị";
+            gvSanPhamDanhMuc.Columns["Description"].HeaderText = "Mô tả";
 
             // ============================================================
 
@@ -409,24 +478,20 @@ namespace SSMP
             dataTableProductName.Columns.Add("CategoryName", typeof(string));
             dataTableProductName.Columns.Add("ManId", typeof(int));
             dataTableProductName.Columns.Add("ManName", typeof(string));
-            dataTableProductName.Columns.Add("ProdDesc", typeof(string));
-            
+
             //Create DataSet of ProductName
             dataSetProductName = new DataSet();
             dataSetProductName.Tables.Add(dataTableProductName);
 
             //Config detail of column in grid view            
-            gvSanPham.DataSource = dataSetProductName;
-            gvSanPham.DataMember = "ProductName";
-            gvSanPham.Columns["ProductNameId"].HeaderText = "Mã tên sản phẩm";
-            gvSanPham.Columns["ProdName"].HeaderText = "Tên sản phẩm";
-            gvSanPham.Columns["CategoryId"].Visible = false;
-            gvSanPham.Columns["CategoryName"].HeaderText = "Loại sản phẩm";
-            gvSanPham.Columns["ManId"].Visible = false;
-            gvSanPham.Columns["ManName"].HeaderText = "Nhà sản xuất";
-            gvSanPham.Columns["ProdDesc"].HeaderText = "Mô tả";
-
-            
+            gvTenSanPham.DataSource = dataSetProductName;
+            gvTenSanPham.DataMember = "ProductName";
+            gvTenSanPham.Columns["ProductNameId"].HeaderText = "Mã tên sản phẩm";
+            gvTenSanPham.Columns["ProdName"].HeaderText = "Tên sản phẩm";
+            gvTenSanPham.Columns["CategoryId"].Visible = false;
+            gvTenSanPham.Columns["CategoryName"].HeaderText = "Loại sản phẩm";
+            gvTenSanPham.Columns["ManId"].Visible = false;
+            gvTenSanPham.Columns["ManName"].HeaderText = "Nhà sản xuất";    
         }
 
         private void IList2DataTable(IList<Product> listProduct, DataTable dataTableProduct)
@@ -450,6 +515,7 @@ namespace SSMP
                     if (objProduct.BillSaleId != null) rowTemp["BillSaleId"] = objProduct.BillSaleId;
                     rowTemp["UnitId"] = objProduct.UnitIdLookup.ID;
                     rowTemp["Unit"] = objProduct.UnitIdLookup.UnitName;
+                    rowTemp["Description"] = objProduct.Description;
                     dataTableProduct.Rows.Add(rowTemp);
                 }
             }
@@ -468,7 +534,6 @@ namespace SSMP
                     rowTemp["CategoryName"] = objProduct.CategoryIdLookup.CategoryName;
                     rowTemp["ManId"] = objProduct.ManIdLookup.ID;
                     rowTemp["ManName"] = objProduct.ManIdLookup.ManName;
-                    //rowTemp["ProdDesc"] = objProduct.ProdDesc;
                     dataTableProductName.Rows.Add(rowTemp);
                 }
             }
@@ -535,6 +600,32 @@ namespace SSMP
             MoveItem(bindingNavigatorProduct.BindingSource.Position);
         }
 
+        //
+        private void toolStripBtnProductNameFirstItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("" + bindingNavigatorProductName.BindingSource.Position);
+            //MoveItemProductName(bindingNavigatorProductName.BindingSource.Position);
+        }
+
+        private void toolStripBtnProductNamePreviousItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("" + bindingNavigatorProductName.BindingSource.Position);
+            MoveItemProductName(bindingNavigatorProductName.BindingSource.Position);
+        }
+
+        private void toolStripBtnProductNameNextItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("" + bindingNavigatorProductName.BindingSource.Position);
+            MoveItemProductName(bindingNavigatorProductName.BindingSource.Position);
+        }
+
+        private void toolStripBtnProductNameLastItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("" + bindingNavigatorProductName.BindingSource.Position);
+            MoveItemProductName(bindingNavigatorProductName.BindingSource.Position);
+        }
+        //
+
         private void toolStripBtnReload_Click(object sender, EventArgs e)
         {
             MoveItem(bindingNavigatorProduct.BindingSource.Position);
@@ -545,6 +636,11 @@ namespace SSMP
             MoveItem(bindingNavigatorProduct.BindingSource.Position);
         }
 
+        private void BindingSource_PositionChangedProductName(object sender, EventArgs e)
+        {
+            MoveItemProductName(bindingNavigatorProductName.BindingSource.Position);
+        }        
+
         private void MoveItem(int position)
         {
             SearchParam searchParam = new SearchParam();
@@ -552,14 +648,22 @@ namespace SSMP
             searchParam.Limit = DEFAULT_LIMIT;
             searchParam.SortBy = DEFAULT_SORT_BY;
             searchParam.SortDir = DEFAULT_SORT_DIR;
-
             this.BindingDataToForm(searchEntity, searchParam, position);
+        }
+
+        private void MoveItemProductName(int position)
+        {
+            SearchParam searchParam = new SearchParam();
+            searchParam.Start = bindingNavigatorProductName.BindingSource.Position * DEFAULT_LIMIT;
+            searchParam.Limit = DEFAULT_LIMIT;
+            searchParam.SortBy = DEFAULT_SORT_BY;
+            searchParam.SortDir = DEFAULT_SORT_DIR;
+            this.BindingDataToFormProductName(searchEntityProductName, searchParam, position);
         }
 
         public void RefreshGridViewProducts()
         {
             Product entity = new Product();
-
             SearchParam searchParam = new SearchParam();
             searchParam.Start = DEFAULT_START;
             searchParam.Limit = DEFAULT_LIMIT;
@@ -567,6 +671,17 @@ namespace SSMP
             searchParam.SortDir = DEFAULT_SORT_DIR;
             this.BindingDataToForm(entity, searchParam, 0);
             bindingNavigatorProduct.BindingSource.PositionChanged += new EventHandler(BindingSource_PositionChanged);
+        }
+        public void RefreshGridViewProductNames()
+        {
+            ProductName entity = new ProductName();
+            SearchParam searchParam = new SearchParam();
+            searchParam.Start = DEFAULT_START;
+            searchParam.Limit = DEFAULT_LIMIT;
+            searchParam.SortBy = DEFAULT_SORT_BY;
+            searchParam.SortDir = DEFAULT_SORT_DIR;
+            this.BindingDataToFormProductName(entity, searchParam, 0);
+            bindingNavigatorProductName.BindingSource.PositionChanged += new EventHandler(BindingSource_PositionChanged);
         }
 
         #endregion
@@ -666,11 +781,7 @@ namespace SSMP
             if (gvSanPhamDanhMuc.SelectedCells.Count > 0)
             {
                 int selectedRowIndex = gvSanPhamDanhMuc.SelectedCells[0].RowIndex;
-
                 BindingProductToForm(selectedRowIndex);
-
-                //btnAddUpdate.Text = "Update";
-                MODE = Constants.MODE.UPDATE;
                 updateProductId = (int)gvSanPhamDanhMuc.Rows[selectedRowIndex].Cells["ProductId"].Value;
             }
 
@@ -797,22 +908,35 @@ namespace SSMP
 
         private void DisplayAll()
         {
+            checkBoxHTGiaban.Checked = true;
+            checkBoxHTGiamGia.Checked = true;
+            checkBoxHTGiaMua.Checked = true;
+            checkBoxHTMaBan.Checked = true;
+            checkBoxHTMamua.Checked = true;
+            checkBoxHTNgayHethan.Checked = true;
+            checkBoxHTNgaySx.Checked = true;
+            checkBoxHTStatus.Checked = true;
+            checkBoxHTMota.Checked = true;
+            checkBoxHTTenSp.Checked = true;
+            checkBoxHTDonVi.Checked = true;
+        }
+
+        private void DisplayAllTenSp()
+        {
             chkLoaiSp.Checked = true;
-            //chkMasp.Checked = true;
-            chkMota.Checked = true;
-            chkTatCaHienThiQuanLySanPham.Checked = true;
-            //chkDispIdCardNo.Checked = true;
+            chkNhaSx.Checked = true;
+            chkTenSp.Checked = true;
         }
 
         private void BindingProductNameToForm(int rowIndex)
         {
             try
             {
-                txtId.Text = (Int32)gvSanPham.Rows[rowIndex].Cells["ProductNameId"].Value + "";
-                comboBoxTenSanPham.Text = (string)gvSanPham.Rows[rowIndex].Cells["ProdName"].Value + "";
+                txtId.Text = (Int32)gvTenSanPham.Rows[rowIndex].Cells["ProductNameId"].Value + "";
+                txtTenSp.Text = (string)gvTenSanPham.Rows[rowIndex].Cells["ProdName"].Value + "";
                 ProductName prdName = productNameManager.GetById(Int32.Parse(txtId.Text), true);
                 comboBoxLoaiSanPham.SelectedValue = prdName.CategoryIdLookup.ID;
-                txtMoTaQuanLySanPham.Text = (string)gvSanPham.Rows[rowIndex].Cells["ProdDesc"].Value + "";
+                comboBoxNhasx.SelectedValue = prdName.ManIdLookup.ID;
             }
             catch (Exception ex)
             {
@@ -838,7 +962,9 @@ namespace SSMP
                 cboDonVi.SelectedValue = gvSanPhamDanhMuc.Rows[rowIndex].Cells["UnitId"].Value;
                 dateTimePickerSx.Value = (DateTime)gvSanPhamDanhMuc.Rows[rowIndex].Cells["MfgDate"].Value;
                 dateTimePickerHetHan.Value = (DateTime)gvSanPhamDanhMuc.Rows[rowIndex].Cells["ExpDate"].Value;
-
+                if (!gvSanPhamDanhMuc.Rows[rowIndex].Cells["Description"].Value.ToString().Equals(""))
+                    textBoxMota.Text = (string)gvSanPhamDanhMuc.Rows[rowIndex].Cells["Description"].Value + "";
+                else textBoxMota.Text = "";
                 ProductName prdName = productNameManager.GetById((int)productNameId, true);
                 cboLoaiSanPham.SelectedValue = prdName.CategoryIdLookup.ID;
                 int manId = prdName.ManIdLookup.ID;
@@ -1003,30 +1129,15 @@ namespace SSMP
         {
             try
             {
-                Product productEntity;
-
-                if (MODE == Constants.MODE.ADD)
+                int idxInList = -1;
+                foreach (Product objProduct in currentListProduct)
                 {
-                    productEntity = new Product();
-                }
-                else if (MODE == Constants.MODE.UPDATE)
-                {
-                    int idxInList = -1;
-
-                    foreach (Product objProduct in currentListProduct)
+                    if (objProduct.ID == updateProductId)
                     {
-                        if (objProduct.ID == updateProductId)
-                        {
-                            idxInList = currentListProduct.IndexOf(objProduct);
-                        }
+                        idxInList = currentListProduct.IndexOf(objProduct);
                     }
-
-                    productEntity = currentListProduct[idxInList];
                 }
-                else
-                {
-                    productEntity = new Product();
-                }
+                Product productEntity = currentListProduct[idxInList];
                 int IdName = (int) cboTenSanPham.SelectedValue ;
                 DateTime ngaySX = dateTimePickerSx.Value;
                 DateTime ngayHH = dateTimePickerHetHan.Value;
@@ -1055,21 +1166,11 @@ namespace SSMP
                 productEntity.StatusId = trangThaiId;
 
                 //Do save new entity
-                MessageBox.Show("11:" + productEntity.ID);
                 productManager.SaveOrUpdate(productEntity);
-                MessageBox.Show("22");
                 //Show message success
-                if (MODE == Constants.MODE.ADD)
-                {
-                    MessageBox.Show("Thêm sản phẩm [" + productEntity.ID + " ] thành công", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else if (MODE == Constants.MODE.UPDATE)
-                {
-                    MessageBox.Show("Cập nhật sản phẩm [" + productEntity.ID + " ] thành công", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MODE = Constants.MODE.ADD;
-                    btnThemQuanLy.Text = "&Thêm mới";
-                    this.ResetForm();
-                }
+
+                MessageBox.Show("Cập nhật sản phẩm [" + productEntity.ID + " ] thành công", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.ResetForm();                
 
                 //Refresh grid view after insert successfully
                 this.RefreshGridViewProducts();
@@ -1079,7 +1180,7 @@ namespace SSMP
             {
                 logger.Debug(ex.Message);
                 logger.Debug(ex.StackTrace);
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.StackTrace);
             }
 
             
@@ -1091,17 +1192,12 @@ namespace SSMP
             {
                 try
                 {
-                    btnThemQuanLy.TextAlign = ContentAlignment.MiddleRight;
-                    btnThemQuanLy.Text = "&Cập Nhật";
-                    btnThemQuanLy.ImageIndex = 2;
                     int selectedRowIndex = gvSanPhamDanhMuc.SelectedCells[0].RowIndex;
                     BindingProductToForm(selectedRowIndex);
-                    MODE = Constants.MODE.UPDATE;
                     updateProductId = (Int64)gvSanPhamDanhMuc.Rows[selectedRowIndex].Cells["ProductId"].Value;
-
                 }
                 catch (Exception ex) {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.StackTrace);
                 }
                 
             }
@@ -1139,22 +1235,20 @@ namespace SSMP
 
         private void btnXoaTrangQuanLy_Click(object sender, EventArgs e)
         {
-            btnThemQuanLy.TextAlign = ContentAlignment.MiddleRight;
-            btnThemQuanLy.Text = "&Thêm mới";
-            btnThemQuanLy.ImageIndex = 1;
-            
+            xoaTrang();
+        }
+
+        private void xoaTrang() {
             textBoxMaSanPham.Text = "";
             textBoxMota.Text = "";
             textBoxGiaBan.Text = "";
             textBoxGiamGia.Text = "";
             textBoxGiaMua.Text = "";
             textBoxMota.Text = "";
-            
+
             cboTenSanPham.SelectedIndex = 0;
             cboTrangThai.SelectedIndex = 0;
             cboDonVi.SelectedIndex = 0;
-  
-            MODE = Constants.MODE.ADD;
             updateProductId = 0;
         }
 
@@ -1179,28 +1273,89 @@ namespace SSMP
 
         private void btnThemQuanLySanPham_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                ProductName productNameEntity;
 
+                if (MODE == Constants.MODE.ADD)
+                {
+                    productNameEntity = new ProductName();
+                }
+                else if (MODE == Constants.MODE.UPDATE)
+                {
+                    int idxInList = -1;
 
-        }
+                    foreach (ProductName objProductName in currentListProductName)
+                    {
+                        if (objProductName.ID == updateProductNameId)
+                        {
+                            idxInList = currentListProductName.IndexOf(objProductName);
+                        }
+                    }
+                    productNameEntity = currentListProductName[idxInList];
+                }
+                else
+                {
+                    productNameEntity = new ProductName();
+                }
 
-        private void btnCapNhatQuanLySanPham_Click(object sender, EventArgs e)
-        {
-            ht = new HoTro();
-            //SqlCommand command = new SqlCommand("update Product set CategoryId = @CategoryId, Giaban= @Giaban,Mota = @Mota where ProductId=@ProductId");
-      
-            int maTenSP = ht.LayVeKhoa("ProductName", "ProductNameId", "ProductName", comboBoxTenSanPham.Text) ;
-            //command.Parameters.Add("@ProductId", maSP);
-            //command.Parameters.Add("@Mota", txtMoTa.Text);
-            //command.Parameters.Add("@Giaban", float.Parse(txtGiaban.Text));
-            //command.Parameters.Add("@CategoryId", ht.LayVeKhoa("Category", "CategoryId", "CategoryName", cboLoaiSanPhamQuanLySanPham.Text));
-            //ht.CapNhatDuLieu(command);
+                string tenSp = txtTenSp.Text;
+                int loaiSp = (int)comboBoxLoaiSanPham.SelectedValue;
+                int nhasx = (int)comboBoxNhasx.SelectedValue;
+                string giaban = txtGiaban.Text;
 
-            SqlCommand command = new SqlCommand("update Product set salePrice= @Giaban where ProdNameId=@ProductNameId");
-            command.Parameters.Add("@ProductNameId", maTenSP);
-            command.Parameters.Add("@Giaban", txtGiaban.Text);
-            ht.CapNhatDuLieu(command);
-            MessageBox.Show("updated");
+                //if (strPassword != strPasswordConfirm)
+                //{
+                //    MessageBox.Show("Mật khẩu không trùng nhau. Vui lòng nhập lại", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //}
+    
+                productNameEntity.ProdName = tenSp;
+                productNameEntity.CategoryId = loaiSp;
+                productNameEntity.ManId = nhasx;
+          
+                //Do save new entity
+                productNameManager.SaveOrUpdate(productNameEntity);
+
+                //Show message success
+                if (MODE == Constants.MODE.ADD)
+                {
+                    MessageBox.Show("Tạo mới tên sản phẩm [" + productNameEntity.ID + " ] thành công", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else if (MODE == Constants.MODE.UPDATE)
+                {
+                    ht = new HoTro();
+                    int maTenSP = productNameEntity.ID;
+                    if (txtGiaban.Text.Length != 0) {
+                        SqlCommand command = new SqlCommand("update Product set salePrice= @Giaban where ProductNameId=@ProductNameId");
+                        command.Parameters.Add("@ProductNameId", maTenSP);
+                        command.Parameters.Add("@Giaban", giaban);
+                        ht.CapNhatDuLieu(command);
+                    }
+                    if (txtGiamGia.Text.Length != 0)
+                    {
+                        SqlCommand command = new SqlCommand("update Product set discount= @GiamGia where ProductNameId=@ProductNameId");
+                        command.Parameters.Add("@ProductNameId", maTenSP);
+                        command.Parameters.Add("@GiamGia", Int32.Parse(txtGiamGia.Text));
+                        ht.CapNhatDuLieu(command);
+                    }                    
+                    MessageBox.Show("Cập nhật tên sản phẩm [" + productNameEntity.ID + " ] thành công", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MODE = Constants.MODE.ADD;
+                    btnThemTenSanPham.Text = "&Thêm mới";
+                    this.ResetForm();
+                }
+
+                //Refresh grid view after insert successfully
+                this.RefreshGridViewProductNames();
+                
+            }
+            catch (Exception ex)
+            {
+                logger.Debug(ex.Message);
+                logger.Debug(ex.StackTrace);
+                MessageBox.Show(ex.StackTrace);
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void tpQuanLySanPham_Click(object sender, EventArgs e)
@@ -1227,31 +1382,177 @@ namespace SSMP
         {
             try
             {
-                int khoa = Int32.Parse(cboTenSanPham.SelectedValue.ToString());
+                int khoa = Int32.Parse(cboTenSanPham.SelectedValue.ToString());            
                 ProductName productName = productNameManager.GetById(khoa, true);
                 cboLoaiSanPham.SelectedValue = productName.CategoryIdLookup.ID;
                 cboNhaSanXuat.SelectedValue = productName.ManIdLookup.ID;
                 Manufacturer man = manufacturerManager.GetById(productName.ManIdLookup.ID, true) ;
                 cboNguonGoc.SelectedValue = man.CountryIdLookup.ID;
             }
-            catch (Exception ex) {
-                // MessageBox.Show(ex.Message);
-            }
-
+            catch (Exception ex) { }
         }
 
         private void gvSanPham_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            if (gvSanPham.SelectedCells.Count > 0)
+            if (gvTenSanPham.SelectedCells.Count > 0)
             {
-                btnThemQuanLySanPham.TextAlign = ContentAlignment.MiddleRight;
-                btnThemQuanLySanPham.Text = "&Cập Nhật";
-                btnThemQuanLySanPham.ImageIndex = 2;
-                int selectedRowIndex = gvSanPham.SelectedCells[0].RowIndex;
+                txtGiaban.Text = "";
+                txtGiamGia.Text = "";
+                btnThemTenSanPham.TextAlign = ContentAlignment.MiddleRight;
+                btnThemTenSanPham.Text = "&Cập Nhật";
+                btnThemTenSanPham.ImageIndex = 2;
+                int selectedRowIndex = gvTenSanPham.SelectedCells[0].RowIndex;
                 BindingProductNameToForm(selectedRowIndex);
-               // MODE = Constants.MODE.UPDATE;
-                //updateProductId = (Int64)gvSanPhamDanhMuc.Rows[selectedRowIndex].Cells["ProductId"].Value;
+                MODE = Constants.MODE.UPDATE;
+                updateProductNameId = (Int32)gvTenSanPham.Rows[selectedRowIndex].Cells["ProductNameId"].Value;
             }
+        }
+
+        private void btnXoaTrangQuanLySanPham_Click(object sender, EventArgs e)
+        {
+            txtId.Text = "";
+            txtGiaban.Text = "";
+            txtTenSp.Text = "";
+            comboBoxLoaiSanPham.SelectedIndex = -1;
+            comboBoxNhasx.SelectedIndex = -1;
+
+            btnThemTenSanPham.Text = "&Thêm mới";
+            btnThemTenSanPham.ImageIndex = 1;
+            MODE = Constants.MODE.ADD;
+        }
+
+        private void btnTaiLaiTatCaQuanLySanPham_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTaiLaiQuanLySanPham_Click(object sender, EventArgs e)
+        {
+            searchEntityProductName = new ProductName();
+            SearchResult<ProductName> searchResult = productNameManager.GetProductNameListByParam(searchEntityProductName, searchParamProductName);
+            currentListProductName = searchResult.SearchList;
+
+            //Binding list product name to gridview
+            dataSetProductName.Clear();
+            IList2DataTableProductName(currentListProductName, dataSetProductName.Tables["ProductName"]);
+            listPagesProductName = new List<Int32>();
+            BindingDataToBindingNagivatorProductName(searchResult.SearchSize, 0);
+        }
+
+        private void toolStripButtonNextProdcutName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkTenSp_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvTenSanPham, chkTenSp, "ProdName");
+        }
+
+        private void chkId_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkLoaiSp_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvTenSanPham, chkLoaiSp, "CategoryName");
+        }
+
+        private void chkNhaSx_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvTenSanPham, chkNhaSx, "ManName");
+        }
+
+        private void chkTatCaHienThiTenSanPham_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkTatCaHienThiTenSanPham.Checked == true)
+            {
+                DisplayAllTenSp();
+            }
+            else
+            {
+                chkLoaiSp.Checked = false;
+                chkNhaSx.Checked = false;
+                chkTenSp.Checked = false;
+            }
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked == true)
+            {
+                DisplayAll();
+            }
+            else
+            {
+                checkBoxHTGiaban.Checked = false;
+                checkBoxHTGiamGia.Checked = false;
+                checkBoxHTGiaMua.Checked = false;
+                checkBoxHTMaBan.Checked = false;
+                checkBoxHTMamua.Checked = false;
+                checkBoxHTNgayHethan.Checked = false;
+                checkBoxHTNgaySx.Checked = false;
+                checkBoxHTStatus.Checked = false;
+                checkBoxHTMota.Checked = false;
+                checkBoxHTTenSp.Checked = false;
+                checkBoxHTDonVi.Checked = false;
+            }
+        }
+
+        private void checkBoxHTNgaySx_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvSanPhamDanhMuc, checkBoxHTNgaySx, "MfgDate");
+        }
+
+        private void checkBoxHTNgayHethan_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvSanPhamDanhMuc, checkBoxHTNgayHethan, "ExpDate");
+        }
+
+        private void checkBoxHTTenSp_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvSanPhamDanhMuc, checkBoxHTTenSp, "ProdName");
+        }
+
+        private void checkBoxHTGiaMua_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvSanPhamDanhMuc, checkBoxHTGiaMua, "PurchasePrice");
+        }
+
+        private void checkBoxHTGiaban_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvSanPhamDanhMuc, checkBoxHTGiaban, "SalePrice");
+        }
+
+        private void checkBoxHTGiamGia_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvSanPhamDanhMuc, checkBoxHTGiamGia, "Discount");
+        }
+
+        private void checkBoxHTStatus_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvSanPhamDanhMuc, checkBoxHTStatus, "Status");
+        }
+
+        private void checkBoxHTMamua_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvSanPhamDanhMuc, checkBoxHTMamua, "BillPurchaseId");
+        }
+
+        private void checkBoxHTMaBan_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvSanPhamDanhMuc, checkBoxHTMaBan, "BillSaleId");
+        }
+
+        private void checkBoxHTDonVi_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvSanPhamDanhMuc, checkBoxHTDonVi, "Unit");
+        }
+
+        private void checkBoxHTMota_CheckedChanged(object sender, EventArgs e)
+        {
+            DisplayColumn(gvSanPhamDanhMuc, checkBoxHTMota, "Description");
         }
     }
 }
