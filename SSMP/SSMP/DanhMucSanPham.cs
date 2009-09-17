@@ -1127,6 +1127,33 @@ namespace SSMP
 
         private void btnThemQuanLy_Click(object sender, EventArgs e)
         {
+            if (textBoxMaSanPham.Text.Length == 0) {
+                HoTro.baoLoi("Chọn sản phẩm để cập nhật");
+                return;
+            }
+
+            if (dateTimePickerHetHan.Value < dateTimePickerSx.Value) {
+                HoTro.baoLoi("Ngày hết hạn không được nhỏ hơn ngày sản xuất");
+                return;
+            }
+            if (!HoTro.IsWholeNumber(textBoxGiaMua.Text)) {
+                HoTro.baoLoi("Giá mua nhập không đúng");
+                return;
+            }
+            if (!HoTro.IsWholeNumber(textBoxGiaBan.Text))
+            {
+                HoTro.baoLoi("Giá bán nhập không đúng");
+                return;
+            }
+            try
+            {
+                if (textBoxGiamGia.Text.Length != 0) Int32.Parse(textBoxGiamGia.Text);
+            }
+            catch (Exception ex) {
+                HoTro.baoLoi("Giảm giá nhập không đúng");
+                return;
+            }
+            
             try
             {
                 int idxInList = -1;
@@ -1273,6 +1300,28 @@ namespace SSMP
 
         private void btnThemQuanLySanPham_Click(object sender, EventArgs e)
         {
+            // validate 
+            if (txtTenSp.Text.Length == 0) {
+                HoTro.baoLoi("Nhập tên sản phẩm");
+                return;
+            }
+
+            if (!HoTro.IsWholeNumber(txtGiaban.Text)) {
+                HoTro.baoLoi("Giá bán nhập không đúng");
+                return;
+            }
+
+            try
+            {
+                if (txtGiamGia.Text.Length != 0)
+                    Int32.Parse(txtGiamGia.Text);
+            }
+            catch (Exception ex)
+            {
+                HoTro.baoLoi("Giảm giá nhập không đúng");
+                return;
+            }
+
             try
             {
                 ProductName productNameEntity;
