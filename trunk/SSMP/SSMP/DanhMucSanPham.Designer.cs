@@ -159,6 +159,7 @@
             this.lblLoaiSanPham = new System.Windows.Forms.Label();
             this.txtGiamGia = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.tcDanhMucSanPham.SuspendLayout();
             this.tpQuanLyTenSanPham.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorProductName)).BeginInit();
@@ -640,6 +641,7 @@
             // 
             // gbThongTinSanPhamQuanLySanPham
             // 
+            this.gbThongTinSanPhamQuanLySanPham.Controls.Add(this.label14);
             this.gbThongTinSanPhamQuanLySanPham.Controls.Add(this.label13);
             this.gbThongTinSanPhamQuanLySanPham.Controls.Add(this.txtGiamGia);
             this.gbThongTinSanPhamQuanLySanPham.Controls.Add(this.comboBoxNhasx);
@@ -1383,9 +1385,9 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label10.Location = new System.Drawing.Point(252, 251);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(32, 13);
+            this.label10.Size = new System.Drawing.Size(21, 13);
             this.label10.TabIndex = 41;
-            this.label10.Text = "(vnđ)";
+            this.label10.Text = "(%)";
             // 
             // cboNhaSanXuat
             // 
@@ -1544,7 +1546,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(-2, 159);
+            this.label4.Location = new System.Drawing.Point(3, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 13);
             this.label4.TabIndex = 30;
@@ -1647,6 +1649,16 @@
             this.label13.Size = new System.Drawing.Size(54, 13);
             this.label13.TabIndex = 87;
             this.label13.Text = "Giảm giá :";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label14.Location = new System.Drawing.Point(294, 212);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(21, 13);
+            this.label14.TabIndex = 88;
+            this.label14.Text = "(%)";
             // 
             // frmDanhMucSanPham
             // 
@@ -1816,5 +1828,6 @@
         private System.Windows.Forms.CheckBox checkBoxHTStatus;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtGiamGia;
+        private System.Windows.Forms.Label label14;
     }
 }

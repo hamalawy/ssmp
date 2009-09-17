@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -387,5 +388,10 @@ namespace SSMP
             MessageBox.Show(s, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        public static bool IsWholeNumber(String strNumber)
+        {
+            Regex objNotWholePattern = new Regex("[^0-9]");
+            return !objNotWholePattern.IsMatch(strNumber);
+        }
     }
 }
