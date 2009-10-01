@@ -20,7 +20,7 @@ namespace SSMP
         public frmDanhMucNhaCungCap DanhMucNhaCungCap;
         public FrmUser QuanLyNguoiDung;
         public FrmUnit QuanLyDonVi;
-        public frmDanhMucNhaSanXuat DanhMucNhaSanXuat;
+        public FrmManufacturer frmManufacturer;
         public FrmAction frmAction;
         public frmNhapHang NhapHang;
         public BanHang frmBanHang;
@@ -271,33 +271,33 @@ namespace SSMP
 
         private void tsmiDanhMucNhaSanXuat_Click(object sender, EventArgs e)
         {
-            if (DanhMucNhaSanXuat == null)
+            if (frmManufacturer == null)
             {
-                DanhMucNhaSanXuat = new frmDanhMucNhaSanXuat();
-                DanhMucNhaSanXuat.MdiParent = this;
-                DanhMucNhaSanXuat.Show();
+                frmManufacturer = new FrmManufacturer();
+                frmManufacturer.MdiParent = this;
+                frmManufacturer.Show();
             }
-            if (DanhMucNhaSanXuat.IsDisposed)
+            if (frmManufacturer.IsDisposed)
             {
-                DanhMucNhaSanXuat = new frmDanhMucNhaSanXuat();
-                DanhMucNhaSanXuat.MdiParent = this;
-                DanhMucNhaSanXuat.Show();
+                frmManufacturer = new FrmManufacturer();
+                frmManufacturer.MdiParent = this;
+                frmManufacturer.Show();
             }
         }
 
         private void tsbDanhMucNhaSanXuat_Click(object sender, EventArgs e)
         {
-            if (DanhMucNhaSanXuat == null)
+            if (frmManufacturer == null)
             {
-                DanhMucNhaSanXuat = new frmDanhMucNhaSanXuat();
-                DanhMucNhaSanXuat.MdiParent = this;
-                DanhMucNhaSanXuat.Show();
+                frmManufacturer = new FrmManufacturer();
+                frmManufacturer.MdiParent = this;
+                frmManufacturer.Show();
             }
-            if (DanhMucNhaSanXuat.IsDisposed)
+            if (frmManufacturer.IsDisposed)
             {
-                DanhMucNhaSanXuat = new frmDanhMucNhaSanXuat();
-                DanhMucNhaSanXuat.MdiParent = this;
-                DanhMucNhaSanXuat.Show();
+                frmManufacturer = new FrmManufacturer();
+                frmManufacturer.MdiParent = this;
+                frmManufacturer.Show();
             }
         }
 

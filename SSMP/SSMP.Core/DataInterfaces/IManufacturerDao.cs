@@ -12,6 +12,6 @@ namespace SSMP.Core.DataInterfaces
     /// </summary>
     public interface IManufacturerDao : IDao<Manufacturer, System.Int32>
     {
-        //SearchResult<Manufacturer> GetManufacturerListByParam(Manufacturer entity, SearchParam searchParam);
+        SearchResult<Manufacturer> GetManufacturerListByParam(Manufacturer entity, SearchParam searchParam);
     }
 }
