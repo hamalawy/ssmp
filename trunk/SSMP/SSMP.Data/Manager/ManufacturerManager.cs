@@ -82,6 +82,7 @@ namespace SSMP.Data.Manager
                     //entity.ManufacturerTitleIdLookup = null;
                     // entity.ManufacturerTitleId = null;
                     //manufacturerDao.CommitChanges();
+                    entity.CountryIdLookup = null;
                     manufacturerDao.Delete(entity);
                     manufacturerDao.CommitChanges();
                 }
@@ -129,7 +130,7 @@ namespace SSMP.Data.Manager
         public SearchResult<Manufacturer> GetManufacturerListByParam(Manufacturer entity, SearchParam searcParam)
         {
             SearchResult<Manufacturer> searchResult = null;
-            /*
+            
             try
             {
                 searchResult = manufacturerDao.GetManufacturerListByParam(entity, searcParam);
@@ -138,7 +139,7 @@ namespace SSMP.Data.Manager
             {
                 throw ex;
             }
-            */
+            
             return searchResult;
         }
     }
