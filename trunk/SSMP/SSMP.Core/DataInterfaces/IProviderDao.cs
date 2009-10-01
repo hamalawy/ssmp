@@ -12,6 +12,6 @@ namespace SSMP.Core.DataInterfaces
     /// </summary>
     public interface IProviderDao : IDao<Provider, System.Int32>
     {
-        //SearchResult<Provider> GetProviderListByParam(Provider entity, SearchParam searchParam);
+        SearchResult<Provider> GetProviderListByParam(Provider entity, SearchParam searchParam);
     }
 }
