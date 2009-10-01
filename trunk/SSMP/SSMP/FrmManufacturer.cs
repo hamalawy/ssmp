@@ -128,7 +128,28 @@ namespace SSMP
                     rowTemp["Email"] = objManufacturer.Email;
                     rowTemp["Website"] = objManufacturer.Website;
                     rowTemp["CountryId"] = objManufacturer.CountryId;
-                    rowTemp["CountryName"] = objManufacturer.CountryIdLookup.CountryName;
+                    if (objManufacturer.CountryIdLookup != null)
+                    {
+                        rowTemp["CountryName"] = objManufacturer.CountryIdLookup.CountryName;
+                    }
+                    else
+                    {
+                        if (objManufacturer.CountryId != 0)
+                        {
+                            if (countryManager.GetById(objManufacturer.CountryId, false) != null)
+                            {
+                                rowTemp["CountryName"] = countryManager.GetById(objManufacturer.CountryId, false).CountryName;
+                            }
+                            else
+                            {
+                                rowTemp["CountryName"] = string.Empty;
+                            }
+                        }
+                        else
+                        {
+                            rowTemp["CountryName"] = string.Empty;
+                        }
+                    }                    
 
                     dataTableManufacturer.Rows.Add(rowTemp);
                 }

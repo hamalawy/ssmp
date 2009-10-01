@@ -31,7 +31,7 @@ namespace SSMP.Data.Manager
 
         public UserRole GetById(int id, bool shouldLock)
         {
-            throw new Exception("The method or operation is not implemented.");
+            return userRoleDao.GetById(id, shouldLock);
         }
 
         public List<UserRole> GetAll()
