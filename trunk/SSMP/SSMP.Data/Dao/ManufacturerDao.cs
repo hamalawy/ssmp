@@ -47,72 +47,30 @@ namespace SSMP.Data.Dao
 
             if (entity != null)
             {
-                /*
                 if (entity.ID != 0)
                 {
-                    if (entity.ManufacturerName != null)
+                    if (entity.ManName != null)
                     {
-                        if (entity.ManufacturerDesc != null)
-                        {
-                            criteria.Add(
+                        criteria.Add(
                                 Restrictions.Or(
                                     Restrictions.Eq("ID", entity.ID),
-                                    Restrictions.Or(
-                                        Restrictions.Like("ManufacturerName", entity.ManufacturerName, MatchMode.Anywhere),
-                                        Restrictions.Like("ManufacturerDesc", entity.ManufacturerDesc, MatchMode.Anywhere))));
-                        }
-                        else
-                        {
-                            criteria.Add(
-                                Restrictions.Or(
-                                    Restrictions.Eq("ID", entity.ID),
-                                    Restrictions.Like("ManufacturerName", entity.ManufacturerName, MatchMode.Anywhere)));
-                        }
+                                    Restrictions.Like("ManName", entity.ManName, MatchMode.Anywhere)));
                     }
                     else
                     {
-                        if (entity.ManufacturerDesc != null)
-                        {
-                            criteria.Add(
-                                Restrictions.Or(
-                                    Restrictions.Eq("ID", entity.ID),
-                                    Restrictions.Like("ManufacturerDesc", entity.ManufacturerDesc, MatchMode.Anywhere)));
-                        }
-                        else
-                        {
-                            criteria.Add(
+                        criteria.Add(
                                 Restrictions.Eq("ID", entity.ID));
-                        }
                     }
 
                 }
                 else
                 {
-                    if (entity.ManufacturerName != null)
+                    if (entity.ManName != null)
                     {
-                        if (entity.ManufacturerDesc != null)
-                        {
-                            criteria.Add(
-                                Restrictions.Or(
-                                    Restrictions.Like("ManufacturerName", entity.ManufacturerName, MatchMode.Anywhere),
-                                    Restrictions.Like("ManufacturerDesc", entity.ManufacturerDesc, MatchMode.Anywhere)));
-                        }
-                        else
-                        {
-                            criteria.Add(
-                                Restrictions.Like("ManufacturerName", entity.ManufacturerName, MatchMode.Anywhere));
-                        }
-                    }
-                    else
-                    {
-                        if (entity.ManufacturerDesc != null)
-                        {
-                            criteria.Add(
-                                Restrictions.Like("ManufacturerDesc", entity.ManufacturerDesc, MatchMode.Anywhere));
-                        }
+                        criteria.Add(
+                                Restrictions.Like("ManName", entity.ManName, MatchMode.Anywhere));
                     }
                 }
-                */
             }
 
             return criteria;
