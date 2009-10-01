@@ -31,7 +31,7 @@ namespace SSMP.Data.Manager
 
         public UserStatus GetById(int id, bool shouldLock)
         {
-            throw new Exception("The method or operation is not implemented.");
+            return userStatusDao.GetById(id, shouldLock);
         }
 
         public List<UserStatus> GetAll()

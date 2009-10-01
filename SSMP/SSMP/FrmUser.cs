@@ -171,12 +171,58 @@ namespace SSMP
                     rowTemp["Sex"] = objUser.Sex;
                     rowTemp["TelNo"] = objUser.TelNo;
                     rowTemp["Address"] = objUser.Address;
-                    rowTemp["UserTitleId"] = objUser.UserTitleIdLookup.ID;
-                    rowTemp["UserTitle"] = objUser.UserTitleIdLookup.UserTitleName;
-                    rowTemp["UserRoleId"] = objUser.UserRoleIdLookup.ID;
-                    rowTemp["UserRole"] = objUser.UserRoleIdLookup.UserRoleName;
-                    rowTemp["UserStatusId"] = objUser.UserStatusIdLookup.ID;
-                    rowTemp["UserStatus"] = objUser.UserStatusIdLookup.UserStatusName;
+                    rowTemp["UserTitleId"] = objUser.UserTitleId;
+                    if (objUser.UserTitleIdLookup != null)
+                    {
+                        rowTemp["UserTitle"] = objUser.UserTitleIdLookup.UserTitleName;
+                    }
+                    else
+                    {
+                        if (objUser.UserTitleId.HasValue)
+                        {
+                            UserTitle temp = userTitleManager.GetById(objUser.UserTitleId.Value, false);
+                            rowTemp["UserTitle"] = temp.UserTitleName;                        
+                        }
+                        else
+                        {
+                            rowTemp["UserTitle"] = string.Empty;
+                        }                            
+                    }
+                    rowTemp["UserRoleId"] = objUser.UserTitleId;
+                    if (objUser.UserRoleIdLookup != null)
+                    {
+                        rowTemp["UserRole"] = objUser.UserRoleIdLookup.UserRoleName;
+                    }
+                    else
+                    {
+                        if (objUser.UserTitleId.HasValue)
+                        {
+                            UserRole temp = userRoleManager.GetById(objUser.UserTitleId.Value, false);
+                            rowTemp["UserRole"] = temp.UserRoleName;
+                        }
+                        else
+                        {
+                            rowTemp["UserRole"] = string.Empty;
+                        }
+                    }
+                    rowTemp["UserStatusId"] = objUser.UserStatusId;
+                    if (objUser.UserStatusIdLookup != null)
+                    {
+                        rowTemp["UserStatus"] = objUser.UserStatusIdLookup.UserStatusName;
+                    }
+                    else
+                    {
+                        UserStatus temp = userStatusManager.GetById(objUser.UserStatusId, false);
+
+                        if (temp != null)
+                        {
+                            rowTemp["UserStatus"] = temp.UserStatusName;
+                        }
+                        else
+                        {
+                            rowTemp["UserStatus"] = string.Empty;
+                        }
+                    }
                         
                     dataTableUser.Rows.Add(rowTemp);
                 }
