@@ -17,7 +17,7 @@ namespace SSMP
         public frmDanhMucQuocGia DanhMucQuocGia;
         public FrmUserRole QuanLyNhomNguoiDung;
         public FrmCategory DanhMucLoaiSanPham;
-        public frmDanhMucNhaCungCap DanhMucNhaCungCap;
+        public FrmProvider frmProvider;
         public FrmUser QuanLyNguoiDung;
         public FrmUnit QuanLyDonVi;
         public FrmManufacturer frmManufacturer;
@@ -181,33 +181,33 @@ namespace SSMP
 
         private void tsmiDanhMucNhaCungCap_Click(object sender, EventArgs e)
         {
-            if (DanhMucNhaCungCap == null)
+            if (frmProvider == null)
             {
-                DanhMucNhaCungCap = new frmDanhMucNhaCungCap();
-                DanhMucNhaCungCap.MdiParent = this;
-                DanhMucNhaCungCap.Show();
+                frmProvider = new FrmProvider();
+                frmProvider.MdiParent = this;
+                frmProvider.Show();
             }
-            if (DanhMucNhaCungCap.IsDisposed)
+            if (frmProvider.IsDisposed)
             {
-                DanhMucNhaCungCap = new frmDanhMucNhaCungCap();
-                DanhMucNhaCungCap.MdiParent = this;
-                DanhMucNhaCungCap.Show();
+                frmProvider = new FrmProvider();
+                frmProvider.MdiParent = this;
+                frmProvider.Show();
             }
         }
 
         private void tsbQuanLyDanhMucNhaCungCap_Click(object sender, EventArgs e)
         {
-            if (DanhMucNhaCungCap == null)
+            if (frmProvider == null)
             {
-                DanhMucNhaCungCap = new frmDanhMucNhaCungCap();
-                DanhMucNhaCungCap.MdiParent = this;
-                DanhMucNhaCungCap.Show();
+                frmProvider = new FrmProvider();
+                frmProvider.MdiParent = this;
+                frmProvider.Show();
             }
-            if (DanhMucNhaCungCap.IsDisposed)
+            if (frmProvider.IsDisposed)
             {
-                DanhMucNhaCungCap = new frmDanhMucNhaCungCap();
-                DanhMucNhaCungCap.MdiParent = this;
-                DanhMucNhaCungCap.Show();
+                frmProvider = new FrmProvider();
+                frmProvider.MdiParent = this;
+                frmProvider.Show();
             }
         }
 

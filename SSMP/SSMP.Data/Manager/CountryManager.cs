@@ -32,7 +32,7 @@ namespace SSMP.Data.Manager
 
         public Country GetById(int id, bool shouldLock)
         {
-            throw new Exception("The method or operation is not implemented.");
+            return countryDao.GetById(id, shouldLock);        
         }
 
         public List<Country> GetAll()
