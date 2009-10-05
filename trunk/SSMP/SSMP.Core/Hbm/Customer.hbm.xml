@@ -4,7 +4,7 @@
     <id name="ID" type="System.Int32" column="CustomerId">
         <generator class="identity"/>
     </id>
-    <property name="CustomerName" column="CustomersName" type="System.String" not-null="true" length="100"/>
+    <property name="CustomerName" column="CustomerName" type="System.String" not-null="true" length="100"/>
     <property name="Address" column="Address" type="System.String" not-null="false" length="255"/>
     <property name="Sex" column="Sex" type="System.Byte" not-null="false" />
     <property name="Email" column="Email" type="System.String" not-null="false" length="50"/>

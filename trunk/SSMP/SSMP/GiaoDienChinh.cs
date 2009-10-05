@@ -30,6 +30,7 @@ namespace SSMP
         public FrmUserStatus frmUserStatus;
         private FrmProductStatus frmProductStatus;
         private FrmActionDetail frmActionDetail;
+        private FrmCustomer frmCustomer;
 
         public string MaNguoiDung;
 
@@ -628,6 +629,22 @@ namespace SSMP
                 frmActionDetail = new FrmActionDetail();
                 frmActionDetail.MdiParent = this;
                 frmActionDetail.Show();
+            }
+        }
+
+        private void toolStripMnuItmCustomer_Click(object sender, EventArgs e)
+        {
+            if (frmCustomer == null)
+            {
+                frmCustomer = new FrmCustomer();
+                frmCustomer.MdiParent = this;
+                frmCustomer.Show();
+            }
+            if (frmCustomer.IsDisposed)
+            {
+                frmCustomer = new FrmCustomer();
+                frmCustomer.MdiParent = this;
+                frmCustomer.Show();
             }
         }
     }
