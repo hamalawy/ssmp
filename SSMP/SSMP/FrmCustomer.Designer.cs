@@ -514,6 +514,7 @@
             // radioMan
             // 
             this.radioMan.AutoSize = true;
+            this.radioMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.radioMan.Location = new System.Drawing.Point(109, 144);
             this.radioMan.Name = "radioMan";
             this.radioMan.Size = new System.Drawing.Size(47, 17);
@@ -525,6 +526,7 @@
             // radioWoman
             // 
             this.radioWoman.AutoSize = true;
+            this.radioWoman.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.radioWoman.Location = new System.Drawing.Point(170, 144);
             this.radioWoman.Name = "radioWoman";
             this.radioWoman.Size = new System.Drawing.Size(39, 17);
