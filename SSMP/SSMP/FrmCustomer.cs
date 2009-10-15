@@ -237,6 +237,10 @@ namespace SSMP
         {
             isAdd = true;
             ResetForm();            
+
+            //Set default value
+            txtPrivilegePoint.Text = "0";
+
             SetFormReadOnly(false);
             //toolStripBtnEdit.Enabled = false;
             //toolStripBtnDelete.Enabled = false;
@@ -407,7 +411,7 @@ namespace SSMP
             {
                 txtEmail.Text = (string)gvCustomer.Rows[rowIndex].Cells["Email"].Value;
             }
-            if (gvCustomer.Rows[rowIndex].Cells["Birthday"].Value != DBNull.Value)
+            if (gvCustomer.Rows[rowIndex].Cells["IdCardNo"].Value != DBNull.Value)
             {
                 txtIdCardNo.Text = (string)gvCustomer.Rows[rowIndex].Cells["IdCardNo"].Value;
             }
