@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategory));
             this.tcQuanLyCategory = new System.Windows.Forms.TabControl();
             this.tpQuanLyCategory = new System.Windows.Forms.TabPage();
+            this.panelCategory = new System.Windows.Forms.Panel();
             this.bindingNavigatorCategory = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -48,7 +49,6 @@
             this.toolStripBtnEdit = new System.Windows.Forms.ToolStripButton();
             this.toolStripBtnDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripLblTotal = new System.Windows.Forms.ToolStripLabel();
-            this.panelCategory = new System.Windows.Forms.Panel();
             this.gvCategory = new System.Windows.Forms.DataGridView();
             this.gbTimKiemQuanLy = new System.Windows.Forms.GroupBox();
             this.chkSearchAll = new System.Windows.Forms.CheckBox();
@@ -78,9 +78,9 @@
             this.lblMaCategory = new System.Windows.Forms.Label();
             this.tcQuanLyCategory.SuspendLayout();
             this.tpQuanLyCategory.SuspendLayout();
+            this.panelCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorCategory)).BeginInit();
             this.bindingNavigatorCategory.SuspendLayout();
-            this.panelCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvCategory)).BeginInit();
             this.gbTimKiemQuanLy.SuspendLayout();
             this.gbThongTinCategory.SuspendLayout();
@@ -116,6 +116,15 @@
             this.tpQuanLyCategory.TabIndex = 0;
             this.tpQuanLyCategory.Text = "Quản lý Loại sản phẩm";
             this.tpQuanLyCategory.UseVisualStyleBackColor = true;
+            // 
+            // panelCategory
+            // 
+            this.panelCategory.Controls.Add(this.bindingNavigatorCategory);
+            this.panelCategory.Controls.Add(this.gvCategory);
+            this.panelCategory.Location = new System.Drawing.Point(15, 253);
+            this.panelCategory.Name = "panelCategory";
+            this.panelCategory.Size = new System.Drawing.Size(787, 267);
+            this.panelCategory.TabIndex = 27;
             // 
             // bindingNavigatorCategory
             // 
@@ -224,6 +233,7 @@
             this.toolStripBtnReload.Name = "toolStripBtnReload";
             this.toolStripBtnReload.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtnReload.ToolTipText = "Tải lại";
+            this.toolStripBtnReload.Click += new System.EventHandler(this.toolStripBtnReload_Click);
             // 
             // toolStripSeparator1
             // 
@@ -238,6 +248,7 @@
             this.toolStripBtnAdd.Name = "toolStripBtnAdd";
             this.toolStripBtnAdd.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtnAdd.ToolTipText = "Thêm mới";
+            this.toolStripBtnAdd.Click += new System.EventHandler(this.toolStripBtnAdd_Click);
             // 
             // toolStripBtnEdit
             // 
@@ -247,6 +258,7 @@
             this.toolStripBtnEdit.Name = "toolStripBtnEdit";
             this.toolStripBtnEdit.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtnEdit.ToolTipText = "Sửa";
+            this.toolStripBtnEdit.Click += new System.EventHandler(this.toolStripBtnEdit_Click);
             // 
             // toolStripBtnDelete
             // 
@@ -256,6 +268,7 @@
             this.toolStripBtnDelete.Name = "toolStripBtnDelete";
             this.toolStripBtnDelete.Size = new System.Drawing.Size(23, 22);
             this.toolStripBtnDelete.ToolTipText = "Xóa";
+            this.toolStripBtnDelete.Click += new System.EventHandler(this.toolStripBtnDelete_Click);
             // 
             // toolStripLblTotal
             // 
@@ -264,15 +277,6 @@
             this.toolStripLblTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.toolStripLblTotal.Size = new System.Drawing.Size(79, 22);
             this.toolStripLblTotal.Text = "Tổng số dòng: ";
-            // 
-            // panelCategory
-            // 
-            this.panelCategory.Controls.Add(this.bindingNavigatorCategory);
-            this.panelCategory.Controls.Add(this.gvCategory);
-            this.panelCategory.Location = new System.Drawing.Point(15, 253);
-            this.panelCategory.Name = "panelCategory";
-            this.panelCategory.Size = new System.Drawing.Size(787, 267);
-            this.panelCategory.TabIndex = 27;
             // 
             // gvCategory
             // 
@@ -607,11 +611,11 @@
             this.tcQuanLyCategory.ResumeLayout(false);
             this.tpQuanLyCategory.ResumeLayout(false);
             this.tpQuanLyCategory.PerformLayout();
+            this.panelCategory.ResumeLayout(false);
+            this.panelCategory.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorCategory)).EndInit();
             this.bindingNavigatorCategory.ResumeLayout(false);
             this.bindingNavigatorCategory.PerformLayout();
-            this.panelCategory.ResumeLayout(false);
-            this.panelCategory.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvCategory)).EndInit();
             this.gbTimKiemQuanLy.ResumeLayout(false);
             this.gbTimKiemQuanLy.PerformLayout();
