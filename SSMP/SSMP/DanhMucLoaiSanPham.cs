@@ -319,7 +319,10 @@ namespace SSMP
         {
             txtCategoryID.Text = (int)gvCategory.Rows[rowIndex].Cells["CategoryId"].Value + "";
             txtCategoryName.Text = (string)gvCategory.Rows[rowIndex].Cells["CategoryName"].Value;
-            txtCategoryDesc.Text = (string)gvCategory.Rows[rowIndex].Cells["CategoryDesc"].Value;
+            if (gvCategory.Rows[rowIndex].Cells["CategoryDesc"].Value != DBNull.Value)
+            {
+                txtCategoryDesc.Text = (string)gvCategory.Rows[rowIndex].Cells["CategoryDesc"].Value;
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

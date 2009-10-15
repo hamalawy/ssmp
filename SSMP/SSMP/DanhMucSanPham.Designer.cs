@@ -72,6 +72,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblTimKiemQuanLySanPham = new System.Windows.Forms.Label();
             this.gbThongTinSanPhamQuanLySanPham = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtGiamGia = new System.Windows.Forms.TextBox();
             this.comboBoxNhasx = new System.Windows.Forms.ComboBox();
             this.la = new System.Windows.Forms.Label();
             this.txtTenSp = new System.Windows.Forms.TextBox();
@@ -157,9 +160,8 @@
             this.lblMaSanPham = new System.Windows.Forms.Label();
             this.cboLoaiSanPham = new System.Windows.Forms.ComboBox();
             this.lblLoaiSanPham = new System.Windows.Forms.Label();
-            this.txtGiamGia = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.tcDanhMucSanPham.SuspendLayout();
             this.tpQuanLyTenSanPham.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorProductName)).BeginInit();
@@ -172,6 +174,8 @@
             this.bindingNavigatorProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvSanPhamDanhMuc)).BeginInit();
             this.gbThongTinSanPham.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcDanhMucSanPham
@@ -186,8 +190,8 @@
             // 
             // tpQuanLyTenSanPham
             // 
+            this.tpQuanLyTenSanPham.Controls.Add(this.panel1);
             this.tpQuanLyTenSanPham.Controls.Add(this.chkId);
-            this.tpQuanLyTenSanPham.Controls.Add(this.bindingNavigatorProductName);
             this.tpQuanLyTenSanPham.Controls.Add(this.chkNhaSx);
             this.tpQuanLyTenSanPham.Controls.Add(this.btnTaiLaiQuanLySanPham);
             this.tpQuanLyTenSanPham.Controls.Add(this.chkTatCaHienThiTenSanPham);
@@ -195,7 +199,6 @@
             this.tpQuanLyTenSanPham.Controls.Add(this.chkTenSp);
             this.tpQuanLyTenSanPham.Controls.Add(this.lblHienThiQuanLySanPham);
             this.tpQuanLyTenSanPham.Controls.Add(this.lblDanhSachSanPhamQuanLySanPham);
-            this.tpQuanLyTenSanPham.Controls.Add(this.gvTenSanPham);
             this.tpQuanLyTenSanPham.Controls.Add(this.btnXoaTrangTenSanPham);
             this.tpQuanLyTenSanPham.Controls.Add(this.btnXoaTenSanPham);
             this.tpQuanLyTenSanPham.Controls.Add(this.btnThemTenSanPham);
@@ -215,11 +218,11 @@
             this.chkId.Checked = true;
             this.chkId.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkId.Enabled = false;
-            this.chkId.Location = new System.Drawing.Point(494, 187);
+            this.chkId.Location = new System.Drawing.Point(506, 187);
             this.chkId.Name = "chkId";
-            this.chkId.Size = new System.Drawing.Size(35, 17);
+            this.chkId.Size = new System.Drawing.Size(90, 17);
             this.chkId.TabIndex = 86;
-            this.chkId.Text = "Id";
+            this.chkId.Text = "Mã sản phẩm";
             this.chkId.UseVisualStyleBackColor = true;
             this.chkId.CheckedChanged += new System.EventHandler(this.chkId_CheckedChanged);
             // 
@@ -229,7 +232,7 @@
             this.bindingNavigatorProductName.CanOverflow = false;
             this.bindingNavigatorProductName.CountItem = this.toolStripLblTotalPageProductName;
             this.bindingNavigatorProductName.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.bindingNavigatorProductName.Dock = System.Windows.Forms.DockStyle.None;
+            this.bindingNavigatorProductName.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bindingNavigatorProductName.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.bindingNavigatorProductName.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripBtnProductNameFirstItem,
@@ -248,7 +251,7 @@
             this.bindingNavigatorDeleteItem,
             this.toolStripBtnUpdate,
             this.toolStripBtnDelete});
-            this.bindingNavigatorProductName.Location = new System.Drawing.Point(368, 418);
+            this.bindingNavigatorProductName.Location = new System.Drawing.Point(0, 192);
             this.bindingNavigatorProductName.MoveFirstItem = this.toolStripBtnProductNameFirstItem;
             this.bindingNavigatorProductName.MoveLastItem = this.toolStripBtnProductNameLastItem;
             this.bindingNavigatorProductName.MoveNextItem = this.toolStripBtnProductNameNextItem;
@@ -256,7 +259,7 @@
             this.bindingNavigatorProductName.Name = "bindingNavigatorProductName";
             this.bindingNavigatorProductName.PositionItem = this.toolStripTextBox1;
             this.bindingNavigatorProductName.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.bindingNavigatorProductName.Size = new System.Drawing.Size(308, 25);
+            this.bindingNavigatorProductName.Size = new System.Drawing.Size(718, 25);
             this.bindingNavigatorProductName.TabIndex = 85;
             this.bindingNavigatorProductName.Text = "bindingNavigatorProductName";
             // 
@@ -273,7 +276,7 @@
             // toolStripLblTotalPageProductName
             // 
             this.toolStripLblTotalPageProductName.Name = "toolStripLblTotalPageProductName";
-            this.toolStripLblTotalPageProductName.Size = new System.Drawing.Size(35, 22);
+            this.toolStripLblTotalPageProductName.Size = new System.Drawing.Size(36, 22);
             this.toolStripLblTotalPageProductName.Text = "of {0}";
             this.toolStripLblTotalPageProductName.ToolTipText = "Total number of items";
             // 
@@ -313,7 +316,7 @@
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(33, 22);
+            this.toolStripLabel2.Size = new System.Drawing.Size(31, 22);
             this.toolStripLabel2.Text = "Page";
             // 
             // toolStripTextBox1
@@ -390,7 +393,7 @@
             this.chkNhaSx.AutoSize = true;
             this.chkNhaSx.Checked = true;
             this.chkNhaSx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkNhaSx.Location = new System.Drawing.Point(765, 185);
+            this.chkNhaSx.Location = new System.Drawing.Point(857, 187);
             this.chkNhaSx.Name = "chkNhaSx";
             this.chkNhaSx.Size = new System.Drawing.Size(89, 17);
             this.chkNhaSx.TabIndex = 84;
@@ -414,7 +417,7 @@
             this.chkTatCaHienThiTenSanPham.Checked = true;
             this.chkTatCaHienThiTenSanPham.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkTatCaHienThiTenSanPham.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkTatCaHienThiTenSanPham.Location = new System.Drawing.Point(421, 187);
+            this.chkTatCaHienThiTenSanPham.Location = new System.Drawing.Point(425, 187);
             this.chkTatCaHienThiTenSanPham.Name = "chkTatCaHienThiTenSanPham";
             this.chkTatCaHienThiTenSanPham.Size = new System.Drawing.Size(57, 17);
             this.chkTatCaHienThiTenSanPham.TabIndex = 20;
@@ -428,7 +431,7 @@
             this.chkLoaiSp.Checked = true;
             this.chkLoaiSp.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkLoaiSp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkLoaiSp.Location = new System.Drawing.Point(664, 187);
+            this.chkLoaiSp.Location = new System.Drawing.Point(738, 187);
             this.chkLoaiSp.Name = "chkLoaiSp";
             this.chkLoaiSp.Size = new System.Drawing.Size(95, 17);
             this.chkLoaiSp.TabIndex = 18;
@@ -442,7 +445,7 @@
             this.chkTenSp.Checked = true;
             this.chkTenSp.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkTenSp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkTenSp.Location = new System.Drawing.Point(554, 188);
+            this.chkTenSp.Location = new System.Drawing.Point(620, 187);
             this.chkTenSp.Name = "chkTenSp";
             this.chkTenSp.Size = new System.Drawing.Size(94, 17);
             this.chkTenSp.TabIndex = 17;
@@ -474,13 +477,15 @@
             // 
             this.gvTenSanPham.AllowUserToAddRows = false;
             this.gvTenSanPham.AllowUserToDeleteRows = false;
+            this.gvTenSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvTenSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvTenSanPham.Location = new System.Drawing.Point(368, 206);
+            this.gvTenSanPham.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gvTenSanPham.Location = new System.Drawing.Point(0, 0);
             this.gvTenSanPham.MultiSelect = false;
             this.gvTenSanPham.Name = "gvTenSanPham";
             this.gvTenSanPham.ReadOnly = true;
             this.gvTenSanPham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvTenSanPham.Size = new System.Drawing.Size(721, 209);
+            this.gvTenSanPham.Size = new System.Drawing.Size(718, 189);
             this.gvTenSanPham.TabIndex = 8;
             this.gvTenSanPham.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSanPham_RowEnter);
             // 
@@ -663,6 +668,34 @@
             this.gbThongTinSanPhamQuanLySanPham.TabStop = false;
             this.gbThongTinSanPhamQuanLySanPham.Text = "THÔNG TIN SẢN PHẨM:";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label14.Location = new System.Drawing.Point(294, 212);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(21, 13);
+            this.label14.TabIndex = 88;
+            this.label14.Text = "(%)";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label13.Location = new System.Drawing.Point(14, 216);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(54, 13);
+            this.label13.TabIndex = 87;
+            this.label13.Text = "Giảm giá :";
+            // 
+            // txtGiamGia
+            // 
+            this.txtGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtGiamGia.Location = new System.Drawing.Point(105, 209);
+            this.txtGiamGia.Name = "txtGiamGia";
+            this.txtGiamGia.Size = new System.Drawing.Size(183, 20);
+            this.txtGiamGia.TabIndex = 18;
+            // 
             // comboBoxNhasx
             // 
             this.comboBoxNhasx.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -705,9 +738,9 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label11.Location = new System.Drawing.Point(14, 53);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(19, 13);
+            this.label11.Size = new System.Drawing.Size(74, 13);
             this.label11.TabIndex = 13;
-            this.label11.Text = "Id:";
+            this.label11.Text = "Mã sản phẩm:";
             // 
             // label2
             // 
@@ -768,6 +801,7 @@
             // 
             // tpQuanLyChiTietSanPham
             // 
+            this.tpQuanLyChiTietSanPham.Controls.Add(this.panel2);
             this.tpQuanLyChiTietSanPham.Controls.Add(this.checkBoxHTMaBan);
             this.tpQuanLyChiTietSanPham.Controls.Add(this.checkBoxHTMamua);
             this.tpQuanLyChiTietSanPham.Controls.Add(this.checkBoxHTStatus);
@@ -781,7 +815,6 @@
             this.tpQuanLyChiTietSanPham.Controls.Add(this.checkBoxHTMota);
             this.tpQuanLyChiTietSanPham.Controls.Add(this.checkBoxHTTenSp);
             this.tpQuanLyChiTietSanPham.Controls.Add(this.checkBox9);
-            this.tpQuanLyChiTietSanPham.Controls.Add(this.bindingNavigatorProduct);
             this.tpQuanLyChiTietSanPham.Controls.Add(this.chkNhaCungCapTimKiemQuanLy);
             this.tpQuanLyChiTietSanPham.Controls.Add(this.chkNhaSanXuatTimKiemQuanLy);
             this.tpQuanLyChiTietSanPham.Controls.Add(this.chkNguonGocTimKiemQuanLy);
@@ -790,7 +823,6 @@
             this.tpQuanLyChiTietSanPham.Controls.Add(this.btnDongQuanLy);
             this.tpQuanLyChiTietSanPham.Controls.Add(this.textBoxMota);
             this.tpQuanLyChiTietSanPham.Controls.Add(this.btnXoaQuanLy);
-            this.tpQuanLyChiTietSanPham.Controls.Add(this.gvSanPhamDanhMuc);
             this.tpQuanLyChiTietSanPham.Controls.Add(this.btnThemQuanLy);
             this.tpQuanLyChiTietSanPham.Controls.Add(this.lblDanhMucSanPhamQuanLy);
             this.tpQuanLyChiTietSanPham.Controls.Add(this.chkTatCaTimKiemQuanLy);
@@ -990,7 +1022,7 @@
             this.bindingNavigatorProduct.CanOverflow = false;
             this.bindingNavigatorProduct.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigatorProduct.DeleteItem = null;
-            this.bindingNavigatorProduct.Dock = System.Windows.Forms.DockStyle.None;
+            this.bindingNavigatorProduct.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bindingNavigatorProduct.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.bindingNavigatorProduct.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
@@ -1004,7 +1036,7 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.toolStripLblTotal});
-            this.bindingNavigatorProduct.Location = new System.Drawing.Point(352, 420);
+            this.bindingNavigatorProduct.Location = new System.Drawing.Point(0, 231);
             this.bindingNavigatorProduct.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigatorProduct.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigatorProduct.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -1012,14 +1044,14 @@
             this.bindingNavigatorProduct.Name = "bindingNavigatorProduct";
             this.bindingNavigatorProduct.PositionItem = this.bindingNavigatorPositionItem;
             this.bindingNavigatorProduct.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.bindingNavigatorProduct.Size = new System.Drawing.Size(341, 25);
+            this.bindingNavigatorProduct.Size = new System.Drawing.Size(759, 25);
             this.bindingNavigatorProduct.TabIndex = 82;
             this.bindingNavigatorProduct.Text = "bindingNavigatorProduct";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(36, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -1049,7 +1081,7 @@
             // toolStripLblPage
             // 
             this.toolStripLblPage.Name = "toolStripLblPage";
-            this.toolStripLblPage.Size = new System.Drawing.Size(33, 22);
+            this.toolStripLblPage.Size = new System.Drawing.Size(31, 22);
             this.toolStripLblPage.Text = "Page";
             // 
             // bindingNavigatorPositionItem
@@ -1094,7 +1126,7 @@
             // 
             this.toolStripLblTotal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLblTotal.Name = "toolStripLblTotal";
-            this.toolStripLblTotal.Size = new System.Drawing.Size(108, 22);
+            this.toolStripLblTotal.Size = new System.Drawing.Size(98, 22);
             this.toolStripLblTotal.Text = "Tổng sồ sản phẩm:";
             // 
             // chkNhaCungCapTimKiemQuanLy
@@ -1197,14 +1229,17 @@
             // 
             // gvSanPhamDanhMuc
             // 
+            this.gvSanPhamDanhMuc.AllowUserToAddRows = false;
+            this.gvSanPhamDanhMuc.AllowUserToDeleteRows = false;
             this.gvSanPhamDanhMuc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvSanPhamDanhMuc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvSanPhamDanhMuc.Location = new System.Drawing.Point(324, 180);
+            this.gvSanPhamDanhMuc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gvSanPhamDanhMuc.Location = new System.Drawing.Point(0, 0);
             this.gvSanPhamDanhMuc.MultiSelect = false;
             this.gvSanPhamDanhMuc.Name = "gvSanPhamDanhMuc";
             this.gvSanPhamDanhMuc.ReadOnly = true;
             this.gvSanPhamDanhMuc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gvSanPhamDanhMuc.Size = new System.Drawing.Size(764, 237);
+            this.gvSanPhamDanhMuc.Size = new System.Drawing.Size(759, 228);
             this.gvSanPhamDanhMuc.TabIndex = 71;
             this.gvSanPhamDanhMuc.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuanLy_RowEnter);
             this.gvSanPhamDanhMuc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSanPhamDanhMuc_CellContentClick);
@@ -1632,33 +1667,23 @@
             this.lblLoaiSanPham.TabIndex = 4;
             this.lblLoaiSanPham.Text = "Loại sản phẩm:";
             // 
-            // txtGiamGia
+            // panel1
             // 
-            this.txtGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtGiamGia.Location = new System.Drawing.Point(105, 209);
-            this.txtGiamGia.Name = "txtGiamGia";
-            this.txtGiamGia.Size = new System.Drawing.Size(183, 20);
-            this.txtGiamGia.TabIndex = 18;
+            this.panel1.Controls.Add(this.gvTenSanPham);
+            this.panel1.Controls.Add(this.bindingNavigatorProductName);
+            this.panel1.Location = new System.Drawing.Point(371, 221);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(718, 217);
+            this.panel1.TabIndex = 87;
             // 
-            // label13
+            // panel2
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label13.Location = new System.Drawing.Point(14, 216);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 13);
-            this.label13.TabIndex = 87;
-            this.label13.Text = "Giảm giá :";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label14.Location = new System.Drawing.Point(294, 212);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(21, 13);
-            this.label14.TabIndex = 88;
-            this.label14.Text = "(%)";
+            this.panel2.Controls.Add(this.gvSanPhamDanhMuc);
+            this.panel2.Controls.Add(this.bindingNavigatorProduct);
+            this.panel2.Location = new System.Drawing.Point(329, 189);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(759, 256);
+            this.panel2.TabIndex = 100;
             // 
             // frmDanhMucSanPham
             // 
@@ -1692,6 +1717,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvSanPhamDanhMuc)).EndInit();
             this.gbThongTinSanPham.ResumeLayout(false);
             this.gbThongTinSanPham.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1829,5 +1858,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtGiamGia;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
