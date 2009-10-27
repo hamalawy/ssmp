@@ -590,7 +590,7 @@
             this.txtMoTa.Name = "txtMoTa";
             this.txtMoTa.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtMoTa.Size = new System.Drawing.Size(141, 60);
-            this.txtMoTa.TabIndex = 17;
+            this.txtMoTa.TabIndex = 9;
             // 
             // btnCapNhatQuanLy
             // 
@@ -601,7 +601,7 @@
             this.btnCapNhatQuanLy.Location = new System.Drawing.Point(91, 175);
             this.btnCapNhatQuanLy.Name = "btnCapNhatQuanLy";
             this.btnCapNhatQuanLy.Size = new System.Drawing.Size(75, 23);
-            this.btnCapNhatQuanLy.TabIndex = 9;
+            this.btnCapNhatQuanLy.TabIndex = 11;
             this.btnCapNhatQuanLy.Text = "&Cập nhật";
             this.btnCapNhatQuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCapNhatQuanLy.UseVisualStyleBackColor = true;
@@ -626,7 +626,7 @@
             this.btnThemQuanLy.Location = new System.Drawing.Point(15, 175);
             this.btnThemQuanLy.Name = "btnThemQuanLy";
             this.btnThemQuanLy.Size = new System.Drawing.Size(60, 23);
-            this.btnThemQuanLy.TabIndex = 8;
+            this.btnThemQuanLy.TabIndex = 10;
             this.btnThemQuanLy.Text = "T&hêm";
             this.btnThemQuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThemQuanLy.UseVisualStyleBackColor = true;
@@ -638,7 +638,7 @@
             this.txtThuDienTu.Location = new System.Drawing.Point(352, 123);
             this.txtThuDienTu.Name = "txtThuDienTu";
             this.txtThuDienTu.Size = new System.Drawing.Size(141, 20);
-            this.txtThuDienTu.TabIndex = 15;
+            this.txtThuDienTu.TabIndex = 7;
             // 
             // btnXoaQuanLy
             // 
@@ -649,7 +649,7 @@
             this.btnXoaQuanLy.Location = new System.Drawing.Point(182, 175);
             this.btnXoaQuanLy.Name = "btnXoaQuanLy";
             this.btnXoaQuanLy.Size = new System.Drawing.Size(57, 23);
-            this.btnXoaQuanLy.TabIndex = 10;
+            this.btnXoaQuanLy.TabIndex = 12;
             this.btnXoaQuanLy.Text = "&Xóa";
             this.btnXoaQuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoaQuanLy.UseVisualStyleBackColor = true;
@@ -672,7 +672,7 @@
             this.cboQuocGia.Location = new System.Drawing.Point(352, 96);
             this.cboQuocGia.Name = "cboQuocGia";
             this.cboQuocGia.Size = new System.Drawing.Size(141, 21);
-            this.cboQuocGia.TabIndex = 13;
+            this.cboQuocGia.TabIndex = 6;
             // 
             // btnXoaTrangQuanLy
             // 
@@ -683,7 +683,7 @@
             this.btnXoaTrangQuanLy.Location = new System.Drawing.Point(255, 175);
             this.btnXoaTrangQuanLy.Name = "btnXoaTrangQuanLy";
             this.btnXoaTrangQuanLy.Size = new System.Drawing.Size(81, 23);
-            this.btnXoaTrangQuanLy.TabIndex = 11;
+            this.btnXoaTrangQuanLy.TabIndex = 13;
             this.btnXoaTrangQuanLy.Text = "Xóa &trắng";
             this.btnXoaTrangQuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoaTrangQuanLy.UseVisualStyleBackColor = true;
@@ -707,7 +707,7 @@
             this.txtWebSite.Name = "txtWebSite";
             this.txtWebSite.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtWebSite.Size = new System.Drawing.Size(141, 65);
-            this.txtWebSite.TabIndex = 11;
+            this.txtWebSite.TabIndex = 8;
             // 
             // lblWebSite
             // 
@@ -725,7 +725,7 @@
             this.txtFax.Location = new System.Drawing.Point(117, 139);
             this.txtFax.Name = "txtFax";
             this.txtFax.Size = new System.Drawing.Size(141, 20);
-            this.txtFax.TabIndex = 9;
+            this.txtFax.TabIndex = 4;
             // 
             // lblFax
             // 
@@ -743,7 +743,7 @@
             this.txtDienThoai.Location = new System.Drawing.Point(117, 114);
             this.txtDienThoai.Name = "txtDienThoai";
             this.txtDienThoai.Size = new System.Drawing.Size(141, 20);
-            this.txtDienThoai.TabIndex = 7;
+            this.txtDienThoai.TabIndex = 3;
             // 
             // lblDienThoai
             // 
@@ -783,7 +783,7 @@
             this.txtTenNhaCungCap.Name = "txtTenNhaCungCap";
             this.txtTenNhaCungCap.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtTenNhaCungCap.Size = new System.Drawing.Size(141, 65);
-            this.txtTenNhaCungCap.TabIndex = 3;
+            this.txtTenNhaCungCap.TabIndex = 2;
             // 
             // lblTenNhaCungCap
             // 

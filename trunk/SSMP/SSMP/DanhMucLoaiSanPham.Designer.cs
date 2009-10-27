@@ -161,7 +161,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(36, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -275,7 +275,7 @@
             this.toolStripLblTotal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLblTotal.Name = "toolStripLblTotal";
             this.toolStripLblTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripLblTotal.Size = new System.Drawing.Size(79, 22);
+            this.toolStripLblTotal.Size = new System.Drawing.Size(87, 22);
             this.toolStripLblTotal.Text = "Tổng số dòng: ";
             // 
             // gvCategory
@@ -331,7 +331,7 @@
             this.chkSearchCategoryDesc.Location = new System.Drawing.Point(356, 80);
             this.chkSearchCategoryDesc.Name = "chkSearchCategoryDesc";
             this.chkSearchCategoryDesc.Size = new System.Drawing.Size(53, 17);
-            this.chkSearchCategoryDesc.TabIndex = 6;
+            this.chkSearchCategoryDesc.TabIndex = 10;
             this.chkSearchCategoryDesc.Text = "Mô tả";
             this.chkSearchCategoryDesc.UseVisualStyleBackColor = true;
             // 
@@ -342,7 +342,7 @@
             this.chkSearchCategoryName.Location = new System.Drawing.Point(254, 80);
             this.chkSearchCategoryName.Name = "chkSearchCategoryName";
             this.chkSearchCategoryName.Size = new System.Drawing.Size(95, 17);
-            this.chkSearchCategoryName.TabIndex = 5;
+            this.chkSearchCategoryName.TabIndex = 9;
             this.chkSearchCategoryName.Text = "Loại sản phẩm";
             this.chkSearchCategoryName.UseVisualStyleBackColor = true;
             // 
@@ -353,7 +353,7 @@
             this.chkSearchCategoryID.Location = new System.Drawing.Point(139, 80);
             this.chkSearchCategoryID.Name = "chkSearchCategoryID";
             this.chkSearchCategoryID.Size = new System.Drawing.Size(109, 17);
-            this.chkSearchCategoryID.TabIndex = 4;
+            this.chkSearchCategoryID.TabIndex = 8;
             this.chkSearchCategoryID.Text = "Mã loại sản phẩm";
             this.chkSearchCategoryID.UseVisualStyleBackColor = true;
             // 
@@ -443,7 +443,7 @@
             this.chkDispCategoryDesc.Location = new System.Drawing.Point(339, 228);
             this.chkDispCategoryDesc.Name = "chkDispCategoryDesc";
             this.chkDispCategoryDesc.Size = new System.Drawing.Size(53, 17);
-            this.chkDispCategoryDesc.TabIndex = 18;
+            this.chkDispCategoryDesc.TabIndex = 22;
             this.chkDispCategoryDesc.Text = "Mô tả";
             this.chkDispCategoryDesc.UseVisualStyleBackColor = true;
             this.chkDispCategoryDesc.CheckedChanged += new System.EventHandler(this.chkDispCategoryDesc_CheckedChanged);
@@ -454,7 +454,7 @@
             this.chkDispCategoryName.Location = new System.Drawing.Point(242, 228);
             this.chkDispCategoryName.Name = "chkDispCategoryName";
             this.chkDispCategoryName.Size = new System.Drawing.Size(95, 17);
-            this.chkDispCategoryName.TabIndex = 17;
+            this.chkDispCategoryName.TabIndex = 21;
             this.chkDispCategoryName.Text = "Loại sản phẩm";
             this.chkDispCategoryName.UseVisualStyleBackColor = true;
             this.chkDispCategoryName.CheckedChanged += new System.EventHandler(this.chkDispCategoryName_CheckedChanged);
@@ -468,7 +468,7 @@
             this.chkDispCategoryID.Location = new System.Drawing.Point(127, 228);
             this.chkDispCategoryID.Name = "chkDispCategoryID";
             this.chkDispCategoryID.Size = new System.Drawing.Size(109, 17);
-            this.chkDispCategoryID.TabIndex = 16;
+            this.chkDispCategoryID.TabIndex = 20;
             this.chkDispCategoryID.Text = "Mã loại sản phẩm";
             this.chkDispCategoryID.UseVisualStyleBackColor = true;
             this.chkDispCategoryID.CheckedChanged += new System.EventHandler(this.chkDispCategoryID_CheckedChanged);
@@ -519,7 +519,7 @@
             this.btnReset.Location = new System.Drawing.Point(252, 158);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(80, 23);
-            this.btnReset.TabIndex = 27;
+            this.btnReset.TabIndex = 5;
             this.btnReset.Text = "Xóa &trắng";
             this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReset.UseVisualStyleBackColor = true;
@@ -533,7 +533,7 @@
             this.btnSave.Location = new System.Drawing.Point(166, 158);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(80, 23);
-            this.btnSave.TabIndex = 26;
+            this.btnSave.TabIndex = 4;
             this.btnSave.Text = "&Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -546,7 +546,7 @@
             this.txtCategoryDesc.Name = "txtCategoryDesc";
             this.txtCategoryDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtCategoryDesc.Size = new System.Drawing.Size(208, 65);
-            this.txtCategoryDesc.TabIndex = 5;
+            this.txtCategoryDesc.TabIndex = 3;
             // 
             // lblMoTa
             // 
@@ -564,7 +564,7 @@
             this.txtCategoryName.Location = new System.Drawing.Point(124, 55);
             this.txtCategoryName.Name = "txtCategoryName";
             this.txtCategoryName.Size = new System.Drawing.Size(208, 20);
-            this.txtCategoryName.TabIndex = 3;
+            this.txtCategoryName.TabIndex = 2;
             // 
             // lblCategory
             // 

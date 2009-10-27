@@ -160,7 +160,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(36, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -274,7 +274,7 @@
             this.toolStripLblTotal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLblTotal.Name = "toolStripLblTotal";
             this.toolStripLblTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripLblTotal.Size = new System.Drawing.Size(79, 22);
+            this.toolStripLblTotal.Size = new System.Drawing.Size(87, 22);
             this.toolStripLblTotal.Text = "Tổng số dòng: ";
             // 
             // gvUnit
@@ -317,7 +317,7 @@
             this.chkSearchAll.Location = new System.Drawing.Point(79, 60);
             this.chkSearchAll.Name = "chkSearchAll";
             this.chkSearchAll.Size = new System.Drawing.Size(57, 17);
-            this.chkSearchAll.TabIndex = 7;
+            this.chkSearchAll.TabIndex = 8;
             this.chkSearchAll.Text = "Tất cả";
             this.chkSearchAll.UseVisualStyleBackColor = true;
             this.chkSearchAll.CheckedChanged += new System.EventHandler(this.chkSearchAll_CheckedChanged);
@@ -329,7 +329,7 @@
             this.chkSearchUnitDesc.Location = new System.Drawing.Point(310, 60);
             this.chkSearchUnitDesc.Name = "chkSearchUnitDesc";
             this.chkSearchUnitDesc.Size = new System.Drawing.Size(53, 17);
-            this.chkSearchUnitDesc.TabIndex = 6;
+            this.chkSearchUnitDesc.TabIndex = 11;
             this.chkSearchUnitDesc.Text = "Mô tả";
             this.chkSearchUnitDesc.UseVisualStyleBackColor = true;
             // 
@@ -340,7 +340,7 @@
             this.chkSearchUnitName.Location = new System.Drawing.Point(228, 60);
             this.chkSearchUnitName.Name = "chkSearchUnitName";
             this.chkSearchUnitName.Size = new System.Drawing.Size(57, 17);
-            this.chkSearchUnitName.TabIndex = 5;
+            this.chkSearchUnitName.TabIndex = 10;
             this.chkSearchUnitName.Text = "Đơn vị";
             this.chkSearchUnitName.UseVisualStyleBackColor = true;
             // 
@@ -351,7 +351,7 @@
             this.chkSearchUnitID.Location = new System.Drawing.Point(139, 60);
             this.chkSearchUnitID.Name = "chkSearchUnitID";
             this.chkSearchUnitID.Size = new System.Drawing.Size(74, 17);
-            this.chkSearchUnitID.TabIndex = 4;
+            this.chkSearchUnitID.TabIndex = 9;
             this.chkSearchUnitID.Text = "Mã đơn vị";
             this.chkSearchUnitID.UseVisualStyleBackColor = true;
             // 
@@ -363,7 +363,7 @@
             this.btnSearch.Location = new System.Drawing.Point(337, 23);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 2;
+            this.btnSearch.TabIndex = 7;
             this.btnSearch.Text = "Tìm &kiếm";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -375,7 +375,7 @@
             this.txtSearch.Location = new System.Drawing.Point(79, 25);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(239, 20);
-            this.txtSearch.TabIndex = 1;
+            this.txtSearch.TabIndex = 6;
             // 
             // lblTimKiemQuanLy
             // 
@@ -394,7 +394,7 @@
             this.btnInAnQuanLy.Location = new System.Drawing.Point(674, 224);
             this.btnInAnQuanLy.Name = "btnInAnQuanLy";
             this.btnInAnQuanLy.Size = new System.Drawing.Size(61, 23);
-            this.btnInAnQuanLy.TabIndex = 25;
+            this.btnInAnQuanLy.TabIndex = 16;
             this.btnInAnQuanLy.Text = "&In ấn";
             this.btnInAnQuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInAnQuanLy.UseVisualStyleBackColor = true;
@@ -406,7 +406,7 @@
             this.btnClose.Location = new System.Drawing.Point(741, 224);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(61, 23);
-            this.btnClose.TabIndex = 24;
+            this.btnClose.TabIndex = 17;
             this.btnClose.Text = "Đ&óng";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
@@ -420,7 +420,7 @@
             this.chkDispAll.Location = new System.Drawing.Point(64, 228);
             this.chkDispAll.Name = "chkDispAll";
             this.chkDispAll.Size = new System.Drawing.Size(57, 17);
-            this.chkDispAll.TabIndex = 19;
+            this.chkDispAll.TabIndex = 12;
             this.chkDispAll.Text = "Tất cả";
             this.chkDispAll.UseVisualStyleBackColor = true;
             this.chkDispAll.CheckedChanged += new System.EventHandler(this.chkDispAll_CheckedChanged);
@@ -431,7 +431,7 @@
             this.chkDispUnitDesc.Location = new System.Drawing.Point(288, 228);
             this.chkDispUnitDesc.Name = "chkDispUnitDesc";
             this.chkDispUnitDesc.Size = new System.Drawing.Size(53, 17);
-            this.chkDispUnitDesc.TabIndex = 18;
+            this.chkDispUnitDesc.TabIndex = 15;
             this.chkDispUnitDesc.Text = "Mô tả";
             this.chkDispUnitDesc.UseVisualStyleBackColor = true;
             this.chkDispUnitDesc.CheckedChanged += new System.EventHandler(this.chkDispUnitDesc_CheckedChanged);
@@ -442,7 +442,7 @@
             this.chkDispUnitName.Location = new System.Drawing.Point(216, 228);
             this.chkDispUnitName.Name = "chkDispUnitName";
             this.chkDispUnitName.Size = new System.Drawing.Size(57, 17);
-            this.chkDispUnitName.TabIndex = 17;
+            this.chkDispUnitName.TabIndex = 14;
             this.chkDispUnitName.Text = "Đơn vị";
             this.chkDispUnitName.UseVisualStyleBackColor = true;
             this.chkDispUnitName.CheckedChanged += new System.EventHandler(this.chkDispUnitName_CheckedChanged);
@@ -456,7 +456,7 @@
             this.chkDispUnitID.Location = new System.Drawing.Point(127, 228);
             this.chkDispUnitID.Name = "chkDispUnitID";
             this.chkDispUnitID.Size = new System.Drawing.Size(74, 17);
-            this.chkDispUnitID.TabIndex = 16;
+            this.chkDispUnitID.TabIndex = 13;
             this.chkDispUnitID.Text = "Mã đơn vị";
             this.chkDispUnitID.UseVisualStyleBackColor = true;
             this.chkDispUnitID.CheckedChanged += new System.EventHandler(this.chkDispUnitID_CheckedChanged);
@@ -507,7 +507,7 @@
             this.btnReset.Location = new System.Drawing.Point(224, 158);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(80, 23);
-            this.btnReset.TabIndex = 27;
+            this.btnReset.TabIndex = 5;
             this.btnReset.Text = "Xóa &trắng";
             this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReset.UseVisualStyleBackColor = true;
@@ -521,7 +521,7 @@
             this.btnSave.Location = new System.Drawing.Point(138, 158);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(80, 23);
-            this.btnSave.TabIndex = 26;
+            this.btnSave.TabIndex = 4;
             this.btnSave.Text = "&Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -534,7 +534,7 @@
             this.txtUnitDesc.Name = "txtUnitDesc";
             this.txtUnitDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtUnitDesc.Size = new System.Drawing.Size(208, 65);
-            this.txtUnitDesc.TabIndex = 5;
+            this.txtUnitDesc.TabIndex = 3;
             // 
             // lblMoTa
             // 
@@ -552,7 +552,7 @@
             this.txtUnitName.Location = new System.Drawing.Point(96, 55);
             this.txtUnitName.Name = "txtUnitName";
             this.txtUnitName.Size = new System.Drawing.Size(208, 20);
-            this.txtUnitName.TabIndex = 3;
+            this.txtUnitName.TabIndex = 2;
             // 
             // lblChucVu
             // 
