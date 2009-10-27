@@ -31,7 +31,7 @@ namespace SSMP.Data.Manager
 
         public Category GetById(int id, bool shouldLock)
         {
-            throw new Exception("The method or operation is not implemented.");
+            return categoryDao.GetById(id, shouldLock);
         }
 
         public List<Category> GetAll()

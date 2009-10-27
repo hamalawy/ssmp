@@ -44,108 +44,32 @@ namespace SSMP.Data.Dao
         private ICriteria CreateCriteriaByParam(ProductName entity)
         {
             ICriteria criteria = NHibernateSession.CreateCriteria(typeof(ProductName));
-            /*
+            
             if (entity != null)
             {
                 if (entity.ID != 0)
                 {
-                    if (entity.ProductNamename == null && entity.FullName == null && entity.Email == null)
+                    if (entity.ProdName == null)
                     {
                         criteria.Add(Restrictions.Eq("ID", entity.ID));
                     }
-                    else if (entity.ProductNamename != null && entity.FullName == null && entity.Email == null)
+                    else if (entity.ProdName != null)
                     {
                         criteria.Add(
                             Restrictions.Or(
                                 Restrictions.Eq("ID", entity.ID),
-                                Restrictions.Like("ProductNamename", entity.ProductNamename, MatchMode.Anywhere)));
-                    }
-                    else if (entity.ProductNamename != null && entity.FullName != null && entity.Email == null)
-                    {
-                        criteria.Add(
-                            Restrictions.Or(
-                                Restrictions.Or(
-                                    Restrictions.Eq("ID", entity.ID)
-                                    , Restrictions.Like("ProductNamename", entity.ProductNamename, MatchMode.Anywhere))
-                                        , Restrictions.Like("FullName", entity.FullName, MatchMode.Anywhere)));
-                    }
-                    else if (entity.ProductNamename != null && entity.FullName != null && entity.Email != null)
-                    {
-                        criteria.Add(
-                            Restrictions.Or(
-                                Restrictions.Or(
-                                    Restrictions.Or(
-                                        Restrictions.Eq("ID", entity.ID)
-                                        , Restrictions.Like("ProductNamename", entity.ProductNamename, MatchMode.Anywhere))
-                                            , Restrictions.Like("FullName", entity.FullName, MatchMode.Anywhere))
-                                                , Restrictions.Like("Email", entity.Email, MatchMode.Anywhere)));
-                    }
-                    else if (entity.ProductNamename == null && entity.FullName != null && entity.Email == null)
-                    {
-                        criteria.Add(
-                            Restrictions.Or(
-                                Restrictions.Eq("ID", entity.ID)
-                                    , Restrictions.Like("FullName", entity.FullName, MatchMode.Anywhere)));
-                    }
-                    else if (entity.ProductNamename == null && entity.FullName != null && entity.Email != null)
-                    {
-                        criteria.Add(
-                            Restrictions.Or(
-                                Restrictions.Or(
-                                    Restrictions.Eq("ID", entity.ID)
-                                        , Restrictions.Like("FullName", entity.FullName, MatchMode.Anywhere))
-                                            , Restrictions.Like("Email", entity.Email, MatchMode.Anywhere)));
-                    }
-                    else if (entity.ProductNamename == null && entity.FullName == null && entity.Email != null)
-                    {
-                        criteria.Add(
-                            Restrictions.Or(
-                                Restrictions.Eq("ID", entity.ID)
-                                , Restrictions.Like("Email", entity.Email, MatchMode.Anywhere)));
-                    }
+                                Restrictions.Like("ProdName", entity.ProdName, MatchMode.Anywhere)));
+                    }                    
                 }
                 else
                 {
-                    if (entity.ProductNamename != null && entity.FullName == null && entity.Email == null)
+                    if (entity.ProdName != null)
                     {
                         criteria.Add(
-                            Restrictions.Like("ProductNamename", entity.ProductNamename, MatchMode.Anywhere));
-                    }
-                    else if (entity.ProductNamename != null && entity.FullName != null && entity.Email == null)
-                    {
-                        criteria.Add(
-                            Restrictions.Or(
-                                 Restrictions.Like("ProductNamename", entity.ProductNamename, MatchMode.Anywhere)
-                                 , Restrictions.Like("FullName", entity.FullName, MatchMode.Anywhere)));
-                    }
-                    else if (entity.ProductNamename != null && entity.FullName != null && entity.Email != null)
-                    {
-                        criteria.Add(
-                            Restrictions.Or(
-                                Restrictions.Or(
-                                    Restrictions.Like("ProductNamename", entity.ProductNamename, MatchMode.Anywhere)
-                                        , Restrictions.Like("FullName", entity.FullName, MatchMode.Anywhere))
-                                            , Restrictions.Like("Email", entity.Email, MatchMode.Anywhere)));
-                    }
-                    else if (entity.ProductNamename == null && entity.FullName != null && entity.Email == null)
-                    {
-                        criteria.Add(
-                            Restrictions.Like("FullName", entity.FullName, MatchMode.Anywhere));
-                    }
-                    else if (entity.ProductNamename == null && entity.FullName != null && entity.Email != null)
-                    {
-                        criteria.Add(
-                            Restrictions.Or(
-                                   Restrictions.Like("FullName", entity.FullName, MatchMode.Anywhere)
-                                    , Restrictions.Like("Email", entity.Email, MatchMode.Anywhere)));
-                    }
-                    else if (entity.ProductNamename == null && entity.FullName == null && entity.Email != null)
-                    {
-                        criteria.Add(
-                            Restrictions.Like("Email", entity.Email, MatchMode.Anywhere));
-                    }
+                            Restrictions.Like("ProdName", entity.ProdName, MatchMode.Anywhere));
+                    }                    
                 }
-            } */
+            } 
 
             return criteria;
         }
