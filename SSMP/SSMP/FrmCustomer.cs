@@ -260,7 +260,7 @@ namespace SSMP
                 int deleteCustomerId = (int)gvCustomer.Rows[selectedRowIndex].Cells["CustomerId"].Value;
                 string deleteCustomerName = (string)gvCustomer.Rows[selectedRowIndex].Cells["CustomerName"].Value;
 
-                if (MessageBox.Show("Bạn có chắc chắn muốn khách hàng [" + deleteCustomerName + "] ?", Constants.INFO, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa khách hàng [" + deleteCustomerName + "] ?", Constants.INFO, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     int idxInList = -1;
 
