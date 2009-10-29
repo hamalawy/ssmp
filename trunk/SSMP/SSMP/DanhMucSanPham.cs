@@ -182,6 +182,7 @@ namespace SSMP
 
                 ResetFormProductName();
                 SetFormProductNameReadOnly(true);
+                SetFormProductReadOnly(true);
 
                 //int khoa = Int32.Parse(cboTenSanPham.SelectedValue.ToString());
                 //ProductName productName = productNameManager.GetById(khoa, true);
@@ -263,7 +264,7 @@ namespace SSMP
             bindingNavigatorProductName.BindingSource = new BindingSource(listPagesProductName, "");
             bindingNavigatorProductName.BindingSource.Position = position;
             bindingNavigatorProductName.BindingSource.PositionChanged += new EventHandler(BindingSource_PositionChangedProductName);
-            //toolStripLabeltotalProductName.Text = "Tổng số tên sản phẩm: " + sizeOfList;
+            toolStripLabeltotalProductName.Text = "Tổng số tên sản phẩm: " + sizeOfList;
         }
 
         private void BindingDataToForm(Product entity, SearchParam searchParam, int position)
@@ -528,6 +529,8 @@ namespace SSMP
         {
             if (listProduct != null)
             {
+                dataSetProduct.Clear();
+
                 foreach (Product objProduct in listProduct)
                 {
                     DataRow rowTemp = dataTableProduct.NewRow();
@@ -1100,7 +1103,7 @@ namespace SSMP
                 this.ResetForm();                
 
                 //Refresh grid view after insert successfully
-                this.RefreshGridViewProducts();
+                this.RefreshGridViewProduct(new Product());
                 
             }
             catch (Exception ex)
@@ -1115,6 +1118,7 @@ namespace SSMP
 
         private void dgvQuanLy_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
+            /*
             if (gvSanPhamDanhMuc.SelectedCells.Count > 0)
             {
                 try
@@ -1125,9 +1129,9 @@ namespace SSMP
                 }
                 catch (Exception ex) {
                     MessageBox.Show(ex.StackTrace);
-                }
-                
+                }                
             }
+            */ 
         }
 
         private void btnXoaTrangQuanLy_Click(object sender, EventArgs e)
@@ -1520,6 +1524,30 @@ namespace SSMP
             BindingDataToBindingNagivatorProductName(searchResult.SearchSize, 0);
         }
 
+        private void RefreshGridViewProduct(Product searchEntity)
+        {
+            //Get all user
+            searchParam = new SearchParam();
+            searchParam.Start = DEFAULT_START;
+            searchParam.Limit = DEFAULT_LIMIT;
+            searchParam.SortBy = DEFAULT_SORT_BY;
+            searchParam.SortDir = DEFAULT_SORT_DIR;
+
+            //
+            this.searchEntity = searchEntity;
+
+            //
+            SearchResult<Product> searchResult = productManager.GetProductListByParam(searchEntity, searchParam);
+            currentListProduct = searchResult.SearchList;
+
+            //Binding list userrole to gridview
+            IList2DataTable(searchResult.SearchList, dataSetProduct.Tables["Product"]);
+
+            //Binding list to navigator
+            listPages = new List<Int32>();
+            BindingDataToBindingNagivator(searchResult.SearchSize, 0);
+        }
+
         private void toolStripBtnDelete_Click_1(object sender, EventArgs e)
         {
             if (gvTenSanPham.SelectedCells.Count > 0)
@@ -1616,6 +1644,71 @@ namespace SSMP
         }
 
         private void toolStripBtnReload_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoaQuanLy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripProductEdit_Click(object sender, EventArgs e)
+        {
+            SetFormProductReadOnly(false);
+        }
+
+        private void SetFormProductReadOnly(bool state)
+        {
+            cboTenSanPham.Enabled = !state;
+            //cboLoaiSanPham.Enabled = !state;
+            dateTimePickerSx.Enabled = !state;
+            dateTimePickerHetHan.Enabled = !state;
+            textBoxGiaMua.ReadOnly = state;
+            textBoxGiaBan.ReadOnly = state;
+            textBoxGiamGia.ReadOnly = state;
+            cboDonVi.Enabled = !state;
+            //cboNguonGoc.Enabled = !state;
+            //cboNhaSanXuat.Enabled = !state;
+            cboTrangThai.Enabled = !state;
+            textBoxMota.ReadOnly = state;
+
+            btnSaveProduct.Enabled = !state;
+            btnResetProduct.Enabled = !state;
+
+            if (state == false)
+            {
+                toolStripProductEdit.Enabled = false;
+            }
+            else 
+            {
+                toolStripProductEdit.Enabled = true;
+            }
+        }
+
+        private void gvSanPhamDanhMuc_SelectionChanged(object sender, EventArgs e)
+        {
+            if (gvSanPhamDanhMuc.SelectedCells.Count > 0)
+            {
+                int selectedRowIndex = gvSanPhamDanhMuc.SelectedCells[0].RowIndex;
+                BindingProductToForm(selectedRowIndex);
+                updateProductId = (Int64)gvSanPhamDanhMuc.Rows[selectedRowIndex].Cells["ProductId"].Value;
+
+                SetFormProductReadOnly(true);
+            }
+        }
+
+        private void toolStripBtnReload_Click_2(object sender, EventArgs e)
+        {
+            RefreshGridViewProductName(new ProductName());
+        }
+
+        private void toolStripProductReload_Click(object sender, EventArgs e)
+        {
+            RefreshGridViewProduct(new Product());
+        }
+
+        private void btnTimKiemQuanLy_Click(object sender, EventArgs e)
         {
 
         }
