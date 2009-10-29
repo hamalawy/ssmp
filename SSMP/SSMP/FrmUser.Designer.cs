@@ -175,7 +175,7 @@
             this.chkDispAddress.Location = new System.Drawing.Point(584, 172);
             this.chkDispAddress.Name = "chkDispAddress";
             this.chkDispAddress.Size = new System.Drawing.Size(59, 17);
-            this.chkDispAddress.TabIndex = 54;
+            this.chkDispAddress.TabIndex = 37;
             this.chkDispAddress.Text = "Địa chỉ";
             this.chkDispAddress.UseVisualStyleBackColor = true;
             this.chkDispAddress.CheckedChanged += new System.EventHandler(this.chkDispAddress_CheckedChanged);
@@ -186,7 +186,7 @@
             this.chkDispSex.Location = new System.Drawing.Point(584, 148);
             this.chkDispSex.Name = "chkDispSex";
             this.chkDispSex.Size = new System.Drawing.Size(66, 17);
-            this.chkDispSex.TabIndex = 53;
+            this.chkDispSex.TabIndex = 32;
             this.chkDispSex.Text = "Giới tính";
             this.chkDispSex.UseVisualStyleBackColor = true;
             this.chkDispSex.CheckedChanged += new System.EventHandler(this.chkDispSex_CheckedChanged);
@@ -197,7 +197,7 @@
             this.chkDispEmail.Location = new System.Drawing.Point(474, 172);
             this.chkDispEmail.Name = "chkDispEmail";
             this.chkDispEmail.Size = new System.Drawing.Size(51, 17);
-            this.chkDispEmail.TabIndex = 1;
+            this.chkDispEmail.TabIndex = 36;
             this.chkDispEmail.Text = "Email";
             this.chkDispEmail.UseVisualStyleBackColor = true;
             this.chkDispEmail.CheckedChanged += new System.EventHandler(this.chkDispEmail_CheckedChanged);
@@ -208,7 +208,7 @@
             this.chkSearchEmail.Location = new System.Drawing.Point(777, 59);
             this.chkSearchEmail.Name = "chkSearchEmail";
             this.chkSearchEmail.Size = new System.Drawing.Size(51, 17);
-            this.chkSearchEmail.TabIndex = 1;
+            this.chkSearchEmail.TabIndex = 24;
             this.chkSearchEmail.Text = "Email";
             this.chkSearchEmail.UseVisualStyleBackColor = true;
             // 
@@ -218,7 +218,7 @@
             this.chkDispIdCardNo.Location = new System.Drawing.Point(777, 148);
             this.chkDispIdCardNo.Name = "chkDispIdCardNo";
             this.chkDispIdCardNo.Size = new System.Drawing.Size(111, 17);
-            this.chkDispIdCardNo.TabIndex = 1;
+            this.chkDispIdCardNo.TabIndex = 34;
             this.chkDispIdCardNo.Text = "Số CMT/Passport";
             this.chkDispIdCardNo.UseVisualStyleBackColor = true;
             this.chkDispIdCardNo.CheckedChanged += new System.EventHandler(this.chkDispIdCardNo_CheckedChanged);
@@ -229,7 +229,7 @@
             this.chkDispTelNo.Location = new System.Drawing.Point(397, 172);
             this.chkDispTelNo.Name = "chkDispTelNo";
             this.chkDispTelNo.Size = new System.Drawing.Size(74, 17);
-            this.chkDispTelNo.TabIndex = 1;
+            this.chkDispTelNo.TabIndex = 35;
             this.chkDispTelNo.Text = "Điện thoại";
             this.chkDispTelNo.UseVisualStyleBackColor = true;
             this.chkDispTelNo.CheckedChanged += new System.EventHandler(this.chkDispTelNo_CheckedChanged);
@@ -240,7 +240,7 @@
             this.chkDispDOB.Location = new System.Drawing.Point(663, 148);
             this.chkDispDOB.Name = "chkDispDOB";
             this.chkDispDOB.Size = new System.Drawing.Size(73, 17);
-            this.chkDispDOB.TabIndex = 1;
+            this.chkDispDOB.TabIndex = 33;
             this.chkDispDOB.Text = "Ngày sinh";
             this.chkDispDOB.UseVisualStyleBackColor = true;
             this.chkDispDOB.CheckedChanged += new System.EventHandler(this.chkDispDOB_CheckedChanged);
@@ -305,7 +305,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(36, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -347,7 +347,7 @@
             // toolStripLblPage
             // 
             this.toolStripLblPage.Name = "toolStripLblPage";
-            this.toolStripLblPage.Size = new System.Drawing.Size(31, 22);
+            this.toolStripLblPage.Size = new System.Drawing.Size(33, 22);
             this.toolStripLblPage.Text = "Page";
             // 
             // bindingNavigatorPositionItem
@@ -428,7 +428,7 @@
             // 
             this.toolStripLblTotal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLblTotal.Name = "toolStripLblTotal";
-            this.toolStripLblTotal.Size = new System.Drawing.Size(106, 22);
+            this.toolStripLblTotal.Size = new System.Drawing.Size(118, 22);
             this.toolStripLblTotal.Text = "Tổng sồ người dùng:";
             // 
             // gvUser
@@ -449,7 +449,7 @@
             this.chkSearchFullname.Location = new System.Drawing.Point(584, 59);
             this.chkSearchFullname.Name = "chkSearchFullname";
             this.chkSearchFullname.Size = new System.Drawing.Size(73, 17);
-            this.chkSearchFullname.TabIndex = 50;
+            this.chkSearchFullname.TabIndex = 22;
             this.chkSearchFullname.Text = "Họ và tên";
             this.chkSearchFullname.UseVisualStyleBackColor = true;
             // 
@@ -459,7 +459,7 @@
             this.chkDispFullname.Location = new System.Drawing.Point(584, 124);
             this.chkDispFullname.Name = "chkDispFullname";
             this.chkDispFullname.Size = new System.Drawing.Size(73, 17);
-            this.chkDispFullname.TabIndex = 49;
+            this.chkDispFullname.TabIndex = 27;
             this.chkDispFullname.Text = "Họ và tên";
             this.chkDispFullname.UseVisualStyleBackColor = true;
             this.chkDispFullname.CheckedChanged += new System.EventHandler(this.chkDispFullname_CheckedChanged);
@@ -481,7 +481,7 @@
             this.btnReloadAll.Location = new System.Drawing.Point(792, 177);
             this.btnReloadAll.Name = "btnReloadAll";
             this.btnReloadAll.Size = new System.Drawing.Size(100, 23);
-            this.btnReloadAll.TabIndex = 47;
+            this.btnReloadAll.TabIndex = 38;
             this.btnReloadAll.Text = "Tải lại toàn bộ";
             this.btnReloadAll.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReloadAll.UseVisualStyleBackColor = true;
@@ -509,7 +509,7 @@
             this.btnPrint.Location = new System.Drawing.Point(898, 177);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(58, 23);
-            this.btnPrint.TabIndex = 45;
+            this.btnPrint.TabIndex = 39;
             this.btnPrint.Text = "&In ấn";
             this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrint.UseVisualStyleBackColor = true;
@@ -520,7 +520,7 @@
             this.chkDispUserTitle.Location = new System.Drawing.Point(777, 124);
             this.chkDispUserTitle.Name = "chkDispUserTitle";
             this.chkDispUserTitle.Size = new System.Drawing.Size(66, 17);
-            this.chkDispUserTitle.TabIndex = 43;
+            this.chkDispUserTitle.TabIndex = 29;
             this.chkDispUserTitle.Text = "Chức vụ";
             this.chkDispUserTitle.UseVisualStyleBackColor = true;
             this.chkDispUserTitle.CheckedChanged += new System.EventHandler(this.chkDispUserTitle_CheckedChanged);
@@ -531,7 +531,7 @@
             this.chkDispUserRole.Location = new System.Drawing.Point(474, 147);
             this.chkDispUserRole.Name = "chkDispUserRole";
             this.chkDispUserRole.Size = new System.Drawing.Size(110, 17);
-            this.chkDispUserRole.TabIndex = 41;
+            this.chkDispUserRole.TabIndex = 31;
             this.chkDispUserRole.Text = "Nhóm người dùng";
             this.chkDispUserRole.UseVisualStyleBackColor = true;
             this.chkDispUserRole.CheckedChanged += new System.EventHandler(this.chkDispUserRole_CheckedChanged);
@@ -542,7 +542,7 @@
             this.chkDispUserStatus.Location = new System.Drawing.Point(397, 147);
             this.chkDispUserStatus.Name = "chkDispUserStatus";
             this.chkDispUserStatus.Size = new System.Drawing.Size(74, 17);
-            this.chkDispUserStatus.TabIndex = 40;
+            this.chkDispUserStatus.TabIndex = 30;
             this.chkDispUserStatus.Text = "Trạng thái";
             this.chkDispUserStatus.UseVisualStyleBackColor = true;
             this.chkDispUserStatus.CheckedChanged += new System.EventHandler(this.chkDispUserStatus_CheckedChanged);
@@ -553,7 +553,7 @@
             this.chkDispUsername.Location = new System.Drawing.Point(663, 124);
             this.chkDispUsername.Name = "chkDispUsername";
             this.chkDispUsername.Size = new System.Drawing.Size(100, 17);
-            this.chkDispUsername.TabIndex = 39;
+            this.chkDispUsername.TabIndex = 28;
             this.chkDispUsername.Text = "Tên đăng nhập";
             this.chkDispUsername.UseVisualStyleBackColor = true;
             this.chkDispUsername.CheckedChanged += new System.EventHandler(this.chkDispUsername_CheckedChanged);
@@ -567,7 +567,7 @@
             this.chkDispUserId.Location = new System.Drawing.Point(474, 124);
             this.chkDispUserId.Name = "chkDispUserId";
             this.chkDispUserId.Size = new System.Drawing.Size(97, 17);
-            this.chkDispUserId.TabIndex = 38;
+            this.chkDispUserId.TabIndex = 26;
             this.chkDispUserId.Text = "Mã người dùng";
             this.chkDispUserId.UseVisualStyleBackColor = true;
             // 
@@ -579,7 +579,7 @@
             this.chkDispAll.Location = new System.Drawing.Point(397, 124);
             this.chkDispAll.Name = "chkDispAll";
             this.chkDispAll.Size = new System.Drawing.Size(57, 17);
-            this.chkDispAll.TabIndex = 37;
+            this.chkDispAll.TabIndex = 25;
             this.chkDispAll.Text = "Tất cả";
             this.chkDispAll.UseVisualStyleBackColor = true;
             this.chkDispAll.CheckedChanged += new System.EventHandler(this.chkDispAll_CheckedChanged);
@@ -610,7 +610,7 @@
             this.chkSearchAll.Location = new System.Drawing.Point(397, 60);
             this.chkSearchAll.Name = "chkSearchAll";
             this.chkSearchAll.Size = new System.Drawing.Size(57, 17);
-            this.chkSearchAll.TabIndex = 32;
+            this.chkSearchAll.TabIndex = 20;
             this.chkSearchAll.Text = "Tất cả";
             this.chkSearchAll.UseVisualStyleBackColor = true;
             this.chkSearchAll.CheckedChanged += new System.EventHandler(this.chkSearchAll_CheckedChanged);
@@ -621,7 +621,7 @@
             this.chkSearchUsername.Location = new System.Drawing.Point(663, 59);
             this.chkSearchUsername.Name = "chkSearchUsername";
             this.chkSearchUsername.Size = new System.Drawing.Size(100, 17);
-            this.chkSearchUsername.TabIndex = 28;
+            this.chkSearchUsername.TabIndex = 23;
             this.chkSearchUsername.Text = "Tên đăng nhập";
             this.chkSearchUsername.UseVisualStyleBackColor = true;
             // 
@@ -631,7 +631,7 @@
             this.chkSearchUserId.Location = new System.Drawing.Point(474, 59);
             this.chkSearchUserId.Name = "chkSearchUserId";
             this.chkSearchUserId.Size = new System.Drawing.Size(97, 17);
-            this.chkSearchUserId.TabIndex = 27;
+            this.chkSearchUserId.TabIndex = 21;
             this.chkSearchUserId.Text = "Mã người dùng";
             this.chkSearchUserId.UseVisualStyleBackColor = true;
             // 
@@ -640,7 +640,7 @@
             this.btnSearch.Location = new System.Drawing.Point(638, 27);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 26;
+            this.btnSearch.TabIndex = 19;
             this.btnSearch.Text = "Tìm &kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -650,7 +650,7 @@
             this.txtSearch.Location = new System.Drawing.Point(397, 29);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(235, 20);
-            this.txtSearch.TabIndex = 25;
+            this.txtSearch.TabIndex = 18;
             // 
             // btnClose
             // 
@@ -660,7 +660,7 @@
             this.btnClose.Location = new System.Drawing.Point(962, 177);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(61, 23);
-            this.btnClose.TabIndex = 22;
+            this.btnClose.TabIndex = 40;
             this.btnClose.Text = "Đ&óng";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
@@ -721,7 +721,7 @@
             this.dateTimeDOB.Location = new System.Drawing.Point(119, 260);
             this.dateTimeDOB.Name = "dateTimeDOB";
             this.dateTimeDOB.Size = new System.Drawing.Size(172, 20);
-            this.dateTimeDOB.TabIndex = 1;
+            this.dateTimeDOB.TabIndex = 11;
             // 
             // cbbUserRole
             // 
@@ -729,7 +729,7 @@
             this.cbbUserRole.Location = new System.Drawing.Point(118, 210);
             this.cbbUserRole.Name = "cbbUserRole";
             this.cbbUserRole.Size = new System.Drawing.Size(172, 21);
-            this.cbbUserRole.TabIndex = 24;
+            this.cbbUserRole.TabIndex = 8;
             // 
             // rdFemale
             // 
@@ -737,7 +737,7 @@
             this.rdFemale.Location = new System.Drawing.Point(197, 237);
             this.rdFemale.Name = "rdFemale";
             this.rdFemale.Size = new System.Drawing.Size(39, 17);
-            this.rdFemale.TabIndex = 22;
+            this.rdFemale.TabIndex = 10;
             this.rdFemale.TabStop = true;
             this.rdFemale.Text = "Nữ";
             this.rdFemale.UseVisualStyleBackColor = true;
@@ -748,7 +748,7 @@
             this.rdMale.Location = new System.Drawing.Point(119, 237);
             this.rdMale.Name = "rdMale";
             this.rdMale.Size = new System.Drawing.Size(47, 17);
-            this.rdMale.TabIndex = 22;
+            this.rdMale.TabIndex = 9;
             this.rdMale.TabStop = true;
             this.rdMale.Text = "Nam";
             this.rdMale.UseVisualStyleBackColor = true;
@@ -759,28 +759,28 @@
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(171, 54);
-            this.txtAddress.TabIndex = 21;
+            this.txtAddress.TabIndex = 15;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(119, 345);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(171, 20);
-            this.txtEmail.TabIndex = 21;
+            this.txtEmail.TabIndex = 14;
             // 
             // txtTelNo
             // 
             this.txtTelNo.Location = new System.Drawing.Point(118, 317);
             this.txtTelNo.Name = "txtTelNo";
             this.txtTelNo.Size = new System.Drawing.Size(172, 20);
-            this.txtTelNo.TabIndex = 21;
+            this.txtTelNo.TabIndex = 13;
             // 
             // txtIdCardNo
             // 
             this.txtIdCardNo.Location = new System.Drawing.Point(119, 289);
             this.txtIdCardNo.Name = "txtIdCardNo";
             this.txtIdCardNo.Size = new System.Drawing.Size(171, 20);
-            this.txtIdCardNo.TabIndex = 21;
+            this.txtIdCardNo.TabIndex = 12;
             // 
             // lblTelNo
             // 
@@ -843,7 +843,7 @@
             this.btnClear.Location = new System.Drawing.Point(210, 433);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(80, 23);
-            this.btnClear.TabIndex = 1;
+            this.btnClear.TabIndex = 17;
             this.btnClear.Text = "Xóa trắng";
             this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClear.UseVisualStyleBackColor = true;
@@ -855,14 +855,14 @@
             this.cbbUserTitle.Location = new System.Drawing.Point(119, 156);
             this.cbbUserTitle.Name = "cbbUserTitle";
             this.cbbUserTitle.Size = new System.Drawing.Size(171, 21);
-            this.cbbUserTitle.TabIndex = 17;
+            this.cbbUserTitle.TabIndex = 6;
             // 
             // txtFullname
             // 
             this.txtFullname.Location = new System.Drawing.Point(118, 51);
             this.txtFullname.Name = "txtFullname";
             this.txtFullname.Size = new System.Drawing.Size(172, 20);
-            this.txtFullname.TabIndex = 15;
+            this.txtFullname.TabIndex = 2;
             // 
             // lblUserTitle
             // 
@@ -900,7 +900,7 @@
             this.cbbUserStatus.Location = new System.Drawing.Point(119, 183);
             this.cbbUserStatus.Name = "cbbUserStatus";
             this.cbbUserStatus.Size = new System.Drawing.Size(81, 21);
-            this.cbbUserStatus.TabIndex = 11;
+            this.cbbUserStatus.TabIndex = 7;
             // 
             // lblUserStatus
             // 
@@ -917,7 +917,7 @@
             this.txtPasswordConfirm.Name = "txtPasswordConfirm";
             this.txtPasswordConfirm.PasswordChar = '*';
             this.txtPasswordConfirm.Size = new System.Drawing.Size(171, 20);
-            this.txtPasswordConfirm.TabIndex = 7;
+            this.txtPasswordConfirm.TabIndex = 5;
             // 
             // lblPasswordConfirm
             // 
@@ -934,7 +934,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(171, 20);
-            this.txtPassword.TabIndex = 5;
+            this.txtPassword.TabIndex = 4;
             // 
             // lblPassword
             // 
@@ -985,7 +985,7 @@
             this.btnAddUpdate.Location = new System.Drawing.Point(119, 433);
             this.btnAddUpdate.Name = "btnAddUpdate";
             this.btnAddUpdate.Size = new System.Drawing.Size(81, 23);
-            this.btnAddUpdate.TabIndex = 18;
+            this.btnAddUpdate.TabIndex = 16;
             this.btnAddUpdate.Text = "T&hêm";
             this.btnAddUpdate.UseVisualStyleBackColor = true;
             this.btnAddUpdate.Click += new System.EventHandler(this.btnAddUpdate_Click);

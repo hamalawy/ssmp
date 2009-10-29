@@ -291,7 +291,7 @@
             this.gvCategory.ReadOnly = true;
             this.gvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvCategory.Size = new System.Drawing.Size(787, 282);
-            this.gvCategory.TabIndex = 13;
+            this.gvCategory.TabIndex = 18;
             this.gvCategory.SelectionChanged += new System.EventHandler(this.gvCategory_SelectionChanged);
             // 
             // gbTimKiemQuanLy
@@ -319,7 +319,7 @@
             this.chkSearchAll.Location = new System.Drawing.Point(79, 80);
             this.chkSearchAll.Name = "chkSearchAll";
             this.chkSearchAll.Size = new System.Drawing.Size(57, 17);
-            this.chkSearchAll.TabIndex = 7;
+            this.chkSearchAll.TabIndex = 8;
             this.chkSearchAll.Text = "Tất cả";
             this.chkSearchAll.UseVisualStyleBackColor = true;
             this.chkSearchAll.CheckedChanged += new System.EventHandler(this.chkSearchAll_CheckedChanged);
@@ -331,7 +331,7 @@
             this.chkSearchCategoryDesc.Location = new System.Drawing.Point(356, 80);
             this.chkSearchCategoryDesc.Name = "chkSearchCategoryDesc";
             this.chkSearchCategoryDesc.Size = new System.Drawing.Size(53, 17);
-            this.chkSearchCategoryDesc.TabIndex = 10;
+            this.chkSearchCategoryDesc.TabIndex = 11;
             this.chkSearchCategoryDesc.Text = "Mô tả";
             this.chkSearchCategoryDesc.UseVisualStyleBackColor = true;
             // 
@@ -342,7 +342,7 @@
             this.chkSearchCategoryName.Location = new System.Drawing.Point(254, 80);
             this.chkSearchCategoryName.Name = "chkSearchCategoryName";
             this.chkSearchCategoryName.Size = new System.Drawing.Size(95, 17);
-            this.chkSearchCategoryName.TabIndex = 9;
+            this.chkSearchCategoryName.TabIndex = 10;
             this.chkSearchCategoryName.Text = "Loại sản phẩm";
             this.chkSearchCategoryName.UseVisualStyleBackColor = true;
             // 
@@ -353,7 +353,7 @@
             this.chkSearchCategoryID.Location = new System.Drawing.Point(139, 80);
             this.chkSearchCategoryID.Name = "chkSearchCategoryID";
             this.chkSearchCategoryID.Size = new System.Drawing.Size(109, 17);
-            this.chkSearchCategoryID.TabIndex = 8;
+            this.chkSearchCategoryID.TabIndex = 9;
             this.chkSearchCategoryID.Text = "Mã loại sản phẩm";
             this.chkSearchCategoryID.UseVisualStyleBackColor = true;
             // 
@@ -375,7 +375,7 @@
             this.btnSearch.Location = new System.Drawing.Point(337, 23);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 2;
+            this.btnSearch.TabIndex = 7;
             this.btnSearch.Text = "Tìm &kiếm";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -387,7 +387,7 @@
             this.txtSearch.Location = new System.Drawing.Point(79, 25);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(239, 20);
-            this.txtSearch.TabIndex = 1;
+            this.txtSearch.TabIndex = 6;
             // 
             // lblTimKiemQuanLy
             // 
@@ -406,7 +406,7 @@
             this.btnInAnQuanLy.Location = new System.Drawing.Point(674, 224);
             this.btnInAnQuanLy.Name = "btnInAnQuanLy";
             this.btnInAnQuanLy.Size = new System.Drawing.Size(61, 23);
-            this.btnInAnQuanLy.TabIndex = 25;
+            this.btnInAnQuanLy.TabIndex = 16;
             this.btnInAnQuanLy.Text = "&In ấn";
             this.btnInAnQuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInAnQuanLy.UseVisualStyleBackColor = true;
@@ -418,7 +418,7 @@
             this.btnClose.Location = new System.Drawing.Point(741, 224);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(61, 23);
-            this.btnClose.TabIndex = 24;
+            this.btnClose.TabIndex = 17;
             this.btnClose.Text = "Đ&óng";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
@@ -432,7 +432,7 @@
             this.chkDispAll.Location = new System.Drawing.Point(64, 228);
             this.chkDispAll.Name = "chkDispAll";
             this.chkDispAll.Size = new System.Drawing.Size(57, 17);
-            this.chkDispAll.TabIndex = 19;
+            this.chkDispAll.TabIndex = 12;
             this.chkDispAll.Text = "Tất cả";
             this.chkDispAll.UseVisualStyleBackColor = true;
             this.chkDispAll.CheckedChanged += new System.EventHandler(this.chkDispAll_CheckedChanged);
@@ -443,7 +443,7 @@
             this.chkDispCategoryDesc.Location = new System.Drawing.Point(339, 228);
             this.chkDispCategoryDesc.Name = "chkDispCategoryDesc";
             this.chkDispCategoryDesc.Size = new System.Drawing.Size(53, 17);
-            this.chkDispCategoryDesc.TabIndex = 22;
+            this.chkDispCategoryDesc.TabIndex = 15;
             this.chkDispCategoryDesc.Text = "Mô tả";
             this.chkDispCategoryDesc.UseVisualStyleBackColor = true;
             this.chkDispCategoryDesc.CheckedChanged += new System.EventHandler(this.chkDispCategoryDesc_CheckedChanged);
@@ -454,7 +454,7 @@
             this.chkDispCategoryName.Location = new System.Drawing.Point(242, 228);
             this.chkDispCategoryName.Name = "chkDispCategoryName";
             this.chkDispCategoryName.Size = new System.Drawing.Size(95, 17);
-            this.chkDispCategoryName.TabIndex = 21;
+            this.chkDispCategoryName.TabIndex = 14;
             this.chkDispCategoryName.Text = "Loại sản phẩm";
             this.chkDispCategoryName.UseVisualStyleBackColor = true;
             this.chkDispCategoryName.CheckedChanged += new System.EventHandler(this.chkDispCategoryName_CheckedChanged);
@@ -468,7 +468,7 @@
             this.chkDispCategoryID.Location = new System.Drawing.Point(127, 228);
             this.chkDispCategoryID.Name = "chkDispCategoryID";
             this.chkDispCategoryID.Size = new System.Drawing.Size(109, 17);
-            this.chkDispCategoryID.TabIndex = 20;
+            this.chkDispCategoryID.TabIndex = 13;
             this.chkDispCategoryID.Text = "Mã loại sản phẩm";
             this.chkDispCategoryID.UseVisualStyleBackColor = true;
             this.chkDispCategoryID.CheckedChanged += new System.EventHandler(this.chkDispCategoryID_CheckedChanged);

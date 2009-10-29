@@ -114,7 +114,7 @@
             this.btnReload.Location = new System.Drawing.Point(751, 37);
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(61, 23);
-            this.btnReload.TabIndex = 26;
+            this.btnReload.TabIndex = 12;
             this.btnReload.Text = "Tải &lại";
             this.btnReload.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReload.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             this.chkMaQuocGiaHienThiQuanLy.Location = new System.Drawing.Point(513, 45);
             this.chkMaQuocGiaHienThiQuanLy.Name = "chkMaQuocGiaHienThiQuanLy";
             this.chkMaQuocGiaHienThiQuanLy.Size = new System.Drawing.Size(85, 17);
-            this.chkMaQuocGiaHienThiQuanLy.TabIndex = 23;
+            this.chkMaQuocGiaHienThiQuanLy.TabIndex = 10;
             this.chkMaQuocGiaHienThiQuanLy.Text = "Mã quốc gia";
             this.chkMaQuocGiaHienThiQuanLy.UseVisualStyleBackColor = true;
             // 
@@ -139,7 +139,7 @@
             this.chkQuocGiaHienThiQuanLy.Location = new System.Drawing.Point(614, 45);
             this.chkQuocGiaHienThiQuanLy.Name = "chkQuocGiaHienThiQuanLy";
             this.chkQuocGiaHienThiQuanLy.Size = new System.Drawing.Size(69, 17);
-            this.chkQuocGiaHienThiQuanLy.TabIndex = 22;
+            this.chkQuocGiaHienThiQuanLy.TabIndex = 11;
             this.chkQuocGiaHienThiQuanLy.Text = "Quốc gia";
             this.chkQuocGiaHienThiQuanLy.UseVisualStyleBackColor = true;
             // 
@@ -180,7 +180,7 @@
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(100, 20);
-            this.txtTotal.TabIndex = 1;
+            this.txtTotal.TabIndex = 9;
             // 
             // lblTongSoQuanLy
             // 
@@ -258,7 +258,7 @@
             this.gvCountry.Name = "gvCountry";
             this.gvCountry.ReadOnly = true;
             this.gvCountry.Size = new System.Drawing.Size(360, 465);
-            this.gvCountry.TabIndex = 15;
+            this.gvCountry.TabIndex = 13;
             this.gvCountry.SelectionChanged += new System.EventHandler(this.gvCountry_SelectionChanged);
             // 
             // gbThongTinQuocGia
@@ -288,7 +288,7 @@
             this.btnReset.Location = new System.Drawing.Point(250, 101);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(80, 23);
-            this.btnReset.TabIndex = 6;
+            this.btnReset.TabIndex = 8;
             this.btnReset.Text = "Xóa &trắng";
             this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReset.UseVisualStyleBackColor = true;
@@ -304,7 +304,7 @@
             this.btnDelete.Location = new System.Drawing.Point(189, 101);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(55, 23);
-            this.btnDelete.TabIndex = 4;
+            this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "&Xóa";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -320,7 +320,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(97, 101);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
-            this.btnUpdate.TabIndex = 3;
+            this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "&Cập nhật";
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -344,7 +344,7 @@
             this.btnAdd.Location = new System.Drawing.Point(20, 101);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(57, 23);
-            this.btnAdd.TabIndex = 2;
+            this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "T&hêm";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -366,7 +366,7 @@
             this.txtCountryName.Location = new System.Drawing.Point(97, 53);
             this.txtCountryName.Name = "txtCountryName";
             this.txtCountryName.Size = new System.Drawing.Size(178, 20);
-            this.txtCountryName.TabIndex = 1;
+            this.txtCountryName.TabIndex = 4;
             // 
             // lblTenQuocGia
             // 

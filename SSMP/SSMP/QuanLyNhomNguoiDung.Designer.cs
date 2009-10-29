@@ -162,7 +162,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(36, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -280,7 +280,7 @@
             this.toolStripLblTotal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLblTotal.Name = "toolStripLblTotal";
             this.toolStripLblTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripLblTotal.Size = new System.Drawing.Size(79, 22);
+            this.toolStripLblTotal.Size = new System.Drawing.Size(87, 22);
             this.toolStripLblTotal.Text = "Tổng số dòng: ";
             // 
             // gvUserRole
@@ -307,7 +307,7 @@
             this.btnInAnQuanLy.Location = new System.Drawing.Point(737, 249);
             this.btnInAnQuanLy.Name = "btnInAnQuanLy";
             this.btnInAnQuanLy.Size = new System.Drawing.Size(64, 23);
-            this.btnInAnQuanLy.TabIndex = 21;
+            this.btnInAnQuanLy.TabIndex = 16;
             this.btnInAnQuanLy.Text = "&In ấn";
             this.btnInAnQuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInAnQuanLy.UseVisualStyleBackColor = true;
@@ -336,7 +336,7 @@
             this.chkDispUserRoleDesc.Location = new System.Drawing.Point(390, 259);
             this.chkDispUserRoleDesc.Name = "chkDispUserRoleDesc";
             this.chkDispUserRoleDesc.Size = new System.Drawing.Size(53, 17);
-            this.chkDispUserRoleDesc.TabIndex = 20;
+            this.chkDispUserRoleDesc.TabIndex = 15;
             this.chkDispUserRoleDesc.Text = "Mô tả";
             this.chkDispUserRoleDesc.UseVisualStyleBackColor = true;
             this.chkDispUserRoleDesc.CheckedChanged += new System.EventHandler(this.chkDispUserDesc_CheckedChanged);
@@ -347,7 +347,7 @@
             this.chkDispUserRoleName.Location = new System.Drawing.Point(274, 259);
             this.chkDispUserRoleName.Name = "chkDispUserRoleName";
             this.chkDispUserRoleName.Size = new System.Drawing.Size(110, 17);
-            this.chkDispUserRoleName.TabIndex = 19;
+            this.chkDispUserRoleName.TabIndex = 14;
             this.chkDispUserRoleName.Text = "Nhóm người dùng";
             this.chkDispUserRoleName.UseVisualStyleBackColor = true;
             this.chkDispUserRoleName.CheckedChanged += new System.EventHandler(this.chkDispUserRoleName_CheckedChanged);
@@ -361,7 +361,7 @@
             this.chkDispUserRoleID.Location = new System.Drawing.Point(142, 259);
             this.chkDispUserRoleID.Name = "chkDispUserRoleID";
             this.chkDispUserRoleID.Size = new System.Drawing.Size(126, 17);
-            this.chkDispUserRoleID.TabIndex = 18;
+            this.chkDispUserRoleID.TabIndex = 13;
             this.chkDispUserRoleID.Text = "Mã nhóm người dùng";
             this.chkDispUserRoleID.UseVisualStyleBackColor = true;
             this.chkDispUserRoleID.CheckedChanged += new System.EventHandler(this.chkDispUserRoleID_CheckedChanged);
@@ -374,7 +374,7 @@
             this.chkDispAll.Location = new System.Drawing.Point(79, 259);
             this.chkDispAll.Name = "chkDispAll";
             this.chkDispAll.Size = new System.Drawing.Size(57, 17);
-            this.chkDispAll.TabIndex = 17;
+            this.chkDispAll.TabIndex = 12;
             this.chkDispAll.Text = "Tất cả";
             this.chkDispAll.UseVisualStyleBackColor = true;
             this.chkDispAll.CheckedChanged += new System.EventHandler(this.chkDispAll_CheckedChanged);
@@ -424,7 +424,7 @@
             this.chkSearchAll.Location = new System.Drawing.Point(79, 80);
             this.chkSearchAll.Name = "chkSearchAll";
             this.chkSearchAll.Size = new System.Drawing.Size(57, 17);
-            this.chkSearchAll.TabIndex = 7;
+            this.chkSearchAll.TabIndex = 8;
             this.chkSearchAll.Text = "Tất cả";
             this.chkSearchAll.UseVisualStyleBackColor = true;
             this.chkSearchAll.CheckedChanged += new System.EventHandler(this.chkSearchAll_CheckedChanged);
@@ -436,7 +436,7 @@
             this.chkSearchUserRoleDesc.Location = new System.Drawing.Point(388, 80);
             this.chkSearchUserRoleDesc.Name = "chkSearchUserRoleDesc";
             this.chkSearchUserRoleDesc.Size = new System.Drawing.Size(53, 17);
-            this.chkSearchUserRoleDesc.TabIndex = 6;
+            this.chkSearchUserRoleDesc.TabIndex = 11;
             this.chkSearchUserRoleDesc.Text = "Mô tả";
             this.chkSearchUserRoleDesc.UseVisualStyleBackColor = true;
             // 
@@ -447,7 +447,7 @@
             this.chkSearchUserRoleName.Location = new System.Drawing.Point(272, 80);
             this.chkSearchUserRoleName.Name = "chkSearchUserRoleName";
             this.chkSearchUserRoleName.Size = new System.Drawing.Size(110, 17);
-            this.chkSearchUserRoleName.TabIndex = 5;
+            this.chkSearchUserRoleName.TabIndex = 10;
             this.chkSearchUserRoleName.Text = "Nhóm người dùng";
             this.chkSearchUserRoleName.UseVisualStyleBackColor = true;
             // 
@@ -458,7 +458,7 @@
             this.chkSearchUserRoleID.Location = new System.Drawing.Point(139, 80);
             this.chkSearchUserRoleID.Name = "chkSearchUserRoleID";
             this.chkSearchUserRoleID.Size = new System.Drawing.Size(126, 17);
-            this.chkSearchUserRoleID.TabIndex = 4;
+            this.chkSearchUserRoleID.TabIndex = 9;
             this.chkSearchUserRoleID.Text = "Mã nhóm người dùng";
             this.chkSearchUserRoleID.UseVisualStyleBackColor = true;
             // 
@@ -481,7 +481,7 @@
             this.btnSearch.Location = new System.Drawing.Point(337, 23);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 2;
+            this.btnSearch.TabIndex = 7;
             this.btnSearch.Text = "Tìm &kiếm";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -493,7 +493,7 @@
             this.txtSearch.Location = new System.Drawing.Point(79, 25);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(239, 20);
-            this.txtSearch.TabIndex = 1;
+            this.txtSearch.TabIndex = 6;
             // 
             // lblTimKiemQuanLy
             // 
@@ -513,7 +513,7 @@
             this.btnClose.Location = new System.Drawing.Point(808, 249);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(65, 23);
-            this.btnClose.TabIndex = 12;
+            this.btnClose.TabIndex = 17;
             this.btnClose.Text = "Đ&óng";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
@@ -545,7 +545,7 @@
             this.txtUserRoleDesc.Name = "txtUserRoleDesc";
             this.txtUserRoleDesc.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtUserRoleDesc.Size = new System.Drawing.Size(220, 75);
-            this.txtUserRoleDesc.TabIndex = 5;
+            this.txtUserRoleDesc.TabIndex = 3;
             // 
             // lblMoTa
             // 
@@ -563,7 +563,7 @@
             this.txtUserRoleName.Location = new System.Drawing.Point(131, 52);
             this.txtUserRoleName.Name = "txtUserRoleName";
             this.txtUserRoleName.Size = new System.Drawing.Size(220, 20);
-            this.txtUserRoleName.TabIndex = 3;
+            this.txtUserRoleName.TabIndex = 2;
             // 
             // btnReset
             // 
@@ -573,7 +573,7 @@
             this.btnReset.Location = new System.Drawing.Point(271, 168);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(80, 23);
-            this.btnReset.TabIndex = 11;
+            this.btnReset.TabIndex = 5;
             this.btnReset.Text = "Xóa &trắng";
             this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReset.UseVisualStyleBackColor = true;
@@ -597,7 +597,7 @@
             this.btnSave.Location = new System.Drawing.Point(185, 168);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(80, 23);
-            this.btnSave.TabIndex = 9;
+            this.btnSave.TabIndex = 4;
             this.btnSave.Text = "&Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);

@@ -66,24 +66,24 @@
             this.lblHienThiQuanLy = new System.Windows.Forms.Label();
             this.lblDanhSachProviderQuanLy = new System.Windows.Forms.Label();
             this.gbThongTinProvider = new System.Windows.Forms.GroupBox();
+            this.cbbCountry = new System.Windows.Forms.ComboBox();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtWebsite = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtFaxNo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtTelNo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.lblMoTa = new System.Windows.Forms.Label();
             this.txtProviderName = new System.Windows.Forms.TextBox();
             this.lblProvider = new System.Windows.Forms.Label();
             this.txtProviderID = new System.Windows.Forms.TextBox();
             this.lblMaProvider = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtTelNo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtFaxNo = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtWebsite = new System.Windows.Forms.TextBox();
-            this.cbbCountry = new System.Windows.Forms.ComboBox();
             this.tcQuanLyProvider.SuspendLayout();
             this.tpQuanLyProvider.SuspendLayout();
             this.panelProvider.SuspendLayout();
@@ -168,7 +168,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(36, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -282,7 +282,7 @@
             this.toolStripLblTotal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLblTotal.Name = "toolStripLblTotal";
             this.toolStripLblTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripLblTotal.Size = new System.Drawing.Size(79, 22);
+            this.toolStripLblTotal.Size = new System.Drawing.Size(87, 22);
             this.toolStripLblTotal.Text = "Tổng số dòng: ";
             // 
             // gvProvider
@@ -325,7 +325,7 @@
             this.chkSearchAll.Location = new System.Drawing.Point(79, 80);
             this.chkSearchAll.Name = "chkSearchAll";
             this.chkSearchAll.Size = new System.Drawing.Size(57, 17);
-            this.chkSearchAll.TabIndex = 7;
+            this.chkSearchAll.TabIndex = 14;
             this.chkSearchAll.Text = "Tất cả";
             this.chkSearchAll.UseVisualStyleBackColor = true;
             this.chkSearchAll.CheckedChanged += new System.EventHandler(this.chkSearchAll_CheckedChanged);
@@ -336,8 +336,8 @@
             this.chkSearchProviderName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.chkSearchProviderName.Location = new System.Drawing.Point(250, 80);
             this.chkSearchProviderName.Name = "chkSearchProviderName";
-            this.chkSearchProviderName.Size = new System.Drawing.Size(109, 17);
-            this.chkSearchProviderName.TabIndex = 5;
+            this.chkSearchProviderName.Size = new System.Drawing.Size(114, 17);
+            this.chkSearchProviderName.TabIndex = 16;
             this.chkSearchProviderName.Text = "Tên nhà cung cấp";
             this.chkSearchProviderName.UseVisualStyleBackColor = true;
             // 
@@ -347,8 +347,8 @@
             this.chkSearchProviderID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.chkSearchProviderID.Location = new System.Drawing.Point(139, 80);
             this.chkSearchProviderID.Name = "chkSearchProviderID";
-            this.chkSearchProviderID.Size = new System.Drawing.Size(105, 17);
-            this.chkSearchProviderID.TabIndex = 4;
+            this.chkSearchProviderID.Size = new System.Drawing.Size(110, 17);
+            this.chkSearchProviderID.TabIndex = 15;
             this.chkSearchProviderID.Text = "Mã nhà cung cấp";
             this.chkSearchProviderID.UseVisualStyleBackColor = true;
             // 
@@ -370,7 +370,7 @@
             this.btnSearch.Location = new System.Drawing.Point(365, 24);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 2;
+            this.btnSearch.TabIndex = 13;
             this.btnSearch.Text = "Tìm &kiếm";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -382,7 +382,7 @@
             this.txtSearch.Location = new System.Drawing.Point(79, 25);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(280, 20);
-            this.txtSearch.TabIndex = 1;
+            this.txtSearch.TabIndex = 12;
             // 
             // lblTimKiemQuanLy
             // 
@@ -401,7 +401,7 @@
             this.btnInAnQuanLy.Location = new System.Drawing.Point(908, 156);
             this.btnInAnQuanLy.Name = "btnInAnQuanLy";
             this.btnInAnQuanLy.Size = new System.Drawing.Size(61, 23);
-            this.btnInAnQuanLy.TabIndex = 25;
+            this.btnInAnQuanLy.TabIndex = 20;
             this.btnInAnQuanLy.Text = "&In ấn";
             this.btnInAnQuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInAnQuanLy.UseVisualStyleBackColor = true;
@@ -413,7 +413,7 @@
             this.btnClose.Location = new System.Drawing.Point(982, 156);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(61, 23);
-            this.btnClose.TabIndex = 24;
+            this.btnClose.TabIndex = 21;
             this.btnClose.Text = "Đ&óng";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
@@ -427,7 +427,7 @@
             this.chkDispAll.Location = new System.Drawing.Point(412, 160);
             this.chkDispAll.Name = "chkDispAll";
             this.chkDispAll.Size = new System.Drawing.Size(57, 17);
-            this.chkDispAll.TabIndex = 19;
+            this.chkDispAll.TabIndex = 17;
             this.chkDispAll.Text = "Tất cả";
             this.chkDispAll.UseVisualStyleBackColor = true;
             this.chkDispAll.CheckedChanged += new System.EventHandler(this.chkDispAll_CheckedChanged);
@@ -437,8 +437,8 @@
             this.chkDispProviderName.AutoSize = true;
             this.chkDispProviderName.Location = new System.Drawing.Point(586, 160);
             this.chkDispProviderName.Name = "chkDispProviderName";
-            this.chkDispProviderName.Size = new System.Drawing.Size(89, 17);
-            this.chkDispProviderName.TabIndex = 17;
+            this.chkDispProviderName.Size = new System.Drawing.Size(94, 17);
+            this.chkDispProviderName.TabIndex = 19;
             this.chkDispProviderName.Text = "Nhà cung cấp";
             this.chkDispProviderName.UseVisualStyleBackColor = true;
             this.chkDispProviderName.CheckedChanged += new System.EventHandler(this.chkDispProviderName_CheckedChanged);
@@ -451,8 +451,8 @@
             this.chkDispProviderID.Enabled = false;
             this.chkDispProviderID.Location = new System.Drawing.Point(475, 160);
             this.chkDispProviderID.Name = "chkDispProviderID";
-            this.chkDispProviderID.Size = new System.Drawing.Size(105, 17);
-            this.chkDispProviderID.TabIndex = 16;
+            this.chkDispProviderID.Size = new System.Drawing.Size(110, 17);
+            this.chkDispProviderID.TabIndex = 18;
             this.chkDispProviderID.Text = "Mã nhà cung cấp";
             this.chkDispProviderID.UseVisualStyleBackColor = true;
             this.chkDispProviderID.CheckedChanged += new System.EventHandler(this.chkDispProviderID_CheckedChanged);
@@ -505,6 +505,15 @@
             this.gbThongTinProvider.TabStop = false;
             this.gbThongTinProvider.Text = "THÔNG TIN NHÀ SẢN XUẤT:";
             // 
+            // cbbCountry
+            // 
+            this.cbbCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbbCountry.FormattingEnabled = true;
+            this.cbbCountry.Location = new System.Drawing.Point(109, 229);
+            this.cbbCountry.Name = "cbbCountry";
+            this.cbbCountry.Size = new System.Drawing.Size(208, 21);
+            this.cbbCountry.TabIndex = 9;
+            // 
             // btnReset
             // 
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -513,7 +522,7 @@
             this.btnReset.Location = new System.Drawing.Point(237, 261);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(80, 23);
-            this.btnReset.TabIndex = 27;
+            this.btnReset.TabIndex = 11;
             this.btnReset.Text = "Xóa &trắng";
             this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReset.UseVisualStyleBackColor = true;
@@ -527,10 +536,96 @@
             this.btnSave.Location = new System.Drawing.Point(151, 261);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(80, 23);
-            this.btnSave.TabIndex = 26;
+            this.btnSave.TabIndex = 10;
             this.btnSave.Text = "&Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.Location = new System.Drawing.Point(10, 232);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Quốc gia:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.Location = new System.Drawing.Point(10, 203);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Website:";
+            // 
+            // txtWebsite
+            // 
+            this.txtWebsite.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtWebsite.Location = new System.Drawing.Point(109, 200);
+            this.txtWebsite.Name = "txtWebsite";
+            this.txtWebsite.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtWebsite.Size = new System.Drawing.Size(208, 20);
+            this.txtWebsite.TabIndex = 8;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtEmail.Location = new System.Drawing.Point(109, 171);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtEmail.Size = new System.Drawing.Size(208, 20);
+            this.txtEmail.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Location = new System.Drawing.Point(10, 174);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Email:";
+            // 
+            // txtFaxNo
+            // 
+            this.txtFaxNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFaxNo.Location = new System.Drawing.Point(109, 142);
+            this.txtFaxNo.Name = "txtFaxNo";
+            this.txtFaxNo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtFaxNo.Size = new System.Drawing.Size(100, 20);
+            this.txtFaxNo.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(10, 145);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Fax:";
+            // 
+            // txtTelNo
+            // 
+            this.txtTelNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTelNo.Location = new System.Drawing.Point(109, 113);
+            this.txtTelNo.Name = "txtTelNo";
+            this.txtTelNo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtTelNo.Size = new System.Drawing.Size(100, 20);
+            this.txtTelNo.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(10, 116);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Điện thoại:";
             // 
             // txtAddress
             // 
@@ -539,7 +634,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtAddress.Size = new System.Drawing.Size(208, 20);
-            this.txtAddress.TabIndex = 5;
+            this.txtAddress.TabIndex = 4;
             // 
             // lblMoTa
             // 
@@ -565,7 +660,7 @@
             this.lblProvider.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblProvider.Location = new System.Drawing.Point(10, 58);
             this.lblProvider.Name = "lblProvider";
-            this.lblProvider.Size = new System.Drawing.Size(93, 13);
+            this.lblProvider.Size = new System.Drawing.Size(98, 13);
             this.lblProvider.TabIndex = 2;
             this.lblProvider.Text = "Tên nhà cung cấp:";
             // 
@@ -584,104 +679,9 @@
             this.lblMaProvider.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblMaProvider.Location = new System.Drawing.Point(10, 29);
             this.lblMaProvider.Name = "lblMaProvider";
-            this.lblMaProvider.Size = new System.Drawing.Size(89, 13);
+            this.lblMaProvider.Size = new System.Drawing.Size(94, 13);
             this.lblMaProvider.TabIndex = 0;
             this.lblMaProvider.Text = "Mã nhà cung cấp:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(10, 116);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Điện thoại:";
-            // 
-            // txtTelNo
-            // 
-            this.txtTelNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTelNo.Location = new System.Drawing.Point(109, 113);
-            this.txtTelNo.Name = "txtTelNo";
-            this.txtTelNo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtTelNo.Size = new System.Drawing.Size(100, 20);
-            this.txtTelNo.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(10, 145);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Fax:";
-            // 
-            // txtFaxNo
-            // 
-            this.txtFaxNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtFaxNo.Location = new System.Drawing.Point(109, 142);
-            this.txtFaxNo.Name = "txtFaxNo";
-            this.txtFaxNo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtFaxNo.Size = new System.Drawing.Size(100, 20);
-            this.txtFaxNo.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label3.Location = new System.Drawing.Point(10, 174);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Email:";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtEmail.Location = new System.Drawing.Point(109, 171);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtEmail.Size = new System.Drawing.Size(208, 20);
-            this.txtEmail.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(10, 203);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Website:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(10, 232);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Quốc gia:";
-            // 
-            // txtWebsite
-            // 
-            this.txtWebsite.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtWebsite.Location = new System.Drawing.Point(109, 200);
-            this.txtWebsite.Name = "txtWebsite";
-            this.txtWebsite.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtWebsite.Size = new System.Drawing.Size(208, 20);
-            this.txtWebsite.TabIndex = 5;
-            // 
-            // cbbCountry
-            // 
-            this.cbbCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbbCountry.FormattingEnabled = true;
-            this.cbbCountry.Location = new System.Drawing.Point(109, 229);
-            this.cbbCountry.Name = "cbbCountry";
-            this.cbbCountry.Size = new System.Drawing.Size(208, 21);
-            this.cbbCountry.TabIndex = 28;
             // 
             // FrmProvider
             // 
