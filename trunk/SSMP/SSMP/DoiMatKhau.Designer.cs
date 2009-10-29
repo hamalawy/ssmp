@@ -70,7 +70,7 @@
             this.btnXoaTrang.Location = new System.Drawing.Point(289, 161);
             this.btnXoaTrang.Name = "btnXoaTrang";
             this.btnXoaTrang.Size = new System.Drawing.Size(75, 23);
-            this.btnXoaTrang.TabIndex = 8;
+            this.btnXoaTrang.TabIndex = 5;
             this.btnXoaTrang.Text = "Xóa &trắng";
             this.btnXoaTrang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoaTrang.UseVisualStyleBackColor = true;
@@ -91,7 +91,7 @@
             this.btnDoiMatKhau.Location = new System.Drawing.Point(164, 161);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             this.btnDoiMatKhau.Size = new System.Drawing.Size(97, 23);
-            this.btnDoiMatKhau.TabIndex = 7;
+            this.btnDoiMatKhau.TabIndex = 4;
             this.btnDoiMatKhau.Text = "Đổi &mật khẩu";
             this.btnDoiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDoiMatKhau.UseVisualStyleBackColor = true;
@@ -103,7 +103,7 @@
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.PasswordChar = '*';
             this.txtMatKhauMoi.Size = new System.Drawing.Size(168, 20);
-            this.txtMatKhauMoi.TabIndex = 6;
+            this.txtMatKhauMoi.TabIndex = 2;
             // 
             // lblMatKhauMoi
             // 
@@ -120,7 +120,7 @@
             this.txtXacNhanLaiMatKhau.Name = "txtXacNhanLaiMatKhau";
             this.txtXacNhanLaiMatKhau.PasswordChar = '*';
             this.txtXacNhanLaiMatKhau.Size = new System.Drawing.Size(168, 20);
-            this.txtXacNhanLaiMatKhau.TabIndex = 4;
+            this.txtXacNhanLaiMatKhau.TabIndex = 3;
             // 
             // lblXacNhanMatKhauMoi
             // 
@@ -137,7 +137,7 @@
             this.txtMatKhauCu.Name = "txtMatKhauCu";
             this.txtMatKhauCu.PasswordChar = '*';
             this.txtMatKhauCu.Size = new System.Drawing.Size(168, 20);
-            this.txtMatKhauCu.TabIndex = 2;
+            this.txtMatKhauCu.TabIndex = 1;
             // 
             // lblMatKhauCu
             // 

@@ -171,7 +171,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(36, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -285,7 +285,7 @@
             this.toolStripLblTotal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLblTotal.Name = "toolStripLblTotal";
             this.toolStripLblTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripLblTotal.Size = new System.Drawing.Size(79, 22);
+            this.toolStripLblTotal.Size = new System.Drawing.Size(87, 22);
             this.toolStripLblTotal.Text = "Tổng số dòng: ";
             // 
             // gvCustomer
@@ -301,7 +301,7 @@
             this.gvCustomer.ReadOnly = true;
             this.gvCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvCustomer.Size = new System.Drawing.Size(680, 262);
-            this.gvCustomer.TabIndex = 13;
+            this.gvCustomer.TabIndex = 23;
             this.gvCustomer.SelectionChanged += new System.EventHandler(this.gvCustomer_SelectionChanged);
             // 
             // gbTimKiemQuanLy
@@ -328,7 +328,7 @@
             this.chkSearchAll.Location = new System.Drawing.Point(79, 80);
             this.chkSearchAll.Name = "chkSearchAll";
             this.chkSearchAll.Size = new System.Drawing.Size(57, 17);
-            this.chkSearchAll.TabIndex = 7;
+            this.chkSearchAll.TabIndex = 15;
             this.chkSearchAll.Text = "Tất cả";
             this.chkSearchAll.UseVisualStyleBackColor = true;
             this.chkSearchAll.CheckedChanged += new System.EventHandler(this.chkSearchAll_CheckedChanged);
@@ -340,7 +340,7 @@
             this.chkSearchCustomerName.Location = new System.Drawing.Point(250, 80);
             this.chkSearchCustomerName.Name = "chkSearchCustomerName";
             this.chkSearchCustomerName.Size = new System.Drawing.Size(105, 17);
-            this.chkSearchCustomerName.TabIndex = 5;
+            this.chkSearchCustomerName.TabIndex = 17;
             this.chkSearchCustomerName.Text = "Tên khách hàng";
             this.chkSearchCustomerName.UseVisualStyleBackColor = true;
             // 
@@ -351,7 +351,7 @@
             this.chkSearchCustomerID.Location = new System.Drawing.Point(139, 80);
             this.chkSearchCustomerID.Name = "chkSearchCustomerID";
             this.chkSearchCustomerID.Size = new System.Drawing.Size(101, 17);
-            this.chkSearchCustomerID.TabIndex = 4;
+            this.chkSearchCustomerID.TabIndex = 16;
             this.chkSearchCustomerID.Text = "Mã khách hàng";
             this.chkSearchCustomerID.UseVisualStyleBackColor = true;
             // 
@@ -373,7 +373,7 @@
             this.btnSearch.Location = new System.Drawing.Point(365, 24);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 2;
+            this.btnSearch.TabIndex = 14;
             this.btnSearch.Text = "Tìm &kiếm";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -385,7 +385,7 @@
             this.txtSearch.Location = new System.Drawing.Point(79, 25);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(280, 20);
-            this.txtSearch.TabIndex = 1;
+            this.txtSearch.TabIndex = 13;
             // 
             // lblTimKiemQuanLy
             // 
@@ -404,7 +404,7 @@
             this.btnInAnQuanLy.Location = new System.Drawing.Point(908, 156);
             this.btnInAnQuanLy.Name = "btnInAnQuanLy";
             this.btnInAnQuanLy.Size = new System.Drawing.Size(61, 23);
-            this.btnInAnQuanLy.TabIndex = 25;
+            this.btnInAnQuanLy.TabIndex = 21;
             this.btnInAnQuanLy.Text = "&In ấn";
             this.btnInAnQuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInAnQuanLy.UseVisualStyleBackColor = true;
@@ -416,7 +416,7 @@
             this.btnClose.Location = new System.Drawing.Point(982, 156);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(61, 23);
-            this.btnClose.TabIndex = 24;
+            this.btnClose.TabIndex = 22;
             this.btnClose.Text = "Đ&óng";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = true;
@@ -430,7 +430,7 @@
             this.chkDispAll.Location = new System.Drawing.Point(412, 160);
             this.chkDispAll.Name = "chkDispAll";
             this.chkDispAll.Size = new System.Drawing.Size(57, 17);
-            this.chkDispAll.TabIndex = 19;
+            this.chkDispAll.TabIndex = 18;
             this.chkDispAll.Text = "Tất cả";
             this.chkDispAll.UseVisualStyleBackColor = true;
             this.chkDispAll.CheckedChanged += new System.EventHandler(this.chkDispAll_CheckedChanged);
@@ -441,7 +441,7 @@
             this.chkDispCustomerName.Location = new System.Drawing.Point(586, 160);
             this.chkDispCustomerName.Name = "chkDispCustomerName";
             this.chkDispCustomerName.Size = new System.Drawing.Size(105, 17);
-            this.chkDispCustomerName.TabIndex = 17;
+            this.chkDispCustomerName.TabIndex = 20;
             this.chkDispCustomerName.Text = "Tên khách hàng";
             this.chkDispCustomerName.UseVisualStyleBackColor = true;
             this.chkDispCustomerName.CheckedChanged += new System.EventHandler(this.chkDispCustomerName_CheckedChanged);
@@ -455,7 +455,7 @@
             this.chkDispCustomerID.Location = new System.Drawing.Point(475, 160);
             this.chkDispCustomerID.Name = "chkDispCustomerID";
             this.chkDispCustomerID.Size = new System.Drawing.Size(101, 17);
-            this.chkDispCustomerID.TabIndex = 16;
+            this.chkDispCustomerID.TabIndex = 19;
             this.chkDispCustomerID.Text = "Mã khách hàng";
             this.chkDispCustomerID.UseVisualStyleBackColor = true;
             this.chkDispCustomerID.CheckedChanged += new System.EventHandler(this.chkDispCustomerID_CheckedChanged);
@@ -518,7 +518,7 @@
             this.radioMan.Location = new System.Drawing.Point(109, 144);
             this.radioMan.Name = "radioMan";
             this.radioMan.Size = new System.Drawing.Size(47, 17);
-            this.radioMan.TabIndex = 37;
+            this.radioMan.TabIndex = 5;
             this.radioMan.TabStop = true;
             this.radioMan.Text = "Nam";
             this.radioMan.UseVisualStyleBackColor = true;
@@ -530,7 +530,7 @@
             this.radioWoman.Location = new System.Drawing.Point(170, 144);
             this.radioWoman.Name = "radioWoman";
             this.radioWoman.Size = new System.Drawing.Size(39, 17);
-            this.radioWoman.TabIndex = 36;
+            this.radioWoman.TabIndex = 6;
             this.radioWoman.TabStop = true;
             this.radioWoman.Text = "Nữ";
             this.radioWoman.UseVisualStyleBackColor = true;
@@ -552,7 +552,7 @@
             this.txtIdCardNo.Name = "txtIdCardNo";
             this.txtIdCardNo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtIdCardNo.Size = new System.Drawing.Size(100, 20);
-            this.txtIdCardNo.TabIndex = 35;
+            this.txtIdCardNo.TabIndex = 7;
             // 
             // txtBirthday
             // 
@@ -562,7 +562,7 @@
             this.txtBirthday.Location = new System.Drawing.Point(109, 114);
             this.txtBirthday.Name = "txtBirthday";
             this.txtBirthday.Size = new System.Drawing.Size(100, 20);
-            this.txtBirthday.TabIndex = 33;
+            this.txtBirthday.TabIndex = 4;
             // 
             // label5
             // 
@@ -581,7 +581,7 @@
             this.txtPrivilegePoint.Name = "txtPrivilegePoint";
             this.txtPrivilegePoint.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtPrivilegePoint.Size = new System.Drawing.Size(100, 20);
-            this.txtPrivilegePoint.TabIndex = 30;
+            this.txtPrivilegePoint.TabIndex = 10;
             // 
             // label6
             // 
@@ -601,7 +601,7 @@
             this.btnReset.Location = new System.Drawing.Point(237, 295);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(80, 23);
-            this.btnReset.TabIndex = 27;
+            this.btnReset.TabIndex = 12;
             this.btnReset.Text = "Xóa &trắng";
             this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReset.UseVisualStyleBackColor = true;
@@ -615,7 +615,7 @@
             this.btnSave.Location = new System.Drawing.Point(151, 295);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(80, 23);
-            this.btnSave.TabIndex = 26;
+            this.btnSave.TabIndex = 11;
             this.btnSave.Text = "&Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -627,7 +627,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtEmail.Size = new System.Drawing.Size(208, 20);
-            this.txtEmail.TabIndex = 5;
+            this.txtEmail.TabIndex = 9;
             // 
             // label3
             // 
@@ -646,7 +646,7 @@
             this.txtTelNo.Name = "txtTelNo";
             this.txtTelNo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtTelNo.Size = new System.Drawing.Size(100, 20);
-            this.txtTelNo.TabIndex = 5;
+            this.txtTelNo.TabIndex = 8;
             // 
             // label2
             // 
@@ -675,7 +675,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtAddress.Size = new System.Drawing.Size(208, 20);
-            this.txtAddress.TabIndex = 5;
+            this.txtAddress.TabIndex = 3;
             // 
             // lblMoTa
             // 
@@ -693,7 +693,7 @@
             this.txtCustomerName.Location = new System.Drawing.Point(109, 55);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(208, 20);
-            this.txtCustomerName.TabIndex = 3;
+            this.txtCustomerName.TabIndex = 2;
             // 
             // lblCustomer
             // 

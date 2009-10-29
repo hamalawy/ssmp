@@ -75,7 +75,7 @@
             this.btnXoaTrang.Location = new System.Drawing.Point(324, 160);
             this.btnXoaTrang.Name = "btnXoaTrang";
             this.btnXoaTrang.Size = new System.Drawing.Size(80, 23);
-            this.btnXoaTrang.TabIndex = 10;
+            this.btnXoaTrang.TabIndex = 6;
             this.btnXoaTrang.Text = "Xóa &trắng";
             this.btnXoaTrang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoaTrang.UseVisualStyleBackColor = true;
@@ -96,7 +96,7 @@
             this.btnCauHinh.Location = new System.Drawing.Point(242, 160);
             this.btnCauHinh.Name = "btnCauHinh";
             this.btnCauHinh.Size = new System.Drawing.Size(75, 23);
-            this.btnCauHinh.TabIndex = 9;
+            this.btnCauHinh.TabIndex = 5;
             this.btnCauHinh.Text = "&Cấu hình";
             this.btnCauHinh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCauHinh.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(162, 20);
-            this.txtMatKhau.TabIndex = 8;
+            this.txtMatKhau.TabIndex = 4;
             // 
             // lblMatKhau
             // 
@@ -124,7 +124,7 @@
             this.txtTenDangNhap.Location = new System.Drawing.Point(242, 88);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.Size = new System.Drawing.Size(162, 20);
-            this.txtTenDangNhap.TabIndex = 6;
+            this.txtTenDangNhap.TabIndex = 3;
             // 
             // lblTenDangNhap
             // 
@@ -140,7 +140,7 @@
             this.txtCoSoDuLieu.Location = new System.Drawing.Point(242, 62);
             this.txtCoSoDuLieu.Name = "txtCoSoDuLieu";
             this.txtCoSoDuLieu.Size = new System.Drawing.Size(162, 20);
-            this.txtCoSoDuLieu.TabIndex = 4;
+            this.txtCoSoDuLieu.TabIndex = 2;
             // 
             // lblCoSoDuLieu
             // 
@@ -156,7 +156,7 @@
             this.txtTenMayChu.Location = new System.Drawing.Point(242, 36);
             this.txtTenMayChu.Name = "txtTenMayChu";
             this.txtTenMayChu.Size = new System.Drawing.Size(162, 20);
-            this.txtTenMayChu.TabIndex = 2;
+            this.txtTenMayChu.TabIndex = 1;
             // 
             // lblTenMayChu
             // 

@@ -16,14 +16,14 @@ namespace SSMP.BaoCao {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class BaoCaoXuat : ReportClass {
+    public class CrystalReport1 : ReportClass {
         
-        public BaoCaoXuat() {
+        public CrystalReport1() {
         }
         
         public override string ResourceName {
             get {
-                return "BaoCaoXuat.rpt";
+                return "CrystalReport1.rpt";
             }
             set {
                 // Do nothing
@@ -69,28 +69,12 @@ namespace SSMP.BaoCao {
                 return this.ReportDefinition.Sections[4];
             }
         }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_tungay {
-            get {
-                return this.DataDefinition.ParameterFields[0];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_denngay {
-            get {
-                return this.DataDefinition.ParameterFields[1];
-            }
-        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedBaoCaoXuat : Component, ICachedReport {
+    public class CachedCrystalReport1 : Component, ICachedReport {
         
-        public CachedBaoCaoXuat() {
+        public CachedCrystalReport1() {
         }
         
         [Browsable(false)]
@@ -127,7 +111,7 @@ namespace SSMP.BaoCao {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            BaoCaoXuat rpt = new BaoCaoXuat();
+            CrystalReport1 rpt = new CrystalReport1();
             rpt.Site = this.Site;
             return rpt;
         }

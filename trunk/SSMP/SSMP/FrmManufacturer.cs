@@ -492,5 +492,10 @@ namespace SSMP
         {
             ResetForm();
         }
+
+        private void gvManufacturer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
