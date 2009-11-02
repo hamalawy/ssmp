@@ -142,6 +142,11 @@ namespace SSMP
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (txtUserRoleName.Text.Trim().Length == 0)
+            {
+                HoTro.baoLoi("Điền tên nhóm người dùng");
+                return;
+            }
             if (isAdd)
             {
                 UserRole entity = new UserRole();

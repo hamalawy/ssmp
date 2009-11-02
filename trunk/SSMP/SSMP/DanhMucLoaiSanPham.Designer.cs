@@ -76,6 +76,7 @@
             this.lblCategory = new System.Windows.Forms.Label();
             this.txtCategoryID = new System.Windows.Forms.TextBox();
             this.lblMaCategory = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tcQuanLyCategory.SuspendLayout();
             this.tpQuanLyCategory.SuspendLayout();
             this.panelCategory.SuspendLayout();
@@ -495,6 +496,7 @@
             // 
             // gbThongTinCategory
             // 
+            this.gbThongTinCategory.Controls.Add(this.label1);
             this.gbThongTinCategory.Controls.Add(this.btnReset);
             this.gbThongTinCategory.Controls.Add(this.btnSave);
             this.gbThongTinCategory.Controls.Add(this.txtCategoryDesc);
@@ -595,6 +597,16 @@
             this.lblMaCategory.TabIndex = 0;
             this.lblMaCategory.Text = "Mã loại sản phẩm:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(338, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(11, 13);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "*";
+            // 
             // FrmCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -673,5 +685,6 @@
         private System.Windows.Forms.ToolStripButton toolStripBtnEdit;
         private System.Windows.Forms.ToolStripButton toolStripBtnDelete;
         private System.Windows.Forms.ToolStripLabel toolStripLblTotal;
+        private System.Windows.Forms.Label label1;
     }
 }

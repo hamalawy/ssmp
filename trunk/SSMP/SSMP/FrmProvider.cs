@@ -175,6 +175,11 @@ namespace SSMP
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (txtProviderName.Text.Trim().Length == 0)
+            {
+                HoTro.baoLoi("Điền tên nhà cung cấp");
+                return;
+            }
             Provider entity;
 
             if (isAdd)

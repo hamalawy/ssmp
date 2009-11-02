@@ -77,6 +77,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.txtUserRoleID = new System.Windows.Forms.TextBox();
             this.lblMaNhomNguoiDung = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControlUserRole.SuspendLayout();
             this.tabPageUserRole.SuspendLayout();
             this.panelUserRole.SuspendLayout();
@@ -521,6 +522,7 @@
             // 
             // gbThongTinNhomNguoiDung
             // 
+            this.gbThongTinNhomNguoiDung.Controls.Add(this.label1);
             this.gbThongTinNhomNguoiDung.Controls.Add(this.txtUserRoleDesc);
             this.gbThongTinNhomNguoiDung.Controls.Add(this.lblMoTa);
             this.gbThongTinNhomNguoiDung.Controls.Add(this.txtUserRoleName);
@@ -621,6 +623,16 @@
             this.lblMaNhomNguoiDung.TabIndex = 0;
             this.lblMaNhomNguoiDung.Text = "Mã nhóm người dùng:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(358, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(11, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "*";
+            // 
             // FrmUserRole
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -700,5 +712,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLblTotal;
         private System.Windows.Forms.ToolStripButton toolStripBtnReload;
         private System.Windows.Forms.ImageList imglQuanLyNhomNguoiDung;
+        private System.Windows.Forms.Label label1;
     }
 }

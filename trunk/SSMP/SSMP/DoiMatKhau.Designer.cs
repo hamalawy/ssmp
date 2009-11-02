@@ -41,12 +41,18 @@
             this.txtMatKhauCu = new System.Windows.Forms.TextBox();
             this.lblMatKhauCu = new System.Windows.Forms.Label();
             this.picDoiMatKhau = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.gbDoiMatKhau.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picDoiMatKhau)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDoiMatKhau
             // 
+            this.gbDoiMatKhau.Controls.Add(this.label3);
+            this.gbDoiMatKhau.Controls.Add(this.label2);
+            this.gbDoiMatKhau.Controls.Add(this.label1);
             this.gbDoiMatKhau.Controls.Add(this.btnXoaTrang);
             this.gbDoiMatKhau.Controls.Add(this.btnDoiMatKhau);
             this.gbDoiMatKhau.Controls.Add(this.txtMatKhauMoi);
@@ -159,6 +165,36 @@
             this.picDoiMatKhau.TabIndex = 0;
             this.picDoiMatKhau.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(429, 63);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(11, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(429, 89);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(11, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Location = new System.Drawing.Point(430, 115);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(11, 13);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "*";
+            // 
             // frmDoiMatKhau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,5 +228,8 @@
         private System.Windows.Forms.Button btnXoaTrang;
         private System.Windows.Forms.Button btnDoiMatKhau;
         private System.Windows.Forms.ImageList imglDoiMatKhau;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

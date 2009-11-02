@@ -140,6 +140,11 @@ namespace SSMP
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (txtUserStatusName.Text.Trim().Length == 0)
+            {
+                HoTro.baoLoi("Điền tên trạng thái");
+                return;
+            }
             if (isAdd)
             {
                 UserStatus entity = new UserStatus();

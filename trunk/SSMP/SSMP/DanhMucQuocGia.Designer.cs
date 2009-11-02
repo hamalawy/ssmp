@@ -56,6 +56,7 @@
             this.lblMaQuocGia = new System.Windows.Forms.Label();
             this.txtCountryName = new System.Windows.Forms.TextBox();
             this.lblTenQuocGia = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tpQuanLy.SuspendLayout();
             this.gbThongTinThongKeQuanLy.SuspendLayout();
@@ -263,6 +264,7 @@
             // 
             // gbThongTinQuocGia
             // 
+            this.gbThongTinQuocGia.Controls.Add(this.label2);
             this.gbThongTinQuocGia.Controls.Add(this.btnReset);
             this.gbThongTinQuocGia.Controls.Add(this.btnDelete);
             this.gbThongTinQuocGia.Controls.Add(this.btnUpdate);
@@ -378,6 +380,16 @@
             this.lblTenQuocGia.TabIndex = 0;
             this.lblTenQuocGia.Text = "Tên quốc gia:";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(290, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(11, 13);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "*";
+            // 
             // frmDanhMucQuocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -433,5 +445,6 @@
         private System.Windows.Forms.TextBox txtCountryName;
         private System.Windows.Forms.Label lblTenQuocGia;
         private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.Label label2;
     }
 }
