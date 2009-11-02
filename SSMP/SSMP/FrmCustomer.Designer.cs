@@ -87,6 +87,7 @@
             this.lblCustomer = new System.Windows.Forms.Label();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.lblMaCustomer = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.tcQuanLyCustomer.SuspendLayout();
             this.tpQuanLyCustomer.SuspendLayout();
             this.panelCustomer.SuspendLayout();
@@ -482,6 +483,7 @@
             // 
             // gbThongTinCustomer
             // 
+            this.gbThongTinCustomer.Controls.Add(this.label7);
             this.gbThongTinCustomer.Controls.Add(this.radioMan);
             this.gbThongTinCustomer.Controls.Add(this.radioWoman);
             this.gbThongTinCustomer.Controls.Add(this.label4);
@@ -506,7 +508,7 @@
             this.gbThongTinCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.gbThongTinCustomer.Location = new System.Drawing.Point(15, 6);
             this.gbThongTinCustomer.Name = "gbThongTinCustomer";
-            this.gbThongTinCustomer.Size = new System.Drawing.Size(333, 461);
+            this.gbThongTinCustomer.Size = new System.Drawing.Size(342, 461);
             this.gbThongTinCustomer.TabIndex = 0;
             this.gbThongTinCustomer.TabStop = false;
             this.gbThongTinCustomer.Text = "THÔNG TIN KHÁCH HÀNG:";
@@ -724,6 +726,16 @@
             this.lblMaCustomer.TabIndex = 0;
             this.lblMaCustomer.Text = "Mã khách hàng:";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label7.Location = new System.Drawing.Point(325, 58);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(11, 13);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "*";
+            // 
             // FrmCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -813,5 +825,6 @@
         private System.Windows.Forms.RadioButton radioWoman;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtIdCardNo;
+        private System.Windows.Forms.Label label7;
     }
 }

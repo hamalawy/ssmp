@@ -496,9 +496,25 @@ namespace SSMP
                 string strEmail = txtEmail.Text.Trim();
                 string strAddress = txtAddress.Text.Trim();
 
+                if (strFullname.Length == 0)
+                {
+                    HoTro.baoLoi("Điền họ tên người dùng");
+                    return;
+                }
+                if (strUsername.Length == 0)
+                {
+                    HoTro.baoLoi("Điền tên đăng nhập người dùng");
+                    return;
+                }
+                if (strPassword.Length == 0)
+                {
+                    HoTro.baoLoi("Điền mật khẩu người dùng");
+                    return;
+                }
+
                 if (strPassword != strPasswordConfirm)
                 {
-                    MessageBox.Show("Mật khẩu không trùng nhau. Vui lòng nhập lại", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    HoTro.baoLoi("Mật khẩu không trùng nhau. Vui lòng nhập lại");
                 }
                 else
                 {

@@ -140,6 +140,11 @@ namespace SSMP
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (txtUserTitleName.Text.Trim().Length == 0)
+            {
+                HoTro.baoLoi("Điền tên chức vụ");
+                return;
+            }
             if (isAdd)
             {
                 UserTitle entity = new UserTitle();

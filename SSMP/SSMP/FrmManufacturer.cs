@@ -189,6 +189,12 @@ namespace SSMP
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (txtManName.Text.Trim().Length == 0)
+            {
+                HoTro.baoLoi("Điền tên nhà sản xuất");
+                return;
+            }
+            
             Manufacturer entity;
 
             if (isAdd)

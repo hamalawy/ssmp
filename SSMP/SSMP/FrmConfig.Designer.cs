@@ -43,12 +43,20 @@
             this.txtTenMayChu = new System.Windows.Forms.TextBox();
             this.lblTenMayChu = new System.Windows.Forms.Label();
             this.picCauHinh = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.gbCauHinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCauHinh)).BeginInit();
             this.SuspendLayout();
             // 
             // gbCauHinh
             // 
+            this.gbCauHinh.Controls.Add(this.label3);
+            this.gbCauHinh.Controls.Add(this.label2);
+            this.gbCauHinh.Controls.Add(this.label1);
+            this.gbCauHinh.Controls.Add(this.label7);
             this.gbCauHinh.Controls.Add(this.btnXoaTrang);
             this.gbCauHinh.Controls.Add(this.btnCauHinh);
             this.gbCauHinh.Controls.Add(this.txtMatKhau);
@@ -178,6 +186,46 @@
             this.picCauHinh.TabIndex = 0;
             this.picCauHinh.TabStop = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label7.Location = new System.Drawing.Point(407, 39);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(11, 13);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "*";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(407, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(11, 13);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(407, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(11, 13);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label3.Location = new System.Drawing.Point(407, 121);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(11, 13);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "*";
+            // 
             // FrmConfig
             // 
             this.AcceptButton = this.btnCauHinh;
@@ -215,5 +263,9 @@
         private System.Windows.Forms.Button btnXoaTrang;
         private System.Windows.Forms.Button btnCauHinh;
         private System.Windows.Forms.ImageList imglCauHinh;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label7;
     }
 }

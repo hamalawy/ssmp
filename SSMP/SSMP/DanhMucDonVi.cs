@@ -140,6 +140,11 @@ namespace SSMP
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (txtUnitName.Text.Trim().Length == 0)
+            {
+                HoTro.baoLoi("Điền tên đơn vị");
+                return;
+            }
             if (isAdd)
             {
                 Unit entity = new Unit();

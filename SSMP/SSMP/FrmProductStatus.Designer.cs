@@ -76,6 +76,7 @@
             this.lblProductStatus = new System.Windows.Forms.Label();
             this.txtProductStatusID = new System.Windows.Forms.TextBox();
             this.lblMaProductStatus = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tcQuanLyProductStatus.SuspendLayout();
             this.tpQuanLyProductStatus.SuspendLayout();
             this.panelProductStatus.SuspendLayout();
@@ -495,6 +496,7 @@
             // 
             // gbThongTinProductStatus
             // 
+            this.gbThongTinProductStatus.Controls.Add(this.label1);
             this.gbThongTinProductStatus.Controls.Add(this.btnReset);
             this.gbThongTinProductStatus.Controls.Add(this.btnSave);
             this.gbThongTinProductStatus.Controls.Add(this.txtProductStatusDesc);
@@ -595,6 +597,16 @@
             this.lblMaProductStatus.TabIndex = 0;
             this.lblMaProductStatus.Text = "Mã trạng thái:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(351, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(11, 13);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "*";
+            // 
             // FrmProductStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -673,5 +685,6 @@
         private System.Windows.Forms.ToolStripButton toolStripBtnDelete;
         private System.Windows.Forms.ToolStripLabel toolStripLblTotal;
         private System.Windows.Forms.DataGridView gvProductStatus;
+        private System.Windows.Forms.Label label1;
     }
 }

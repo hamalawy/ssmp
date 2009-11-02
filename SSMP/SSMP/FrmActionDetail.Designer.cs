@@ -76,6 +76,7 @@
             this.lblActionDetail = new System.Windows.Forms.Label();
             this.txtActionDetailID = new System.Windows.Forms.TextBox();
             this.lblMaActionDetail = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tcQuanLyActionDetail.SuspendLayout();
             this.tpQuanLyActionDetail.SuspendLayout();
             this.panelActionDetail.SuspendLayout();
@@ -498,6 +499,7 @@
             // 
             // gbThongTinActionDetail
             // 
+            this.gbThongTinActionDetail.Controls.Add(this.label1);
             this.gbThongTinActionDetail.Controls.Add(this.btnReset);
             this.gbThongTinActionDetail.Controls.Add(this.btnSave);
             this.gbThongTinActionDetail.Controls.Add(this.txtActionDetailDesc);
@@ -598,6 +600,16 @@
             this.lblMaActionDetail.TabIndex = 0;
             this.lblMaActionDetail.Text = "Mã dấu vết:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(310, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(11, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "*";
+            // 
             // FrmActionDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -676,5 +688,6 @@
         private System.Windows.Forms.ToolStripButton toolStripBtnDelete;
         private System.Windows.Forms.ToolStripLabel toolStripLblTotal;
         private System.Windows.Forms.DataGridView gvActionDetail;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -140,6 +140,12 @@ namespace SSMP
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (txtCategoryName.Text.Trim().Length == 0)
+            {
+                HoTro.baoLoi("Điền tên của loại sản phẩm");
+                return;
+            }
+
             if (isAdd)
             {
                 Category entity = new Category();

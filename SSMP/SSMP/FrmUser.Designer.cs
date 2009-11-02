@@ -112,6 +112,10 @@
             this.txtUserId = new System.Windows.Forms.TextBox();
             this.lblUserId = new System.Windows.Forms.Label();
             this.btnAddUpdate = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.tcUserManagement.SuspendLayout();
             this.tpUserManagement.SuspendLayout();
             this.panelGridUser.SuspendLayout();
@@ -676,6 +680,10 @@
             // 
             // gbUserInfo
             // 
+            this.gbUserInfo.Controls.Add(this.label4);
+            this.gbUserInfo.Controls.Add(this.label3);
+            this.gbUserInfo.Controls.Add(this.label2);
+            this.gbUserInfo.Controls.Add(this.label1);
             this.gbUserInfo.Controls.Add(this.dateTimeDOB);
             this.gbUserInfo.Controls.Add(this.cbbUserRole);
             this.gbUserInfo.Controls.Add(this.rdFemale);
@@ -709,7 +717,7 @@
             this.gbUserInfo.Controls.Add(this.btnAddUpdate);
             this.gbUserInfo.Location = new System.Drawing.Point(15, 6);
             this.gbUserInfo.Name = "gbUserInfo";
-            this.gbUserInfo.Size = new System.Drawing.Size(306, 494);
+            this.gbUserInfo.Size = new System.Drawing.Size(311, 494);
             this.gbUserInfo.TabIndex = 17;
             this.gbUserInfo.TabStop = false;
             this.gbUserInfo.Text = "THÔNG TIN NGƯỜI DÙNG:";
@@ -745,6 +753,7 @@
             // rdMale
             // 
             this.rdMale.AutoSize = true;
+            this.rdMale.Checked = true;
             this.rdMale.Location = new System.Drawing.Point(119, 237);
             this.rdMale.Name = "rdMale";
             this.rdMale.Size = new System.Drawing.Size(47, 17);
@@ -990,6 +999,42 @@
             this.btnAddUpdate.UseVisualStyleBackColor = true;
             this.btnAddUpdate.Click += new System.EventHandler(this.btnAddUpdate_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(296, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(11, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "*";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(296, 137);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(11, 13);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "*";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(296, 111);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(11, 13);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "*";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(296, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(11, 13);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "*";
+            // 
             // FrmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1102,6 +1147,10 @@
         private System.Windows.Forms.CheckBox chkDispSex;
         private System.Windows.Forms.ComboBox cbbUserRole;
         private System.Windows.Forms.DateTimePicker dateTimeDOB;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
 
     }
 }

@@ -110,7 +110,11 @@ namespace SSMP
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string strCountryName = txtCountryName.Text.Trim();
-
+            if (strCountryName.Length == 0)
+            {
+                HoTro.baoLoi("Điền tên quốc gia");
+                return;
+            }
             Country newCountry = new Country();
             newCountry.CountryName = strCountryName;
 
@@ -123,6 +127,11 @@ namespace SSMP
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (txtCountryName.Text.Trim().Length == 0)
+            {
+                HoTro.baoLoi("Điền tên quốc gia");
+                return;
+            }
             int idxInList = -1;
 
             foreach (Country objCountry in currentListCountry)

@@ -84,6 +84,7 @@
             this.lblManufacturer = new System.Windows.Forms.Label();
             this.txtManID = new System.Windows.Forms.TextBox();
             this.lblMaManufacturer = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tcQuanLyManufacturer.SuspendLayout();
             this.tpQuanLyManufacturer.SuspendLayout();
             this.panelManufacturer.SuspendLayout();
@@ -480,6 +481,7 @@
             // 
             // gbThongTinManufacturer
             // 
+            this.gbThongTinManufacturer.Controls.Add(this.label6);
             this.gbThongTinManufacturer.Controls.Add(this.cbbCountry);
             this.gbThongTinManufacturer.Controls.Add(this.btnReset);
             this.gbThongTinManufacturer.Controls.Add(this.btnSave);
@@ -501,7 +503,7 @@
             this.gbThongTinManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.gbThongTinManufacturer.Location = new System.Drawing.Point(15, 6);
             this.gbThongTinManufacturer.Name = "gbThongTinManufacturer";
-            this.gbThongTinManufacturer.Size = new System.Drawing.Size(333, 461);
+            this.gbThongTinManufacturer.Size = new System.Drawing.Size(342, 461);
             this.gbThongTinManufacturer.TabIndex = 0;
             this.gbThongTinManufacturer.TabStop = false;
             this.gbThongTinManufacturer.Text = "THÔNG TIN NHÀ SẢN XUẤT:";
@@ -684,6 +686,16 @@
             this.lblMaManufacturer.TabIndex = 0;
             this.lblMaManufacturer.Text = "Mã nhà sản xuất:";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label6.Location = new System.Drawing.Point(325, 58);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(11, 13);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "*";
+            // 
             // FrmManufacturer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -770,5 +782,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtWebsite;
         private System.Windows.Forms.ComboBox cbbCountry;
+        private System.Windows.Forms.Label label6;
     }
 }

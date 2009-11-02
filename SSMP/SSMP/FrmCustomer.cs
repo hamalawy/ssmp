@@ -190,6 +190,12 @@ namespace SSMP
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
+            if (txtCustomerName.Text.Trim().Length == 0)
+            {
+                HoTro.baoLoi("Điền tên khách hàng");
+                return;
+            }
             Customer entity;
 
             if (isAdd)

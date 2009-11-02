@@ -140,6 +140,11 @@ namespace SSMP
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (txtActionName.Text.Trim().Length == 0)
+            {
+                HoTro.baoLoi("Điền tên hành động");
+                return;
+            }
             if (isAdd)
             {
                 Action entity = new Action();
