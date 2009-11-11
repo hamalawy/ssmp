@@ -549,6 +549,9 @@ namespace SSMP
                     rowTemp["UnitId"] = objProduct.UnitIdLookup.ID;
                     rowTemp["Unit"] = objProduct.UnitIdLookup.UnitName;
                     rowTemp["Description"] = objProduct.Description;
+                    //rowTemp["ManId"] = objProduct.ManIdLookup.ID;
+                    //rowTemp["ManName"] = objProduct.ManIdLookup.ManName;
+                    
                     dataTableProduct.Rows.Add(rowTemp);
                 }
             }
@@ -576,7 +579,7 @@ namespace SSMP
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string strSearch = textBoxSearch.Text.Trim(); ;
+            string strSearch = txtProductSearch.Text.Trim(); ;
             searchEntity = new Product();
             /*
             if (chkSearchProductId.Checked == true)
@@ -1710,7 +1713,46 @@ namespace SSMP
 
         private void btnTimKiemQuanLy_Click(object sender, EventArgs e)
         {
+            string strSearch = txtProductSearch.Text.Trim();
 
+            searchEntity = new Product();
+
+            if (chkSearchNameProduct.Checked)
+            {
+                searchEntity.SearchProductName = strSearch;
+            }
+            if (chkSearchManNameProduct.Checked)
+            {
+                searchEntity.SearchManufacturerName = strSearch;
+            }
+            if (chkSearchProviderNameProduct.Checked)
+            {
+                searchEntity.SearchProviderName = strSearch;
+            }
+
+            RefreshGridViewProduct(searchEntity);
+        }
+
+        private void chkSearchAllProduct_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkSearchAllProduct.Checked)
+            {
+                chkSearchNameProduct.Checked = true;
+                chkSearchManNameProduct.Checked = true;
+                chkSearchProviderNameProduct.Checked = true;
+            }
+            else
+            {
+                chkSearchNameProduct.Checked = false;
+                chkSearchManNameProduct.Checked = false;
+                chkSearchProviderNameProduct.Checked = false;
+            }
+        }
+
+        private void btnAdvanceSearch_Click(object sender, EventArgs e)
+        {
+            FrmSearchProduct frmSearch = new FrmSearchProduct();
+            frmSearch.Show(this);
         }
     }
 }

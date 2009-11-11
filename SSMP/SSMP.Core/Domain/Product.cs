@@ -22,14 +22,31 @@ namespace SSMP.Core.Domain
         private System.String _Description;
         private BillPurchase _BillPurchaseIdLookup;
         private BillSale _BillSaleIdLookup;
-
         private ProductName _ProductNameIdLookup;
-
-
         private ProductStatus _ProductStatusIdLookup;
-
         private Unit _UnitIdLookup;
 
+        private String _SearchProductName;
+
+        public virtual String SearchProductName
+        {
+            get { return _SearchProductName; }
+            set { _SearchProductName = value; }
+        }
+        private String _SearchManufacturerName;
+
+        public virtual String SearchManufacturerName
+        {
+            get { return _SearchManufacturerName; }
+            set { _SearchManufacturerName = value; }
+        }
+        private String _SearchProviderName;
+
+        public virtual String SearchProviderName
+        {
+            get { return _SearchProviderName; }
+            set { _SearchProviderName = value; }
+        }
 
         public Product()
         {
@@ -113,18 +130,15 @@ namespace SSMP.Core.Domain
             set { _Description = value; }
         }
 
-         public virtual BillPurchase BillPurchaseIdLookup{
-             get { return _BillPurchaseIdLookup; }
-             set { _BillPurchaseIdLookup = value;}
-         }
+        public virtual BillPurchase BillPurchaseIdLookup{
+            get { return _BillPurchaseIdLookup; }
+            set { _BillPurchaseIdLookup = value;}
+        }
 
-         public virtual BillSale BillSaleIdLookup{
-             get { return _BillSaleIdLookup; }
-             set { _BillSaleIdLookup = value;}
-         }
-        
-
-
+        public virtual BillSale BillSaleIdLookup{
+            get { return _BillSaleIdLookup; }
+            set { _BillSaleIdLookup = value;}
+        }
 
         public override int GetHashCode()
         {
