@@ -12,6 +12,9 @@ namespace SSMP.Data.Manager
     public class ProductManager : IManager<SSMP.Core.Domain.Product, System.String>
     {
         private SSMP.Core.DataInterfaces.IProductDao productDao;
+        private IProductNameDao productNameDao;
+        private IProductStatusDao productStatusDao;
+        private IUnitDao unitDao;
         private static readonly ILog logger = LogManager.GetLogger(typeof(ProductManager));
 
         public ProductManager()
@@ -21,6 +24,9 @@ namespace SSMP.Data.Manager
 
             IDaoFactory daoFactory = new NHibernateDaoFactory();
             productDao = daoFactory.GetProductDao();
+            productNameDao = daoFactory.GetProductNameDao();
+            productStatusDao = daoFactory.GetProductStatusDao();
+            unitDao = daoFactory.GetUnitDao();
 
             logger.Debug(LOCATION + LogConstants.SEPARATOR + "DaoFactory create successfully");
             logger.Debug(LOCATION + LogConstants.END);
@@ -136,6 +142,15 @@ namespace SSMP.Data.Manager
             try
             {
                 searchResult = productDao.GetProductListByParam(entity, searcParam);
+
+                List<Product> searchList = searchResult.SearchList;
+
+                foreach (Product obj in searchList)
+                {
+                    obj.ProductNameIdLookup = productNameDao.GetById(obj.ProductNameId.Value, false);
+                    obj.ProductStatusIdLookup = productStatusDao.GetById(obj.StatusId, false);
+                    obj.UnitIdLookup = unitDao.GetById(obj.UnitId, false);
+                }
             }
             catch (Exception ex)
             {

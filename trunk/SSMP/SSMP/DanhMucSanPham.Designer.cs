@@ -148,18 +148,14 @@
             this.cboLoaiSanPham = new System.Windows.Forms.ComboBox();
             this.lblLoaiSanPham = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.btnAdvanceSearch = new System.Windows.Forms.Button();
+            this.chkSearchProviderNameProduct = new System.Windows.Forms.CheckBox();
+            this.txtProductSearch = new System.Windows.Forms.TextBox();
             this.btnTimKiemQuanLy = new System.Windows.Forms.Button();
             this.imglDanhMucSanPham = new System.Windows.Forms.ImageList(this.components);
-            this.chkMaSanPhamTimKiemQuanLy = new System.Windows.Forms.CheckBox();
-            this.chkTenSanPhamTimKiemQuanLy = new System.Windows.Forms.CheckBox();
-            this.chkLoaiSanPhamTimKiemQuanLy = new System.Windows.Forms.CheckBox();
-            this.chkMoTaTimKiemQuanLy = new System.Windows.Forms.CheckBox();
-            this.chkTatCaTimKiemQuanLy = new System.Windows.Forms.CheckBox();
-            this.chkDonViTimKiemQuanLy = new System.Windows.Forms.CheckBox();
-            this.chkNguonGocTimKiemQuanLy = new System.Windows.Forms.CheckBox();
-            this.chkNhaSanXuatTimKiemQuanLy = new System.Windows.Forms.CheckBox();
-            this.chkNhaCungCapTimKiemQuanLy = new System.Windows.Forms.CheckBox();
+            this.chkSearchNameProduct = new System.Windows.Forms.CheckBox();
+            this.chkSearchAllProduct = new System.Windows.Forms.CheckBox();
+            this.chkSearchManNameProduct = new System.Windows.Forms.CheckBox();
             this.tcDanhMucSanPham.SuspendLayout();
             this.tpQuanLyTenSanPham.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -1495,17 +1491,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBoxSearch);
+            this.groupBox1.Controls.Add(this.btnAdvanceSearch);
+            this.groupBox1.Controls.Add(this.chkSearchProviderNameProduct);
+            this.groupBox1.Controls.Add(this.txtProductSearch);
             this.groupBox1.Controls.Add(this.btnTimKiemQuanLy);
-            this.groupBox1.Controls.Add(this.chkMaSanPhamTimKiemQuanLy);
-            this.groupBox1.Controls.Add(this.chkTenSanPhamTimKiemQuanLy);
-            this.groupBox1.Controls.Add(this.chkLoaiSanPhamTimKiemQuanLy);
-            this.groupBox1.Controls.Add(this.chkMoTaTimKiemQuanLy);
-            this.groupBox1.Controls.Add(this.chkTatCaTimKiemQuanLy);
-            this.groupBox1.Controls.Add(this.chkDonViTimKiemQuanLy);
-            this.groupBox1.Controls.Add(this.chkNguonGocTimKiemQuanLy);
-            this.groupBox1.Controls.Add(this.chkNhaSanXuatTimKiemQuanLy);
-            this.groupBox1.Controls.Add(this.chkNhaCungCapTimKiemQuanLy);
+            this.groupBox1.Controls.Add(this.chkSearchNameProduct);
+            this.groupBox1.Controls.Add(this.chkSearchAllProduct);
+            this.groupBox1.Controls.Add(this.chkSearchManNameProduct);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(329, 6);
             this.groupBox1.Name = "groupBox1";
@@ -1514,13 +1506,38 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
             // 
-            // textBoxSearch
+            // btnAdvanceSearch
             // 
-            this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBoxSearch.Location = new System.Drawing.Point(64, 23);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(209, 20);
-            this.textBoxSearch.TabIndex = 63;
+            this.btnAdvanceSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdvanceSearch.Image = global::SSMP.Properties.Resources.page_find;
+            this.btnAdvanceSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdvanceSearch.Location = new System.Drawing.Point(361, 21);
+            this.btnAdvanceSearch.Name = "btnAdvanceSearch";
+            this.btnAdvanceSearch.Size = new System.Drawing.Size(124, 23);
+            this.btnAdvanceSearch.TabIndex = 82;
+            this.btnAdvanceSearch.Text = "Tìm kiếm nâng cao";
+            this.btnAdvanceSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdvanceSearch.UseVisualStyleBackColor = true;
+            this.btnAdvanceSearch.Click += new System.EventHandler(this.btnAdvanceSearch_Click);
+            // 
+            // chkSearchProviderNameProduct
+            // 
+            this.chkSearchProviderNameProduct.AutoSize = true;
+            this.chkSearchProviderNameProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.chkSearchProviderNameProduct.Location = new System.Drawing.Point(327, 57);
+            this.chkSearchProviderNameProduct.Name = "chkSearchProviderNameProduct";
+            this.chkSearchProviderNameProduct.Size = new System.Drawing.Size(94, 17);
+            this.chkSearchProviderNameProduct.TabIndex = 81;
+            this.chkSearchProviderNameProduct.Text = "Nhà cung cấp";
+            this.chkSearchProviderNameProduct.UseVisualStyleBackColor = true;
+            // 
+            // txtProductSearch
+            // 
+            this.txtProductSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtProductSearch.Location = new System.Drawing.Point(64, 23);
+            this.txtProductSearch.Name = "txtProductSearch";
+            this.txtProductSearch.Size = new System.Drawing.Size(209, 20);
+            this.txtProductSearch.TabIndex = 63;
             // 
             // btnTimKiemQuanLy
             // 
@@ -1551,104 +1568,39 @@
             this.imglDanhMucSanPham.Images.SetKeyName(7, "recycle.png");
             this.imglDanhMucSanPham.Images.SetKeyName(8, "refresh.png");
             // 
-            // chkMaSanPhamTimKiemQuanLy
+            // chkSearchNameProduct
             // 
-            this.chkMaSanPhamTimKiemQuanLy.AutoSize = true;
-            this.chkMaSanPhamTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkMaSanPhamTimKiemQuanLy.Location = new System.Drawing.Point(64, 54);
-            this.chkMaSanPhamTimKiemQuanLy.Name = "chkMaSanPhamTimKiemQuanLy";
-            this.chkMaSanPhamTimKiemQuanLy.Size = new System.Drawing.Size(90, 17);
-            this.chkMaSanPhamTimKiemQuanLy.TabIndex = 65;
-            this.chkMaSanPhamTimKiemQuanLy.Text = "Mã sản phẩm";
-            this.chkMaSanPhamTimKiemQuanLy.UseVisualStyleBackColor = true;
+            this.chkSearchNameProduct.AutoSize = true;
+            this.chkSearchNameProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.chkSearchNameProduct.Location = new System.Drawing.Point(131, 57);
+            this.chkSearchNameProduct.Name = "chkSearchNameProduct";
+            this.chkSearchNameProduct.Size = new System.Drawing.Size(94, 17);
+            this.chkSearchNameProduct.TabIndex = 66;
+            this.chkSearchNameProduct.Text = "Tên sản phẩm";
+            this.chkSearchNameProduct.UseVisualStyleBackColor = true;
             // 
-            // chkTenSanPhamTimKiemQuanLy
+            // chkSearchAllProduct
             // 
-            this.chkTenSanPhamTimKiemQuanLy.AutoSize = true;
-            this.chkTenSanPhamTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkTenSanPhamTimKiemQuanLy.Location = new System.Drawing.Point(160, 54);
-            this.chkTenSanPhamTimKiemQuanLy.Name = "chkTenSanPhamTimKiemQuanLy";
-            this.chkTenSanPhamTimKiemQuanLy.Size = new System.Drawing.Size(94, 17);
-            this.chkTenSanPhamTimKiemQuanLy.TabIndex = 66;
-            this.chkTenSanPhamTimKiemQuanLy.Text = "Tên sản phẩm";
-            this.chkTenSanPhamTimKiemQuanLy.UseVisualStyleBackColor = true;
+            this.chkSearchAllProduct.AutoSize = true;
+            this.chkSearchAllProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.chkSearchAllProduct.Location = new System.Drawing.Point(64, 57);
+            this.chkSearchAllProduct.Name = "chkSearchAllProduct";
+            this.chkSearchAllProduct.Size = new System.Drawing.Size(57, 17);
+            this.chkSearchAllProduct.TabIndex = 69;
+            this.chkSearchAllProduct.Text = "Tất cả";
+            this.chkSearchAllProduct.UseVisualStyleBackColor = true;
+            this.chkSearchAllProduct.CheckedChanged += new System.EventHandler(this.chkSearchAllProduct_CheckedChanged);
             // 
-            // chkLoaiSanPhamTimKiemQuanLy
+            // chkSearchManNameProduct
             // 
-            this.chkLoaiSanPhamTimKiemQuanLy.AutoSize = true;
-            this.chkLoaiSanPhamTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkLoaiSanPhamTimKiemQuanLy.Location = new System.Drawing.Point(260, 54);
-            this.chkLoaiSanPhamTimKiemQuanLy.Name = "chkLoaiSanPhamTimKiemQuanLy";
-            this.chkLoaiSanPhamTimKiemQuanLy.Size = new System.Drawing.Size(95, 17);
-            this.chkLoaiSanPhamTimKiemQuanLy.TabIndex = 67;
-            this.chkLoaiSanPhamTimKiemQuanLy.Text = "Loại sản phẩm";
-            this.chkLoaiSanPhamTimKiemQuanLy.UseVisualStyleBackColor = true;
-            // 
-            // chkMoTaTimKiemQuanLy
-            // 
-            this.chkMoTaTimKiemQuanLy.AutoSize = true;
-            this.chkMoTaTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkMoTaTimKiemQuanLy.Location = new System.Drawing.Point(259, 77);
-            this.chkMoTaTimKiemQuanLy.Name = "chkMoTaTimKiemQuanLy";
-            this.chkMoTaTimKiemQuanLy.Size = new System.Drawing.Size(53, 17);
-            this.chkMoTaTimKiemQuanLy.TabIndex = 68;
-            this.chkMoTaTimKiemQuanLy.Text = "Mô tả";
-            this.chkMoTaTimKiemQuanLy.UseVisualStyleBackColor = true;
-            // 
-            // chkTatCaTimKiemQuanLy
-            // 
-            this.chkTatCaTimKiemQuanLy.AutoSize = true;
-            this.chkTatCaTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkTatCaTimKiemQuanLy.Location = new System.Drawing.Point(318, 77);
-            this.chkTatCaTimKiemQuanLy.Name = "chkTatCaTimKiemQuanLy";
-            this.chkTatCaTimKiemQuanLy.Size = new System.Drawing.Size(57, 17);
-            this.chkTatCaTimKiemQuanLy.TabIndex = 69;
-            this.chkTatCaTimKiemQuanLy.Text = "Tất cả";
-            this.chkTatCaTimKiemQuanLy.UseVisualStyleBackColor = true;
-            // 
-            // chkDonViTimKiemQuanLy
-            // 
-            this.chkDonViTimKiemQuanLy.AutoSize = true;
-            this.chkDonViTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkDonViTimKiemQuanLy.Location = new System.Drawing.Point(361, 54);
-            this.chkDonViTimKiemQuanLy.Name = "chkDonViTimKiemQuanLy";
-            this.chkDonViTimKiemQuanLy.Size = new System.Drawing.Size(57, 17);
-            this.chkDonViTimKiemQuanLy.TabIndex = 78;
-            this.chkDonViTimKiemQuanLy.Text = "Đơn vị";
-            this.chkDonViTimKiemQuanLy.UseVisualStyleBackColor = true;
-            // 
-            // chkNguonGocTimKiemQuanLy
-            // 
-            this.chkNguonGocTimKiemQuanLy.AutoSize = true;
-            this.chkNguonGocTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkNguonGocTimKiemQuanLy.Location = new System.Drawing.Point(424, 54);
-            this.chkNguonGocTimKiemQuanLy.Name = "chkNguonGocTimKiemQuanLy";
-            this.chkNguonGocTimKiemQuanLy.Size = new System.Drawing.Size(79, 17);
-            this.chkNguonGocTimKiemQuanLy.TabIndex = 79;
-            this.chkNguonGocTimKiemQuanLy.Text = "Nguồn gốc";
-            this.chkNguonGocTimKiemQuanLy.UseVisualStyleBackColor = true;
-            // 
-            // chkNhaSanXuatTimKiemQuanLy
-            // 
-            this.chkNhaSanXuatTimKiemQuanLy.AutoSize = true;
-            this.chkNhaSanXuatTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkNhaSanXuatTimKiemQuanLy.Location = new System.Drawing.Point(64, 77);
-            this.chkNhaSanXuatTimKiemQuanLy.Name = "chkNhaSanXuatTimKiemQuanLy";
-            this.chkNhaSanXuatTimKiemQuanLy.Size = new System.Drawing.Size(89, 17);
-            this.chkNhaSanXuatTimKiemQuanLy.TabIndex = 80;
-            this.chkNhaSanXuatTimKiemQuanLy.Text = "Nhà sản xuất";
-            this.chkNhaSanXuatTimKiemQuanLy.UseVisualStyleBackColor = true;
-            // 
-            // chkNhaCungCapTimKiemQuanLy
-            // 
-            this.chkNhaCungCapTimKiemQuanLy.AutoSize = true;
-            this.chkNhaCungCapTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkNhaCungCapTimKiemQuanLy.Location = new System.Drawing.Point(159, 77);
-            this.chkNhaCungCapTimKiemQuanLy.Name = "chkNhaCungCapTimKiemQuanLy";
-            this.chkNhaCungCapTimKiemQuanLy.Size = new System.Drawing.Size(94, 17);
-            this.chkNhaCungCapTimKiemQuanLy.TabIndex = 81;
-            this.chkNhaCungCapTimKiemQuanLy.Text = "Nhà cung cấp";
-            this.chkNhaCungCapTimKiemQuanLy.UseVisualStyleBackColor = true;
+            this.chkSearchManNameProduct.AutoSize = true;
+            this.chkSearchManNameProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.chkSearchManNameProduct.Location = new System.Drawing.Point(227, 57);
+            this.chkSearchManNameProduct.Name = "chkSearchManNameProduct";
+            this.chkSearchManNameProduct.Size = new System.Drawing.Size(89, 17);
+            this.chkSearchManNameProduct.TabIndex = 80;
+            this.chkSearchManNameProduct.Text = "Nhà sản xuất";
+            this.chkSearchManNameProduct.UseVisualStyleBackColor = true;
             // 
             // frmDanhMucSanPham
             // 
@@ -1711,21 +1663,15 @@
         private System.Windows.Forms.Label lblDonVi;
         private System.Windows.Forms.ComboBox cboNhaSanXuat;
         private System.Windows.Forms.Label lblNhaSanXuat;
-        private System.Windows.Forms.CheckBox chkNhaCungCapTimKiemQuanLy;
-        private System.Windows.Forms.CheckBox chkNhaSanXuatTimKiemQuanLy;
-        private System.Windows.Forms.CheckBox chkNguonGocTimKiemQuanLy;
-        private System.Windows.Forms.CheckBox chkDonViTimKiemQuanLy;
+        private System.Windows.Forms.CheckBox chkSearchManNameProduct;
         private System.Windows.Forms.Button btnResetProduct;
         private System.Windows.Forms.DataGridView gvSanPhamDanhMuc;
         private System.Windows.Forms.Button btnSaveProduct;
         private System.Windows.Forms.Label lblDanhMucSanPhamQuanLy;
-        private System.Windows.Forms.CheckBox chkTatCaTimKiemQuanLy;
-        private System.Windows.Forms.CheckBox chkMoTaTimKiemQuanLy;
-        private System.Windows.Forms.CheckBox chkLoaiSanPhamTimKiemQuanLy;
-        private System.Windows.Forms.CheckBox chkTenSanPhamTimKiemQuanLy;
-        private System.Windows.Forms.CheckBox chkMaSanPhamTimKiemQuanLy;
+        private System.Windows.Forms.CheckBox chkSearchAllProduct;
+        private System.Windows.Forms.CheckBox chkSearchNameProduct;
         private System.Windows.Forms.Button btnTimKiemQuanLy;
-        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.TextBox txtProductSearch;
         private System.Windows.Forms.TabPage tpQuanLyTenSanPham;
         private System.Windows.Forms.GroupBox gbThongTinSanPhamQuanLySanPham;
         private System.Windows.Forms.Label lblTenSanPhamQuanLySanPham;
@@ -1825,5 +1771,7 @@
         private System.Windows.Forms.ToolStripButton toolStripProductEdit;
         private System.Windows.Forms.ToolStripLabel toolStripLabeltotalProductName;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox chkSearchProviderNameProduct;
+        private System.Windows.Forms.Button btnAdvanceSearch;
     }
 }
