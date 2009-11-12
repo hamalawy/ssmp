@@ -11,6 +11,7 @@ using SSMP.Data.Manager;
 using SSMP.Core.Domain;
 using SSMP.Core.Utils;
 using log4net;
+using System.Globalization;
 
 namespace SSMP
 {
@@ -274,8 +275,8 @@ namespace SSMP
             {
                 DataTable dataTableProduct = new DataTable("Product");
                 dataTableProduct.Columns.Add("ProductId", typeof(Int64));
-                dataTableProduct.Columns.Add("MfgDate", typeof(DateTime));
-                dataTableProduct.Columns.Add("ExpDate", typeof(DateTime));
+                dataTableProduct.Columns.Add("MfgDate", typeof(string));
+                dataTableProduct.Columns.Add("ExpDate", typeof(string));
                 dataTableProduct.Columns.Add("ProductNameId", typeof(int));
                 dataTableProduct.Columns.Add("ProdName", typeof(string));
                 dataTableProduct.Columns.Add("PurchasePrice", typeof(string));
@@ -293,8 +294,8 @@ namespace SSMP
                 {
                     DataRow rowTemp = dataTableProduct.NewRow();
                     rowTemp["ProductId"] = objProduct.ID;
-                    rowTemp["MfgDate"] = objProduct.MfgDate;
-                    rowTemp["ExpDate"] = objProduct.ExpDate;
+                    rowTemp["MfgDate"] = objProduct.MfgDate.Value.ToString("dd/MM/yyyy");
+                    rowTemp["ExpDate"] = objProduct.ExpDate.Value.ToString("dd/MM/yyyy");
                     rowTemp["ProductNameId"] = objProduct.ProductNameIdLookup.ID;
                     rowTemp["ProdName"] = objProduct.ProductNameIdLookup.ProdName;
                     rowTemp["PurchasePrice"] = objProduct.PurchasePrice;
@@ -460,8 +461,8 @@ namespace SSMP
             //Create DataTable of Product
             DataTable dataTableProduct = new DataTable("Product");
             dataTableProduct.Columns.Add("ProductId", typeof(Int64));
-            dataTableProduct.Columns.Add("MfgDate", typeof(DateTime));
-            dataTableProduct.Columns.Add("ExpDate", typeof(DateTime));
+            dataTableProduct.Columns.Add("MfgDate", typeof(string));
+            dataTableProduct.Columns.Add("ExpDate", typeof(string));
             dataTableProduct.Columns.Add("ProductNameId", typeof(int));
             dataTableProduct.Columns.Add("ProdName", typeof(string));
             dataTableProduct.Columns.Add("PurchasePrice", typeof(string));
@@ -534,9 +535,9 @@ namespace SSMP
                 foreach (Product objProduct in listProduct)
                 {
                     DataRow rowTemp = dataTableProduct.NewRow();
-                    rowTemp["ProductId"] = objProduct.ID;                    
-                    rowTemp["MfgDate"] = objProduct.MfgDate;
-                    rowTemp["ExpDate"] = objProduct.ExpDate;
+                    rowTemp["ProductId"] = objProduct.ID;
+                    rowTemp["MfgDate"] = objProduct.MfgDate.Value.ToString("dd/MM/yyyy");
+                    rowTemp["ExpDate"] = objProduct.ExpDate.Value.ToString("dd/MM/yyyy");
                     rowTemp["ProductNameId"] = objProduct.ProductNameIdLookup.ID;
                     rowTemp["ProdName"] = objProduct.ProductNameIdLookup.ProdName;
                     rowTemp["PurchasePrice"] = objProduct.PurchasePrice;
@@ -908,8 +909,8 @@ namespace SSMP
                 cboTenSanPham.SelectedValue = productNameId;
                 cboTrangThai.SelectedValue = gvSanPhamDanhMuc.Rows[rowIndex].Cells["StatusId"].Value;
                 cboDonVi.SelectedValue = gvSanPhamDanhMuc.Rows[rowIndex].Cells["UnitId"].Value;
-                dateTimePickerSx.Value = (DateTime)gvSanPhamDanhMuc.Rows[rowIndex].Cells["MfgDate"].Value;
-                dateTimePickerHetHan.Value = (DateTime)gvSanPhamDanhMuc.Rows[rowIndex].Cells["ExpDate"].Value;
+                dateTimePickerSx.Value = DateTime.ParseExact(gvSanPhamDanhMuc.Rows[rowIndex].Cells["MfgDate"].Value.ToString(), "dd/MM/yyyy", new CultureInfo("en-US"));
+                dateTimePickerHetHan.Value = DateTime.ParseExact(gvSanPhamDanhMuc.Rows[rowIndex].Cells["ExpDate"].Value.ToString(), "dd/MM/yyyy", new CultureInfo("en-US"));
                 if (!gvSanPhamDanhMuc.Rows[rowIndex].Cells["Description"].Value.ToString().Equals(""))
                     textBoxMota.Text = (string)gvSanPhamDanhMuc.Rows[rowIndex].Cells["Description"].Value + "";
                 else textBoxMota.Text = "";
@@ -923,7 +924,7 @@ namespace SSMP
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace);
+                MessageBox.Show(ex.Message);
             }
         }
 
