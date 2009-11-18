@@ -11,6 +11,7 @@ using SSMP.Data.Manager;
 using SSMP.Core.Domain;
 using SSMP.Core.Utils;
 using log4net;
+using System.Globalization;
 
 namespace SSMP
 {
@@ -147,9 +148,11 @@ namespace SSMP
                 dataTableUser.Columns.Add("Username", typeof(string));
                 dataTableUser.Columns.Add("FullName", typeof(string));
                 dataTableUser.Columns.Add("Email", typeof(string));
-                dataTableUser.Columns.Add("Birthday", typeof(DateTime));
+                dataTableUser.Columns.Add("Birthday", typeof(string));
                 dataTableUser.Columns.Add("IdCardNo", typeof(string));
-                dataTableUser.Columns.Add("Sex", typeof(byte));
+                dataTableUser.Columns.Add("SexId", typeof(byte));
+                dataTableUser.Columns.Add("Sex", typeof(string));
+
                 dataTableUser.Columns.Add("TelNo", typeof(string));
                 dataTableUser.Columns.Add("Address", typeof(string));
                 dataTableUser.Columns.Add("UserTitleId", typeof(int));
@@ -166,9 +169,27 @@ namespace SSMP
                     rowTemp["Username"] = objUser.Username;
                     rowTemp["FullName"] = objUser.FullName;
                     rowTemp["Email"] = objUser.Email;
-                    rowTemp["Birthday"] = objUser.Birthday;
+                    rowTemp["Birthday"] = objUser.Birthday.Value.ToString("dd/MM/yyyy");
+
+
                     rowTemp["IdCardNo"] = objUser.IdCardNo;
-                    rowTemp["Sex"] = objUser.Sex;
+                    try
+                    {
+                        if (Int32.Parse(objUser.Sex.ToString()) == 0)
+                        {
+                            rowTemp["Sex"] = "Nữ";
+                            rowTemp["SexId"] = 0;
+                        }
+                        else {
+                            rowTemp["Sex"] = "Nam";
+                            rowTemp["SexId"] = 1;
+                        }
+                    }
+                    catch (Exception ex) {
+                        rowTemp["Sex"] = "Nam";
+                    }
+                    
+                    
                     rowTemp["TelNo"] = objUser.TelNo;
                     rowTemp["Address"] = objUser.Address;
                     rowTemp["UserTitleId"] = objUser.UserTitleId;
@@ -290,9 +311,11 @@ namespace SSMP
             dataTableUser.Columns.Add("Username", typeof(string));
             dataTableUser.Columns.Add("FullName", typeof(string));
             dataTableUser.Columns.Add("Email", typeof(string));
-            dataTableUser.Columns.Add("Birthday", typeof(DateTime));
+            dataTableUser.Columns.Add("Birthday", typeof(string));
             dataTableUser.Columns.Add("IdCardNo", typeof(string));
-            dataTableUser.Columns.Add("Sex", typeof(byte));
+            dataTableUser.Columns.Add("SexId", typeof(byte));
+            dataTableUser.Columns.Add("Sex", typeof(string));
+
             dataTableUser.Columns.Add("TelNo", typeof(string));
             dataTableUser.Columns.Add("Address", typeof(string));
             dataTableUser.Columns.Add("UserTitleId", typeof(int));
@@ -316,6 +339,7 @@ namespace SSMP
             gvUser.Columns["Birthday"].HeaderText = "Ngày sinh";
             gvUser.Columns["IdCardNo"].HeaderText = "Số CMT/Passport";
             gvUser.Columns["Sex"].HeaderText = "Giới tính";
+            gvUser.Columns["SexId"].Visible = false;
             gvUser.Columns["TelNo"].HeaderText = "Điện thoại";
             gvUser.Columns["Address"].HeaderText = "Địa chỉ";
             gvUser.Columns["UserTitleId"].Visible = false;
@@ -338,9 +362,18 @@ namespace SSMP
                     rowTemp["Username"] = objUser.Username;
                     rowTemp["FullName"] = objUser.FullName;
                     rowTemp["Email"] = objUser.Email;
-                    rowTemp["Birthday"] = objUser.Birthday;
+                    rowTemp["Birthday"] = objUser.Birthday.Value.ToString("dd/MM/yyyy");
+                    
+                    
                     rowTemp["IdCardNo"] = objUser.IdCardNo;
-                    rowTemp["Sex"] = objUser.Sex;
+                    if (Int32.Parse(objUser.Sex.ToString()) == 0) {
+                        rowTemp["SexId"] = 0;
+                        rowTemp["Sex"] = "Nữ";
+                    } else {
+                        rowTemp["SexId"] = 1;
+                        rowTemp["Sex"] = "Nam";
+                    }
+                    
                     rowTemp["TelNo"] = objUser.TelNo;
                     rowTemp["Address"] = objUser.Address;
                     rowTemp["UserTitleId"] = objUser.UserTitleIdLookup.ID;
@@ -709,7 +742,10 @@ namespace SSMP
         private void BindingUserToForm(int rowIndex)
         {
             txtAddress.Text = (string)gvUser.Rows[rowIndex].Cells["Address"].Value;
-            dateTimeDOB.Value = (DateTime)gvUser.Rows[rowIndex].Cells["Birthday"].Value;
+            //dateTimeDOB.Value = (DateTime)gvUser.Rows[rowIndex].Cells["Birthday"].Value;
+
+            dateTimeDOB.Value = DateTime.ParseExact(gvUser.Rows[rowIndex].Cells["Birthday"].Value.ToString(), "dd/MM/yyyy", new CultureInfo("en-US"));
+
             txtEmail.Text = (string)gvUser.Rows[rowIndex].Cells["Email"].Value;
             txtFullname.Text = (string)gvUser.Rows[rowIndex].Cells["Fullname"].Value;
             txtIdCardNo.Text = (string)gvUser.Rows[rowIndex].Cells["IdCardNo"].Value;
@@ -719,8 +755,8 @@ namespace SSMP
             cbbUserRole.SelectedValue = gvUser.Rows[rowIndex].Cells["UserRoleId"].Value;
             cbbUserStatus.SelectedValue = gvUser.Rows[rowIndex].Cells["UserStatusId"].Value;
             cbbUserTitle.SelectedValue = gvUser.Rows[rowIndex].Cells["UserTitleId"].Value;
-            rdMale.Checked = (byte)gvUser.Rows[rowIndex].Cells["Sex"].Value == 1 ? true : false;
-            rdFemale.Checked = (byte)gvUser.Rows[rowIndex].Cells["Sex"].Value == 0 ? true : false;
+            rdMale.Checked = (byte)gvUser.Rows[rowIndex].Cells["SexId"].Value == 1 ? true : false;
+            rdFemale.Checked = (byte)gvUser.Rows[rowIndex].Cells["SexId"].Value == 0 ? true : false;
         }
 
         private void ResetForm()
