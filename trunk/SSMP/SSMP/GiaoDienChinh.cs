@@ -52,18 +52,13 @@ namespace SSMP
 
         private void tsmiCauHinh_Click(object sender, EventArgs e)
         {
-            if (frmConfig == null)
+            if (frmConfig == null || frmConfig.IsDisposed)
             {
                 frmConfig = new FrmConfig();
                 frmConfig.MdiParent = this;
                 frmConfig.Show();
             }
-            if (frmConfig.IsDisposed)
-            {
-                frmConfig = new FrmConfig();
-                frmConfig.MdiParent = this;
-                frmConfig.Show();
-            }
+            frmConfig.BringToFront();
         }
 
         private void tsmiThoat_Click(object sender, EventArgs e)
@@ -86,146 +81,101 @@ namespace SSMP
 
         private void tsmiDoiMatKhau_Click(object sender, EventArgs e)
         {
-            if (DoiMatKhau == null)
+            if (DoiMatKhau == null || DoiMatKhau.IsDisposed)
             {
                 DoiMatKhau = new frmDoiMatKhau();
                 DoiMatKhau.MdiParent = this;
                 DoiMatKhau.Show();
             }
-            if (DoiMatKhau.IsDisposed)
-            {
-                DoiMatKhau = new frmDoiMatKhau();
-                DoiMatKhau.MdiParent = this;
-                DoiMatKhau.Show();
-            }
+            DoiMatKhau.BringToFront();
         }
 
         private void tsmiDanhMucQuocGia_Click(object sender, EventArgs e)
         {
-            if (DanhMucQuocGia == null)
+            if (DanhMucQuocGia == null || DanhMucQuocGia.IsDisposed)
             {
                 DanhMucQuocGia = new frmDanhMucQuocGia();
                 DanhMucQuocGia.MdiParent = this;
                 DanhMucQuocGia.Show();
             }
-            if (DanhMucQuocGia.IsDisposed)
-            {
-                DanhMucQuocGia = new frmDanhMucQuocGia();
-                DanhMucQuocGia.MdiParent = this;
-                DanhMucQuocGia.Show();
-            }
+            DanhMucQuocGia.BringToFront();
         }
 
         private void tsbQuanLyDanhMucQuocGia_Click(object sender, EventArgs e)
         {
-            if (DanhMucQuocGia == null)
+            if (DanhMucQuocGia == null || DanhMucQuocGia.IsDisposed)
             {
                 DanhMucQuocGia = new frmDanhMucQuocGia();
                 DanhMucQuocGia.MdiParent = this;
                 DanhMucQuocGia.Show();
             }
-            if (DanhMucQuocGia.IsDisposed)
-            {
-                DanhMucQuocGia = new frmDanhMucQuocGia();
-                DanhMucQuocGia.MdiParent = this;
-                DanhMucQuocGia.Show();
-            }
+            DanhMucQuocGia.BringToFront();
         }
 
         private void tsmiQuanLyNhomNguoiDung_Click(object sender, EventArgs e)
         {
-            if (QuanLyNhomNguoiDung == null)
+            if (QuanLyNhomNguoiDung == null || QuanLyNhomNguoiDung.IsDisposed)
             {
                 QuanLyNhomNguoiDung = new FrmUserRole();
                 QuanLyNhomNguoiDung.MdiParent = this;
                 QuanLyNhomNguoiDung.Show();
             }
-            if (QuanLyNhomNguoiDung.IsDisposed)
-            {
-                QuanLyNhomNguoiDung = new FrmUserRole();
-                QuanLyNhomNguoiDung.MdiParent = this;
-                QuanLyNhomNguoiDung.Show();
-            }
+            QuanLyNhomNguoiDung.BringToFront();
         }
 
         private void tsbQuanLyDanhMucLoaiSanPham_Click(object sender, EventArgs e)
         {
-            if (DanhMucLoaiSanPham == null)
+            if (DanhMucLoaiSanPham == null || DanhMucLoaiSanPham.IsDisposed)
             {
                 DanhMucLoaiSanPham = new FrmCategory();
                 DanhMucLoaiSanPham.MdiParent = this;
                 DanhMucLoaiSanPham.Show();
             }
-            if (DanhMucLoaiSanPham.IsDisposed)
-            {
-                DanhMucLoaiSanPham = new FrmCategory();
-                DanhMucLoaiSanPham.MdiParent = this;
-                DanhMucLoaiSanPham.Show();
-            }
+            DanhMucLoaiSanPham.BringToFront();
         }
 
         private void tsmiDanhMucLoaiSanPham_Click(object sender, EventArgs e)
         {
-            if (DanhMucLoaiSanPham == null)
+            if (DanhMucLoaiSanPham == null || DanhMucLoaiSanPham.IsDisposed)
             {
                 DanhMucLoaiSanPham = new FrmCategory();
                 DanhMucLoaiSanPham.MdiParent = this;
                 DanhMucLoaiSanPham.Show();
             }
-            if (DanhMucLoaiSanPham.IsDisposed)
-            {
-                DanhMucLoaiSanPham = new FrmCategory();
-                DanhMucLoaiSanPham.MdiParent = this;
-                DanhMucLoaiSanPham.Show();
-            }
+            DanhMucLoaiSanPham.BringToFront();
         }
 
         private void tsmiDanhMucNhaCungCap_Click(object sender, EventArgs e)
         {
-            if (frmProvider == null)
+            if (frmProvider == null || frmProvider.IsDisposed)
             {
                 frmProvider = new FrmProvider();
                 frmProvider.MdiParent = this;
                 frmProvider.Show();
             }
-            if (frmProvider.IsDisposed)
-            {
-                frmProvider = new FrmProvider();
-                frmProvider.MdiParent = this;
-                frmProvider.Show();
-            }
+            frmProvider.BringToFront();
         }
 
         private void tsbQuanLyDanhMucNhaCungCap_Click(object sender, EventArgs e)
         {
-            if (frmProvider == null)
+            if (frmProvider == null || frmProvider.IsDisposed)
             {
                 frmProvider = new FrmProvider();
                 frmProvider.MdiParent = this;
                 frmProvider.Show();
             }
-            if (frmProvider.IsDisposed)
-            {
-                frmProvider = new FrmProvider();
-                frmProvider.MdiParent = this;
-                frmProvider.Show();
-            }
+            frmProvider.BringToFront();
         }
 
         private void tsmiQuanLyNguoiDung_Click(object sender, EventArgs e)
         {
-            if (QuanLyNguoiDung == null)
+            if (QuanLyNguoiDung == null || QuanLyNguoiDung.IsDisposed)
             {
                 QuanLyNguoiDung = new FrmUser();
                 QuanLyNguoiDung.MdiParent = this;
                 QuanLyNguoiDung.Show();
             }
-            if (QuanLyNguoiDung.IsDisposed)
-            {
-                QuanLyNguoiDung = new FrmUser();
-                QuanLyNguoiDung.MdiParent = this;
-                QuanLyNguoiDung.Show();
-            }
+            QuanLyNguoiDung.BringToFront();
         }
 
         private void tsmiXepTheoTangThangDung_Click(object sender, EventArgs e)
@@ -256,117 +206,82 @@ namespace SSMP
 
         private void tsmiDanhMucDonVi_Click(object sender, EventArgs e)
         {
-            if (QuanLyDonVi == null)
+            if (QuanLyDonVi == null || QuanLyDonVi.IsDisposed)
             {
                 QuanLyDonVi = new FrmUnit();
                 QuanLyDonVi.MdiParent = this;
                 QuanLyDonVi.Show();
             }
-            if (QuanLyDonVi.IsDisposed)
-            {
-                QuanLyDonVi = new FrmUnit();
-                QuanLyDonVi.MdiParent = this;
-                QuanLyDonVi.Show();
-            }
+            QuanLyDonVi.BringToFront();
         }
 
         private void tsmiDanhMucNhaSanXuat_Click(object sender, EventArgs e)
         {
-            if (frmManufacturer == null)
+            if (frmManufacturer == null || frmManufacturer.IsDisposed)
             {
                 frmManufacturer = new FrmManufacturer();
                 frmManufacturer.MdiParent = this;
                 frmManufacturer.Show();
             }
-            if (frmManufacturer.IsDisposed)
-            {
-                frmManufacturer = new FrmManufacturer();
-                frmManufacturer.MdiParent = this;
-                frmManufacturer.Show();
-            }
+            frmManufacturer.BringToFront();
+
         }
 
         private void tsbDanhMucNhaSanXuat_Click(object sender, EventArgs e)
         {
-            if (frmManufacturer == null)
+            if (frmManufacturer == null || frmManufacturer.IsDisposed)
             {
                 frmManufacturer = new FrmManufacturer();
                 frmManufacturer.MdiParent = this;
                 frmManufacturer.Show();
             }
-            if (frmManufacturer.IsDisposed)
-            {
-                frmManufacturer = new FrmManufacturer();
-                frmManufacturer.MdiParent = this;
-                frmManufacturer.Show();
-            }
+            frmManufacturer.BringToFront();
         }
 
         private void tsmiQuanLyHanhDong_Click(object sender, EventArgs e)
         {
-            if (frmAction == null)
+            if (frmAction == null || frmAction.IsDisposed)
             {
                 frmAction = new FrmAction();
                 frmAction.MdiParent = this;
                 frmAction.Show();
             }
-            if (frmAction.IsDisposed)
-            {
-                frmAction = new FrmAction();
-                frmAction.MdiParent = this;
-                frmAction.Show();
-            }
+            frmAction.BringToFront();
         }
 
         private void tsmiLapPhieuNhapHangHoa_Click(object sender, EventArgs e)
         {
-            if (NhapHang == null)
+            if (NhapHang == null || NhapHang.IsDisposed)
             {
                 NhapHang = new frmNhapHang();
                 NhapHang.MdiParent = this;
                 NhapHang.setSelectedTab(0);
                 NhapHang.Show();
             }
-            if (NhapHang.IsDisposed)
-            {
-                NhapHang = new frmNhapHang();
-                NhapHang.MdiParent = this;
-                NhapHang.setSelectedTab(0);
-                NhapHang.Show();
-            }
+            NhapHang.BringToFront();
             
         }
 
         private void tsmiQuanLyChucVu_Click(object sender, EventArgs e)
         {
-            if (QuanLyChucVu == null)
+            if (QuanLyChucVu == null || QuanLyChucVu.IsDisposed)
             {
                 QuanLyChucVu = new FrmUserTitle();
                 QuanLyChucVu.MdiParent = this;
                 QuanLyChucVu.Show();
             }
-            if (QuanLyChucVu.IsDisposed)
-            {
-                QuanLyChucVu = new FrmUserTitle();
-                QuanLyChucVu.MdiParent = this;
-                QuanLyChucVu.Show();
-            }
+            QuanLyChucVu.BringToFront();
         }
 
         private void tsmiDanhMucSanPham_Click(object sender, EventArgs e)
         {
-            if (DanhMucSanPham == null)
+            if (DanhMucSanPham == null || DanhMucSanPham.IsDisposed)
             {
                 DanhMucSanPham = new frmDanhMucSanPham();
                 DanhMucSanPham.MdiParent = this;
                 DanhMucSanPham.Show();
             }
-            if (DanhMucSanPham.IsDisposed)
-            {
-                DanhMucSanPham = new frmDanhMucSanPham();
-                DanhMucSanPham.MdiParent = this;
-                DanhMucSanPham.Show();
-            }
+            DanhMucSanPham.BringToFront();
         }
 
         private void frmGiaoDienChinh_Load(object sender, EventArgs e)
@@ -398,131 +313,87 @@ namespace SSMP
 
         private void tsmiLapPhieuBanHang_Click(object sender, EventArgs e)
         {
-            if (frmBanHang == null)
+            if (frmBanHang == null || frmBanHang.IsDisposed)
             {
                 frmBanHang = new BanHang();
                 frmBanHang.MdiParent = this;
                 frmBanHang.setSelectedTab(0);
                 frmBanHang.Show();
             }
-            if (frmBanHang.IsDisposed)
-            {
-                frmBanHang = new BanHang();
-                frmBanHang.MdiParent = this;
-                frmBanHang.setSelectedTab(0);
-                frmBanHang.Show();
-            }
-            
+            frmBanHang.BringToFront();
         }
 
         private void tsmiQuanLyPhieuNhapHang_Click(object sender, EventArgs e)
         {
-            if (NhapHang == null)
+            if (NhapHang == null || NhapHang.IsDisposed)
             {
                 NhapHang = new frmNhapHang();
                 NhapHang.MdiParent = this;
                 NhapHang.setSelectedTab(1);
                 NhapHang.Show();
             }
-            if (NhapHang.IsDisposed)
-            {
-                NhapHang = new frmNhapHang();
-                NhapHang.MdiParent = this;
-                NhapHang.setSelectedTab(1);
-                NhapHang.Show();
-            }
-            
+            NhapHang.BringToFront();            
         }
 
         private void tsmiBaoCaoNhapHang_Click(object sender, EventArgs e)
         {
-            if (NhapHang == null)
+            if (NhapHang == null || NhapHang.IsDisposed)
             {
                 NhapHang = new frmNhapHang();
                 NhapHang.MdiParent = this;
                 NhapHang.setSelectedTab(2);
                 NhapHang.Show();
             }
-            if (NhapHang.IsDisposed)
-            {
-                NhapHang = new frmNhapHang();
-                NhapHang.MdiParent = this;
-                NhapHang.setSelectedTab(2);
-                NhapHang.Show();
-            }
+            NhapHang.BringToFront();    
             
         }
 
         private void tsmiQuanLyHoaDonBanHang_Click(object sender, EventArgs e)
         {
-            if (frmBanHang == null)
+            if (frmBanHang == null || frmBanHang.IsDisposed)
             {
                 frmBanHang = new BanHang();
                 frmBanHang.MdiParent = this;
                 frmBanHang.setSelectedTab(1);
                 frmBanHang.Show();
             }
-            if (frmBanHang.IsDisposed)
-            {
-                frmBanHang = new BanHang();
-                frmBanHang.MdiParent = this;
-                frmBanHang.setSelectedTab(1);
-                frmBanHang.Show();
-            }
+            frmBanHang.BringToFront();
             
         }
 
         private void tsmiBaoCaoBanHang_Click(object sender, EventArgs e)
         {
-            if (frmBanHang == null)
+           if (frmBanHang == null || frmBanHang.IsDisposed)
             {
                 frmBanHang = new BanHang();
                 frmBanHang.MdiParent = this;
                 frmBanHang.setSelectedTab(2);
                 frmBanHang.Show();
             }
-            if (frmBanHang.IsDisposed)
-            {
-                frmBanHang = new BanHang();
-                frmBanHang.MdiParent = this;
-                frmBanHang.setSelectedTab(2);
-                frmBanHang.Show();
-            }
-            
+            frmBanHang.BringToFront();
         }
 
         private void tsmiDangNhap_Click(object sender, EventArgs e)
         {
-            if (frmDangNhap == null)
+            if (frmDangNhap == null || frmDangNhap.IsDisposed)
             {
                 frmDangNhap = new DangNhap();
                 frmDangNhap.MdiParent = this;
                 frmDangNhap.Show();
             }
-            if (frmDangNhap.IsDisposed)
-            {
-                frmDangNhap = new DangNhap();
-                frmDangNhap.MdiParent = this;
-                frmDangNhap.Show();
-            }
+            frmDangNhap.BringToFront();
         }
 
         private void tsbDangNhap_Click(object sender, EventArgs e)
         {
-            if (frmDangNhap == null)
+            if (frmDangNhap == null || frmDangNhap.IsDisposed)
             {
                 frmDangNhap = new DangNhap();
                 frmDangNhap.MdiParent = this;
                 frmDangNhap.setGiaoDienChinh(this);
                 frmDangNhap.Show();
             }
-            if (frmDangNhap.IsDisposed)
-            {
-                frmDangNhap = new DangNhap();
-                frmDangNhap.setGiaoDienChinh(this);
-                frmDangNhap.MdiParent = this;
-                frmDangNhap.Show();
-            }
+            frmDangNhap.BringToFront();
         }
 
         private void tsmiDangXuat_Click(object sender, EventArgs e)
@@ -543,39 +414,26 @@ namespace SSMP
 
         private void tsdbBanHang_Click(object sender, EventArgs e)
         {
-            if (frmBanHang == null)
+            if (frmBanHang == null || frmBanHang.IsDisposed)
             {
                 frmBanHang = new BanHang();
                 frmBanHang.MdiParent = this;
                 frmBanHang.setSelectedTab(0);
                 frmBanHang.Show();
             }
-            if (frmBanHang.IsDisposed)
-            {
-                frmBanHang = new BanHang();
-                frmBanHang.MdiParent = this;
-                frmBanHang.setSelectedTab(0);
-                frmBanHang.Show();
-            }
-            
+            frmBanHang.BringToFront();            
         }
 
         private void tsdbNhapHang_Click(object sender, EventArgs e)
         {
-            if (NhapHang == null)
+            if (NhapHang == null || NhapHang.IsDisposed)
             {
                 NhapHang = new frmNhapHang();
                 NhapHang.MdiParent = this;
                 NhapHang.setSelectedTab(0);
                 NhapHang.Show();
             }
-            if (NhapHang.IsDisposed)
-            {
-                NhapHang = new frmNhapHang();
-                NhapHang.MdiParent = this;
-                NhapHang.setSelectedTab(0);
-                NhapHang.Show();
-            }
+            NhapHang.BringToFront();
             
         }
 
@@ -586,66 +444,46 @@ namespace SSMP
 
         private void toolStripMenuItemUserStatus_Click(object sender, EventArgs e)
         {
-            if (frmUserStatus == null)
+            if (frmUserStatus == null || frmUserStatus.IsDisposed)
             {
                 frmUserStatus = new FrmUserStatus();
                 frmUserStatus.MdiParent = this;
                 frmUserStatus.Show();
             }
-            if (frmUserStatus.IsDisposed)
-            {
-                frmUserStatus = new FrmUserStatus();
-                frmUserStatus.MdiParent = this;
-                frmUserStatus.Show();
-            }
+            frmUserStatus.BringToFront();
         }
 
         private void toolStripMenuItemProductStatus_Click(object sender, EventArgs e)
         {
-            if (frmProductStatus == null)
+            if (frmProductStatus == null || frmProductStatus.IsDisposed)
             {
                 frmProductStatus = new FrmProductStatus();
                 frmProductStatus.MdiParent = this;
                 frmProductStatus.Show();
             }
-            if (frmProductStatus.IsDisposed)
-            {
-                frmProductStatus = new FrmProductStatus();
-                frmProductStatus.MdiParent = this;
-                frmProductStatus.Show();
-            }
+            frmProductStatus.BringToFront();
         }
 
         private void tsmiQuanLyDauVet_Click(object sender, EventArgs e)
         {
-            if (frmActionDetail == null)
+            if (frmActionDetail == null || frmActionDetail.IsDisposed)
             {
                 frmActionDetail = new FrmActionDetail();
                 frmActionDetail.MdiParent = this;
                 frmActionDetail.Show();
             }
-            if (frmActionDetail.IsDisposed)
-            {
-                frmActionDetail = new FrmActionDetail();
-                frmActionDetail.MdiParent = this;
-                frmActionDetail.Show();
-            }
+            frmActionDetail.BringToFront();
         }
 
         private void toolStripMnuItmCustomer_Click(object sender, EventArgs e)
         {
-            if (frmCustomer == null)
+            if (frmCustomer == null || frmCustomer.IsDisposed)
             {
                 frmCustomer = new FrmCustomer();
                 frmCustomer.MdiParent = this;
                 frmCustomer.Show();
             }
-            if (frmCustomer.IsDisposed)
-            {
-                frmCustomer = new FrmCustomer();
-                frmCustomer.MdiParent = this;
-                frmCustomer.Show();
-            }
+            frmCustomer.BringToFront();
         }
     }
 }
