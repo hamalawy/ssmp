@@ -442,5 +442,29 @@ namespace SSMP
         {
             ResetForm();
         }
+
+        private void btnReloadAll_Click(object sender, EventArgs e)
+        {
+            //Get all user
+            searchParam = new SearchParam();
+            searchParam.Start = DEFAULT_START;
+            searchParam.Limit = DEFAULT_LIMIT;
+            searchParam.SortBy = DEFAULT_SORT_BY;
+            searchParam.SortDir = DEFAULT_SORT_DIR;
+
+            //
+            searchEntity = new UserTitle();
+
+            //
+            SearchResult<UserTitle> searchResult = userTitleManager.GetUserTitleListByParam(searchEntity, searchParam);
+
+            //Binding list userrole to gridview
+            IList2DataTable(searchResult.SearchList, dataSetUserTitle.Tables["UserTitle"]);
+
+            //Binding list to navigator
+            listPages = new List<Int32>();
+            BindingDataToBindingNagivator(searchResult.SearchSize, 0);
+
+        }
     }
 }

@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhapHang));
             this.tabQuanLyPhieuNhap = new System.Windows.Forms.TabControl();
             this.tpLapPhieuNhapHangHoa = new System.Windows.Forms.TabPage();
+            this.buttonXoaDong = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.richTextBoxMota = new System.Windows.Forms.RichTextBox();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
@@ -83,6 +85,7 @@
             this.cboNhaCungCap = new System.Windows.Forms.ComboBox();
             this.lblNhaCungCap = new System.Windows.Forms.Label();
             this.tpQuanLyPhieuNhapHangHoa = new System.Windows.Forms.TabPage();
+            this.btnReloadAll = new System.Windows.Forms.Button();
             this.checkBoxTrangthai = new System.Windows.Forms.CheckBox();
             this.checkBoxGiamGia = new System.Windows.Forms.CheckBox();
             this.checkBoxGiaMua = new System.Windows.Forms.CheckBox();
@@ -113,7 +116,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.checkBoxNgay = new System.Windows.Forms.CheckBox();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.label8 = new System.Windows.Forms.Label();
             this.tabQuanLyPhieuNhap.SuspendLayout();
             this.tpLapPhieuNhapHangHoa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSach)).BeginInit();
@@ -140,6 +142,7 @@
             // 
             // tpLapPhieuNhapHangHoa
             // 
+            this.tpLapPhieuNhapHangHoa.Controls.Add(this.buttonXoaDong);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.label8);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.label6);
             this.tpLapPhieuNhapHangHoa.Controls.Add(this.richTextBoxMota);
@@ -189,6 +192,29 @@
             this.tpLapPhieuNhapHangHoa.TabIndex = 0;
             this.tpLapPhieuNhapHangHoa.Text = "Lập Phiếu nhập Hàng hóa";
             this.tpLapPhieuNhapHangHoa.UseVisualStyleBackColor = true;
+            // 
+            // buttonXoaDong
+            // 
+            this.buttonXoaDong.Image = global::SSMP.Properties.Resources.delete;
+            this.buttonXoaDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonXoaDong.Location = new System.Drawing.Point(805, 279);
+            this.buttonXoaDong.Name = "buttonXoaDong";
+            this.buttonXoaDong.Size = new System.Drawing.Size(77, 23);
+            this.buttonXoaDong.TabIndex = 132;
+            this.buttonXoaDong.Text = "Xóa dòng";
+            this.buttonXoaDong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonXoaDong.UseVisualStyleBackColor = true;
+            this.buttonXoaDong.Click += new System.EventHandler(this.buttonXoaDong_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.Location = new System.Drawing.Point(234, 88);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(11, 13);
+            this.label8.TabIndex = 131;
+            this.label8.Text = "*";
             // 
             // label6
             // 
@@ -313,6 +339,7 @@
             // 
             // dataGridViewDanhSach
             // 
+            this.dataGridViewDanhSach.AllowUserToAddRows = false;
             this.dataGridViewDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDanhSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clten,
@@ -537,31 +564,40 @@
             // 
             // btnXoaCacTruong
             // 
-            this.btnXoaCacTruong.Location = new System.Drawing.Point(617, 255);
+            this.btnXoaCacTruong.Image = global::SSMP.Properties.Resources.delete;
+            this.btnXoaCacTruong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoaCacTruong.Location = new System.Drawing.Point(614, 255);
             this.btnXoaCacTruong.Name = "btnXoaCacTruong";
-            this.btnXoaCacTruong.Size = new System.Drawing.Size(88, 23);
+            this.btnXoaCacTruong.Size = new System.Drawing.Size(103, 23);
             this.btnXoaCacTruong.TabIndex = 117;
             this.btnXoaCacTruong.Text = "Xóa các &trường";
+            this.btnXoaCacTruong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoaCacTruong.UseVisualStyleBackColor = true;
             this.btnXoaCacTruong.Click += new System.EventHandler(this.btnXoaCacTruong_Click);
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(524, 255);
+            this.btnCapNhat.Image = global::SSMP.Properties.Resources.accept;
+            this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCapNhat.Location = new System.Drawing.Point(533, 255);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(75, 23);
             this.btnCapNhat.TabIndex = 116;
             this.btnCapNhat.Text = "&Cập nhật";
+            this.btnCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCapNhat.UseVisualStyleBackColor = true;
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click_1);
             // 
             // btnDuaVaoPhieuNhap
             // 
+            this.btnDuaVaoPhieuNhap.Image = global::SSMP.Properties.Resources.add1;
+            this.btnDuaVaoPhieuNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDuaVaoPhieuNhap.Location = new System.Drawing.Point(399, 255);
             this.btnDuaVaoPhieuNhap.Name = "btnDuaVaoPhieuNhap";
-            this.btnDuaVaoPhieuNhap.Size = new System.Drawing.Size(119, 23);
+            this.btnDuaVaoPhieuNhap.Size = new System.Drawing.Size(128, 23);
             this.btnDuaVaoPhieuNhap.TabIndex = 115;
             this.btnDuaVaoPhieuNhap.Text = "Đưa vào &Phiếu nhập";
+            this.btnDuaVaoPhieuNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDuaVaoPhieuNhap.UseVisualStyleBackColor = true;
             this.btnDuaVaoPhieuNhap.Click += new System.EventHandler(this.btnDuaVaoPhieuNhap_Click);
             // 
@@ -662,6 +698,7 @@
             // 
             // tpQuanLyPhieuNhapHangHoa
             // 
+            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.btnReloadAll);
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.checkBoxTrangthai);
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.checkBoxGiamGia);
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.checkBoxGiaMua);
@@ -686,12 +723,25 @@
             this.tpQuanLyPhieuNhapHangHoa.Click += new System.EventHandler(this.tpQuanLyPhieuNhapHangHoa_Click);
             this.tpQuanLyPhieuNhapHangHoa.Enter += new System.EventHandler(this.tpQuanLyPhieuNhapHangHoa_Enter);
             // 
+            // btnReloadAll
+            // 
+            this.btnReloadAll.Image = global::SSMP.Properties.Resources.arrow_refresh;
+            this.btnReloadAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReloadAll.Location = new System.Drawing.Point(778, 250);
+            this.btnReloadAll.Name = "btnReloadAll";
+            this.btnReloadAll.Size = new System.Drawing.Size(100, 23);
+            this.btnReloadAll.TabIndex = 40;
+            this.btnReloadAll.Text = "Tải lại toàn bộ";
+            this.btnReloadAll.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReloadAll.UseVisualStyleBackColor = true;
+            this.btnReloadAll.Click += new System.EventHandler(this.btnReloadAll_Click);
+            // 
             // checkBoxTrangthai
             // 
             this.checkBoxTrangthai.AutoSize = true;
             this.checkBoxTrangthai.Checked = true;
             this.checkBoxTrangthai.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxTrangthai.Location = new System.Drawing.Point(778, 246);
+            this.checkBoxTrangthai.Location = new System.Drawing.Point(778, 233);
             this.checkBoxTrangthai.Name = "checkBoxTrangthai";
             this.checkBoxTrangthai.Size = new System.Drawing.Size(74, 17);
             this.checkBoxTrangthai.TabIndex = 17;
@@ -704,7 +754,7 @@
             this.checkBoxGiamGia.AutoSize = true;
             this.checkBoxGiamGia.Checked = true;
             this.checkBoxGiamGia.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxGiamGia.Location = new System.Drawing.Point(778, 223);
+            this.checkBoxGiamGia.Location = new System.Drawing.Point(778, 210);
             this.checkBoxGiamGia.Name = "checkBoxGiamGia";
             this.checkBoxGiamGia.Size = new System.Drawing.Size(67, 17);
             this.checkBoxGiamGia.TabIndex = 16;
@@ -717,7 +767,7 @@
             this.checkBoxGiaMua.AutoSize = true;
             this.checkBoxGiaMua.Checked = true;
             this.checkBoxGiaMua.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxGiaMua.Location = new System.Drawing.Point(778, 200);
+            this.checkBoxGiaMua.Location = new System.Drawing.Point(778, 187);
             this.checkBoxGiaMua.Name = "checkBoxGiaMua";
             this.checkBoxGiaMua.Size = new System.Drawing.Size(65, 17);
             this.checkBoxGiaMua.TabIndex = 15;
@@ -730,7 +780,7 @@
             this.checkBoxGiaBan.AutoSize = true;
             this.checkBoxGiaBan.Checked = true;
             this.checkBoxGiaBan.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxGiaBan.Location = new System.Drawing.Point(668, 246);
+            this.checkBoxGiaBan.Location = new System.Drawing.Point(668, 233);
             this.checkBoxGiaBan.Name = "checkBoxGiaBan";
             this.checkBoxGiaBan.Size = new System.Drawing.Size(63, 17);
             this.checkBoxGiaBan.TabIndex = 14;
@@ -743,7 +793,7 @@
             this.checkBoxNgayHethan.AutoSize = true;
             this.checkBoxNgayHethan.Checked = true;
             this.checkBoxNgayHethan.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxNgayHethan.Location = new System.Drawing.Point(668, 223);
+            this.checkBoxNgayHethan.Location = new System.Drawing.Point(668, 210);
             this.checkBoxNgayHethan.Name = "checkBoxNgayHethan";
             this.checkBoxNgayHethan.Size = new System.Drawing.Size(90, 17);
             this.checkBoxNgayHethan.TabIndex = 13;
@@ -756,7 +806,7 @@
             this.checkBoxNgaySx.AutoSize = true;
             this.checkBoxNgaySx.Checked = true;
             this.checkBoxNgaySx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxNgaySx.Location = new System.Drawing.Point(668, 200);
+            this.checkBoxNgaySx.Location = new System.Drawing.Point(668, 187);
             this.checkBoxNgaySx.Name = "checkBoxNgaySx";
             this.checkBoxNgaySx.Size = new System.Drawing.Size(94, 17);
             this.checkBoxNgaySx.TabIndex = 12;
@@ -769,7 +819,7 @@
             this.checkBoxDv.AutoSize = true;
             this.checkBoxDv.Checked = true;
             this.checkBoxDv.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxDv.Location = new System.Drawing.Point(559, 246);
+            this.checkBoxDv.Location = new System.Drawing.Point(559, 233);
             this.checkBoxDv.Name = "checkBoxDv";
             this.checkBoxDv.Size = new System.Drawing.Size(57, 17);
             this.checkBoxDv.TabIndex = 11;
@@ -782,7 +832,7 @@
             this.checkBoxTenSp.AutoSize = true;
             this.checkBoxTenSp.Checked = true;
             this.checkBoxTenSp.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxTenSp.Location = new System.Drawing.Point(559, 223);
+            this.checkBoxTenSp.Location = new System.Drawing.Point(559, 210);
             this.checkBoxTenSp.Name = "checkBoxTenSp";
             this.checkBoxTenSp.Size = new System.Drawing.Size(94, 17);
             this.checkBoxTenSp.TabIndex = 10;
@@ -795,7 +845,7 @@
             this.checkBoxMasp.AutoSize = true;
             this.checkBoxMasp.Checked = true;
             this.checkBoxMasp.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxMasp.Location = new System.Drawing.Point(559, 200);
+            this.checkBoxMasp.Location = new System.Drawing.Point(559, 187);
             this.checkBoxMasp.Name = "checkBoxMasp";
             this.checkBoxMasp.Size = new System.Drawing.Size(90, 17);
             this.checkBoxMasp.TabIndex = 9;
@@ -814,6 +864,7 @@
             this.dataGridViewPhieuNhapHAng.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewPhieuNhapHAng.Size = new System.Drawing.Size(523, 209);
             this.dataGridViewPhieuNhapHAng.TabIndex = 8;
+            this.dataGridViewPhieuNhapHAng.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPhieuNhapHAng_RowEnter);
             this.dataGridViewPhieuNhapHAng.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPhieuNhapHAng_CellClick);
             this.dataGridViewPhieuNhapHAng.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPhieuNhapHAng_CellContentClick);
             // 
@@ -908,11 +959,14 @@
             // btnTimKiemQuanLy
             // 
             this.btnTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTimKiemQuanLy.Image = global::SSMP.Properties.Resources.page_find;
+            this.btnTimKiemQuanLy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTimKiemQuanLy.Location = new System.Drawing.Point(244, 24);
             this.btnTimKiemQuanLy.Name = "btnTimKiemQuanLy";
             this.btnTimKiemQuanLy.Size = new System.Drawing.Size(75, 23);
             this.btnTimKiemQuanLy.TabIndex = 2;
             this.btnTimKiemQuanLy.Text = "Tìm &kiếm";
+            this.btnTimKiemQuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiemQuanLy.UseVisualStyleBackColor = true;
             this.btnTimKiemQuanLy.Click += new System.EventHandler(this.btnTimKiemQuanLy_Click);
             // 
@@ -936,6 +990,7 @@
             // 
             // dataGridViewHangHoa
             // 
+            this.dataGridViewHangHoa.AllowUserToAddRows = false;
             this.dataGridViewHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHangHoa.Location = new System.Drawing.Point(19, 275);
             this.dataGridViewHangHoa.MultiSelect = false;
@@ -1001,11 +1056,14 @@
             // 
             // button1
             // 
+            this.button1.Image = global::SSMP.Properties.Resources.page_find;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(698, 21);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 23);
+            this.button1.Size = new System.Drawing.Size(93, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "Xem Báo cáo";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -1055,16 +1113,6 @@
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.Location = new System.Drawing.Point(234, 88);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(11, 13);
-            this.label8.TabIndex = 131;
-            this.label8.Text = "*";
             // 
             // frmNhapHang
             // 
@@ -1182,6 +1230,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox richTextBoxMota;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button buttonXoaDong;
+        private System.Windows.Forms.Button btnReloadAll;
 
 
 

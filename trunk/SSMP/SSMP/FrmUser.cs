@@ -816,5 +816,27 @@ namespace SSMP
             //chkSearchUserStatus.Checked = true;
             //chkSearchUserTitle.Checked = true;
         }
+
+        private void btnReloadAll_Click(object sender, EventArgs e)
+        {
+            //Get all user
+            searchParam = new SearchParam();
+            searchParam.Start = DEFAULT_START;
+            searchParam.Limit = DEFAULT_LIMIT;
+            searchParam.SortBy = DEFAULT_SORT_BY;
+            searchParam.SortDir = DEFAULT_SORT_DIR;
+
+            searchEntity = new User();
+
+            SearchResult<User> searchResult = userManager.GetUserListByParam(searchEntity, searchParam);
+            currentListUser = searchResult.SearchList;
+
+            //Binding list user to gridview
+            IList2DataTable(currentListUser, dataSetUser.Tables["User"]);
+
+            //
+            listPages = new List<Int32>();
+            BindingDataToBindingNagivator(searchResult.SearchSize, 0);
+        }
     }
 }

@@ -68,6 +68,7 @@
             this.lblHienThiQuanLy = new System.Windows.Forms.Label();
             this.lblDanhSachChucVuQuanLy = new System.Windows.Forms.Label();
             this.gbThongTinChucVu = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtUserTitleDesc = new System.Windows.Forms.TextBox();
@@ -76,7 +77,7 @@
             this.lblChucVu = new System.Windows.Forms.Label();
             this.txtUserTitleID = new System.Windows.Forms.TextBox();
             this.lblMaChucVu = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnReloadAll = new System.Windows.Forms.Button();
             this.tcQuanLyChucVu.SuspendLayout();
             this.tpQuanLyChucVu.SuspendLayout();
             this.panelUserTitle.SuspendLayout();
@@ -99,6 +100,7 @@
             // 
             // tpQuanLyChucVu
             // 
+            this.tpQuanLyChucVu.Controls.Add(this.btnReloadAll);
             this.tpQuanLyChucVu.Controls.Add(this.panelUserTitle);
             this.tpQuanLyChucVu.Controls.Add(this.gbTimKiemQuanLy);
             this.tpQuanLyChucVu.Controls.Add(this.btnInAnQuanLy);
@@ -513,6 +515,16 @@
             this.gbThongTinChucVu.TabStop = false;
             this.gbThongTinChucVu.Text = "THÔNG TIN CHỨC VỤ:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(310, 62);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(11, 13);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "*";
+            // 
             // btnReset
             // 
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -597,15 +609,18 @@
             this.lblMaChucVu.TabIndex = 0;
             this.lblMaChucVu.Text = "Mã chức vụ:";
             // 
-            // label1
+            // btnReloadAll
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(310, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(11, 13);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "*";
+            this.btnReloadAll.Image = global::SSMP.Properties.Resources.arrow_refresh;
+            this.btnReloadAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReloadAll.Location = new System.Drawing.Point(568, 224);
+            this.btnReloadAll.Name = "btnReloadAll";
+            this.btnReloadAll.Size = new System.Drawing.Size(100, 23);
+            this.btnReloadAll.TabIndex = 40;
+            this.btnReloadAll.Text = "Tải lại toàn bộ";
+            this.btnReloadAll.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReloadAll.UseVisualStyleBackColor = true;
+            this.btnReloadAll.Click += new System.EventHandler(this.btnReloadAll_Click);
             // 
             // FrmUserTitle
             // 
@@ -686,5 +701,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripLblTotal;
         private System.Windows.Forms.DataGridView gvUserTitle;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnReloadAll;
     }
 }
