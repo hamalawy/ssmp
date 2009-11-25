@@ -138,8 +138,8 @@ namespace SSMP.Data
         /// See http://www.hibernate.org/hib_docs/reference/en/html/mapping.html#mapping-declaration-id-assigned.
         /// </summary>
         public T Save(T entity)
-        {
-            NHibernateSession.Save(entity);
+        {            
+            NHibernateSession.Save(entity);            
             return entity;
         }
 
@@ -149,7 +149,7 @@ namespace SSMP.Data
         /// entity, even if its ID is assigned.
         /// </summary>
         public T SaveOrUpdate(T entity)
-        {
+        {            
             NHibernateSession.SaveOrUpdate(entity);
             return entity;
         }

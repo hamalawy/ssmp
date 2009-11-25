@@ -11,7 +11,7 @@ namespace SSMP.Data.Manager
 {
     public class ProductManager : IManager<SSMP.Core.Domain.Product, System.String>
     {
-        private SSMP.Core.DataInterfaces.IProductDao productDao;
+        private IProductDao productDao;
         private IProductNameDao productNameDao;
         private IProductStatusDao productStatusDao;
         private IUnitDao unitDao;
@@ -63,7 +63,11 @@ namespace SSMP.Data.Manager
             {
                 if (entity != null)
                 {
-                    productDao.SaveOrUpdate(entity);
+                    if (entity.BillSaleId == 0)
+                    {
+                        entity.BillSaleId = null;
+                    }
+                    productDao.SaveOrUpdate(entity);                    
                     productDao.CommitChanges();
                 }
                 else
@@ -159,5 +163,30 @@ namespace SSMP.Data.Manager
 
             return searchResult;
         }
+
+        public SearchResult<Product> GetProductListByAdvanceParam(Product entity, SearchParam searcParam)
+        {
+            SearchResult<Product> searchResult;
+
+            try
+            {
+                searchResult = productDao.GetProductListByAdvanceParam(entity, searcParam);
+
+                List<Product> searchList = searchResult.SearchList;
+
+                foreach (Product obj in searchList)
+                {
+                    obj.ProductNameIdLookup = productNameDao.GetById(obj.ProductNameId.Value, false);
+                    obj.ProductStatusIdLookup = productStatusDao.GetById(obj.StatusId, false);
+                    obj.UnitIdLookup = unitDao.GetById(obj.UnitId, false);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return searchResult;
+        }        
     }
 }

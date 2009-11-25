@@ -25,7 +25,7 @@ namespace SSMP
         public frmNhapHang NhapHang;
         public BanHang frmBanHang;
         public FrmUserTitle QuanLyChucVu;
-        public frmDanhMucSanPham DanhMucSanPham;
+        public FrmDanhMucSanPham DanhMucSanPham;
         public DangNhap frmDangNhap;
         public FrmUserStatus frmUserStatus;
         private FrmProductStatus frmProductStatus;
@@ -277,7 +277,7 @@ namespace SSMP
         {
             if (DanhMucSanPham == null || DanhMucSanPham.IsDisposed)
             {
-                DanhMucSanPham = new frmDanhMucSanPham();
+                DanhMucSanPham = new FrmDanhMucSanPham();
                 DanhMucSanPham.MdiParent = this;
                 DanhMucSanPham.Show();
             }

@@ -45,12 +45,20 @@ namespace SSMP
         {
             List<DieuKienTimKiem> list = new List<DieuKienTimKiem>();
 
-            list.Add(new DieuKienTimKiem("Bằng", 0));
-            list.Add(new DieuKienTimKiem("Nhỏ hơn hoặc bằng", 1));
-            list.Add(new DieuKienTimKiem("Lớn hơn hoặc bằng", 2));
-            list.Add(new DieuKienTimKiem("Trong khoảng", 3));
+            list.Add(new DieuKienTimKiem("Bằng", DieuKienTimKiemValue.Bang));
+            list.Add(new DieuKienTimKiem("Nhỏ hơn hoặc bằng", DieuKienTimKiemValue.NhoHonHoacBang));
+            list.Add(new DieuKienTimKiem("Lớn hơn hoặc bằng", DieuKienTimKiemValue.LonHonHoacBang));
+            list.Add(new DieuKienTimKiem("Trong khoảng", DieuKienTimKiemValue.TrongKhoang));
 
             return list;
+        }
+
+        public class DieuKienTimKiemValue
+        {
+            public const int Bang = 0;
+            public const int NhoHonHoacBang = 1;
+            public const int LonHonHoacBang = 2;
+            public const int TrongKhoang = 3;
         }
     }    
 }

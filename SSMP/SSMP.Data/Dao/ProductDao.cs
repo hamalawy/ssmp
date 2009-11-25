@@ -86,8 +86,16 @@ namespace SSMP.Data.Dao
                 tempPd.MfgDate = (DateTime)obj.GetValue(1);
                 tempPd.ExpDate = (DateTime)obj.GetValue(2);
                 tempPd.ProductNameId = (int)obj.GetValue(3);
-                tempPd.PurchasePrice = obj.GetValue(4) != null ? (string)obj.GetValue(4) : "";
-                tempPd.SalePrice = obj.GetValue(5) != null ? (string)obj.GetValue(5) : "";
+                if (obj.GetValue(4) != null)
+                {
+                    tempPd.PurchasePrice = (int)obj.GetValue(4);
+                }
+                if (obj.GetValue(5) != null)
+                {
+                    tempPd.SalePrice = (int)obj.GetValue(5);
+                }
+                //tempPd.PurchasePrice = obj.GetValue(4) != null ? (int)obj.GetValue(4) : 0;
+                //tempPd.SalePrice = obj.GetValue(5) != null ? (int)obj.GetValue(5): 0;
                 tempPd.Discount = obj.GetValue(6) != null ? (int)obj.GetValue(6) : 0;
                 tempPd.StatusId = obj.GetValue(7) != null ? (int)obj.GetValue(7) : 0;
                 tempPd.BillPurchaseId = obj.GetValue(8) != null ? (long)obj.GetValue(8) : 0;
@@ -114,8 +122,142 @@ namespace SSMP.Data.Dao
         private ICriteria CreateCriteriaByParam(Product entity)
         {
             ICriteria criteria = NHibernateSession.CreateCriteria(typeof(Product));
-            
+
+            if (entity != null)
+            {
+                if (entity.ProductNameId.HasValue && entity.ProductNameId != 0) 
+                {
+                    criteria.Add(Restrictions.Eq("ProductNameId", entity.ProductNameId));
+                }
+
+                if (entity.SearchCategoryID.HasValue && entity.SearchCategoryID != 0)
+                {
+                    criteria
+                        .CreateAlias("ProductNameIdLookup", "ProductName")
+                        .Add(Restrictions.Eq("ProductName.CategoryId", entity.SearchCategoryID));
+                }
+
+                if (entity.UnitId != 0)
+                {
+                    criteria.Add(Restrictions.Eq("UnitId", entity.UnitId));
+                }
+
+                if (entity.SearchCountryID.HasValue && entity.SearchCountryID != 0)
+                {
+                    if (criteria.GetCriteriaByPath("ProductNameIdLookup") == null)
+                    {
+                        criteria.CreateAlias("ProductNameIdLookup", "ProductName");
+                    }
+                    criteria
+                        .CreateAlias("ProductName.ManIdLookup", "Manufaturer")                                              
+                        .Add(Restrictions.Eq("Manufaturer.CountryId", entity.SearchCountryID));
+                }
+
+                if (entity.SearchManufacturerID.HasValue && entity.SearchManufacturerID != 0)
+                {
+                    if (criteria.GetCriteriaByPath("ProductNameIdLookup") == null)
+                    {
+                        criteria.CreateAlias("ProductNameIdLookup", "ProductName");
+                    }
+                    criteria
+                        .Add(Restrictions.Eq("ProductName.ManId", entity.SearchManufacturerID));
+                }
+
+                if (entity.StatusId != 0)
+                {
+                    criteria
+                        .Add(Restrictions.Eq("StatusId", entity.StatusId));
+                }
+
+                if (entity.MfgDateFrom != null && entity.MfgDateTo != null)
+                {
+                    criteria.Add(Restrictions.Between("MfgDate", entity.MfgDateFrom, entity.MfgDateTo));
+                }
+
+                if (entity.ExpDateFrom != null && entity.ExpDateTo != null)
+                {
+                    criteria.Add(Restrictions.Between("ExpDate", entity.ExpDateFrom, entity.ExpDateTo));
+                }
+
+                switch (entity.PurchasePriceCompare)
+                {
+                    case DBConstants.DieuKienTimKiemValue.Bang:
+                        criteria.Add(Restrictions.Eq("PurchasePrice", entity.PurchasePriceFrom));
+                        break;
+                    case DBConstants.DieuKienTimKiemValue.LonHonHoacBang:
+                        criteria.Add(Restrictions.Ge("PurchasePrice", entity.PurchasePriceFrom));
+                        break;
+                    case DBConstants.DieuKienTimKiemValue.NhoHonHoacBang:
+                        criteria.Add(Restrictions.Le("PurchasePrice", entity.PurchasePriceFrom));
+                        break;
+                    case DBConstants.DieuKienTimKiemValue.TrongKhoang:
+                        criteria.Add(Restrictions.Between("PurchasePrice", entity.PurchasePriceFrom, entity.PurchasePriceTo));
+                        break;
+                }
+
+                switch (entity.SalePriceCompare)
+                {
+                    case DBConstants.DieuKienTimKiemValue.Bang:
+                        criteria.Add(Restrictions.Eq("SalePrice", entity.SalePriceFrom));
+                        break;
+                    case DBConstants.DieuKienTimKiemValue.LonHonHoacBang:
+                        criteria.Add(Restrictions.Eq("SalePrice", entity.SalePriceFrom));
+                        break;
+                    case DBConstants.DieuKienTimKiemValue.NhoHonHoacBang:
+                        criteria.Add(Restrictions.Eq("SalePrice", entity.SalePriceFrom));
+                        break;
+                    case DBConstants.DieuKienTimKiemValue.TrongKhoang:
+                        criteria.Add(Restrictions.Between("SalePrice", entity.SalePriceFrom, entity.SalePriceTo));
+                        break;
+                }
+
+                switch (entity.DiscountCompare)
+                {
+                    case DBConstants.DieuKienTimKiemValue.Bang:
+                        criteria.Add(Restrictions.Eq("Discount", entity.DiscountFrom));
+                        break;
+                    case DBConstants.DieuKienTimKiemValue.LonHonHoacBang:
+                        criteria.Add(Restrictions.Eq("Discount", entity.DiscountFrom));
+                        break;
+                    case DBConstants.DieuKienTimKiemValue.NhoHonHoacBang:
+                        criteria.Add(Restrictions.Eq("Discount", entity.DiscountFrom));
+                        break;
+                    case DBConstants.DieuKienTimKiemValue.TrongKhoang:
+                        criteria.Add(Restrictions.Between("Discount", entity.DiscountFrom, entity.DiscountTo));
+                        break;
+                }
+            }
+
             return criteria;
+        }
+
+        public SearchResult<Product> GetProductListByAdvanceParam(Product entity, SearchParam searchParam)
+        {
+            SearchResult<Product> searchResult = new SearchResult<Product>();
+
+            //Criteria for query list
+            ICriteria criteria = CreateCriteriaByParam(entity);
+            criteria.SetFirstResult(searchParam.Start);
+            criteria.SetMaxResults(searchParam.Limit);
+
+            if (searchParam.SortDir.Equals(DBConstants.ASC))
+            {
+                criteria.AddOrder(Order.Asc(searchParam.SortBy));
+            }
+            else
+            {
+                criteria.AddOrder(Order.Desc(searchParam.SortBy));
+            }
+
+            searchResult.SearchList = criteria.List<Product>() as List<Product>;
+
+            //Criteria for query totalsize
+            ICriteria criteriaSize = CreateCriteriaByParam(entity);
+
+            criteriaSize.SetProjection(Projections.Count(DBConstants.ID));
+            searchResult.SearchSize = criteriaSize.UniqueResult<System.Int32>();
+           
+            return searchResult;
         }
 
         #endregion

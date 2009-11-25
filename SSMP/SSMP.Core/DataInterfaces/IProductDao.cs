@@ -13,5 +13,6 @@ namespace SSMP.Core.DataInterfaces
     public interface IProductDao : IDao<Product, System.Int32>
     {
         SearchResult<Product> GetProductListByParam(Product entity, SearchParam searchParam);
+        SearchResult<Product> GetProductListByAdvanceParam(Product entity, SearchParam searchParam);
     }
 }

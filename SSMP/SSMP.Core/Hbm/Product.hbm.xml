@@ -7,8 +7,8 @@
     <property name="MfgDate" column="MfgDate" type="System.DateTime" not-null="false" />
     <property name="ExpDate" column="ExpDate" type="System.DateTime" not-null="false" />
     <property name="ProductNameId" column="ProductNameId" type="System.Int32" not-null="false" />
-    <property name="PurchasePrice" column="PurchasePrice" type="System.String" not-null="false" length="20"/>
-    <property name="SalePrice" column="SalePrice" type="System.String" not-null="false" length="20"/>
+    <property name="PurchasePrice" column="PurchasePrice" type="System.Int32" not-null="false" />
+    <property name="SalePrice" column="SalePrice" type="System.Int32" not-null="false" />
     <property name="Discount" column="Discount" type="System.Int32" not-null="false" />
     <property name="StatusId" column="StatusId" type="System.Int32" not-null="true" />
     <property name="BillPurchaseId" column="BillPurchaseId" type="System.Int64" not-null="true" />
