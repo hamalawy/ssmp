@@ -15,7 +15,7 @@ using System.Globalization;
 
 namespace SSMP
 {
-    public partial class frmDanhMucSanPham : Form
+    public partial class FrmDanhMucSanPham : Form
     {
         HoTro ht;
 
@@ -37,7 +37,7 @@ namespace SSMP
         private const int DEFAULT_LIMIT = 10;
 
         //
-        private static readonly ILog logger = LogManager.GetLogger(typeof(frmDanhMucSanPham));
+        private static readonly ILog logger = LogManager.GetLogger(typeof(FrmDanhMucSanPham));
         private Product searchEntity;
         private ProductName searchEntityProductName;
         private SearchParam searchParam;
@@ -52,7 +52,7 @@ namespace SSMP
         private Int64 updateProductId;
         private Int64 updateProductNameId;
 
-        public frmDanhMucSanPham()
+        public FrmDanhMucSanPham()
         {
             InitializeComponent();
 
@@ -1093,8 +1093,8 @@ namespace SSMP
                 productEntity.ProductNameId = IdName;
                 productEntity.MfgDate = ngaySX;
                 productEntity.ExpDate = ngayHH;
-                productEntity.PurchasePrice = giaMua;
-                productEntity.SalePrice = giaBan;
+                productEntity.PurchasePrice = Int32.Parse(giaMua);
+                productEntity.SalePrice = Int32.Parse(giaBan);
                 productEntity.Discount = giamGia;
                 productEntity.UnitId = donViId;
                 productEntity.StatusId = trangThaiId;
@@ -1752,8 +1752,32 @@ namespace SSMP
 
         private void btnAdvanceSearch_Click(object sender, EventArgs e)
         {
-            FrmSearchProduct frmSearch = new FrmSearchProduct();
-            frmSearch.Show(this);
+            FrmSearchProduct frmSearch = new FrmSearchProduct(this);
+            frmSearch.ShowDialog(this);
+        }
+
+        public void AdvanceSearchProduct(Product searchEntity)
+        {
+            //Default param
+            searchParam = new SearchParam();
+            searchParam.Start = DEFAULT_START;
+            searchParam.Limit = DEFAULT_LIMIT;
+            searchParam.SortBy = DEFAULT_SORT_BY;
+            searchParam.SortDir = DEFAULT_SORT_DIR;
+
+            //
+            this.searchEntity = searchEntity;
+
+            //
+            SearchResult<Product> searchResult = productManager.GetProductListByAdvanceParam(searchEntity, searchParam);
+            currentListProduct = searchResult.SearchList;
+
+            //Binding list userrole to gridview
+            IList2DataTable(searchResult.SearchList, dataSetProduct.Tables["Product"]);
+
+            //Binding list to navigator
+            listPages = new List<Int32>();
+            BindingDataToBindingNagivator(searchResult.SearchSize, 0);
         }
     }
 }

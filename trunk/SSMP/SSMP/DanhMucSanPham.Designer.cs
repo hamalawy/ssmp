@@ -1,6 +1,6 @@
 ﻿namespace SSMP
 {
-    partial class frmDanhMucSanPham
+    partial class FrmDanhMucSanPham
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDanhMucSanPham));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDanhMucSanPham));
             this.tcDanhMucSanPham = new System.Windows.Forms.TabControl();
             this.tpQuanLyTenSanPham = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -1602,7 +1602,7 @@
             this.chkSearchManNameProduct.Text = "Nhà sản xuất";
             this.chkSearchManNameProduct.UseVisualStyleBackColor = true;
             // 
-            // frmDanhMucSanPham
+            // FrmDanhMucSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1612,7 +1612,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmDanhMucSanPham";
+            this.Name = "FrmDanhMucSanPham";
             this.Text = "Danh Mục Sản Phẩm";
             this.Load += new System.EventHandler(this.frmDanhMucSanPham_Load);
             this.tcDanhMucSanPham.ResumeLayout(false);

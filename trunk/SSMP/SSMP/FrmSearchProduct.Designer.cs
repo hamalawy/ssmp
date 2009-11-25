@@ -590,7 +590,9 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(645, 327);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "FrmSearchProduct";
+            this.ShowInTaskbar = false;
             this.Text = "Tìm kiếm nâng cao";
             this.Load += new System.EventHandler(this.FrmSearchProduct_Load);
             this.groupBox1.ResumeLayout(false);
