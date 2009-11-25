@@ -66,6 +66,7 @@
             this.lblHienThiQuanLy = new System.Windows.Forms.Label();
             this.lblDanhSachCustomerQuanLy = new System.Windows.Forms.Label();
             this.gbThongTinCustomer = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.radioMan = new System.Windows.Forms.RadioButton();
             this.radioWoman = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -87,7 +88,7 @@
             this.lblCustomer = new System.Windows.Forms.Label();
             this.txtCustomerID = new System.Windows.Forms.TextBox();
             this.lblMaCustomer = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.btnReloadAll = new System.Windows.Forms.Button();
             this.tcQuanLyCustomer.SuspendLayout();
             this.tpQuanLyCustomer.SuspendLayout();
             this.panelCustomer.SuspendLayout();
@@ -110,6 +111,7 @@
             // 
             // tpQuanLyCustomer
             // 
+            this.tpQuanLyCustomer.Controls.Add(this.btnReloadAll);
             this.tpQuanLyCustomer.Controls.Add(this.panelCustomer);
             this.tpQuanLyCustomer.Controls.Add(this.gbTimKiemQuanLy);
             this.tpQuanLyCustomer.Controls.Add(this.btnInAnQuanLy);
@@ -513,6 +515,16 @@
             this.gbThongTinCustomer.TabStop = false;
             this.gbThongTinCustomer.Text = "THÔNG TIN KHÁCH HÀNG:";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label7.Location = new System.Drawing.Point(325, 58);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(11, 13);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "*";
+            // 
             // radioMan
             // 
             this.radioMan.AutoSize = true;
@@ -726,15 +738,18 @@
             this.lblMaCustomer.TabIndex = 0;
             this.lblMaCustomer.Text = "Mã khách hàng:";
             // 
-            // label7
+            // btnReloadAll
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(325, 58);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(11, 13);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "*";
+            this.btnReloadAll.Image = global::SSMP.Properties.Resources.arrow_refresh;
+            this.btnReloadAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReloadAll.Location = new System.Drawing.Point(802, 156);
+            this.btnReloadAll.Name = "btnReloadAll";
+            this.btnReloadAll.Size = new System.Drawing.Size(100, 23);
+            this.btnReloadAll.TabIndex = 40;
+            this.btnReloadAll.Text = "Tải lại toàn bộ";
+            this.btnReloadAll.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReloadAll.UseVisualStyleBackColor = true;
+            this.btnReloadAll.Click += new System.EventHandler(this.btnReloadAll_Click);
             // 
             // FrmCustomer
             // 
@@ -826,5 +841,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtIdCardNo;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnReloadAll;
     }
 }

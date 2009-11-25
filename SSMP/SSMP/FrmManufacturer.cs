@@ -503,5 +503,29 @@ namespace SSMP
         {
 
         }
+
+        private void btnReloadAll_Click(object sender, EventArgs e)
+        {
+            //Get all user
+            searchParam = new SearchParam();
+            searchParam.Start = DEFAULT_START;
+            searchParam.Limit = DEFAULT_LIMIT;
+            searchParam.SortBy = DEFAULT_SORT_BY;
+            searchParam.SortDir = DEFAULT_SORT_DIR;
+
+            //
+            searchEntity = new Manufacturer();
+
+            //
+            SearchResult<Manufacturer> searchResult = manufacturerManager.GetManufacturerListByParam(searchEntity, searchParam);
+            currentListManufacturer = searchResult.SearchList;
+
+            //Binding list userrole to gridview
+            IList2DataTable(searchResult.SearchList, dataSetManufacturer.Tables["Manufacturer"]);
+
+            //Binding list to navigator
+            listPages = new List<Int32>();
+            BindingDataToBindingNagivator(searchResult.SearchSize, 0);
+        }
     }
 }

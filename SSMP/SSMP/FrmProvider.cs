@@ -483,5 +483,29 @@ namespace SSMP
         {
             ResetForm();
         }
+
+        private void btnReloadAll_Click(object sender, EventArgs e)
+        {
+            //Get all user
+            searchParam = new SearchParam();
+            searchParam.Start = DEFAULT_START;
+            searchParam.Limit = DEFAULT_LIMIT;
+            searchParam.SortBy = DEFAULT_SORT_BY;
+            searchParam.SortDir = DEFAULT_SORT_DIR;
+
+            //
+            searchEntity = new Provider();
+
+            //
+            SearchResult<Provider> searchResult = manufacturerManager.GetProviderListByParam(searchEntity, searchParam);
+            currentListProvider = searchResult.SearchList;
+
+            //Binding list userrole to gridview
+            IList2DataTable(searchResult.SearchList, dataSetProvider.Tables["Provider"]);
+
+            //Binding list to navigator
+            listPages = new List<Int32>();
+            BindingDataToBindingNagivator(searchResult.SearchSize, 0);
+        }
     }
 }
