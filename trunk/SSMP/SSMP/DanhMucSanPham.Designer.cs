@@ -305,7 +305,7 @@
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(49, 22);
+            this.toolStripLabel2.Size = new System.Drawing.Size(53, 22);
             this.toolStripLabel2.Text = "Trang số";
             // 
             // toolStripTextBox1
@@ -394,7 +394,7 @@
             // 
             this.toolStripLabeltotalProductName.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabeltotalProductName.Name = "toolStripLabeltotalProductName";
-            this.toolStripLabeltotalProductName.Size = new System.Drawing.Size(117, 22);
+            this.toolStripLabeltotalProductName.Size = new System.Drawing.Size(128, 22);
             this.toolStripLabeltotalProductName.Text = "Tổng số tên sản phẩm:";
             // 
             // gvTenSanPham
@@ -411,7 +411,7 @@
             this.gvTenSanPham.ReadOnly = true;
             this.gvTenSanPham.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvTenSanPham.Size = new System.Drawing.Size(718, 247);
-            this.gvTenSanPham.TabIndex = 8;
+            this.gvTenSanPham.TabIndex = 18;
             this.gvTenSanPham.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvSanPham_RowEnter);
             this.gvTenSanPham.SelectionChanged += new System.EventHandler(this.gvTenSanPham_SelectionChanged);
             // 
@@ -424,7 +424,7 @@
             this.chkId.Location = new System.Drawing.Point(506, 162);
             this.chkId.Name = "chkId";
             this.chkId.Size = new System.Drawing.Size(90, 17);
-            this.chkId.TabIndex = 86;
+            this.chkId.TabIndex = 14;
             this.chkId.Text = "Mã sản phẩm";
             this.chkId.UseVisualStyleBackColor = true;
             this.chkId.CheckedChanged += new System.EventHandler(this.chkId_CheckedChanged);
@@ -437,7 +437,7 @@
             this.chkNhaSx.Location = new System.Drawing.Point(809, 162);
             this.chkNhaSx.Name = "chkNhaSx";
             this.chkNhaSx.Size = new System.Drawing.Size(89, 17);
-            this.chkNhaSx.TabIndex = 84;
+            this.chkNhaSx.TabIndex = 17;
             this.chkNhaSx.Text = "Nhà sản xuất";
             this.chkNhaSx.UseVisualStyleBackColor = true;
             this.chkNhaSx.CheckedChanged += new System.EventHandler(this.chkNhaSx_CheckedChanged);
@@ -451,7 +451,7 @@
             this.chkTatCaHienThiTenSanPham.Location = new System.Drawing.Point(441, 162);
             this.chkTatCaHienThiTenSanPham.Name = "chkTatCaHienThiTenSanPham";
             this.chkTatCaHienThiTenSanPham.Size = new System.Drawing.Size(57, 17);
-            this.chkTatCaHienThiTenSanPham.TabIndex = 20;
+            this.chkTatCaHienThiTenSanPham.TabIndex = 13;
             this.chkTatCaHienThiTenSanPham.Text = "Tất cả";
             this.chkTatCaHienThiTenSanPham.UseVisualStyleBackColor = true;
             this.chkTatCaHienThiTenSanPham.CheckedChanged += new System.EventHandler(this.chkTatCaHienThiTenSanPham_CheckedChanged);
@@ -465,7 +465,7 @@
             this.chkLoaiSp.Location = new System.Drawing.Point(706, 162);
             this.chkLoaiSp.Name = "chkLoaiSp";
             this.chkLoaiSp.Size = new System.Drawing.Size(95, 17);
-            this.chkLoaiSp.TabIndex = 18;
+            this.chkLoaiSp.TabIndex = 16;
             this.chkLoaiSp.Text = "Loại sản phẩm";
             this.chkLoaiSp.UseVisualStyleBackColor = true;
             this.chkLoaiSp.CheckedChanged += new System.EventHandler(this.chkLoaiSp_CheckedChanged);
@@ -479,7 +479,7 @@
             this.chkTenSp.Location = new System.Drawing.Point(604, 162);
             this.chkTenSp.Name = "chkTenSp";
             this.chkTenSp.Size = new System.Drawing.Size(94, 17);
-            this.chkTenSp.TabIndex = 17;
+            this.chkTenSp.TabIndex = 15;
             this.chkTenSp.Text = "Tên sản phẩm";
             this.chkTenSp.UseVisualStyleBackColor = true;
             this.chkTenSp.CheckedChanged += new System.EventHandler(this.chkTenSp_CheckedChanged);
@@ -526,7 +526,7 @@
             this.chkProductNameSearchAll.Location = new System.Drawing.Point(79, 61);
             this.chkProductNameSearchAll.Name = "chkProductNameSearchAll";
             this.chkProductNameSearchAll.Size = new System.Drawing.Size(57, 17);
-            this.chkProductNameSearchAll.TabIndex = 15;
+            this.chkProductNameSearchAll.TabIndex = 10;
             this.chkProductNameSearchAll.Text = "Tất cả";
             this.chkProductNameSearchAll.UseVisualStyleBackColor = true;
             this.chkProductNameSearchAll.CheckedChanged += new System.EventHandler(this.chkTatCaTimKiemTenSanPham_CheckedChanged);
@@ -561,7 +561,7 @@
             this.btnTimKiemTenSanPham.Location = new System.Drawing.Point(329, 21);
             this.btnTimKiemTenSanPham.Name = "btnTimKiemTenSanPham";
             this.btnTimKiemTenSanPham.Size = new System.Drawing.Size(77, 23);
-            this.btnTimKiemTenSanPham.TabIndex = 10;
+            this.btnTimKiemTenSanPham.TabIndex = 9;
             this.btnTimKiemTenSanPham.Text = "Tìm &kiếm";
             this.btnTimKiemTenSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiemTenSanPham.UseVisualStyleBackColor = true;
@@ -573,7 +573,7 @@
             this.txtProductNameSearch.Location = new System.Drawing.Point(79, 23);
             this.txtProductNameSearch.Name = "txtProductNameSearch";
             this.txtProductNameSearch.Size = new System.Drawing.Size(223, 20);
-            this.txtProductNameSearch.TabIndex = 9;
+            this.txtProductNameSearch.TabIndex = 8;
             // 
             // gbThongTinSanPhamQuanLySanPham
             // 
@@ -627,7 +627,7 @@
             this.txtGiamGia.Location = new System.Drawing.Point(116, 192);
             this.txtGiamGia.Name = "txtGiamGia";
             this.txtGiamGia.Size = new System.Drawing.Size(95, 20);
-            this.txtGiamGia.TabIndex = 18;
+            this.txtGiamGia.TabIndex = 5;
             // 
             // comboBoxNhasx
             // 
@@ -636,7 +636,7 @@
             this.comboBoxNhasx.Location = new System.Drawing.Point(116, 135);
             this.comboBoxNhasx.Name = "comboBoxNhasx";
             this.comboBoxNhasx.Size = new System.Drawing.Size(211, 21);
-            this.comboBoxNhasx.TabIndex = 17;
+            this.comboBoxNhasx.TabIndex = 3;
             // 
             // la
             // 
@@ -654,7 +654,7 @@
             this.txtTenSp.Location = new System.Drawing.Point(116, 78);
             this.txtTenSp.Name = "txtTenSp";
             this.txtTenSp.Size = new System.Drawing.Size(211, 20);
-            this.txtTenSp.TabIndex = 15;
+            this.txtTenSp.TabIndex = 1;
             // 
             // txtId
             // 
@@ -663,7 +663,7 @@
             this.txtId.Location = new System.Drawing.Point(116, 50);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(211, 20);
-            this.txtId.TabIndex = 14;
+            this.txtId.TabIndex = 0;
             // 
             // label11
             // 
@@ -693,7 +693,7 @@
             this.btnXoaTrangTenSanPham.Location = new System.Drawing.Point(241, 247);
             this.btnXoaTrangTenSanPham.Name = "btnXoaTrangTenSanPham";
             this.btnXoaTrangTenSanPham.Size = new System.Drawing.Size(86, 23);
-            this.btnXoaTrangTenSanPham.TabIndex = 6;
+            this.btnXoaTrangTenSanPham.TabIndex = 7;
             this.btnXoaTrangTenSanPham.Text = "Xóa &trắng";
             this.btnXoaTrangTenSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoaTrangTenSanPham.UseVisualStyleBackColor = true;
@@ -705,7 +705,7 @@
             this.txtGiaban.Location = new System.Drawing.Point(116, 164);
             this.txtGiaban.Name = "txtGiaban";
             this.txtGiaban.Size = new System.Drawing.Size(95, 20);
-            this.txtGiaban.TabIndex = 9;
+            this.txtGiaban.TabIndex = 4;
             // 
             // label1
             // 
@@ -725,7 +725,7 @@
             this.btnProductNameSave.Location = new System.Drawing.Point(149, 247);
             this.btnProductNameSave.Name = "btnProductNameSave";
             this.btnProductNameSave.Size = new System.Drawing.Size(86, 23);
-            this.btnProductNameSave.TabIndex = 3;
+            this.btnProductNameSave.TabIndex = 6;
             this.btnProductNameSave.Text = "&Lưu lại";
             this.btnProductNameSave.UseVisualStyleBackColor = true;
             this.btnProductNameSave.Click += new System.EventHandler(this.btnThemQuanLySanPham_Click);
@@ -737,7 +737,7 @@
             this.comboBoxLoaiSanPham.Location = new System.Drawing.Point(116, 106);
             this.comboBoxLoaiSanPham.Name = "comboBoxLoaiSanPham";
             this.comboBoxLoaiSanPham.Size = new System.Drawing.Size(211, 21);
-            this.comboBoxLoaiSanPham.TabIndex = 5;
+            this.comboBoxLoaiSanPham.TabIndex = 2;
             // 
             // lblLoaiSanPhamQuanLySanPham
             // 
@@ -864,7 +864,7 @@
             // toolStripLblPage
             // 
             this.toolStripLblPage.Name = "toolStripLblPage";
-            this.toolStripLblPage.Size = new System.Drawing.Size(49, 22);
+            this.toolStripLblPage.Size = new System.Drawing.Size(53, 22);
             this.toolStripLblPage.Text = "Trang số";
             // 
             // bindingNavigatorPositionItem
@@ -909,7 +909,7 @@
             // 
             this.toolStripLblTotal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLblTotal.Name = "toolStripLblTotal";
-            this.toolStripLblTotal.Size = new System.Drawing.Size(98, 22);
+            this.toolStripLblTotal.Size = new System.Drawing.Size(108, 22);
             this.toolStripLblTotal.Text = "Tổng sồ sản phẩm:";
             // 
             // toolStripProductReload
@@ -951,7 +951,7 @@
             this.gvSanPhamDanhMuc.ReadOnly = true;
             this.gvSanPhamDanhMuc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvSanPhamDanhMuc.Size = new System.Drawing.Size(759, 277);
-            this.gvSanPhamDanhMuc.TabIndex = 71;
+            this.gvSanPhamDanhMuc.TabIndex = 36;
             this.gvSanPhamDanhMuc.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuanLy_RowEnter);
             this.gvSanPhamDanhMuc.SelectionChanged += new System.EventHandler(this.gvSanPhamDanhMuc_SelectionChanged);
             // 
@@ -963,7 +963,7 @@
             this.checkBoxHTMaBan.Location = new System.Drawing.Point(752, 156);
             this.checkBoxHTMaBan.Name = "checkBoxHTMaBan";
             this.checkBoxHTMaBan.Size = new System.Drawing.Size(62, 17);
-            this.checkBoxHTMaBan.TabIndex = 99;
+            this.checkBoxHTMaBan.TabIndex = 33;
             this.checkBoxHTMaBan.Text = "Mã bán";
             this.checkBoxHTMaBan.UseVisualStyleBackColor = true;
             this.checkBoxHTMaBan.CheckedChanged += new System.EventHandler(this.checkBoxHTMaBan_CheckedChanged);
@@ -976,7 +976,7 @@
             this.checkBoxHTMamua.Location = new System.Drawing.Point(656, 156);
             this.checkBoxHTMamua.Name = "checkBoxHTMamua";
             this.checkBoxHTMamua.Size = new System.Drawing.Size(64, 17);
-            this.checkBoxHTMamua.TabIndex = 98;
+            this.checkBoxHTMamua.TabIndex = 32;
             this.checkBoxHTMamua.Text = "Mã mua";
             this.checkBoxHTMamua.UseVisualStyleBackColor = true;
             this.checkBoxHTMamua.CheckedChanged += new System.EventHandler(this.checkBoxHTMamua_CheckedChanged);
@@ -989,7 +989,7 @@
             this.checkBoxHTStatus.Location = new System.Drawing.Point(556, 156);
             this.checkBoxHTStatus.Name = "checkBoxHTStatus";
             this.checkBoxHTStatus.Size = new System.Drawing.Size(74, 17);
-            this.checkBoxHTStatus.TabIndex = 97;
+            this.checkBoxHTStatus.TabIndex = 31;
             this.checkBoxHTStatus.Text = "Trạng thái";
             this.checkBoxHTStatus.UseVisualStyleBackColor = true;
             this.checkBoxHTStatus.CheckedChanged += new System.EventHandler(this.checkBoxHTStatus_CheckedChanged);
@@ -1002,7 +1002,7 @@
             this.checkBoxHTGiamGia.Location = new System.Drawing.Point(460, 156);
             this.checkBoxHTGiamGia.Name = "checkBoxHTGiamGia";
             this.checkBoxHTGiamGia.Size = new System.Drawing.Size(67, 17);
-            this.checkBoxHTGiamGia.TabIndex = 96;
+            this.checkBoxHTGiamGia.TabIndex = 30;
             this.checkBoxHTGiamGia.Text = "Giảm giá";
             this.checkBoxHTGiamGia.UseVisualStyleBackColor = true;
             this.checkBoxHTGiamGia.CheckedChanged += new System.EventHandler(this.checkBoxHTGiamGia_CheckedChanged);
@@ -1015,7 +1015,7 @@
             this.checkBoxHTGiaban.Location = new System.Drawing.Point(925, 129);
             this.checkBoxHTGiaban.Name = "checkBoxHTGiaban";
             this.checkBoxHTGiaban.Size = new System.Drawing.Size(63, 17);
-            this.checkBoxHTGiaban.TabIndex = 95;
+            this.checkBoxHTGiaban.TabIndex = 28;
             this.checkBoxHTGiaban.Text = "Giá bán";
             this.checkBoxHTGiaban.UseVisualStyleBackColor = true;
             this.checkBoxHTGiaban.CheckedChanged += new System.EventHandler(this.checkBoxHTGiaban_CheckedChanged);
@@ -1028,7 +1028,7 @@
             this.checkBoxHTGiaMua.Location = new System.Drawing.Point(852, 129);
             this.checkBoxHTGiaMua.Name = "checkBoxHTGiaMua";
             this.checkBoxHTGiaMua.Size = new System.Drawing.Size(65, 17);
-            this.checkBoxHTGiaMua.TabIndex = 94;
+            this.checkBoxHTGiaMua.TabIndex = 27;
             this.checkBoxHTGiaMua.Text = "Giá mua";
             this.checkBoxHTGiaMua.UseVisualStyleBackColor = true;
             this.checkBoxHTGiaMua.CheckedChanged += new System.EventHandler(this.checkBoxHTGiaMua_CheckedChanged);
@@ -1041,7 +1041,7 @@
             this.checkBoxHTNgaySx.Location = new System.Drawing.Point(556, 129);
             this.checkBoxHTNgaySx.Name = "checkBoxHTNgaySx";
             this.checkBoxHTNgaySx.Size = new System.Drawing.Size(94, 17);
-            this.checkBoxHTNgaySx.TabIndex = 93;
+            this.checkBoxHTNgaySx.TabIndex = 24;
             this.checkBoxHTNgaySx.Text = "Ngày sản xuất";
             this.checkBoxHTNgaySx.UseVisualStyleBackColor = true;
             this.checkBoxHTNgaySx.CheckedChanged += new System.EventHandler(this.checkBoxHTNgaySx_CheckedChanged);
@@ -1054,7 +1054,7 @@
             this.checkBoxHTNgayHethan.Location = new System.Drawing.Point(656, 129);
             this.checkBoxHTNgayHethan.Name = "checkBoxHTNgayHethan";
             this.checkBoxHTNgayHethan.Size = new System.Drawing.Size(90, 17);
-            this.checkBoxHTNgayHethan.TabIndex = 92;
+            this.checkBoxHTNgayHethan.TabIndex = 25;
             this.checkBoxHTNgayHethan.Text = "Ngày hết hạn";
             this.checkBoxHTNgayHethan.UseVisualStyleBackColor = true;
             this.checkBoxHTNgayHethan.CheckedChanged += new System.EventHandler(this.checkBoxHTNgayHethan_CheckedChanged);
@@ -1068,7 +1068,7 @@
             this.checkBoxHTDonVi.Location = new System.Drawing.Point(852, 156);
             this.checkBoxHTDonVi.Name = "checkBoxHTDonVi";
             this.checkBoxHTDonVi.Size = new System.Drawing.Size(57, 17);
-            this.checkBoxHTDonVi.TabIndex = 88;
+            this.checkBoxHTDonVi.TabIndex = 34;
             this.checkBoxHTDonVi.Text = "Đơn vị";
             this.checkBoxHTDonVi.UseVisualStyleBackColor = true;
             this.checkBoxHTDonVi.CheckedChanged += new System.EventHandler(this.checkBoxHTDonVi_CheckedChanged);
@@ -1082,7 +1082,7 @@
             this.checkBox5.Location = new System.Drawing.Point(329, 156);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(57, 17);
-            this.checkBox5.TabIndex = 87;
+            this.checkBox5.TabIndex = 29;
             this.checkBox5.Text = "Tất cả";
             this.checkBox5.UseVisualStyleBackColor = true;
             this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
@@ -1096,7 +1096,7 @@
             this.checkBoxHTMota.Location = new System.Drawing.Point(925, 156);
             this.checkBoxHTMota.Name = "checkBoxHTMota";
             this.checkBoxHTMota.Size = new System.Drawing.Size(53, 17);
-            this.checkBoxHTMota.TabIndex = 86;
+            this.checkBoxHTMota.TabIndex = 35;
             this.checkBoxHTMota.Text = "Mô tả";
             this.checkBoxHTMota.UseVisualStyleBackColor = true;
             this.checkBoxHTMota.CheckedChanged += new System.EventHandler(this.checkBoxHTMota_CheckedChanged);
@@ -1110,7 +1110,7 @@
             this.checkBoxHTTenSp.Location = new System.Drawing.Point(752, 129);
             this.checkBoxHTTenSp.Name = "checkBoxHTTenSp";
             this.checkBoxHTTenSp.Size = new System.Drawing.Size(94, 17);
-            this.checkBoxHTTenSp.TabIndex = 84;
+            this.checkBoxHTTenSp.TabIndex = 26;
             this.checkBoxHTTenSp.Text = "Tên sản phẩm";
             this.checkBoxHTTenSp.UseVisualStyleBackColor = true;
             this.checkBoxHTTenSp.CheckedChanged += new System.EventHandler(this.checkBoxHTTenSp_CheckedChanged);
@@ -1125,7 +1125,7 @@
             this.checkBox9.Location = new System.Drawing.Point(460, 129);
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(90, 17);
-            this.checkBox9.TabIndex = 83;
+            this.checkBox9.TabIndex = 23;
             this.checkBox9.Text = "Mã sản phẩm";
             this.checkBox9.UseVisualStyleBackColor = true;
             // 
@@ -1198,7 +1198,7 @@
             this.cboTrangThai.Location = new System.Drawing.Point(97, 342);
             this.cboTrangThai.Name = "cboTrangThai";
             this.cboTrangThai.Size = new System.Drawing.Size(188, 21);
-            this.cboTrangThai.TabIndex = 42;
+            this.cboTrangThai.TabIndex = 12;
             // 
             // label10
             // 
@@ -1218,7 +1218,7 @@
             this.cboNhaSanXuat.Location = new System.Drawing.Point(97, 313);
             this.cboNhaSanXuat.Name = "cboNhaSanXuat";
             this.cboNhaSanXuat.Size = new System.Drawing.Size(188, 21);
-            this.cboNhaSanXuat.TabIndex = 27;
+            this.cboNhaSanXuat.TabIndex = 11;
             // 
             // lblNhaSanXuat
             // 
@@ -1258,7 +1258,7 @@
             this.cboNguonGoc.Location = new System.Drawing.Point(97, 284);
             this.cboNguonGoc.Name = "cboNguonGoc";
             this.cboNguonGoc.Size = new System.Drawing.Size(188, 21);
-            this.cboNguonGoc.TabIndex = 25;
+            this.cboNguonGoc.TabIndex = 10;
             // 
             // lblNguonGoc
             // 
@@ -1276,7 +1276,7 @@
             this.textBoxGiamGia.Location = new System.Drawing.Point(97, 227);
             this.textBoxGiamGia.Name = "textBoxGiamGia";
             this.textBoxGiamGia.Size = new System.Drawing.Size(100, 20);
-            this.textBoxGiamGia.TabIndex = 38;
+            this.textBoxGiamGia.TabIndex = 8;
             // 
             // textBoxGiaBan
             // 
@@ -1284,7 +1284,7 @@
             this.textBoxGiaBan.Location = new System.Drawing.Point(97, 199);
             this.textBoxGiaBan.Name = "textBoxGiaBan";
             this.textBoxGiaBan.Size = new System.Drawing.Size(100, 20);
-            this.textBoxGiaBan.TabIndex = 37;
+            this.textBoxGiaBan.TabIndex = 7;
             // 
             // textBoxGiaMua
             // 
@@ -1292,7 +1292,7 @@
             this.textBoxGiaMua.Location = new System.Drawing.Point(97, 171);
             this.textBoxGiaMua.Name = "textBoxGiaMua";
             this.textBoxGiaMua.Size = new System.Drawing.Size(100, 20);
-            this.textBoxGiaMua.TabIndex = 36;
+            this.textBoxGiaMua.TabIndex = 6;
             // 
             // label7
             // 
@@ -1311,7 +1311,7 @@
             this.cboDonVi.Location = new System.Drawing.Point(97, 255);
             this.cboDonVi.Name = "cboDonVi";
             this.cboDonVi.Size = new System.Drawing.Size(188, 21);
-            this.cboDonVi.TabIndex = 23;
+            this.cboDonVi.TabIndex = 9;
             // 
             // lblDonVi
             // 
@@ -1351,7 +1351,7 @@
             this.dateTimePickerHetHan.Location = new System.Drawing.Point(97, 143);
             this.dateTimePickerHetHan.Name = "dateTimePickerHetHan";
             this.dateTimePickerHetHan.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePickerHetHan.TabIndex = 32;
+            this.dateTimePickerHetHan.TabIndex = 5;
             // 
             // dateTimePickerSx
             // 
@@ -1361,7 +1361,7 @@
             this.dateTimePickerSx.Location = new System.Drawing.Point(97, 115);
             this.dateTimePickerSx.Name = "dateTimePickerSx";
             this.dateTimePickerSx.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePickerSx.TabIndex = 31;
+            this.dateTimePickerSx.TabIndex = 4;
             // 
             // btnResetProduct
             // 
@@ -1371,7 +1371,7 @@
             this.btnResetProduct.Location = new System.Drawing.Point(196, 445);
             this.btnResetProduct.Name = "btnResetProduct";
             this.btnResetProduct.Size = new System.Drawing.Size(86, 23);
-            this.btnResetProduct.TabIndex = 74;
+            this.btnResetProduct.TabIndex = 15;
             this.btnResetProduct.Text = "&Xóa trắng";
             this.btnResetProduct.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnResetProduct.UseVisualStyleBackColor = true;
@@ -1395,7 +1395,7 @@
             this.btnSaveProduct.Location = new System.Drawing.Point(104, 445);
             this.btnSaveProduct.Name = "btnSaveProduct";
             this.btnSaveProduct.Size = new System.Drawing.Size(86, 23);
-            this.btnSaveProduct.TabIndex = 72;
+            this.btnSaveProduct.TabIndex = 14;
             this.btnSaveProduct.Text = "&Lưu lại";
             this.btnSaveProduct.UseVisualStyleBackColor = true;
             this.btnSaveProduct.Click += new System.EventHandler(this.btnThemQuanLy_Click);
@@ -1408,7 +1408,7 @@
             this.textBoxMota.Name = "textBoxMota";
             this.textBoxMota.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxMota.Size = new System.Drawing.Size(188, 60);
-            this.textBoxMota.TabIndex = 21;
+            this.textBoxMota.TabIndex = 13;
             // 
             // label3
             // 
@@ -1427,7 +1427,7 @@
             this.cboTenSanPham.Location = new System.Drawing.Point(97, 57);
             this.cboTenSanPham.Name = "cboTenSanPham";
             this.cboTenSanPham.Size = new System.Drawing.Size(188, 21);
-            this.cboTenSanPham.TabIndex = 28;
+            this.cboTenSanPham.TabIndex = 2;
             this.cboTenSanPham.SelectedIndexChanged += new System.EventHandler(this.cboTenSanPham_SelectedIndexChanged);
             // 
             // lblMoTa
@@ -1477,7 +1477,7 @@
             this.cboLoaiSanPham.Location = new System.Drawing.Point(97, 86);
             this.cboLoaiSanPham.Name = "cboLoaiSanPham";
             this.cboLoaiSanPham.Size = new System.Drawing.Size(188, 21);
-            this.cboLoaiSanPham.TabIndex = 5;
+            this.cboLoaiSanPham.TabIndex = 3;
             // 
             // lblLoaiSanPham
             // 
@@ -1514,7 +1514,7 @@
             this.btnAdvanceSearch.Location = new System.Drawing.Point(361, 21);
             this.btnAdvanceSearch.Name = "btnAdvanceSearch";
             this.btnAdvanceSearch.Size = new System.Drawing.Size(124, 23);
-            this.btnAdvanceSearch.TabIndex = 82;
+            this.btnAdvanceSearch.TabIndex = 18;
             this.btnAdvanceSearch.Text = "Tìm kiếm nâng cao";
             this.btnAdvanceSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdvanceSearch.UseVisualStyleBackColor = true;
@@ -1527,7 +1527,7 @@
             this.chkSearchProviderNameProduct.Location = new System.Drawing.Point(327, 57);
             this.chkSearchProviderNameProduct.Name = "chkSearchProviderNameProduct";
             this.chkSearchProviderNameProduct.Size = new System.Drawing.Size(94, 17);
-            this.chkSearchProviderNameProduct.TabIndex = 81;
+            this.chkSearchProviderNameProduct.TabIndex = 22;
             this.chkSearchProviderNameProduct.Text = "Nhà cung cấp";
             this.chkSearchProviderNameProduct.UseVisualStyleBackColor = true;
             // 
@@ -1537,7 +1537,7 @@
             this.txtProductSearch.Location = new System.Drawing.Point(64, 23);
             this.txtProductSearch.Name = "txtProductSearch";
             this.txtProductSearch.Size = new System.Drawing.Size(209, 20);
-            this.txtProductSearch.TabIndex = 63;
+            this.txtProductSearch.TabIndex = 16;
             // 
             // btnTimKiemQuanLy
             // 
@@ -1548,7 +1548,7 @@
             this.btnTimKiemQuanLy.Location = new System.Drawing.Point(280, 21);
             this.btnTimKiemQuanLy.Name = "btnTimKiemQuanLy";
             this.btnTimKiemQuanLy.Size = new System.Drawing.Size(75, 23);
-            this.btnTimKiemQuanLy.TabIndex = 64;
+            this.btnTimKiemQuanLy.TabIndex = 17;
             this.btnTimKiemQuanLy.Text = "Tìm &kiếm";
             this.btnTimKiemQuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimKiemQuanLy.UseVisualStyleBackColor = true;
@@ -1575,7 +1575,7 @@
             this.chkSearchNameProduct.Location = new System.Drawing.Point(131, 57);
             this.chkSearchNameProduct.Name = "chkSearchNameProduct";
             this.chkSearchNameProduct.Size = new System.Drawing.Size(94, 17);
-            this.chkSearchNameProduct.TabIndex = 66;
+            this.chkSearchNameProduct.TabIndex = 20;
             this.chkSearchNameProduct.Text = "Tên sản phẩm";
             this.chkSearchNameProduct.UseVisualStyleBackColor = true;
             // 
@@ -1586,7 +1586,7 @@
             this.chkSearchAllProduct.Location = new System.Drawing.Point(64, 57);
             this.chkSearchAllProduct.Name = "chkSearchAllProduct";
             this.chkSearchAllProduct.Size = new System.Drawing.Size(57, 17);
-            this.chkSearchAllProduct.TabIndex = 69;
+            this.chkSearchAllProduct.TabIndex = 19;
             this.chkSearchAllProduct.Text = "Tất cả";
             this.chkSearchAllProduct.UseVisualStyleBackColor = true;
             this.chkSearchAllProduct.CheckedChanged += new System.EventHandler(this.chkSearchAllProduct_CheckedChanged);
@@ -1598,7 +1598,7 @@
             this.chkSearchManNameProduct.Location = new System.Drawing.Point(227, 57);
             this.chkSearchManNameProduct.Name = "chkSearchManNameProduct";
             this.chkSearchManNameProduct.Size = new System.Drawing.Size(89, 17);
-            this.chkSearchManNameProduct.TabIndex = 80;
+            this.chkSearchManNameProduct.TabIndex = 21;
             this.chkSearchManNameProduct.Text = "Nhà sản xuất";
             this.chkSearchManNameProduct.UseVisualStyleBackColor = true;
             // 
