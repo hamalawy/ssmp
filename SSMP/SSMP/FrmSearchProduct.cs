@@ -96,6 +96,9 @@ namespace SSMP
             cboDieuKienGiamGia.DisplayMember = "Text";
             cboDieuKienGiamGia.ValueMember = "Value";
             cboDieuKienGiamGia.SelectedIndex = 3;
+
+            dateTimeNgaySXFrom.Value = new DateTime(DateTime.Now.Year, 1, 1);
+            dateTimeNgayHetHanTo.Value = new DateTime(DateTime.Now.Year, 12, 31);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
