@@ -95,7 +95,7 @@
             this.cboTrangThai.Location = new System.Drawing.Point(408, 88);
             this.cboTrangThai.Name = "cboTrangThai";
             this.cboTrangThai.Size = new System.Drawing.Size(188, 21);
-            this.cboTrangThai.TabIndex = 71;
+            this.cboTrangThai.TabIndex = 8;
             // 
             // label10
             // 
@@ -114,7 +114,7 @@
             this.cboNhaSanXuat.Location = new System.Drawing.Point(408, 59);
             this.cboNhaSanXuat.Name = "cboNhaSanXuat";
             this.cboNhaSanXuat.Size = new System.Drawing.Size(188, 21);
-            this.cboNhaSanXuat.TabIndex = 56;
+            this.cboNhaSanXuat.TabIndex = 7;
             // 
             // lblNhaSanXuat
             // 
@@ -153,7 +153,7 @@
             this.cboNguonGoc.Location = new System.Drawing.Point(408, 30);
             this.cboNguonGoc.Name = "cboNguonGoc";
             this.cboNguonGoc.Size = new System.Drawing.Size(188, 21);
-            this.cboNguonGoc.TabIndex = 54;
+            this.cboNguonGoc.TabIndex = 6;
             // 
             // lblNguonGoc
             // 
@@ -171,7 +171,7 @@
             this.txtGiamGiaFrom.Location = new System.Drawing.Point(269, 225);
             this.txtGiamGiaFrom.Name = "txtGiamGiaFrom";
             this.txtGiamGiaFrom.Size = new System.Drawing.Size(110, 20);
-            this.txtGiamGiaFrom.TabIndex = 67;
+            this.txtGiamGiaFrom.TabIndex = 18;
             // 
             // txtGiaBanFrom
             // 
@@ -179,7 +179,7 @@
             this.txtGiaBanFrom.Location = new System.Drawing.Point(269, 195);
             this.txtGiaBanFrom.Name = "txtGiaBanFrom";
             this.txtGiaBanFrom.Size = new System.Drawing.Size(110, 20);
-            this.txtGiaBanFrom.TabIndex = 66;
+            this.txtGiaBanFrom.TabIndex = 15;
             // 
             // txtGiaMuaFrom
             // 
@@ -187,7 +187,7 @@
             this.txtGiaMuaFrom.Location = new System.Drawing.Point(269, 166);
             this.txtGiaMuaFrom.Name = "txtGiaMuaFrom";
             this.txtGiaMuaFrom.Size = new System.Drawing.Size(110, 20);
-            this.txtGiaMuaFrom.TabIndex = 65;
+            this.txtGiaMuaFrom.TabIndex = 12;
             // 
             // label7
             // 
@@ -206,7 +206,7 @@
             this.cboDonVi.Location = new System.Drawing.Point(101, 87);
             this.cboDonVi.Name = "cboDonVi";
             this.cboDonVi.Size = new System.Drawing.Size(188, 21);
-            this.cboDonVi.TabIndex = 52;
+            this.cboDonVi.TabIndex = 3;
             // 
             // lblDonVi
             // 
@@ -246,7 +246,7 @@
             this.dateTimeNgayHetHanFrom.Location = new System.Drawing.Point(408, 117);
             this.dateTimeNgayHetHanFrom.Name = "dateTimeNgayHetHanFrom";
             this.dateTimeNgayHetHanFrom.Size = new System.Drawing.Size(85, 20);
-            this.dateTimeNgayHetHanFrom.TabIndex = 61;
+            this.dateTimeNgayHetHanFrom.TabIndex = 9;
             // 
             // dateTimeNgaySXFrom
             // 
@@ -256,7 +256,7 @@
             this.dateTimeNgaySXFrom.Location = new System.Drawing.Point(101, 117);
             this.dateTimeNgaySXFrom.Name = "dateTimeNgaySXFrom";
             this.dateTimeNgaySXFrom.Size = new System.Drawing.Size(85, 20);
-            this.dateTimeNgaySXFrom.TabIndex = 60;
+            this.dateTimeNgaySXFrom.TabIndex = 4;
             // 
             // label4
             // 
@@ -285,7 +285,7 @@
             this.cboTenSanPham.Location = new System.Drawing.Point(101, 30);
             this.cboTenSanPham.Name = "cboTenSanPham";
             this.cboTenSanPham.Size = new System.Drawing.Size(188, 21);
-            this.cboTenSanPham.TabIndex = 57;
+            this.cboTenSanPham.TabIndex = 1;
             // 
             // lblTenSanPham
             // 
@@ -304,7 +304,7 @@
             this.cboLoaiSanPham.Location = new System.Drawing.Point(101, 59);
             this.cboLoaiSanPham.Name = "cboLoaiSanPham";
             this.cboLoaiSanPham.Size = new System.Drawing.Size(188, 21);
-            this.cboLoaiSanPham.TabIndex = 48;
+            this.cboLoaiSanPham.TabIndex = 2;
             // 
             // lblLoaiSanPham
             // 
@@ -324,7 +324,7 @@
             this.dateTimeNgaySXTo.Location = new System.Drawing.Point(204, 117);
             this.dateTimeNgaySXTo.Name = "dateTimeNgaySXTo";
             this.dateTimeNgaySXTo.Size = new System.Drawing.Size(85, 20);
-            this.dateTimeNgaySXTo.TabIndex = 60;
+            this.dateTimeNgaySXTo.TabIndex = 5;
             // 
             // dateTimeNgayHetHanTo
             // 
@@ -334,7 +334,7 @@
             this.dateTimeNgayHetHanTo.Location = new System.Drawing.Point(511, 117);
             this.dateTimeNgayHetHanTo.Name = "dateTimeNgayHetHanTo";
             this.dateTimeNgayHetHanTo.Size = new System.Drawing.Size(85, 20);
-            this.dateTimeNgayHetHanTo.TabIndex = 61;
+            this.dateTimeNgayHetHanTo.TabIndex = 10;
             // 
             // txtGiaMuaTo
             // 
@@ -342,7 +342,7 @@
             this.txtGiaMuaTo.Location = new System.Drawing.Point(444, 166);
             this.txtGiaMuaTo.Name = "txtGiaMuaTo";
             this.txtGiaMuaTo.Size = new System.Drawing.Size(110, 20);
-            this.txtGiaMuaTo.TabIndex = 65;
+            this.txtGiaMuaTo.TabIndex = 13;
             // 
             // txtGiaBanTo
             // 
@@ -350,7 +350,7 @@
             this.txtGiaBanTo.Location = new System.Drawing.Point(444, 195);
             this.txtGiaBanTo.Name = "txtGiaBanTo";
             this.txtGiaBanTo.Size = new System.Drawing.Size(110, 20);
-            this.txtGiaBanTo.TabIndex = 66;
+            this.txtGiaBanTo.TabIndex = 16;
             // 
             // txtGiamGiaTo
             // 
@@ -358,7 +358,7 @@
             this.txtGiamGiaTo.Location = new System.Drawing.Point(444, 224);
             this.txtGiamGiaTo.Name = "txtGiamGiaTo";
             this.txtGiamGiaTo.Size = new System.Drawing.Size(110, 20);
-            this.txtGiamGiaTo.TabIndex = 67;
+            this.txtGiamGiaTo.TabIndex = 19;
             // 
             // label1
             // 
@@ -407,7 +407,7 @@
             this.cboDieuKienGiaMua.Location = new System.Drawing.Point(101, 166);
             this.cboDieuKienGiaMua.Name = "cboDieuKienGiaMua";
             this.cboDieuKienGiaMua.Size = new System.Drawing.Size(121, 21);
-            this.cboDieuKienGiaMua.TabIndex = 77;
+            this.cboDieuKienGiaMua.TabIndex = 11;
             this.cboDieuKienGiaMua.SelectedIndexChanged += new System.EventHandler(this.cboDieuKienGiaMua_SelectedIndexChanged);
             // 
             // cboDieuKienGiaBan
@@ -421,7 +421,7 @@
             this.cboDieuKienGiaBan.Location = new System.Drawing.Point(102, 195);
             this.cboDieuKienGiaBan.Name = "cboDieuKienGiaBan";
             this.cboDieuKienGiaBan.Size = new System.Drawing.Size(120, 21);
-            this.cboDieuKienGiaBan.TabIndex = 77;
+            this.cboDieuKienGiaBan.TabIndex = 14;
             this.cboDieuKienGiaBan.SelectedIndexChanged += new System.EventHandler(this.cboDieuKienGiaBan_SelectedIndexChanged);
             // 
             // cboDieuKienGiamGia
@@ -435,7 +435,7 @@
             this.cboDieuKienGiamGia.Location = new System.Drawing.Point(102, 224);
             this.cboDieuKienGiamGia.Name = "cboDieuKienGiamGia";
             this.cboDieuKienGiamGia.Size = new System.Drawing.Size(120, 21);
-            this.cboDieuKienGiamGia.TabIndex = 77;
+            this.cboDieuKienGiamGia.TabIndex = 17;
             this.cboDieuKienGiamGia.SelectedIndexChanged += new System.EventHandler(this.cboDieuKienGiamGia_SelectedIndexChanged);
             // 
             // lblDenGiaMua
@@ -472,7 +472,7 @@
             this.btnReset.Location = new System.Drawing.Point(316, 260);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(78, 23);
-            this.btnReset.TabIndex = 74;
+            this.btnReset.TabIndex = 21;
             this.btnReset.Text = "Xóa trắng";
             this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReset.UseVisualStyleBackColor = true;
@@ -485,7 +485,7 @@
             this.btnSearch.Location = new System.Drawing.Point(227, 260);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(78, 23);
-            this.btnSearch.TabIndex = 73;
+            this.btnSearch.TabIndex = 20;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSearch.UseVisualStyleBackColor = true;
