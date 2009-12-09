@@ -72,7 +72,7 @@ namespace SSMP.BaoCao {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Mã_số {
+        public CrystalDecisions.Shared.IParameterField Parameter_Ngày_sản_xuất {
             get {
                 return this.DataDefinition.ParameterFields[0];
             }
@@ -80,7 +80,7 @@ namespace SSMP.BaoCao {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Ngày_sản_xuất {
+        public CrystalDecisions.Shared.IParameterField Parameter_Ngày_hết_hạn {
             get {
                 return this.DataDefinition.ParameterFields[1];
             }
@@ -88,7 +88,7 @@ namespace SSMP.BaoCao {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Ngày_hết_hạn {
+        public CrystalDecisions.Shared.IParameterField Parameter_Tên_sản_phẩm {
             get {
                 return this.DataDefinition.ParameterFields[2];
             }
@@ -96,7 +96,7 @@ namespace SSMP.BaoCao {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Tên_sản_phẩm {
+        public CrystalDecisions.Shared.IParameterField Parameter_Giá_mua {
             get {
                 return this.DataDefinition.ParameterFields[3];
             }
@@ -104,7 +104,7 @@ namespace SSMP.BaoCao {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Giá_mua {
+        public CrystalDecisions.Shared.IParameterField Parameter_Giá_bán {
             get {
                 return this.DataDefinition.ParameterFields[4];
             }
@@ -112,17 +112,9 @@ namespace SSMP.BaoCao {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_Giá_bán {
-            get {
-                return this.DataDefinition.ParameterFields[5];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public CrystalDecisions.Shared.IParameterField Parameter_Ngày_tạo {
             get {
-                return this.DataDefinition.ParameterFields[6];
+                return this.DataDefinition.ParameterFields[5];
             }
         }
     }

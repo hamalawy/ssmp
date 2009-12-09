@@ -37,8 +37,7 @@ namespace SSMP
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command, ht.KetNoi());
                 BaoCao.DataSet1 dataset = new SSMP.BaoCao.DataSet1();
-                adapter.Fill(dataset);
-
+                adapter.Fill(dataset, "DataTable1");
                 BaoCao.TestNhapCrystalReport report = new SSMP.BaoCao.TestNhapCrystalReport();
                 report.SetDataSource(dataset);
                 crystalReportViewer1.ReportSource = report;
@@ -64,7 +63,7 @@ namespace SSMP
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command, ht.KetNoi());
                 BaoCao.DataSet2 dataset = new SSMP.BaoCao.DataSet2();
-                adapter.Fill(dataset);
+                adapter.Fill(dataset, "DataTable1");
 
                 BaoCao.TestXuatCrystalReport report = new SSMP.BaoCao.TestXuatCrystalReport();
                 report.SetDataSource(dataset);
