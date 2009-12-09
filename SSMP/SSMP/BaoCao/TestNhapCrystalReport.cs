@@ -16,14 +16,14 @@ namespace SSMP.BaoCao {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport1 : ReportClass {
+    public class TestNhapCrystalReport : ReportClass {
         
-        public CrystalReport1() {
+        public TestNhapCrystalReport() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport1.rpt";
+                return "TestNhapCrystalReport.rpt";
             }
             set {
                 // Do nothing
@@ -69,12 +69,92 @@ namespace SSMP.BaoCao {
                 return this.ReportDefinition.Sections[4];
             }
         }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_id {
+            get {
+                return this.DataDefinition.ParameterFields[0];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_NgaySx {
+            get {
+                return this.DataDefinition.ParameterFields[1];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_Ngayhh {
+            get {
+                return this.DataDefinition.ParameterFields[2];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_tenSp {
+            get {
+                return this.DataDefinition.ParameterFields[3];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_giaMua {
+            get {
+                return this.DataDefinition.ParameterFields[4];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_giaBan {
+            get {
+                return this.DataDefinition.ParameterFields[5];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_giamGia {
+            get {
+                return this.DataDefinition.ParameterFields[6];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_trangThai {
+            get {
+                return this.DataDefinition.ParameterFields[7];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_ngayNhap {
+            get {
+                return this.DataDefinition.ParameterFields[8];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_donVi {
+            get {
+                return this.DataDefinition.ParameterFields[9];
+            }
+        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport1 : Component, ICachedReport {
+    public class CachedTestNhapCrystalReport : Component, ICachedReport {
         
-        public CachedCrystalReport1() {
+        public CachedTestNhapCrystalReport() {
         }
         
         [Browsable(false)]
@@ -111,7 +191,7 @@ namespace SSMP.BaoCao {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport1 rpt = new CrystalReport1();
+            TestNhapCrystalReport rpt = new TestNhapCrystalReport();
             rpt.Site = this.Site;
             return rpt;
         }
