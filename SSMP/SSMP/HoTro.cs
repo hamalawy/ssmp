@@ -121,7 +121,7 @@ namespace SSMP
                 string CauLenh = "";
                 CauLenh = "select " + TruongKhoa + "," + TruongHienThi + " from " + TenBang;
 
-                if (TenBang.Contains("Product")) CauLenh += " where StatusId = 1";
+                //if (TenBang.Contains("Product")) CauLenh += " where StatusId = 1";
 
 
                 da = new SqlDataAdapter(CauLenh, KetNoi());
