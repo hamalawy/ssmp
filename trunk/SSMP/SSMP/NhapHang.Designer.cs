@@ -30,97 +30,97 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhapHang));
             this.tpBaoCao = new System.Windows.Forms.TabPage();
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.checkBoxNgay = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.checkBoxNgay = new System.Windows.Forms.CheckBox();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tpQuanLyPhieuNhapHangHoa = new System.Windows.Forms.TabPage();
-            this.lblDanhSachPhieuNhapHang = new System.Windows.Forms.Label();
-            this.lblDanhSachHangHo = new System.Windows.Forms.Label();
-            this.dataGridViewHangHoa = new System.Windows.Forms.DataGridView();
-            this.gbTimKiemQuanLy = new System.Windows.Forms.GroupBox();
-            this.lblTimKiemQuanLy = new System.Windows.Forms.Label();
-            this.txtTimKiemQuanLy = new System.Windows.Forms.TextBox();
-            this.btnTimKiemQuanLy = new System.Windows.Forms.Button();
-            this.checkBoxMaPhieu = new System.Windows.Forms.CheckBox();
-            this.chkNhanviengh = new System.Windows.Forms.CheckBox();
-            this.cbngaytao = new System.Windows.Forms.CheckBox();
-            this.chkNhacungcap = new System.Windows.Forms.CheckBox();
-            this.chkNguoiLapPhieu = new System.Windows.Forms.CheckBox();
-            this.dataGridViewPhieuNhapHAng = new System.Windows.Forms.DataGridView();
-            this.checkBoxMasp = new System.Windows.Forms.CheckBox();
-            this.checkBoxTenSp = new System.Windows.Forms.CheckBox();
-            this.checkBoxDv = new System.Windows.Forms.CheckBox();
-            this.checkBoxNgaySx = new System.Windows.Forms.CheckBox();
-            this.checkBoxNgayHethan = new System.Windows.Forms.CheckBox();
-            this.checkBoxGiaBan = new System.Windows.Forms.CheckBox();
-            this.checkBoxGiaMua = new System.Windows.Forms.CheckBox();
-            this.checkBoxGiamGia = new System.Windows.Forms.CheckBox();
-            this.checkBoxTrangthai = new System.Windows.Forms.CheckBox();
             this.btnReloadAll = new System.Windows.Forms.Button();
+            this.checkBoxTrangthai = new System.Windows.Forms.CheckBox();
+            this.checkBoxGiamGia = new System.Windows.Forms.CheckBox();
+            this.checkBoxGiaMua = new System.Windows.Forms.CheckBox();
+            this.checkBoxGiaBan = new System.Windows.Forms.CheckBox();
+            this.checkBoxNgayHethan = new System.Windows.Forms.CheckBox();
+            this.checkBoxNgaySx = new System.Windows.Forms.CheckBox();
+            this.checkBoxDv = new System.Windows.Forms.CheckBox();
+            this.checkBoxTenSp = new System.Windows.Forms.CheckBox();
+            this.checkBoxMasp = new System.Windows.Forms.CheckBox();
+            this.dataGridViewPhieuNhapHAng = new System.Windows.Forms.DataGridView();
+            this.gbTimKiemQuanLy = new System.Windows.Forms.GroupBox();
+            this.chkNguoiLapPhieu = new System.Windows.Forms.CheckBox();
+            this.chkNhacungcap = new System.Windows.Forms.CheckBox();
+            this.cbngaytao = new System.Windows.Forms.CheckBox();
+            this.chkNhanviengh = new System.Windows.Forms.CheckBox();
+            this.checkBoxMaPhieu = new System.Windows.Forms.CheckBox();
+            this.btnTimKiemQuanLy = new System.Windows.Forms.Button();
+            this.txtTimKiemQuanLy = new System.Windows.Forms.TextBox();
+            this.lblTimKiemQuanLy = new System.Windows.Forms.Label();
+            this.dataGridViewHangHoa = new System.Windows.Forms.DataGridView();
+            this.lblDanhSachHangHo = new System.Windows.Forms.Label();
+            this.lblDanhSachPhieuNhapHang = new System.Windows.Forms.Label();
             this.tpLapPhieuNhapHangHoa = new System.Windows.Forms.TabPage();
-            this.lblNhaCungCap = new System.Windows.Forms.Label();
-            this.cboNhaCungCap = new System.Windows.Forms.ComboBox();
-            this.lblNhanVienGiaoHang = new System.Windows.Forms.Label();
-            this.lblPhieuNhapKho = new System.Windows.Forms.Label();
-            this.lblNgayThang = new System.Windows.Forms.Label();
-            this.txtNgayThang = new System.Windows.Forms.TextBox();
-            this.lblTenSanPham = new System.Windows.Forms.Label();
-            this.lblDonViTinh = new System.Windows.Forms.Label();
-            this.cboDonViTinh = new System.Windows.Forms.ComboBox();
-            this.lblGiaMua = new System.Windows.Forms.Label();
-            this.txtGiaMua = new System.Windows.Forms.TextBox();
-            this.btnDuaVaoPhieuNhap = new System.Windows.Forms.Button();
-            this.btnCapNhat = new System.Windows.Forms.Button();
-            this.btnXoaCacTruong = new System.Windows.Forms.Button();
-            this.lblLoaiSanPham = new System.Windows.Forms.Label();
-            this.cboLoaiSanPham = new System.Windows.Forms.ComboBox();
-            this.cboTenSanPham = new System.Windows.Forms.ComboBox();
-            this.lblSoPhieuNhapHang = new System.Windows.Forms.Label();
-            this.txtNhanVienGiaoHang = new System.Windows.Forms.TextBox();
-            this.lblNhaSanXuat = new System.Windows.Forms.Label();
-            this.cboNhaSanXuat = new System.Windows.Forms.ComboBox();
-            this.lblNguonGoc = new System.Windows.Forms.Label();
-            this.cboNguonGoc = new System.Windows.Forms.ComboBox();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.ngaySanXuat = new System.Windows.Forms.DateTimePicker();
-            this.ngayHetHan = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dataGridViewDanhSach = new System.Windows.Forms.DataGridView();
-            this.clNhanVienGiaoHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clGiaMua = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clNguonGoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clNhaSx = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clDonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clNgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clngaySanXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clsoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clten = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.richTextBoxMota = new System.Windows.Forms.RichTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.buttonXoaDong = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.richTextBoxMota = new System.Windows.Forms.RichTextBox();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
+            this.txtNhanVienGiaoHang = new System.Windows.Forms.TextBox();
+            this.txtGiaMua = new System.Windows.Forms.TextBox();
+            this.txtNgayThang = new System.Windows.Forms.TextBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.dataGridViewDanhSach = new System.Windows.Forms.DataGridView();
+            this.clten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clsoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clngaySanXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clNgayHetHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clDonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clNhaSx = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clNguonGoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clGiaMua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clNhaCungCap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clNhanVienGiaoHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.ngayHetHan = new System.Windows.Forms.DateTimePicker();
+            this.ngaySanXuat = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboNguonGoc = new System.Windows.Forms.ComboBox();
+            this.lblNguonGoc = new System.Windows.Forms.Label();
+            this.cboNhaSanXuat = new System.Windows.Forms.ComboBox();
+            this.lblNhaSanXuat = new System.Windows.Forms.Label();
+            this.lblSoPhieuNhapHang = new System.Windows.Forms.Label();
+            this.cboTenSanPham = new System.Windows.Forms.ComboBox();
+            this.cboLoaiSanPham = new System.Windows.Forms.ComboBox();
+            this.lblLoaiSanPham = new System.Windows.Forms.Label();
+            this.btnXoaCacTruong = new System.Windows.Forms.Button();
+            this.btnCapNhat = new System.Windows.Forms.Button();
+            this.btnDuaVaoPhieuNhap = new System.Windows.Forms.Button();
+            this.lblGiaMua = new System.Windows.Forms.Label();
+            this.cboDonViTinh = new System.Windows.Forms.ComboBox();
+            this.lblDonViTinh = new System.Windows.Forms.Label();
+            this.lblTenSanPham = new System.Windows.Forms.Label();
+            this.lblNgayThang = new System.Windows.Forms.Label();
+            this.lblPhieuNhapKho = new System.Windows.Forms.Label();
+            this.lblNhanVienGiaoHang = new System.Windows.Forms.Label();
+            this.cboNhaCungCap = new System.Windows.Forms.ComboBox();
+            this.lblNhaCungCap = new System.Windows.Forms.Label();
             this.tabQuanLyPhieuNhap = new System.Windows.Forms.TabControl();
             this.tpBaoCao.SuspendLayout();
             this.tpQuanLyPhieuNhapHangHoa.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHangHoa)).BeginInit();
-            this.gbTimKiemQuanLy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPhieuNhapHAng)).BeginInit();
+            this.gbTimKiemQuanLy.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHangHoa)).BeginInit();
             this.tpLapPhieuNhapHangHoa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSach)).BeginInit();
             this.tabQuanLyPhieuNhap.SuspendLayout();
@@ -142,6 +142,68 @@
             this.tpBaoCao.Text = "Báo cáo";
             this.tpBaoCao.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(422, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Đến :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(155, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Từ :";
+            // 
+            // button1
+            // 
+            this.button1.Image = global::SSMP.Properties.Resources.page_find;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(698, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Xem Báo cáo";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker2.Enabled = false;
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(466, 20);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 3;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker1.Enabled = false;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(198, 20);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 2;
+            // 
+            // checkBoxNgay
+            // 
+            this.checkBoxNgay.AutoSize = true;
+            this.checkBoxNgay.Location = new System.Drawing.Point(21, 25);
+            this.checkBoxNgay.Name = "checkBoxNgay";
+            this.checkBoxNgay.Size = new System.Drawing.Size(127, 17);
+            this.checkBoxNgay.TabIndex = 1;
+            this.checkBoxNgay.Text = "Xem theo ngày  nhập";
+            this.checkBoxNgay.UseVisualStyleBackColor = true;
+            this.checkBoxNgay.CheckedChanged += new System.EventHandler(this.checkBoxNgay_CheckedChanged);
+            // 
             // crystalReportViewer1
             // 
             this.crystalReportViewer1.ActiveViewIndex = -1;
@@ -157,68 +219,6 @@
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ViewTimeSelectionFormula = "";
             this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);
-            // 
-            // checkBoxNgay
-            // 
-            this.checkBoxNgay.AutoSize = true;
-            this.checkBoxNgay.Location = new System.Drawing.Point(21, 25);
-            this.checkBoxNgay.Name = "checkBoxNgay";
-            this.checkBoxNgay.Size = new System.Drawing.Size(127, 17);
-            this.checkBoxNgay.TabIndex = 1;
-            this.checkBoxNgay.Text = "Xem theo ngày  nhập";
-            this.checkBoxNgay.UseVisualStyleBackColor = true;
-            this.checkBoxNgay.CheckedChanged += new System.EventHandler(this.checkBoxNgay_CheckedChanged);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(198, 20);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 2;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker2.Enabled = false;
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(466, 20);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::SSMP.Properties.Resources.page_find;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(698, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Xem Báo cáo";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(155, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Từ :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(422, 25);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Đến :";
             // 
             // tpQuanLyPhieuNhapHangHoa
             // 
@@ -247,37 +247,150 @@
             this.tpQuanLyPhieuNhapHangHoa.Click += new System.EventHandler(this.tpQuanLyPhieuNhapHangHoa_Click);
             this.tpQuanLyPhieuNhapHangHoa.Enter += new System.EventHandler(this.tpQuanLyPhieuNhapHangHoa_Enter);
             // 
-            // lblDanhSachPhieuNhapHang
+            // btnReloadAll
             // 
-            this.lblDanhSachPhieuNhapHang.AutoSize = true;
-            this.lblDanhSachPhieuNhapHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDanhSachPhieuNhapHang.Location = new System.Drawing.Point(16, 15);
-            this.lblDanhSachPhieuNhapHang.Name = "lblDanhSachPhieuNhapHang";
-            this.lblDanhSachPhieuNhapHang.Size = new System.Drawing.Size(202, 13);
-            this.lblDanhSachPhieuNhapHang.TabIndex = 0;
-            this.lblDanhSachPhieuNhapHang.Text = "DANH SÁCH PHIẾU NHẬP HÀNG:";
+            this.btnReloadAll.Image = global::SSMP.Properties.Resources.arrow_refresh;
+            this.btnReloadAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReloadAll.Location = new System.Drawing.Point(778, 250);
+            this.btnReloadAll.Name = "btnReloadAll";
+            this.btnReloadAll.Size = new System.Drawing.Size(100, 23);
+            this.btnReloadAll.TabIndex = 40;
+            this.btnReloadAll.Text = "Tải lại toàn bộ";
+            this.btnReloadAll.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReloadAll.UseVisualStyleBackColor = true;
+            this.btnReloadAll.Click += new System.EventHandler(this.btnReloadAll_Click);
             // 
-            // lblDanhSachHangHo
+            // checkBoxTrangthai
             // 
-            this.lblDanhSachHangHo.AutoSize = true;
-            this.lblDanhSachHangHo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblDanhSachHangHo.Location = new System.Drawing.Point(16, 250);
-            this.lblDanhSachHangHo.Name = "lblDanhSachHangHo";
-            this.lblDanhSachHangHo.Size = new System.Drawing.Size(152, 13);
-            this.lblDanhSachHangHo.TabIndex = 2;
-            this.lblDanhSachHangHo.Text = "DANH SÁCH HÀNG HÓA:";
+            this.checkBoxTrangthai.AutoSize = true;
+            this.checkBoxTrangthai.Checked = true;
+            this.checkBoxTrangthai.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxTrangthai.Location = new System.Drawing.Point(778, 233);
+            this.checkBoxTrangthai.Name = "checkBoxTrangthai";
+            this.checkBoxTrangthai.Size = new System.Drawing.Size(74, 17);
+            this.checkBoxTrangthai.TabIndex = 17;
+            this.checkBoxTrangthai.Text = "Trạng thái";
+            this.checkBoxTrangthai.UseVisualStyleBackColor = true;
+            this.checkBoxTrangthai.CheckedChanged += new System.EventHandler(this.checkBox17_CheckedChanged);
             // 
-            // dataGridViewHangHoa
+            // checkBoxGiamGia
             // 
-            this.dataGridViewHangHoa.AllowUserToAddRows = false;
-            this.dataGridViewHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewHangHoa.Location = new System.Drawing.Point(19, 275);
-            this.dataGridViewHangHoa.MultiSelect = false;
-            this.dataGridViewHangHoa.Name = "dataGridViewHangHoa";
-            this.dataGridViewHangHoa.ReadOnly = true;
-            this.dataGridViewHangHoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewHangHoa.Size = new System.Drawing.Size(862, 273);
-            this.dataGridViewHangHoa.TabIndex = 3;
+            this.checkBoxGiamGia.AutoSize = true;
+            this.checkBoxGiamGia.Checked = true;
+            this.checkBoxGiamGia.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxGiamGia.Location = new System.Drawing.Point(778, 210);
+            this.checkBoxGiamGia.Name = "checkBoxGiamGia";
+            this.checkBoxGiamGia.Size = new System.Drawing.Size(67, 17);
+            this.checkBoxGiamGia.TabIndex = 16;
+            this.checkBoxGiamGia.Text = "Giảm giá";
+            this.checkBoxGiamGia.UseVisualStyleBackColor = true;
+            this.checkBoxGiamGia.CheckedChanged += new System.EventHandler(this.checkBox16_CheckedChanged);
+            // 
+            // checkBoxGiaMua
+            // 
+            this.checkBoxGiaMua.AutoSize = true;
+            this.checkBoxGiaMua.Checked = true;
+            this.checkBoxGiaMua.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxGiaMua.Location = new System.Drawing.Point(778, 187);
+            this.checkBoxGiaMua.Name = "checkBoxGiaMua";
+            this.checkBoxGiaMua.Size = new System.Drawing.Size(65, 17);
+            this.checkBoxGiaMua.TabIndex = 15;
+            this.checkBoxGiaMua.Text = "Giá mua";
+            this.checkBoxGiaMua.UseVisualStyleBackColor = true;
+            this.checkBoxGiaMua.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged);
+            // 
+            // checkBoxGiaBan
+            // 
+            this.checkBoxGiaBan.AutoSize = true;
+            this.checkBoxGiaBan.Checked = true;
+            this.checkBoxGiaBan.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxGiaBan.Location = new System.Drawing.Point(668, 233);
+            this.checkBoxGiaBan.Name = "checkBoxGiaBan";
+            this.checkBoxGiaBan.Size = new System.Drawing.Size(63, 17);
+            this.checkBoxGiaBan.TabIndex = 14;
+            this.checkBoxGiaBan.Text = "Giá bán";
+            this.checkBoxGiaBan.UseVisualStyleBackColor = true;
+            this.checkBoxGiaBan.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
+            // 
+            // checkBoxNgayHethan
+            // 
+            this.checkBoxNgayHethan.AutoSize = true;
+            this.checkBoxNgayHethan.Checked = true;
+            this.checkBoxNgayHethan.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxNgayHethan.Location = new System.Drawing.Point(668, 210);
+            this.checkBoxNgayHethan.Name = "checkBoxNgayHethan";
+            this.checkBoxNgayHethan.Size = new System.Drawing.Size(90, 17);
+            this.checkBoxNgayHethan.TabIndex = 13;
+            this.checkBoxNgayHethan.Text = "Ngày hết hạn";
+            this.checkBoxNgayHethan.UseVisualStyleBackColor = true;
+            this.checkBoxNgayHethan.CheckedChanged += new System.EventHandler(this.checkBox13_CheckedChanged);
+            // 
+            // checkBoxNgaySx
+            // 
+            this.checkBoxNgaySx.AutoSize = true;
+            this.checkBoxNgaySx.Checked = true;
+            this.checkBoxNgaySx.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxNgaySx.Location = new System.Drawing.Point(668, 187);
+            this.checkBoxNgaySx.Name = "checkBoxNgaySx";
+            this.checkBoxNgaySx.Size = new System.Drawing.Size(94, 17);
+            this.checkBoxNgaySx.TabIndex = 12;
+            this.checkBoxNgaySx.Text = "Ngày sản xuất";
+            this.checkBoxNgaySx.UseVisualStyleBackColor = true;
+            this.checkBoxNgaySx.CheckedChanged += new System.EventHandler(this.checkBox12_CheckedChanged);
+            // 
+            // checkBoxDv
+            // 
+            this.checkBoxDv.AutoSize = true;
+            this.checkBoxDv.Checked = true;
+            this.checkBoxDv.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxDv.Location = new System.Drawing.Point(559, 233);
+            this.checkBoxDv.Name = "checkBoxDv";
+            this.checkBoxDv.Size = new System.Drawing.Size(57, 17);
+            this.checkBoxDv.TabIndex = 11;
+            this.checkBoxDv.Text = "Đơn vị";
+            this.checkBoxDv.UseVisualStyleBackColor = true;
+            this.checkBoxDv.CheckedChanged += new System.EventHandler(this.checkBox11_CheckedChanged);
+            // 
+            // checkBoxTenSp
+            // 
+            this.checkBoxTenSp.AutoSize = true;
+            this.checkBoxTenSp.Checked = true;
+            this.checkBoxTenSp.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxTenSp.Location = new System.Drawing.Point(559, 210);
+            this.checkBoxTenSp.Name = "checkBoxTenSp";
+            this.checkBoxTenSp.Size = new System.Drawing.Size(94, 17);
+            this.checkBoxTenSp.TabIndex = 10;
+            this.checkBoxTenSp.Text = "Tên sản phẩm";
+            this.checkBoxTenSp.UseVisualStyleBackColor = true;
+            this.checkBoxTenSp.CheckedChanged += new System.EventHandler(this.checkBox10_CheckedChanged);
+            // 
+            // checkBoxMasp
+            // 
+            this.checkBoxMasp.AutoSize = true;
+            this.checkBoxMasp.Checked = true;
+            this.checkBoxMasp.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxMasp.Location = new System.Drawing.Point(559, 187);
+            this.checkBoxMasp.Name = "checkBoxMasp";
+            this.checkBoxMasp.Size = new System.Drawing.Size(90, 17);
+            this.checkBoxMasp.TabIndex = 9;
+            this.checkBoxMasp.Text = "Mã sản phẩm";
+            this.checkBoxMasp.UseVisualStyleBackColor = true;
+            this.checkBoxMasp.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged);
+            // 
+            // dataGridViewPhieuNhapHAng
+            // 
+            this.dataGridViewPhieuNhapHAng.AllowUserToAddRows = false;
+            this.dataGridViewPhieuNhapHAng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPhieuNhapHAng.Location = new System.Drawing.Point(19, 31);
+            this.dataGridViewPhieuNhapHAng.MultiSelect = false;
+            this.dataGridViewPhieuNhapHAng.Name = "dataGridViewPhieuNhapHAng";
+            this.dataGridViewPhieuNhapHAng.ReadOnly = true;
+            this.dataGridViewPhieuNhapHAng.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewPhieuNhapHAng.Size = new System.Drawing.Size(523, 209);
+            this.dataGridViewPhieuNhapHAng.TabIndex = 8;
+            this.dataGridViewPhieuNhapHAng.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPhieuNhapHAng_RowEnter);
+            this.dataGridViewPhieuNhapHAng.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPhieuNhapHAng_CellClick);
+            this.dataGridViewPhieuNhapHAng.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPhieuNhapHAng_CellContentClick);
             // 
             // gbTimKiemQuanLy
             // 
@@ -297,79 +410,19 @@
             this.gbTimKiemQuanLy.TabStop = false;
             this.gbTimKiemQuanLy.Text = "TÌM KIẾM:";
             // 
-            // lblTimKiemQuanLy
+            // chkNguoiLapPhieu
             // 
-            this.lblTimKiemQuanLy.AutoSize = true;
-            this.lblTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblTimKiemQuanLy.Location = new System.Drawing.Point(6, 29);
-            this.lblTimKiemQuanLy.Name = "lblTimKiemQuanLy";
-            this.lblTimKiemQuanLy.Size = new System.Drawing.Size(52, 13);
-            this.lblTimKiemQuanLy.TabIndex = 0;
-            this.lblTimKiemQuanLy.Text = "Tìm kiếm:";
-            // 
-            // txtTimKiemQuanLy
-            // 
-            this.txtTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtTimKiemQuanLy.Location = new System.Drawing.Point(64, 26);
-            this.txtTimKiemQuanLy.Name = "txtTimKiemQuanLy";
-            this.txtTimKiemQuanLy.Size = new System.Drawing.Size(162, 20);
-            this.txtTimKiemQuanLy.TabIndex = 1;
-            // 
-            // btnTimKiemQuanLy
-            // 
-            this.btnTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnTimKiemQuanLy.Image = global::SSMP.Properties.Resources.page_find;
-            this.btnTimKiemQuanLy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimKiemQuanLy.Location = new System.Drawing.Point(244, 24);
-            this.btnTimKiemQuanLy.Name = "btnTimKiemQuanLy";
-            this.btnTimKiemQuanLy.Size = new System.Drawing.Size(75, 23);
-            this.btnTimKiemQuanLy.TabIndex = 2;
-            this.btnTimKiemQuanLy.Text = "Tìm &kiếm";
-            this.btnTimKiemQuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTimKiemQuanLy.UseVisualStyleBackColor = true;
-            this.btnTimKiemQuanLy.Click += new System.EventHandler(this.btnTimKiemQuanLy_Click);
-            // 
-            // checkBoxMaPhieu
-            // 
-            this.checkBoxMaPhieu.AutoSize = true;
-            this.checkBoxMaPhieu.Checked = true;
-            this.checkBoxMaPhieu.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxMaPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.checkBoxMaPhieu.Location = new System.Drawing.Point(34, 52);
-            this.checkBoxMaPhieu.Name = "checkBoxMaPhieu";
-            this.checkBoxMaPhieu.Size = new System.Drawing.Size(70, 17);
-            this.checkBoxMaPhieu.TabIndex = 3;
-            this.checkBoxMaPhieu.Text = "Mã phiếu";
-            this.checkBoxMaPhieu.UseVisualStyleBackColor = true;
-            this.checkBoxMaPhieu.CheckedChanged += new System.EventHandler(this.checkBoxMaPhieu_CheckedChanged);
-            // 
-            // chkNhanviengh
-            // 
-            this.chkNhanviengh.AutoSize = true;
-            this.chkNhanviengh.Checked = true;
-            this.chkNhanviengh.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkNhanviengh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkNhanviengh.Location = new System.Drawing.Point(101, 52);
-            this.chkNhanviengh.Name = "chkNhanviengh";
-            this.chkNhanviengh.Size = new System.Drawing.Size(125, 17);
-            this.chkNhanviengh.TabIndex = 4;
-            this.chkNhanviengh.Text = "Nhân viên giao hàng";
-            this.chkNhanviengh.UseVisualStyleBackColor = true;
-            this.chkNhanviengh.CheckedChanged += new System.EventHandler(this.chkNhanviengh_CheckedChanged);
-            // 
-            // cbngaytao
-            // 
-            this.cbngaytao.AutoSize = true;
-            this.cbngaytao.Checked = true;
-            this.cbngaytao.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbngaytao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbngaytao.Location = new System.Drawing.Point(35, 76);
-            this.cbngaytao.Name = "cbngaytao";
-            this.cbngaytao.Size = new System.Drawing.Size(69, 17);
-            this.cbngaytao.TabIndex = 5;
-            this.cbngaytao.Text = "Ngày tạo";
-            this.cbngaytao.UseVisualStyleBackColor = true;
-            this.cbngaytao.CheckedChanged += new System.EventHandler(this.cbngaytao_CheckedChanged);
+            this.chkNguoiLapPhieu.AutoSize = true;
+            this.chkNguoiLapPhieu.Checked = true;
+            this.chkNguoiLapPhieu.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkNguoiLapPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.chkNguoiLapPhieu.Location = new System.Drawing.Point(219, 76);
+            this.chkNguoiLapPhieu.Name = "chkNguoiLapPhieu";
+            this.chkNguoiLapPhieu.Size = new System.Drawing.Size(100, 17);
+            this.chkNguoiLapPhieu.TabIndex = 7;
+            this.chkNguoiLapPhieu.Text = "Người lập phiếu";
+            this.chkNguoiLapPhieu.UseVisualStyleBackColor = true;
+            this.chkNguoiLapPhieu.CheckedChanged += new System.EventHandler(this.chkNguoiLapPhieu_CheckedChanged);
             // 
             // chkNhacungcap
             // 
@@ -385,164 +438,111 @@
             this.chkNhacungcap.UseVisualStyleBackColor = true;
             this.chkNhacungcap.CheckedChanged += new System.EventHandler(this.chkNhacungcap_CheckedChanged);
             // 
-            // chkNguoiLapPhieu
+            // cbngaytao
             // 
-            this.chkNguoiLapPhieu.AutoSize = true;
-            this.chkNguoiLapPhieu.Checked = true;
-            this.chkNguoiLapPhieu.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkNguoiLapPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.chkNguoiLapPhieu.Location = new System.Drawing.Point(219, 76);
-            this.chkNguoiLapPhieu.Name = "chkNguoiLapPhieu";
-            this.chkNguoiLapPhieu.Size = new System.Drawing.Size(100, 17);
-            this.chkNguoiLapPhieu.TabIndex = 7;
-            this.chkNguoiLapPhieu.Text = "Người lập phiếu";
-            this.chkNguoiLapPhieu.UseVisualStyleBackColor = true;
-            this.chkNguoiLapPhieu.CheckedChanged += new System.EventHandler(this.chkNguoiLapPhieu_CheckedChanged);
+            this.cbngaytao.AutoSize = true;
+            this.cbngaytao.Checked = true;
+            this.cbngaytao.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbngaytao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbngaytao.Location = new System.Drawing.Point(35, 76);
+            this.cbngaytao.Name = "cbngaytao";
+            this.cbngaytao.Size = new System.Drawing.Size(69, 17);
+            this.cbngaytao.TabIndex = 5;
+            this.cbngaytao.Text = "Ngày tạo";
+            this.cbngaytao.UseVisualStyleBackColor = true;
+            this.cbngaytao.CheckedChanged += new System.EventHandler(this.cbngaytao_CheckedChanged);
             // 
-            // dataGridViewPhieuNhapHAng
+            // chkNhanviengh
             // 
-            this.dataGridViewPhieuNhapHAng.AllowUserToAddRows = false;
-            this.dataGridViewPhieuNhapHAng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPhieuNhapHAng.Location = new System.Drawing.Point(19, 31);
-            this.dataGridViewPhieuNhapHAng.MultiSelect = false;
-            this.dataGridViewPhieuNhapHAng.Name = "dataGridViewPhieuNhapHAng";
-            this.dataGridViewPhieuNhapHAng.ReadOnly = true;
-            this.dataGridViewPhieuNhapHAng.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewPhieuNhapHAng.Size = new System.Drawing.Size(523, 209);
-            this.dataGridViewPhieuNhapHAng.TabIndex = 8;
-            this.dataGridViewPhieuNhapHAng.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPhieuNhapHAng_RowEnter);
-            this.dataGridViewPhieuNhapHAng.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPhieuNhapHAng_CellClick);
-            this.dataGridViewPhieuNhapHAng.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPhieuNhapHAng_CellContentClick);
+            this.chkNhanviengh.AutoSize = true;
+            this.chkNhanviengh.Checked = true;
+            this.chkNhanviengh.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkNhanviengh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.chkNhanviengh.Location = new System.Drawing.Point(101, 52);
+            this.chkNhanviengh.Name = "chkNhanviengh";
+            this.chkNhanviengh.Size = new System.Drawing.Size(125, 17);
+            this.chkNhanviengh.TabIndex = 4;
+            this.chkNhanviengh.Text = "Nhân viên giao hàng";
+            this.chkNhanviengh.UseVisualStyleBackColor = true;
+            this.chkNhanviengh.CheckedChanged += new System.EventHandler(this.chkNhanviengh_CheckedChanged);
             // 
-            // checkBoxMasp
+            // checkBoxMaPhieu
             // 
-            this.checkBoxMasp.AutoSize = true;
-            this.checkBoxMasp.Checked = true;
-            this.checkBoxMasp.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxMasp.Location = new System.Drawing.Point(559, 187);
-            this.checkBoxMasp.Name = "checkBoxMasp";
-            this.checkBoxMasp.Size = new System.Drawing.Size(90, 17);
-            this.checkBoxMasp.TabIndex = 9;
-            this.checkBoxMasp.Text = "Mã sản phẩm";
-            this.checkBoxMasp.UseVisualStyleBackColor = true;
-            this.checkBoxMasp.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged);
+            this.checkBoxMaPhieu.AutoSize = true;
+            this.checkBoxMaPhieu.Checked = true;
+            this.checkBoxMaPhieu.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxMaPhieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.checkBoxMaPhieu.Location = new System.Drawing.Point(34, 52);
+            this.checkBoxMaPhieu.Name = "checkBoxMaPhieu";
+            this.checkBoxMaPhieu.Size = new System.Drawing.Size(70, 17);
+            this.checkBoxMaPhieu.TabIndex = 3;
+            this.checkBoxMaPhieu.Text = "Mã phiếu";
+            this.checkBoxMaPhieu.UseVisualStyleBackColor = true;
+            this.checkBoxMaPhieu.CheckedChanged += new System.EventHandler(this.checkBoxMaPhieu_CheckedChanged);
             // 
-            // checkBoxTenSp
+            // btnTimKiemQuanLy
             // 
-            this.checkBoxTenSp.AutoSize = true;
-            this.checkBoxTenSp.Checked = true;
-            this.checkBoxTenSp.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxTenSp.Location = new System.Drawing.Point(559, 210);
-            this.checkBoxTenSp.Name = "checkBoxTenSp";
-            this.checkBoxTenSp.Size = new System.Drawing.Size(94, 17);
-            this.checkBoxTenSp.TabIndex = 10;
-            this.checkBoxTenSp.Text = "Tên sản phẩm";
-            this.checkBoxTenSp.UseVisualStyleBackColor = true;
-            this.checkBoxTenSp.CheckedChanged += new System.EventHandler(this.checkBox10_CheckedChanged);
+            this.btnTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTimKiemQuanLy.Image = global::SSMP.Properties.Resources.page_find;
+            this.btnTimKiemQuanLy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiemQuanLy.Location = new System.Drawing.Point(244, 24);
+            this.btnTimKiemQuanLy.Name = "btnTimKiemQuanLy";
+            this.btnTimKiemQuanLy.Size = new System.Drawing.Size(75, 23);
+            this.btnTimKiemQuanLy.TabIndex = 2;
+            this.btnTimKiemQuanLy.Text = "Tìm &kiếm";
+            this.btnTimKiemQuanLy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiemQuanLy.UseVisualStyleBackColor = true;
+            this.btnTimKiemQuanLy.Click += new System.EventHandler(this.btnTimKiemQuanLy_Click);
             // 
-            // checkBoxDv
+            // txtTimKiemQuanLy
             // 
-            this.checkBoxDv.AutoSize = true;
-            this.checkBoxDv.Checked = true;
-            this.checkBoxDv.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxDv.Location = new System.Drawing.Point(559, 233);
-            this.checkBoxDv.Name = "checkBoxDv";
-            this.checkBoxDv.Size = new System.Drawing.Size(57, 17);
-            this.checkBoxDv.TabIndex = 11;
-            this.checkBoxDv.Text = "Đơn vị";
-            this.checkBoxDv.UseVisualStyleBackColor = true;
-            this.checkBoxDv.CheckedChanged += new System.EventHandler(this.checkBox11_CheckedChanged);
+            this.txtTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTimKiemQuanLy.Location = new System.Drawing.Point(64, 26);
+            this.txtTimKiemQuanLy.Name = "txtTimKiemQuanLy";
+            this.txtTimKiemQuanLy.Size = new System.Drawing.Size(162, 20);
+            this.txtTimKiemQuanLy.TabIndex = 1;
             // 
-            // checkBoxNgaySx
+            // lblTimKiemQuanLy
             // 
-            this.checkBoxNgaySx.AutoSize = true;
-            this.checkBoxNgaySx.Checked = true;
-            this.checkBoxNgaySx.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxNgaySx.Location = new System.Drawing.Point(668, 187);
-            this.checkBoxNgaySx.Name = "checkBoxNgaySx";
-            this.checkBoxNgaySx.Size = new System.Drawing.Size(94, 17);
-            this.checkBoxNgaySx.TabIndex = 12;
-            this.checkBoxNgaySx.Text = "Ngày sản xuất";
-            this.checkBoxNgaySx.UseVisualStyleBackColor = true;
-            this.checkBoxNgaySx.CheckedChanged += new System.EventHandler(this.checkBox12_CheckedChanged);
+            this.lblTimKiemQuanLy.AutoSize = true;
+            this.lblTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblTimKiemQuanLy.Location = new System.Drawing.Point(6, 29);
+            this.lblTimKiemQuanLy.Name = "lblTimKiemQuanLy";
+            this.lblTimKiemQuanLy.Size = new System.Drawing.Size(52, 13);
+            this.lblTimKiemQuanLy.TabIndex = 0;
+            this.lblTimKiemQuanLy.Text = "Tìm kiếm:";
             // 
-            // checkBoxNgayHethan
+            // dataGridViewHangHoa
             // 
-            this.checkBoxNgayHethan.AutoSize = true;
-            this.checkBoxNgayHethan.Checked = true;
-            this.checkBoxNgayHethan.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxNgayHethan.Location = new System.Drawing.Point(668, 210);
-            this.checkBoxNgayHethan.Name = "checkBoxNgayHethan";
-            this.checkBoxNgayHethan.Size = new System.Drawing.Size(90, 17);
-            this.checkBoxNgayHethan.TabIndex = 13;
-            this.checkBoxNgayHethan.Text = "Ngày hết hạn";
-            this.checkBoxNgayHethan.UseVisualStyleBackColor = true;
-            this.checkBoxNgayHethan.CheckedChanged += new System.EventHandler(this.checkBox13_CheckedChanged);
+            this.dataGridViewHangHoa.AllowUserToAddRows = false;
+            this.dataGridViewHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHangHoa.Location = new System.Drawing.Point(19, 275);
+            this.dataGridViewHangHoa.MultiSelect = false;
+            this.dataGridViewHangHoa.Name = "dataGridViewHangHoa";
+            this.dataGridViewHangHoa.ReadOnly = true;
+            this.dataGridViewHangHoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewHangHoa.Size = new System.Drawing.Size(862, 273);
+            this.dataGridViewHangHoa.TabIndex = 3;
             // 
-            // checkBoxGiaBan
+            // lblDanhSachHangHo
             // 
-            this.checkBoxGiaBan.AutoSize = true;
-            this.checkBoxGiaBan.Checked = true;
-            this.checkBoxGiaBan.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxGiaBan.Location = new System.Drawing.Point(668, 233);
-            this.checkBoxGiaBan.Name = "checkBoxGiaBan";
-            this.checkBoxGiaBan.Size = new System.Drawing.Size(63, 17);
-            this.checkBoxGiaBan.TabIndex = 14;
-            this.checkBoxGiaBan.Text = "Giá bán";
-            this.checkBoxGiaBan.UseVisualStyleBackColor = true;
-            this.checkBoxGiaBan.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
+            this.lblDanhSachHangHo.AutoSize = true;
+            this.lblDanhSachHangHo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblDanhSachHangHo.Location = new System.Drawing.Point(16, 250);
+            this.lblDanhSachHangHo.Name = "lblDanhSachHangHo";
+            this.lblDanhSachHangHo.Size = new System.Drawing.Size(152, 13);
+            this.lblDanhSachHangHo.TabIndex = 2;
+            this.lblDanhSachHangHo.Text = "DANH SÁCH HÀNG HÓA:";
             // 
-            // checkBoxGiaMua
+            // lblDanhSachPhieuNhapHang
             // 
-            this.checkBoxGiaMua.AutoSize = true;
-            this.checkBoxGiaMua.Checked = true;
-            this.checkBoxGiaMua.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxGiaMua.Location = new System.Drawing.Point(778, 187);
-            this.checkBoxGiaMua.Name = "checkBoxGiaMua";
-            this.checkBoxGiaMua.Size = new System.Drawing.Size(65, 17);
-            this.checkBoxGiaMua.TabIndex = 15;
-            this.checkBoxGiaMua.Text = "Giá mua";
-            this.checkBoxGiaMua.UseVisualStyleBackColor = true;
-            this.checkBoxGiaMua.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged);
-            // 
-            // checkBoxGiamGia
-            // 
-            this.checkBoxGiamGia.AutoSize = true;
-            this.checkBoxGiamGia.Checked = true;
-            this.checkBoxGiamGia.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxGiamGia.Location = new System.Drawing.Point(778, 210);
-            this.checkBoxGiamGia.Name = "checkBoxGiamGia";
-            this.checkBoxGiamGia.Size = new System.Drawing.Size(67, 17);
-            this.checkBoxGiamGia.TabIndex = 16;
-            this.checkBoxGiamGia.Text = "Giảm giá";
-            this.checkBoxGiamGia.UseVisualStyleBackColor = true;
-            this.checkBoxGiamGia.CheckedChanged += new System.EventHandler(this.checkBox16_CheckedChanged);
-            // 
-            // checkBoxTrangthai
-            // 
-            this.checkBoxTrangthai.AutoSize = true;
-            this.checkBoxTrangthai.Checked = true;
-            this.checkBoxTrangthai.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxTrangthai.Location = new System.Drawing.Point(778, 233);
-            this.checkBoxTrangthai.Name = "checkBoxTrangthai";
-            this.checkBoxTrangthai.Size = new System.Drawing.Size(74, 17);
-            this.checkBoxTrangthai.TabIndex = 17;
-            this.checkBoxTrangthai.Text = "Trạng thái";
-            this.checkBoxTrangthai.UseVisualStyleBackColor = true;
-            this.checkBoxTrangthai.CheckedChanged += new System.EventHandler(this.checkBox17_CheckedChanged);
-            // 
-            // btnReloadAll
-            // 
-            this.btnReloadAll.Image = global::SSMP.Properties.Resources.arrow_refresh;
-            this.btnReloadAll.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReloadAll.Location = new System.Drawing.Point(778, 250);
-            this.btnReloadAll.Name = "btnReloadAll";
-            this.btnReloadAll.Size = new System.Drawing.Size(100, 23);
-            this.btnReloadAll.TabIndex = 40;
-            this.btnReloadAll.Text = "Tải lại toàn bộ";
-            this.btnReloadAll.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReloadAll.UseVisualStyleBackColor = true;
-            this.btnReloadAll.Click += new System.EventHandler(this.btnReloadAll_Click);
+            this.lblDanhSachPhieuNhapHang.AutoSize = true;
+            this.lblDanhSachPhieuNhapHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblDanhSachPhieuNhapHang.Location = new System.Drawing.Point(16, 15);
+            this.lblDanhSachPhieuNhapHang.Name = "lblDanhSachPhieuNhapHang";
+            this.lblDanhSachPhieuNhapHang.Size = new System.Drawing.Size(202, 13);
+            this.lblDanhSachPhieuNhapHang.TabIndex = 0;
+            this.lblDanhSachPhieuNhapHang.Text = "DANH SÁCH PHIẾU NHẬP HÀNG:";
             // 
             // tpLapPhieuNhapHangHoa
             // 
@@ -597,50 +597,66 @@
             this.tpLapPhieuNhapHangHoa.Text = "Lập Phiếu nhập Hàng hóa";
             this.tpLapPhieuNhapHangHoa.UseVisualStyleBackColor = true;
             // 
-            // lblNhaCungCap
+            // buttonXoaDong
             // 
-            this.lblNhaCungCap.AutoSize = true;
-            this.lblNhaCungCap.Location = new System.Drawing.Point(346, 220);
-            this.lblNhaCungCap.Name = "lblNhaCungCap";
-            this.lblNhaCungCap.Size = new System.Drawing.Size(78, 13);
-            this.lblNhaCungCap.TabIndex = 50;
-            this.lblNhaCungCap.Text = "Nhà cung cấp:";
+            this.buttonXoaDong.Image = global::SSMP.Properties.Resources.delete;
+            this.buttonXoaDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonXoaDong.Location = new System.Drawing.Point(805, 279);
+            this.buttonXoaDong.Name = "buttonXoaDong";
+            this.buttonXoaDong.Size = new System.Drawing.Size(77, 23);
+            this.buttonXoaDong.TabIndex = 132;
+            this.buttonXoaDong.Text = "Xóa dòng";
+            this.buttonXoaDong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonXoaDong.UseVisualStyleBackColor = true;
+            this.buttonXoaDong.Click += new System.EventHandler(this.buttonXoaDong_Click);
             // 
-            // cboNhaCungCap
+            // label8
             // 
-            this.cboNhaCungCap.FormattingEnabled = true;
-            this.cboNhaCungCap.Location = new System.Drawing.Point(441, 220);
-            this.cboNhaCungCap.Name = "cboNhaCungCap";
-            this.cboNhaCungCap.Size = new System.Drawing.Size(158, 21);
-            this.cboNhaCungCap.TabIndex = 112;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.Location = new System.Drawing.Point(234, 88);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(11, 13);
+            this.label8.TabIndex = 131;
+            this.label8.Text = "*";
             // 
-            // lblNhanVienGiaoHang
+            // label6
             // 
-            this.lblNhanVienGiaoHang.AutoSize = true;
-            this.lblNhanVienGiaoHang.Location = new System.Drawing.Point(15, 113);
-            this.lblNhanVienGiaoHang.Name = "lblNhanVienGiaoHang";
-            this.lblNhanVienGiaoHang.Size = new System.Drawing.Size(109, 13);
-            this.lblNhanVienGiaoHang.TabIndex = 53;
-            this.lblNhanVienGiaoHang.Text = "Nhân viên giao hàng:";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(636, 118);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 130;
+            this.label6.Text = "Mô tả :";
             // 
-            // lblPhieuNhapKho
+            // richTextBoxMota
             // 
-            this.lblPhieuNhapKho.AutoSize = true;
-            this.lblPhieuNhapKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblPhieuNhapKho.Location = new System.Drawing.Point(351, 3);
-            this.lblPhieuNhapKho.Name = "lblPhieuNhapKho";
-            this.lblPhieuNhapKho.Size = new System.Drawing.Size(139, 17);
-            this.lblPhieuNhapKho.TabIndex = 62;
-            this.lblPhieuNhapKho.Text = "PHIẾU NHẬP KHO";
+            this.richTextBoxMota.Location = new System.Drawing.Point(688, 118);
+            this.richTextBoxMota.Name = "richTextBoxMota";
+            this.richTextBoxMota.Size = new System.Drawing.Size(194, 96);
+            this.richTextBoxMota.TabIndex = 114;
+            this.richTextBoxMota.Text = "";
             // 
-            // lblNgayThang
+            // txtSoLuong
             // 
-            this.lblNgayThang.AutoSize = true;
-            this.lblNgayThang.Location = new System.Drawing.Point(428, 42);
-            this.lblNgayThang.Name = "lblNgayThang";
-            this.lblNgayThang.Size = new System.Drawing.Size(65, 13);
-            this.lblNgayThang.TabIndex = 63;
-            this.lblNgayThang.Text = "Ngày tháng:";
+            this.txtSoLuong.Location = new System.Drawing.Point(128, 86);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(100, 20);
+            this.txtSoLuong.TabIndex = 103;
+            // 
+            // txtNhanVienGiaoHang
+            // 
+            this.txtNhanVienGiaoHang.Location = new System.Drawing.Point(128, 113);
+            this.txtNhanVienGiaoHang.Name = "txtNhanVienGiaoHang";
+            this.txtNhanVienGiaoHang.Size = new System.Drawing.Size(194, 20);
+            this.txtNhanVienGiaoHang.TabIndex = 104;
+            // 
+            // txtGiaMua
+            // 
+            this.txtGiaMua.Location = new System.Drawing.Point(688, 80);
+            this.txtGiaMua.Name = "txtGiaMua";
+            this.txtGiaMua.Size = new System.Drawing.Size(156, 20);
+            this.txtGiaMua.TabIndex = 113;
             // 
             // txtNgayThang
             // 
@@ -650,228 +666,109 @@
             this.txtNgayThang.Size = new System.Drawing.Size(100, 20);
             this.txtNgayThang.TabIndex = 64;
             // 
-            // lblTenSanPham
+            // checkBox8
             // 
-            this.lblTenSanPham.AutoSize = true;
-            this.lblTenSanPham.Location = new System.Drawing.Point(351, 86);
-            this.lblTenSanPham.Name = "lblTenSanPham";
-            this.lblTenSanPham.Size = new System.Drawing.Size(78, 13);
-            this.lblTenSanPham.TabIndex = 69;
-            this.lblTenSanPham.Text = "Tên sản phẩm:";
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Checked = true;
+            this.checkBox8.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox8.Location = new System.Drawing.Point(273, 269);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(125, 17);
+            this.checkBox8.TabIndex = 128;
+            this.checkBox8.Text = "Nhân viên giao hàng";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
             // 
-            // lblDonViTinh
+            // checkBox7
             // 
-            this.lblDonViTinh.AutoSize = true;
-            this.lblDonViTinh.Location = new System.Drawing.Point(351, 116);
-            this.lblDonViTinh.Name = "lblDonViTinh";
-            this.lblDonViTinh.Size = new System.Drawing.Size(63, 13);
-            this.lblDonViTinh.TabIndex = 70;
-            this.lblDonViTinh.Text = "Đơn vị tính:";
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Checked = true;
+            this.checkBox7.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox7.Location = new System.Drawing.Point(273, 246);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(65, 17);
+            this.checkBox7.TabIndex = 127;
+            this.checkBox7.Text = "Giá mua";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
             // 
-            // cboDonViTinh
+            // checkBox6
             // 
-            this.cboDonViTinh.FormattingEnabled = true;
-            this.cboDonViTinh.Location = new System.Drawing.Point(441, 113);
-            this.cboDonViTinh.Name = "cboDonViTinh";
-            this.cboDonViTinh.Size = new System.Drawing.Size(158, 21);
-            this.cboDonViTinh.TabIndex = 108;
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Checked = true;
+            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox6.Location = new System.Drawing.Point(178, 269);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(79, 17);
+            this.checkBox6.TabIndex = 126;
+            this.checkBox6.Text = "Nguồn gốc";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
             // 
-            // lblGiaMua
+            // checkBox5
             // 
-            this.lblGiaMua.AutoSize = true;
-            this.lblGiaMua.Location = new System.Drawing.Point(633, 83);
-            this.lblGiaMua.Name = "lblGiaMua";
-            this.lblGiaMua.Size = new System.Drawing.Size(49, 13);
-            this.lblGiaMua.TabIndex = 72;
-            this.lblGiaMua.Text = "Giá mua:";
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Checked = true;
+            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox5.Location = new System.Drawing.Point(178, 246);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(89, 17);
+            this.checkBox5.TabIndex = 125;
+            this.checkBox5.Text = "Nhà sản xuất";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
-            // txtGiaMua
+            // checkBox4
             // 
-            this.txtGiaMua.Location = new System.Drawing.Point(688, 80);
-            this.txtGiaMua.Name = "txtGiaMua";
-            this.txtGiaMua.Size = new System.Drawing.Size(156, 20);
-            this.txtGiaMua.TabIndex = 113;
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Checked = true;
+            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox4.Location = new System.Drawing.Point(87, 269);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(90, 17);
+            this.checkBox4.TabIndex = 124;
+            this.checkBox4.Text = "Ngày hết hạn";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
-            // btnDuaVaoPhieuNhap
+            // checkBox3
             // 
-            this.btnDuaVaoPhieuNhap.Image = global::SSMP.Properties.Resources.add1;
-            this.btnDuaVaoPhieuNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDuaVaoPhieuNhap.Location = new System.Drawing.Point(399, 255);
-            this.btnDuaVaoPhieuNhap.Name = "btnDuaVaoPhieuNhap";
-            this.btnDuaVaoPhieuNhap.Size = new System.Drawing.Size(128, 23);
-            this.btnDuaVaoPhieuNhap.TabIndex = 115;
-            this.btnDuaVaoPhieuNhap.Text = "Đưa vào &Phiếu nhập";
-            this.btnDuaVaoPhieuNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDuaVaoPhieuNhap.UseVisualStyleBackColor = true;
-            this.btnDuaVaoPhieuNhap.Click += new System.EventHandler(this.btnDuaVaoPhieuNhap_Click);
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox3.Location = new System.Drawing.Point(87, 246);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(94, 17);
+            this.checkBox3.TabIndex = 123;
+            this.checkBox3.Text = "Ngày sản xuất";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
-            // btnCapNhat
+            // checkBox2
             // 
-            this.btnCapNhat.Image = global::SSMP.Properties.Resources.accept;
-            this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCapNhat.Location = new System.Drawing.Point(533, 255);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(75, 23);
-            this.btnCapNhat.TabIndex = 116;
-            this.btnCapNhat.Text = "&Cập nhật";
-            this.btnCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCapNhat.UseVisualStyleBackColor = true;
-            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click_1);
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Location = new System.Drawing.Point(18, 269);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(57, 17);
+            this.checkBox2.TabIndex = 122;
+            this.checkBox2.Text = "Đơn vị";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
-            // btnXoaCacTruong
+            // checkBox1
             // 
-            this.btnXoaCacTruong.Image = global::SSMP.Properties.Resources.delete;
-            this.btnXoaCacTruong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoaCacTruong.Location = new System.Drawing.Point(614, 255);
-            this.btnXoaCacTruong.Name = "btnXoaCacTruong";
-            this.btnXoaCacTruong.Size = new System.Drawing.Size(103, 23);
-            this.btnXoaCacTruong.TabIndex = 117;
-            this.btnXoaCacTruong.Text = "Xóa các &trường";
-            this.btnXoaCacTruong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnXoaCacTruong.UseVisualStyleBackColor = true;
-            this.btnXoaCacTruong.Click += new System.EventHandler(this.btnXoaCacTruong_Click);
-            // 
-            // lblLoaiSanPham
-            // 
-            this.lblLoaiSanPham.AutoSize = true;
-            this.lblLoaiSanPham.Location = new System.Drawing.Point(351, 141);
-            this.lblLoaiSanPham.Name = "lblLoaiSanPham";
-            this.lblLoaiSanPham.Size = new System.Drawing.Size(79, 13);
-            this.lblLoaiSanPham.TabIndex = 90;
-            this.lblLoaiSanPham.Text = "Loại sản phẩm:";
-            // 
-            // cboLoaiSanPham
-            // 
-            this.cboLoaiSanPham.Enabled = false;
-            this.cboLoaiSanPham.FormattingEnabled = true;
-            this.cboLoaiSanPham.Location = new System.Drawing.Point(441, 138);
-            this.cboLoaiSanPham.Name = "cboLoaiSanPham";
-            this.cboLoaiSanPham.Size = new System.Drawing.Size(158, 21);
-            this.cboLoaiSanPham.TabIndex = 109;
-            // 
-            // cboTenSanPham
-            // 
-            this.cboTenSanPham.FormattingEnabled = true;
-            this.cboTenSanPham.Location = new System.Drawing.Point(441, 83);
-            this.cboTenSanPham.Name = "cboTenSanPham";
-            this.cboTenSanPham.Size = new System.Drawing.Size(158, 21);
-            this.cboTenSanPham.TabIndex = 107;
-            this.cboTenSanPham.SelectedIndexChanged += new System.EventHandler(this.cboTenSanPham_SelectedIndexChanged);
-            // 
-            // lblSoPhieuNhapHang
-            // 
-            this.lblSoPhieuNhapHang.AutoSize = true;
-            this.lblSoPhieuNhapHang.Location = new System.Drawing.Point(15, 91);
-            this.lblSoPhieuNhapHang.Name = "lblSoPhieuNhapHang";
-            this.lblSoPhieuNhapHang.Size = new System.Drawing.Size(52, 13);
-            this.lblSoPhieuNhapHang.TabIndex = 96;
-            this.lblSoPhieuNhapHang.Text = "Số lượng:";
-            // 
-            // txtNhanVienGiaoHang
-            // 
-            this.txtNhanVienGiaoHang.Location = new System.Drawing.Point(128, 113);
-            this.txtNhanVienGiaoHang.Name = "txtNhanVienGiaoHang";
-            this.txtNhanVienGiaoHang.Size = new System.Drawing.Size(194, 20);
-            this.txtNhanVienGiaoHang.TabIndex = 104;
-            // 
-            // lblNhaSanXuat
-            // 
-            this.lblNhaSanXuat.AutoSize = true;
-            this.lblNhaSanXuat.Location = new System.Drawing.Point(351, 169);
-            this.lblNhaSanXuat.Name = "lblNhaSanXuat";
-            this.lblNhaSanXuat.Size = new System.Drawing.Size(73, 13);
-            this.lblNhaSanXuat.TabIndex = 99;
-            this.lblNhaSanXuat.Text = "Nhà sản xuất:";
-            // 
-            // cboNhaSanXuat
-            // 
-            this.cboNhaSanXuat.Enabled = false;
-            this.cboNhaSanXuat.FormattingEnabled = true;
-            this.cboNhaSanXuat.Location = new System.Drawing.Point(441, 166);
-            this.cboNhaSanXuat.Name = "cboNhaSanXuat";
-            this.cboNhaSanXuat.Size = new System.Drawing.Size(158, 21);
-            this.cboNhaSanXuat.TabIndex = 110;
-            this.cboNhaSanXuat.SelectedIndexChanged += new System.EventHandler(this.cboNhaSanXuat_SelectedIndexChanged);
-            // 
-            // lblNguonGoc
-            // 
-            this.lblNguonGoc.AutoSize = true;
-            this.lblNguonGoc.Location = new System.Drawing.Point(352, 193);
-            this.lblNguonGoc.Name = "lblNguonGoc";
-            this.lblNguonGoc.Size = new System.Drawing.Size(63, 13);
-            this.lblNguonGoc.TabIndex = 101;
-            this.lblNguonGoc.Text = "Nguồn gốc:";
-            // 
-            // cboNguonGoc
-            // 
-            this.cboNguonGoc.Enabled = false;
-            this.cboNguonGoc.FormattingEnabled = true;
-            this.cboNguonGoc.Location = new System.Drawing.Point(441, 193);
-            this.cboNguonGoc.Name = "cboNguonGoc";
-            this.cboNguonGoc.Size = new System.Drawing.Size(158, 21);
-            this.cboNguonGoc.TabIndex = 111;
-            // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.Location = new System.Drawing.Point(128, 86);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(100, 20);
-            this.txtSoLuong.TabIndex = 103;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 141);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 13);
-            this.label1.TabIndex = 104;
-            this.label1.Text = "Ngày sản xuất :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 169);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
-            this.label2.TabIndex = 105;
-            this.label2.Text = "Ngày hết hạn :";
-            // 
-            // ngaySanXuat
-            // 
-            this.ngaySanXuat.CustomFormat = "dd/MM/yyyy";
-            this.ngaySanXuat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ngaySanXuat.Location = new System.Drawing.Point(128, 141);
-            this.ngaySanXuat.Name = "ngaySanXuat";
-            this.ngaySanXuat.Size = new System.Drawing.Size(200, 20);
-            this.ngaySanXuat.TabIndex = 105;
-            // 
-            // ngayHetHan
-            // 
-            this.ngayHetHan.CustomFormat = "dd/MM/yyyy";
-            this.ngayHetHan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ngayHetHan.Location = new System.Drawing.Point(128, 169);
-            this.ngayHetHan.Name = "ngayHetHan";
-            this.ngayHetHan.Size = new System.Drawing.Size(200, 20);
-            this.ngayHetHan.TabIndex = 106;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(850, 88);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
-            this.label7.TabIndex = 117;
-            this.label7.Text = "(vnđ)";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 289);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(282, 16);
-            this.label3.TabIndex = 119;
-            this.label3.Text = "Danh sách hàng hóa :(trong phiếu nhập)";
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(18, 246);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(68, 17);
+            this.checkBox1.TabIndex = 121;
+            this.checkBox1.Text = "Số lượng";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // dataGridViewDanhSach
             // 
@@ -896,53 +793,11 @@
             this.dataGridViewDanhSach.Size = new System.Drawing.Size(863, 253);
             this.dataGridViewDanhSach.TabIndex = 120;
             // 
-            // clNhanVienGiaoHang
+            // clten
             // 
-            this.clNhanVienGiaoHang.HeaderText = "Nhân Viên Giao Hàng";
-            this.clNhanVienGiaoHang.Name = "clNhanVienGiaoHang";
-            this.clNhanVienGiaoHang.ReadOnly = true;
-            // 
-            // clNhaCungCap
-            // 
-            this.clNhaCungCap.HeaderText = "Nhà cung cấp";
-            this.clNhaCungCap.Name = "clNhaCungCap";
-            this.clNhaCungCap.ReadOnly = true;
-            // 
-            // clGiaMua
-            // 
-            this.clGiaMua.HeaderText = "Giá mua";
-            this.clGiaMua.Name = "clGiaMua";
-            this.clGiaMua.ReadOnly = true;
-            // 
-            // clNguonGoc
-            // 
-            this.clNguonGoc.HeaderText = "Nguồn Gốc";
-            this.clNguonGoc.Name = "clNguonGoc";
-            this.clNguonGoc.ReadOnly = true;
-            // 
-            // clNhaSx
-            // 
-            this.clNhaSx.HeaderText = "Nhà sản xuất";
-            this.clNhaSx.Name = "clNhaSx";
-            this.clNhaSx.ReadOnly = true;
-            // 
-            // clDonVi
-            // 
-            this.clDonVi.HeaderText = "Đơn Vị";
-            this.clDonVi.Name = "clDonVi";
-            this.clDonVi.ReadOnly = true;
-            // 
-            // clNgayHetHan
-            // 
-            this.clNgayHetHan.HeaderText = "Ngày hết hạn";
-            this.clNgayHetHan.Name = "clNgayHetHan";
-            this.clNgayHetHan.ReadOnly = true;
-            // 
-            // clngaySanXuat
-            // 
-            this.clngaySanXuat.HeaderText = "Ngày Sản Xuất";
-            this.clngaySanXuat.Name = "clngaySanXuat";
-            this.clngaySanXuat.ReadOnly = true;
+            this.clten.HeaderText = "Tên Sản Phẩm";
+            this.clten.Name = "clten";
+            this.clten.ReadOnly = true;
             // 
             // clsoLuong
             // 
@@ -950,155 +805,300 @@
             this.clsoLuong.Name = "clsoLuong";
             this.clsoLuong.ReadOnly = true;
             // 
-            // clten
+            // clngaySanXuat
             // 
-            this.clten.HeaderText = "Tên Sản Phẩm";
-            this.clten.Name = "clten";
-            this.clten.ReadOnly = true;
+            this.clngaySanXuat.HeaderText = "Ngày Sản Xuất";
+            this.clngaySanXuat.Name = "clngaySanXuat";
+            this.clngaySanXuat.ReadOnly = true;
             // 
-            // checkBox1
+            // clNgayHetHan
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(18, 246);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(68, 17);
-            this.checkBox1.TabIndex = 121;
-            this.checkBox1.Text = "Số lượng";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.clNgayHetHan.HeaderText = "Ngày hết hạn";
+            this.clNgayHetHan.Name = "clNgayHetHan";
+            this.clNgayHetHan.ReadOnly = true;
             // 
-            // checkBox2
+            // clDonVi
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Location = new System.Drawing.Point(18, 269);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(57, 17);
-            this.checkBox2.TabIndex = 122;
-            this.checkBox2.Text = "Đơn vị";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.clDonVi.HeaderText = "Đơn Vị";
+            this.clDonVi.Name = "clDonVi";
+            this.clDonVi.ReadOnly = true;
             // 
-            // checkBox3
+            // clNhaSx
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Checked = true;
-            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.Location = new System.Drawing.Point(87, 246);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(94, 17);
-            this.checkBox3.TabIndex = 123;
-            this.checkBox3.Text = "Ngày sản xuất";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            this.clNhaSx.HeaderText = "Nhà sản xuất";
+            this.clNhaSx.Name = "clNhaSx";
+            this.clNhaSx.ReadOnly = true;
             // 
-            // checkBox4
+            // clNguonGoc
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Checked = true;
-            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox4.Location = new System.Drawing.Point(87, 269);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(90, 17);
-            this.checkBox4.TabIndex = 124;
-            this.checkBox4.Text = "Ngày hết hạn";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            this.clNguonGoc.HeaderText = "Nguồn Gốc";
+            this.clNguonGoc.Name = "clNguonGoc";
+            this.clNguonGoc.ReadOnly = true;
             // 
-            // checkBox5
+            // clGiaMua
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Checked = true;
-            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox5.Location = new System.Drawing.Point(178, 246);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(89, 17);
-            this.checkBox5.TabIndex = 125;
-            this.checkBox5.Text = "Nhà sản xuất";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            this.clGiaMua.HeaderText = "Giá mua";
+            this.clGiaMua.Name = "clGiaMua";
+            this.clGiaMua.ReadOnly = true;
             // 
-            // checkBox6
+            // clNhaCungCap
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Checked = true;
-            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox6.Location = new System.Drawing.Point(178, 269);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(79, 17);
-            this.checkBox6.TabIndex = 126;
-            this.checkBox6.Text = "Nguồn gốc";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
+            this.clNhaCungCap.HeaderText = "Nhà cung cấp";
+            this.clNhaCungCap.Name = "clNhaCungCap";
+            this.clNhaCungCap.ReadOnly = true;
             // 
-            // checkBox7
+            // clNhanVienGiaoHang
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Checked = true;
-            this.checkBox7.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox7.Location = new System.Drawing.Point(273, 246);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(65, 17);
-            this.checkBox7.TabIndex = 127;
-            this.checkBox7.Text = "Giá mua";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
+            this.clNhanVienGiaoHang.HeaderText = "Nhân Viên Giao Hàng";
+            this.clNhanVienGiaoHang.Name = "clNhanVienGiaoHang";
+            this.clNhanVienGiaoHang.ReadOnly = true;
             // 
-            // checkBox8
+            // label3
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Checked = true;
-            this.checkBox8.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox8.Location = new System.Drawing.Point(273, 269);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(125, 17);
-            this.checkBox8.TabIndex = 128;
-            this.checkBox8.Text = "Nhân viên giao hàng";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(15, 289);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(282, 16);
+            this.label3.TabIndex = 119;
+            this.label3.Text = "Danh sách hàng hóa :(trong phiếu nhập)";
             // 
-            // richTextBoxMota
+            // label7
             // 
-            this.richTextBoxMota.Location = new System.Drawing.Point(688, 118);
-            this.richTextBoxMota.Name = "richTextBoxMota";
-            this.richTextBoxMota.Size = new System.Drawing.Size(194, 96);
-            this.richTextBoxMota.TabIndex = 114;
-            this.richTextBoxMota.Text = "";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(850, 88);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.TabIndex = 117;
+            this.label7.Text = "(vnđ)";
             // 
-            // label6
+            // ngayHetHan
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(636, 118);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
-            this.label6.TabIndex = 130;
-            this.label6.Text = "Mô tả :";
+            this.ngayHetHan.CustomFormat = "dd/MM/yyyy";
+            this.ngayHetHan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ngayHetHan.Location = new System.Drawing.Point(128, 169);
+            this.ngayHetHan.Name = "ngayHetHan";
+            this.ngayHetHan.Size = new System.Drawing.Size(200, 20);
+            this.ngayHetHan.TabIndex = 106;
             // 
-            // label8
+            // ngaySanXuat
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.Location = new System.Drawing.Point(234, 88);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(11, 13);
-            this.label8.TabIndex = 131;
-            this.label8.Text = "*";
+            this.ngaySanXuat.CustomFormat = "dd/MM/yyyy";
+            this.ngaySanXuat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ngaySanXuat.Location = new System.Drawing.Point(128, 141);
+            this.ngaySanXuat.Name = "ngaySanXuat";
+            this.ngaySanXuat.Size = new System.Drawing.Size(200, 20);
+            this.ngaySanXuat.TabIndex = 105;
             // 
-            // buttonXoaDong
+            // label2
             // 
-            this.buttonXoaDong.Image = global::SSMP.Properties.Resources.delete;
-            this.buttonXoaDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonXoaDong.Location = new System.Drawing.Point(805, 279);
-            this.buttonXoaDong.Name = "buttonXoaDong";
-            this.buttonXoaDong.Size = new System.Drawing.Size(77, 23);
-            this.buttonXoaDong.TabIndex = 132;
-            this.buttonXoaDong.Text = "Xóa dòng";
-            this.buttonXoaDong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonXoaDong.UseVisualStyleBackColor = true;
-            this.buttonXoaDong.Click += new System.EventHandler(this.buttonXoaDong_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 169);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.TabIndex = 105;
+            this.label2.Text = "Ngày hết hạn :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 141);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 13);
+            this.label1.TabIndex = 104;
+            this.label1.Text = "Ngày sản xuất :";
+            // 
+            // cboNguonGoc
+            // 
+            this.cboNguonGoc.Enabled = false;
+            this.cboNguonGoc.FormattingEnabled = true;
+            this.cboNguonGoc.Location = new System.Drawing.Point(441, 193);
+            this.cboNguonGoc.Name = "cboNguonGoc";
+            this.cboNguonGoc.Size = new System.Drawing.Size(158, 21);
+            this.cboNguonGoc.TabIndex = 111;
+            // 
+            // lblNguonGoc
+            // 
+            this.lblNguonGoc.AutoSize = true;
+            this.lblNguonGoc.Location = new System.Drawing.Point(352, 193);
+            this.lblNguonGoc.Name = "lblNguonGoc";
+            this.lblNguonGoc.Size = new System.Drawing.Size(63, 13);
+            this.lblNguonGoc.TabIndex = 101;
+            this.lblNguonGoc.Text = "Nguồn gốc:";
+            // 
+            // cboNhaSanXuat
+            // 
+            this.cboNhaSanXuat.Enabled = false;
+            this.cboNhaSanXuat.FormattingEnabled = true;
+            this.cboNhaSanXuat.Location = new System.Drawing.Point(441, 166);
+            this.cboNhaSanXuat.Name = "cboNhaSanXuat";
+            this.cboNhaSanXuat.Size = new System.Drawing.Size(158, 21);
+            this.cboNhaSanXuat.TabIndex = 110;
+            this.cboNhaSanXuat.SelectedIndexChanged += new System.EventHandler(this.cboNhaSanXuat_SelectedIndexChanged);
+            // 
+            // lblNhaSanXuat
+            // 
+            this.lblNhaSanXuat.AutoSize = true;
+            this.lblNhaSanXuat.Location = new System.Drawing.Point(351, 169);
+            this.lblNhaSanXuat.Name = "lblNhaSanXuat";
+            this.lblNhaSanXuat.Size = new System.Drawing.Size(73, 13);
+            this.lblNhaSanXuat.TabIndex = 99;
+            this.lblNhaSanXuat.Text = "Nhà sản xuất:";
+            // 
+            // lblSoPhieuNhapHang
+            // 
+            this.lblSoPhieuNhapHang.AutoSize = true;
+            this.lblSoPhieuNhapHang.Location = new System.Drawing.Point(15, 91);
+            this.lblSoPhieuNhapHang.Name = "lblSoPhieuNhapHang";
+            this.lblSoPhieuNhapHang.Size = new System.Drawing.Size(52, 13);
+            this.lblSoPhieuNhapHang.TabIndex = 96;
+            this.lblSoPhieuNhapHang.Text = "Số lượng:";
+            // 
+            // cboTenSanPham
+            // 
+            this.cboTenSanPham.FormattingEnabled = true;
+            this.cboTenSanPham.Location = new System.Drawing.Point(441, 83);
+            this.cboTenSanPham.Name = "cboTenSanPham";
+            this.cboTenSanPham.Size = new System.Drawing.Size(158, 21);
+            this.cboTenSanPham.TabIndex = 107;
+            this.cboTenSanPham.SelectedIndexChanged += new System.EventHandler(this.cboTenSanPham_SelectedIndexChanged);
+            // 
+            // cboLoaiSanPham
+            // 
+            this.cboLoaiSanPham.Enabled = false;
+            this.cboLoaiSanPham.FormattingEnabled = true;
+            this.cboLoaiSanPham.Location = new System.Drawing.Point(441, 138);
+            this.cboLoaiSanPham.Name = "cboLoaiSanPham";
+            this.cboLoaiSanPham.Size = new System.Drawing.Size(158, 21);
+            this.cboLoaiSanPham.TabIndex = 109;
+            // 
+            // lblLoaiSanPham
+            // 
+            this.lblLoaiSanPham.AutoSize = true;
+            this.lblLoaiSanPham.Location = new System.Drawing.Point(351, 141);
+            this.lblLoaiSanPham.Name = "lblLoaiSanPham";
+            this.lblLoaiSanPham.Size = new System.Drawing.Size(79, 13);
+            this.lblLoaiSanPham.TabIndex = 90;
+            this.lblLoaiSanPham.Text = "Loại sản phẩm:";
+            // 
+            // btnXoaCacTruong
+            // 
+            this.btnXoaCacTruong.Image = global::SSMP.Properties.Resources.cross;
+            this.btnXoaCacTruong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoaCacTruong.Location = new System.Drawing.Point(614, 255);
+            this.btnXoaCacTruong.Name = "btnXoaCacTruong";
+            this.btnXoaCacTruong.Size = new System.Drawing.Size(103, 23);
+            this.btnXoaCacTruong.TabIndex = 117;
+            this.btnXoaCacTruong.Text = "Xóa các &trường";
+            this.btnXoaCacTruong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXoaCacTruong.UseVisualStyleBackColor = true;
+            this.btnXoaCacTruong.Click += new System.EventHandler(this.btnXoaCacTruong_Click);
+            // 
+            // btnCapNhat
+            // 
+            this.btnCapNhat.Image = global::SSMP.Properties.Resources.disk;
+            this.btnCapNhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCapNhat.Location = new System.Drawing.Point(533, 255);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(75, 23);
+            this.btnCapNhat.TabIndex = 116;
+            this.btnCapNhat.Text = "&Lưu lại";
+            this.btnCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCapNhat.UseVisualStyleBackColor = true;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click_1);
+            // 
+            // btnDuaVaoPhieuNhap
+            // 
+            this.btnDuaVaoPhieuNhap.Image = global::SSMP.Properties.Resources.add1;
+            this.btnDuaVaoPhieuNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDuaVaoPhieuNhap.Location = new System.Drawing.Point(399, 255);
+            this.btnDuaVaoPhieuNhap.Name = "btnDuaVaoPhieuNhap";
+            this.btnDuaVaoPhieuNhap.Size = new System.Drawing.Size(128, 23);
+            this.btnDuaVaoPhieuNhap.TabIndex = 115;
+            this.btnDuaVaoPhieuNhap.Text = "Đưa vào &Phiếu nhập";
+            this.btnDuaVaoPhieuNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDuaVaoPhieuNhap.UseVisualStyleBackColor = true;
+            this.btnDuaVaoPhieuNhap.Click += new System.EventHandler(this.btnDuaVaoPhieuNhap_Click);
+            // 
+            // lblGiaMua
+            // 
+            this.lblGiaMua.AutoSize = true;
+            this.lblGiaMua.Location = new System.Drawing.Point(633, 83);
+            this.lblGiaMua.Name = "lblGiaMua";
+            this.lblGiaMua.Size = new System.Drawing.Size(49, 13);
+            this.lblGiaMua.TabIndex = 72;
+            this.lblGiaMua.Text = "Giá mua:";
+            // 
+            // cboDonViTinh
+            // 
+            this.cboDonViTinh.FormattingEnabled = true;
+            this.cboDonViTinh.Location = new System.Drawing.Point(441, 113);
+            this.cboDonViTinh.Name = "cboDonViTinh";
+            this.cboDonViTinh.Size = new System.Drawing.Size(158, 21);
+            this.cboDonViTinh.TabIndex = 108;
+            // 
+            // lblDonViTinh
+            // 
+            this.lblDonViTinh.AutoSize = true;
+            this.lblDonViTinh.Location = new System.Drawing.Point(351, 116);
+            this.lblDonViTinh.Name = "lblDonViTinh";
+            this.lblDonViTinh.Size = new System.Drawing.Size(63, 13);
+            this.lblDonViTinh.TabIndex = 70;
+            this.lblDonViTinh.Text = "Đơn vị tính:";
+            // 
+            // lblTenSanPham
+            // 
+            this.lblTenSanPham.AutoSize = true;
+            this.lblTenSanPham.Location = new System.Drawing.Point(351, 86);
+            this.lblTenSanPham.Name = "lblTenSanPham";
+            this.lblTenSanPham.Size = new System.Drawing.Size(78, 13);
+            this.lblTenSanPham.TabIndex = 69;
+            this.lblTenSanPham.Text = "Tên sản phẩm:";
+            // 
+            // lblNgayThang
+            // 
+            this.lblNgayThang.AutoSize = true;
+            this.lblNgayThang.Location = new System.Drawing.Point(428, 42);
+            this.lblNgayThang.Name = "lblNgayThang";
+            this.lblNgayThang.Size = new System.Drawing.Size(65, 13);
+            this.lblNgayThang.TabIndex = 63;
+            this.lblNgayThang.Text = "Ngày tháng:";
+            // 
+            // lblPhieuNhapKho
+            // 
+            this.lblPhieuNhapKho.AutoSize = true;
+            this.lblPhieuNhapKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblPhieuNhapKho.Location = new System.Drawing.Point(351, 3);
+            this.lblPhieuNhapKho.Name = "lblPhieuNhapKho";
+            this.lblPhieuNhapKho.Size = new System.Drawing.Size(139, 17);
+            this.lblPhieuNhapKho.TabIndex = 62;
+            this.lblPhieuNhapKho.Text = "PHIẾU NHẬP KHO";
+            // 
+            // lblNhanVienGiaoHang
+            // 
+            this.lblNhanVienGiaoHang.AutoSize = true;
+            this.lblNhanVienGiaoHang.Location = new System.Drawing.Point(15, 113);
+            this.lblNhanVienGiaoHang.Name = "lblNhanVienGiaoHang";
+            this.lblNhanVienGiaoHang.Size = new System.Drawing.Size(109, 13);
+            this.lblNhanVienGiaoHang.TabIndex = 53;
+            this.lblNhanVienGiaoHang.Text = "Nhân viên giao hàng:";
+            // 
+            // cboNhaCungCap
+            // 
+            this.cboNhaCungCap.FormattingEnabled = true;
+            this.cboNhaCungCap.Location = new System.Drawing.Point(441, 220);
+            this.cboNhaCungCap.Name = "cboNhaCungCap";
+            this.cboNhaCungCap.Size = new System.Drawing.Size(158, 21);
+            this.cboNhaCungCap.TabIndex = 112;
+            // 
+            // lblNhaCungCap
+            // 
+            this.lblNhaCungCap.AutoSize = true;
+            this.lblNhaCungCap.Location = new System.Drawing.Point(346, 220);
+            this.lblNhaCungCap.Name = "lblNhaCungCap";
+            this.lblNhaCungCap.Size = new System.Drawing.Size(78, 13);
+            this.lblNhaCungCap.TabIndex = 50;
+            this.lblNhaCungCap.Text = "Nhà cung cấp:";
             // 
             // tabQuanLyPhieuNhap
             // 
@@ -1131,10 +1131,10 @@
             this.tpBaoCao.PerformLayout();
             this.tpQuanLyPhieuNhapHangHoa.ResumeLayout(false);
             this.tpQuanLyPhieuNhapHangHoa.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHangHoa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPhieuNhapHAng)).EndInit();
             this.gbTimKiemQuanLy.ResumeLayout(false);
             this.gbTimKiemQuanLy.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPhieuNhapHAng)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHangHoa)).EndInit();
             this.tpLapPhieuNhapHangHoa.ResumeLayout(false);
             this.tpLapPhieuNhapHangHoa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSach)).EndInit();
