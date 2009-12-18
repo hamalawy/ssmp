@@ -210,8 +210,6 @@
             this.crystalReportViewer1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.DisplayGroupTree = false;
-            this.crystalReportViewer1.DisplayStatusBar = false;
-            this.crystalReportViewer1.DisplayToolbar = false;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 73);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.SelectionFormula = "";

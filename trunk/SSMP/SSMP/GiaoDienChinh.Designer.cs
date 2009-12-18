@@ -97,7 +97,6 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbThoat = new System.Windows.Forms.ToolStripButton();
             this.ssChinh = new System.Windows.Forms.StatusStrip();
-            this.bcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msChinh.SuspendLayout();
             this.tsChinh.SuspendLayout();
             this.SuspendLayout();
@@ -233,8 +232,7 @@
             this.tsmiLapPhieuNhapHangHoa,
             this.tsmiQuanLyPhieuNhapHang,
             this.toolStripMenuItem8,
-            this.tsmiBaoCaoNhapHang,
-            this.bcToolStripMenuItem});
+            this.tsmiBaoCaoNhapHang});
             this.tsmiNhapHang.Name = "tsmiNhapHang";
             this.tsmiNhapHang.Size = new System.Drawing.Size(78, 20);
             this.tsmiNhapHang.Text = "&Nhập hàng";
@@ -727,13 +725,6 @@
             this.ssChinh.TabIndex = 4;
             this.ssChinh.Text = "ssChinh";
             // 
-            // bcToolStripMenuItem
-            // 
-            this.bcToolStripMenuItem.Name = "bcToolStripMenuItem";
-            this.bcToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
-            this.bcToolStripMenuItem.Text = "bc";
-            this.bcToolStripMenuItem.Click += new System.EventHandler(this.bcToolStripMenuItem_Click);
-            // 
             // frmGiaoDienChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -829,7 +820,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemProductStatus;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMnuItmCustomer;
-        private System.Windows.Forms.ToolStripMenuItem bcToolStripMenuItem;
     }
 }
 
