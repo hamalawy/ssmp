@@ -64,7 +64,7 @@ namespace SSMP
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Nhập thông tin để cấu hình hệ thống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Nhập thông tin để cấu hình hệ thống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
