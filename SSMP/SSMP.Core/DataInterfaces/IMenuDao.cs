@@ -10,9 +10,8 @@ namespace SSMP.Core.DataInterfaces
     /// place it in its own file for manageability.  In this way, it can grow further without
     /// cluttering up <see cref="IDaoFactory" />.
     /// </summary>
-    public interface IUserDao : IDao<User, System.Int32>
+    public interface IMenuDao : IDao<Menu, System.Int32>
     {
-        SearchResult<User> GetUserListByParam(User entity, SearchParam searchParam);
-        User GetUserByUserPass(string username, string password);
+        SearchResult<Menu> GetMenuListByParam(Menu entity, SearchParam searchParam);
     }
 }

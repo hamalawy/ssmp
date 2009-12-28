@@ -13,6 +13,8 @@ namespace SSMP.Data.Manager
     public class UserRoleManager : IManager<UserRole, System.Int32> 
     {
         private IUserRoleDao userRoleDao;
+        private IRoleDetailDao roleDetailDao;
+        private IMenuDao menuDao;
         private static readonly ILog logger = LogManager.GetLogger(typeof(UserRoleManager));
 
         public UserRoleManager()
@@ -22,6 +24,8 @@ namespace SSMP.Data.Manager
 
             IDaoFactory daoFactory = new NHibernateDaoFactory();
             userRoleDao = daoFactory.GetUserRoleDao();
+            roleDetailDao = daoFactory.GetRoleDetailDao();
+            menuDao = daoFactory.GetMenuDao();
 
             logger.Debug(LOCATION + LogConstants.SEPARATOR + "DaoFactory create successfully");
             logger.Debug(LOCATION + LogConstants.END);
@@ -41,7 +45,7 @@ namespace SSMP.Data.Manager
 
         public List<UserRole> GetByExample(UserRole exampleInstance, params string[] propertiesToExclude)
         {
-            throw new Exception("The method or operation is not implemented.");
+            return userRoleDao.GetByExample(exampleInstance, propertiesToExclude);
         }
 
         public UserRole GetUniqueByExample(UserRole exampleInstance, params string[] propertiesToExclude)
@@ -60,9 +64,12 @@ namespace SSMP.Data.Manager
             {
                 if (entity != null)
                 {
+                    userRoleDao.OpenTransaction();
+                    bool isSave = false;
                     if (entity.ID == 0)
                     {
                         userRoleDao.SaveOrUpdate(entity);
+                        isSave = true;
                     }
                     else
                     {
@@ -70,7 +77,19 @@ namespace SSMP.Data.Manager
                         existEntity.UserRoleName = entity.UserRoleName;
                         existEntity.UserRoleDesc = entity.UserRoleDesc;
                     }
-                    
+
+                    if (isSave)
+                    {
+                        for (int i = 1; i <= 5; i++)
+                        {
+                            RoleDetail roleDetail = new RoleDetail(new RoleDetail.DomainObjectID(i, entity.ID));
+                            roleDetail.Enable = 0;
+                            //roleDetail.MenuIdLookup = menuDao.GetById(i, false);
+                            //roleDetail.UserRoleIdLookup = userRoleDao.GetById(entity.ID, false);
+                            roleDetailDao.Save(roleDetail);                                 
+                        }                        
+                    }
+
                     userRoleDao.CommitChanges();
                 }
                 else
@@ -80,7 +99,8 @@ namespace SSMP.Data.Manager
             }
             catch (Exception ex)
             {
-                throw ex;
+                userRoleDao.RollbackTransaction();
+                throw ex;                
             }
 
             return entity;
@@ -92,6 +112,26 @@ namespace SSMP.Data.Manager
             {
                 if (entity != null)
                 {
+                    userRoleDao.OpenTransaction();
+                    for (int i = 1; i <= 5; i++)
+                    {
+                        RoleDetail roleDetail = roleDetailDao.GetById(new RoleDetail.DomainObjectID(i, entity.ID), false);
+
+                        bool entityExist = true;
+                        try
+                        {
+                            byte tmp = roleDetail.Enable.Value;                            
+                        }
+                        catch(NHibernate.ObjectNotFoundException ex)
+                        {
+                            entityExist = false;
+                        }
+                        if (entityExist) //De tranh truong hop null
+                        {
+                            roleDetailDao.Delete(roleDetail);
+                        }
+                    }
+
                     UserRole existEntity = userRoleDao.GetById(entity.ID, false);
 
                     userRoleDao.Delete(existEntity);
@@ -99,12 +139,14 @@ namespace SSMP.Data.Manager
                 }
                 else
                 {
+                    userRoleDao.RollbackTransaction();
                     throw new Exception("User entity cannot be null");
                 }
             }
             catch (Exception ex)
             {
-                throw ex;
+                userRoleDao.RollbackTransaction();
+                throw ex;                
             }
         }
 

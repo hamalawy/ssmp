@@ -142,33 +142,40 @@ namespace SSMP
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtUserRoleName.Text.Trim().Length == 0)
+            try
             {
-                HoTro.baoLoi("Điền tên nhóm người dùng");
-                return;
-            }
-            if (isAdd)
-            {
-                UserRole entity = new UserRole();
-                entity.UserRoleName = txtUserRoleName.Text.Trim();
-                entity.UserRoleDesc = txtUserRoleDesc.Text.Trim();
+                if (txtUserRoleName.Text.Trim().Length == 0)
+                {
+                    HoTro.baoLoi("Điền tên nhóm người dùng");
+                    return;
+                }
+                if (isAdd)
+                {
+                    UserRole entity = new UserRole();
+                    entity.UserRoleName = txtUserRoleName.Text.Trim();
+                    entity.UserRoleDesc = txtUserRoleDesc.Text.Trim();
 
-                userRoleManager.SaveOrUpdate(entity);
-                RefreshGridView(new UserRole());
-                ResetForm();
-                SetFormReadOnly(true);
-            }
-            else
-            {
-                UserRole entity = new UserRole(Int32.Parse(txtUserRoleID.Text));
-                entity.UserRoleName = txtUserRoleName.Text.Trim();
-                entity.UserRoleDesc = txtUserRoleDesc.Text.Trim();
+                    userRoleManager.SaveOrUpdate(entity);
+                    RefreshGridView(new UserRole());
+                    ResetForm();
+                    SetFormReadOnly(true);
+                }
+                else
+                {
+                    UserRole entity = new UserRole(Int32.Parse(txtUserRoleID.Text));
+                    entity.UserRoleName = txtUserRoleName.Text.Trim();
+                    entity.UserRoleDesc = txtUserRoleDesc.Text.Trim();
 
-                userRoleManager.SaveOrUpdate(entity);
-                RefreshGridView(new UserRole());
-                ResetForm();
-                SetFormReadOnly(true);
+                    userRoleManager.SaveOrUpdate(entity);
+                    RefreshGridView(new UserRole());
+                    ResetForm();
+                    SetFormReadOnly(true);
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã có lỗi trong quá trình xử lý", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
         }
 
         #region Binding Navigator Event
@@ -184,26 +191,48 @@ namespace SSMP
 
         private void toolStripBtnEdit_Click(object sender, EventArgs e)
         {
-            isAdd = false;
-            SetFormReadOnly(false);            
+            int selectedUserRoleId = (int)gvUserRole.SelectedRows[0].Cells[0].Value;
+            if (selectedUserRoleId == 1)
+            {
+                MessageBox.Show("Nhóm quản trị hệ thống là nhóm người dùng mặc định, không sửa được!", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                isAdd = false;
+                SetFormReadOnly(false);  
+            }                      
         }
 
         private void toolStripBtnDelete_Click(object sender, EventArgs e)
         {
-            if (gvUserRole.SelectedCells.Count > 0)
+            try
             {
-                int selectedRowIndex = gvUserRole.SelectedCells[0].RowIndex;
-                int deleteUserRoleId = (int)gvUserRole.Rows[selectedRowIndex].Cells["UserRoleId"].Value;
-                string deleteUserRoleName = (string)gvUserRole.Rows[selectedRowIndex].Cells["UserRoleName"].Value;
-
-                if (MessageBox.Show("Bạn có chắc chắn muốn xóa nhóm người dùng [" + deleteUserRoleName + "] ?", Constants.INFO, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (gvUserRole.SelectedCells.Count > 0)
                 {
-                    userRoleManager.Delete(new UserRole(deleteUserRoleId));
-                    
-                    //Refresh grid view after delete successfully
-                    RefreshGridView(new UserRole());
+                    int selectedRowIndex = gvUserRole.SelectedCells[0].RowIndex;
+                    int deleteUserRoleId = (int)gvUserRole.Rows[selectedRowIndex].Cells["UserRoleId"].Value;
+                    string deleteUserRoleName = (string)gvUserRole.Rows[selectedRowIndex].Cells["UserRoleName"].Value;
+
+                    if (deleteUserRoleId == 1)
+                    {
+                        MessageBox.Show("Nhóm quản trị hệ thống là nhóm người dùng mặc định, không xóa được!", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Bạn có chắc chắn muốn xóa nhóm người dùng [" + deleteUserRoleName + "] ?", Constants.INFO, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            userRoleManager.Delete(new UserRole(deleteUserRoleId));
+
+                            //Refresh grid view after delete successfully
+                            RefreshGridView(new UserRole());
+                        }
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã có lỗi trong quá trình xử lý", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
         }
 
 
@@ -466,6 +495,20 @@ namespace SSMP
             //Binding list to navigator
             listPages = new List<Int32>();
             BindingDataToBindingNagivator(searchResult.SearchSize, 0);
+        }
+
+        private void toolStripBtnRoleDetail_Click(object sender, EventArgs e)
+        {
+            int selectedUserRoleId = (int)gvUserRole.SelectedRows[0].Cells[0].Value;
+            if (selectedUserRoleId == 1)
+            {
+                MessageBox.Show("Nhóm quản trị hệ thống là nhóm người dùng mặc định, không sửa được!", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                FrmRoleDetail frmRoleDetail = new FrmRoleDetail();
+                frmRoleDetail.ShowDialog(this, selectedUserRoleId);
+            }
         }
     }
 }

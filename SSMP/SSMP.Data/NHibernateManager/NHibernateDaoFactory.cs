@@ -83,5 +83,13 @@ namespace SSMP.Data
         {
             return new UserTitleDao();
         }
+        public IMenuDao GetMenuDao()
+        {
+            return new MenuDao();
+        }
+        public IRoleDetailDao GetRoleDetailDao()
+        {
+            return new RoleDetailDao();
+        }
     }
 }

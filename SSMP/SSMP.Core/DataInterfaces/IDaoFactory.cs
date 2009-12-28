@@ -24,5 +24,7 @@ namespace SSMP.Core.DataInterfaces
         IUserDao GetUserDao();
         IUserStatusDao GetUserStatusDao();
         IUserTitleDao GetUserTitleDao();
+        IMenuDao GetMenuDao();
+        IRoleDetailDao GetRoleDetailDao();
     }
 }

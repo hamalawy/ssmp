@@ -209,16 +209,16 @@ namespace SSMP
                             rowTemp["UserTitle"] = string.Empty;
                         }                            
                     }
-                    rowTemp["UserRoleId"] = objUser.UserTitleId;
+                    rowTemp["UserRoleId"] = objUser.UserRoleId;
                     if (objUser.UserRoleIdLookup != null)
                     {
                         rowTemp["UserRole"] = objUser.UserRoleIdLookup.UserRoleName;
                     }
                     else
                     {
-                        if (objUser.UserTitleId.HasValue)
+                        if (objUser.UserRoleId != 0)
                         {
-                            UserRole temp = userRoleManager.GetById(objUser.UserTitleId.Value, false);
+                            UserRole temp = userRoleManager.GetById(objUser.UserRoleId, false);
                             rowTemp["UserRole"] = temp.UserRoleName;
                         }
                         else
@@ -376,12 +376,59 @@ namespace SSMP
                     
                     rowTemp["TelNo"] = objUser.TelNo;
                     rowTemp["Address"] = objUser.Address;
-                    rowTemp["UserTitleId"] = objUser.UserTitleIdLookup.ID;
-                    rowTemp["UserTitle"] = objUser.UserTitleIdLookup.UserTitleName;
-                    rowTemp["UserRoleId"] = objUser.UserRoleIdLookup.ID;
-                    rowTemp["UserRole"] = objUser.UserRoleIdLookup.UserRoleName;
-                    rowTemp["UserStatusId"] = objUser.UserStatusIdLookup.ID;
-                    rowTemp["UserStatus"] = objUser.UserStatusIdLookup.UserStatusName;
+                    
+                    rowTemp["UserTitleId"] = objUser.UserTitleId;
+                    if (objUser.UserTitleIdLookup != null)
+                    {
+                        rowTemp["UserTitle"] = objUser.UserTitleIdLookup.UserTitleName;
+                    }
+                    else
+                    {
+                        if (objUser.UserTitleId.HasValue)
+                        {
+                            UserTitle temp = userTitleManager.GetById(objUser.UserTitleId.Value, false);
+                            rowTemp["UserTitle"] = temp.UserTitleName;
+                        }
+                        else
+                        {
+                            rowTemp["UserTitle"] = string.Empty;
+                        }
+                    }
+                    rowTemp["UserRoleId"] = objUser.UserRoleId;
+                    if (objUser.UserRoleIdLookup != null)
+                    {
+                        rowTemp["UserRole"] = objUser.UserRoleIdLookup.UserRoleName;
+                    }
+                    else
+                    {
+                        if (objUser.UserRoleId != 0)
+                        {
+                            UserRole temp = userRoleManager.GetById(objUser.UserRoleId, false);
+                            rowTemp["UserRole"] = temp.UserRoleName;
+                        }
+                        else
+                        {
+                            rowTemp["UserRole"] = string.Empty;
+                        }
+                    }
+                    rowTemp["UserStatusId"] = objUser.UserStatusId;
+                    if (objUser.UserStatusIdLookup != null)
+                    {
+                        rowTemp["UserStatus"] = objUser.UserStatusIdLookup.UserStatusName;
+                    }
+                    else
+                    {
+                        UserStatus temp = userStatusManager.GetById(objUser.UserStatusId, false);
+
+                        if (temp != null)
+                        {
+                            rowTemp["UserStatus"] = temp.UserStatusName;
+                        }
+                        else
+                        {
+                            rowTemp["UserStatus"] = string.Empty;
+                        }
+                    }
 
                     dataTableUser.Rows.Add(rowTemp);
                 }
@@ -588,7 +635,7 @@ namespace SSMP
             {
                 logger.Debug(ex.Message);
                 logger.Debug(ex.StackTrace);
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Đã có lỗi trong quá trình xử lý", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -752,9 +799,16 @@ namespace SSMP
             txtTelNo.Text = (string)gvUser.Rows[rowIndex].Cells["TelNo"].Value;
             txtUserId.Text = (int)gvUser.Rows[rowIndex].Cells["UserId"].Value + "";
             txtUsername.Text = (string)gvUser.Rows[rowIndex].Cells["Username"].Value;
-            cbbUserRole.SelectedValue = gvUser.Rows[rowIndex].Cells["UserRoleId"].Value;
-            cbbUserStatus.SelectedValue = gvUser.Rows[rowIndex].Cells["UserStatusId"].Value;
-            cbbUserTitle.SelectedValue = gvUser.Rows[rowIndex].Cells["UserTitleId"].Value;
+            
+            //int roleID = (int)gvUser.Rows[rowIndex].Cells["UserRoleId"].Value;
+            //UserRole tmpUserRole = userRoleManager.GetById(roleID, false);
+            //cbbUserRole.SelectedValue = tmpUserRole.ID;
+            //cbbUserRole.SelectedText = tmpUserRole.UserRoleName;
+            //cbbUserRole.SelectedIndex = 2;
+
+            cbbUserRole.SelectedValue = (int)gvUser.Rows[rowIndex].Cells["UserRoleId"].Value;
+            cbbUserStatus.SelectedValue = (int)gvUser.Rows[rowIndex].Cells["UserStatusId"].Value;
+            cbbUserTitle.SelectedValue = (int)gvUser.Rows[rowIndex].Cells["UserTitleId"].Value;
             rdMale.Checked = (byte)gvUser.Rows[rowIndex].Cells["SexId"].Value == 1 ? true : false;
             rdFemale.Checked = (byte)gvUser.Rows[rowIndex].Cells["SexId"].Value == 0 ? true : false;
         }

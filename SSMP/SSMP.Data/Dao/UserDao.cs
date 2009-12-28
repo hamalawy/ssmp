@@ -150,6 +150,21 @@ namespace SSMP.Data.Dao
             return criteria;
         }
 
+        public User GetUserByUserPass(string username, string password)
+        {
+            ICriteria criteria = NHibernateSession.CreateCriteria(typeof(User));
+            criteria.Add(Restrictions.Eq("Username", username)).Add(Restrictions.Eq("Password", password));
+            List<User> list = criteria.List<User>() as List<User>;
+            if (list.Count > 0)
+            {
+                return list[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         #endregion
     }
 }
