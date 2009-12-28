@@ -38,7 +38,7 @@ namespace SSMP.Data.Manager
 
         public List<User> GetByExample(User exampleInstance, params string[] propertiesToExclude)
         {
-            throw new Exception("The method or operation is not implemented.");
+            return userDao.GetByExample(exampleInstance, propertiesToExclude);
         }
 
         public User GetUniqueByExample(User exampleInstance, params string[] propertiesToExclude)
@@ -100,7 +100,7 @@ namespace SSMP.Data.Manager
         {
             User userObj = userDao.GetById(entity.ID, false);
 
-            if (userObj != null)
+            if (userObj.ID != 0)
             {
                 return true;
             }
@@ -140,6 +140,18 @@ namespace SSMP.Data.Manager
             }
 
             return searchResult;
+        }
+
+        public User GetUserByUserPass(string username, string password)
+        {
+            try
+            {
+                return userDao.GetUserByUserPass(username, password);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

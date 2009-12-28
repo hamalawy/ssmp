@@ -31,6 +31,9 @@ namespace SSMP
         private FrmProductStatus frmProductStatus;
         private FrmActionDetail frmActionDetail;
         private FrmCustomer frmCustomer;
+        public string SessionUsername;
+        public string SessionFullname;
+        
 
         public string MaNguoiDung;
 
@@ -286,11 +289,9 @@ namespace SSMP
 
         private void frmGiaoDienChinh_Load(object sender, EventArgs e)
         {
-            
-            
             if (!File.Exists(Constants.CONFIG_FILE))
             {
-                MessageBox.Show("Because this is the first time use program, please config database", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Vui lòng khai báo thông tin về cơ sở dữ liệu", Constants.INFO, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 if (frmConfig == null)
                 {
@@ -309,6 +310,20 @@ namespace SSMP
             {
                 System.Console.WriteLine("Config file existed!");
             }
+
+            if (string.IsNullOrEmpty(this.SessionUsername))
+            {
+                if (frmDangNhap == null || frmDangNhap.IsDisposed)
+                {
+                    frmDangNhap = new DangNhap();
+                    frmDangNhap.MdiParent = this;
+                    frmDangNhap.setGiaoDienChinh(this);
+                    frmDangNhap.Show();
+                    frmDangNhap.BringToFront();
+
+                    ShowHideToolbar(false, true, false, false, false, false, false, false);                    
+                }
+            }            
         }
 
         private void tsmiLapPhieuBanHang_Click(object sender, EventArgs e)
@@ -379,6 +394,7 @@ namespace SSMP
             {
                 frmDangNhap = new DangNhap();
                 frmDangNhap.MdiParent = this;
+                frmDangNhap.setGiaoDienChinh(this);
                 frmDangNhap.Show();
             }
             frmDangNhap.BringToFront();
@@ -397,11 +413,31 @@ namespace SSMP
         }
 
         private void tsmiDangXuat_Click(object sender, EventArgs e)
-        {
-            DangNhap.idNguoiDung = 0;
-            DangNhap.tenDangNhap = null;
-            DangNhap.quyenNguoiDung = 0;
-            MessageBox.Show(this, "Đăng xuất thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        {            
+            this.SessionUsername = null;
+            this.SessionFullname = null;
+            this.SetStatusText(string.Empty);
+
+            foreach (Form child in this.MdiChildren)
+            {
+                child.Close();
+            }
+
+            MessageBox.Show(this, "Bạn đã thoát khỏi chương trình!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            if (string.IsNullOrEmpty(this.SessionUsername))
+            {
+                if (frmDangNhap == null || frmDangNhap.IsDisposed)
+                {
+                    frmDangNhap = new DangNhap();
+                    frmDangNhap.MdiParent = this;
+                    frmDangNhap.setGiaoDienChinh(this);
+                    frmDangNhap.Show();                    
+
+                    ShowHideToolbar(false, true, false, false, false, false, false, false);
+                }
+                frmDangNhap.BringToFront();
+            }            
         }
 
         private void tsDangXuat_Click(object sender, EventArgs e)
@@ -490,6 +526,64 @@ namespace SSMP
         {
             Form1 f = new Form1();
             f.Show();
+        }
+
+        public void SetStatusText(string text)
+        {
+            toolStripStatusLblWelcome.Text = text;
+        }
+
+        public void ShowHideToolbar(bool hethong, bool dangnhap, bool doimatkhau, bool dangxuat, bool banhang, bool nhaphang, bool danhmuc, bool quantri)
+        {
+            tsmiCauHinh.Visible = hethong;
+            //tsmiHeThong.Visible = hethong;
+            tsmiDangNhap.Visible = dangnhap;
+            tsmiDoiMatKhau.Visible = doimatkhau;
+            tsmiDangXuat.Visible = dangxuat;
+            tsmiBanHang.Visible = banhang;
+            tsmiNhapHang.Visible = nhaphang;
+            tsmiQuanLyDanhMuc.Visible = danhmuc;
+            tsmiQuanTri.Visible = quantri;
+        }
+
+        public void ShowHideCauHinh(bool visible)
+        {
+            tsmiCauHinh.Visible = visible;
+        }
+
+        public void ShowHideDangNhap(bool visible)
+        {
+            tsmiDangNhap.Visible = visible;
+        }
+
+        public void ShowHideDoiMatKhau(bool visible)
+        {
+            tsmiDoiMatKhau.Visible = visible;
+        }
+
+        public void ShowHideDangXuat(bool visible)
+        {
+            tsmiDangXuat.Visible = visible;
+        }
+
+        public void ShowHideBanHang(bool visible)
+        {
+            tsmiBanHang.Visible = visible;
+        }
+
+        public void ShowHideNhapHang(bool visible)
+        {
+            tsmiNhapHang.Visible = visible;
+        }
+
+        public void ShowHideQuanLyDanhMuc(bool visible)
+        {
+            tsmiQuanLyDanhMuc.Visible = visible;
+        }
+
+        public void ShowHideQuanTri(bool visible)
+        {
+            tsmiQuanTri.Visible = visible;
         }
     }
 }

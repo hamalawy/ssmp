@@ -10,9 +10,10 @@ namespace SSMP.Core.DataInterfaces
     /// place it in its own file for manageability.  In this way, it can grow further without
     /// cluttering up <see cref="IDaoFactory" />.
     /// </summary>
-    public interface IUserDao : IDao<User, System.Int32>
+    public interface IRoleDetailDao : IDao<RoleDetail, RoleDetail.DomainObjectID>
     {
-        SearchResult<User> GetUserListByParam(User entity, SearchParam searchParam);
-        User GetUserByUserPass(string username, string password);
+        //SearchResult<UserRoleDetail> GetUserRoleDetailListByParam(UserRoleDetail entity, SearchParam searchParam);
+        List<Menu> GetListMenuByRole(int roleID);
+        List<RoleDetail> GetListByRole(int roleID);
     }
 }

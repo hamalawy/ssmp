@@ -186,5 +186,15 @@ namespace SSMP.Data
                 return NHibernateSessionManager.Instance.GetSession();
             }
         }
+
+        public void OpenTransaction()
+        {
+            NHibernateSessionManager.Instance.BeginTransaction();
+        }
+
+        public void RollbackTransaction()
+        {
+            NHibernateSessionManager.Instance.RollbackTransaction();
+        }
     }
 }

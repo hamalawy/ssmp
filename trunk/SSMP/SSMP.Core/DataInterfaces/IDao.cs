@@ -15,5 +15,7 @@ namespace SSMP.Core.DataInterfaces
         void Delete(T entity);
         void CommitChanges();
         SearchResult<T> GetByExampleAndPaging(T exampleInstance, SearchParam searchParam);
+        void OpenTransaction();
+        void RollbackTransaction();
     }
 }

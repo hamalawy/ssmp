@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="SSMP.Core" namespace="SSMP.Core.Domain">
+    <class name="Menu" table="Menu" >
+    <id name="ID" type="System.Int32" column="ID">
+        <generator class="identity"/>
+    </id>
+    <property name="MenuName" column="MenuName" type="System.String" not-null="true" length="200"/>
+ </class>
+</hibernate-mapping>
