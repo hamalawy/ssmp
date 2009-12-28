@@ -309,21 +309,24 @@ namespace SSMP
             else
             {
                 System.Console.WriteLine("Config file existed!");
+
+                if (string.IsNullOrEmpty(this.SessionUsername))
+                {
+                    if (frmDangNhap == null || frmDangNhap.IsDisposed)
+                    {
+                        frmDangNhap = new DangNhap();
+                        frmDangNhap.MdiParent = this;
+                        frmDangNhap.setGiaoDienChinh(this);
+                        frmDangNhap.Show();
+                        frmDangNhap.BringToFront();
+
+                        ShowHideToolbar(false, true, false, false, false, false, false, false);
+                    }
+                } 
             }
 
-            if (string.IsNullOrEmpty(this.SessionUsername))
-            {
-                if (frmDangNhap == null || frmDangNhap.IsDisposed)
-                {
-                    frmDangNhap = new DangNhap();
-                    frmDangNhap.MdiParent = this;
-                    frmDangNhap.setGiaoDienChinh(this);
-                    frmDangNhap.Show();
-                    frmDangNhap.BringToFront();
-
-                    ShowHideToolbar(false, true, false, false, false, false, false, false);                    
-                }
-            }            
+            ShowHideToolbar(false, true, false, false, false, false, false, false);
+            ShowHideCauHinh(true);
         }
 
         private void tsmiLapPhieuBanHang_Click(object sender, EventArgs e)
