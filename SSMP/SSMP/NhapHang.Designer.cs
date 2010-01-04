@@ -38,6 +38,8 @@
             this.checkBoxNgay = new System.Windows.Forms.CheckBox();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tpQuanLyPhieuNhapHangHoa = new System.Windows.Forms.TabPage();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.buttonEdit = new System.Windows.Forms.Button();
             this.btnReloadAll = new System.Windows.Forms.Button();
             this.checkBoxTrangthai = new System.Windows.Forms.CheckBox();
             this.checkBoxGiamGia = new System.Windows.Forms.CheckBox();
@@ -210,6 +212,8 @@
             this.crystalReportViewer1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.DisplayGroupTree = false;
+            this.crystalReportViewer1.DisplayStatusBar = false;
+            this.crystalReportViewer1.DisplayToolbar = false;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 73);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.SelectionFormula = "";
@@ -220,6 +224,8 @@
             // 
             // tpQuanLyPhieuNhapHangHoa
             // 
+            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.buttonDelete);
+            this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.buttonEdit);
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.btnReloadAll);
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.checkBoxTrangthai);
             this.tpQuanLyPhieuNhapHangHoa.Controls.Add(this.checkBoxGiamGia);
@@ -244,6 +250,26 @@
             this.tpQuanLyPhieuNhapHangHoa.UseVisualStyleBackColor = true;
             this.tpQuanLyPhieuNhapHangHoa.Click += new System.EventHandler(this.tpQuanLyPhieuNhapHangHoa_Click);
             this.tpQuanLyPhieuNhapHangHoa.Enter += new System.EventHandler(this.tpQuanLyPhieuNhapHangHoa_Enter);
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Location = new System.Drawing.Point(640, 128);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(75, 23);
+            this.buttonDelete.TabIndex = 42;
+            this.buttonDelete.Text = "&Xóa phiếu";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Location = new System.Drawing.Point(559, 128);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(75, 23);
+            this.buttonEdit.TabIndex = 41;
+            this.buttonEdit.Text = "&Sửa phiếu";
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // btnReloadAll
             // 
@@ -403,7 +429,7 @@
             this.gbTimKiemQuanLy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.gbTimKiemQuanLy.Location = new System.Drawing.Point(559, 16);
             this.gbTimKiemQuanLy.Name = "gbTimKiemQuanLy";
-            this.gbTimKiemQuanLy.Size = new System.Drawing.Size(325, 165);
+            this.gbTimKiemQuanLy.Size = new System.Drawing.Size(325, 106);
             this.gbTimKiemQuanLy.TabIndex = 4;
             this.gbTimKiemQuanLy.TabStop = false;
             this.gbTimKiemQuanLy.Text = "TÌM KIẾM:";
@@ -594,6 +620,7 @@
             this.tpLapPhieuNhapHangHoa.TabIndex = 0;
             this.tpLapPhieuNhapHangHoa.Text = "Lập Phiếu nhập Hàng hóa";
             this.tpLapPhieuNhapHangHoa.UseVisualStyleBackColor = true;
+            this.tpLapPhieuNhapHangHoa.Click += new System.EventHandler(this.tpLapPhieuNhapHangHoa_Click);
             // 
             // buttonXoaDong
             // 
@@ -1230,6 +1257,8 @@
         private System.Windows.Forms.ComboBox cboNhaCungCap;
         private System.Windows.Forms.Label lblNhaCungCap;
         private System.Windows.Forms.TabControl tabQuanLyPhieuNhap;
+        private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.Button buttonEdit;
 
 
 

@@ -101,17 +101,18 @@ namespace SSMP
 
         public void CapNhatDuLieu(SqlCommand cmd)
         {
-            //try
-            //{
+            try
+            {
                 cmd.Connection = KetNoi();
                 cmd.Connection.Open();
                 cmd.ExecuteNonQuery();
-            //}
-        /*
+                cmd.Connection.Close();
+            }
+        
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
-            }*/
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public void TaiDuLieu(ComboBox cbo, string TenBang, string TruongKhoa, string TruongHienThi)
@@ -397,5 +398,10 @@ namespace SSMP
             Regex objNotWholePattern = new Regex("[^0-9]");
             return !objNotWholePattern.IsMatch(strNumber);
         }
+
+        public static string confirm(string text, string cap) {
+            return MessageBox.Show(text, cap, MessageBoxButtons.YesNo, MessageBoxIcon.Warning).ToString();
+        }
+
     }
 }
