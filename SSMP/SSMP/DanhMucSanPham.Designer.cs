@@ -305,7 +305,7 @@
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(53, 22);
+            this.toolStripLabel2.Size = new System.Drawing.Size(49, 22);
             this.toolStripLabel2.Text = "Trang số";
             // 
             // toolStripTextBox1
@@ -394,7 +394,7 @@
             // 
             this.toolStripLabeltotalProductName.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabeltotalProductName.Name = "toolStripLabeltotalProductName";
-            this.toolStripLabeltotalProductName.Size = new System.Drawing.Size(128, 22);
+            this.toolStripLabeltotalProductName.Size = new System.Drawing.Size(117, 22);
             this.toolStripLabeltotalProductName.Text = "Tổng số tên sản phẩm:";
             // 
             // gvTenSanPham
@@ -605,7 +605,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label14.Location = new System.Drawing.Point(306, 166);
+            this.label14.Location = new System.Drawing.Point(306, 195);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(21, 13);
             this.label14.TabIndex = 88;
@@ -679,7 +679,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(295, 195);
+            this.label2.Location = new System.Drawing.Point(291, 167);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 10;
@@ -864,7 +864,7 @@
             // toolStripLblPage
             // 
             this.toolStripLblPage.Name = "toolStripLblPage";
-            this.toolStripLblPage.Size = new System.Drawing.Size(53, 22);
+            this.toolStripLblPage.Size = new System.Drawing.Size(49, 22);
             this.toolStripLblPage.Text = "Trang số";
             // 
             // bindingNavigatorPositionItem
@@ -909,7 +909,7 @@
             // 
             this.toolStripLblTotal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLblTotal.Name = "toolStripLblTotal";
-            this.toolStripLblTotal.Size = new System.Drawing.Size(108, 22);
+            this.toolStripLblTotal.Size = new System.Drawing.Size(98, 22);
             this.toolStripLblTotal.Text = "Tổng sồ sản phẩm:";
             // 
             // toolStripProductReload
