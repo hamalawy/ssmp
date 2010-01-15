@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using SSMP.Data;
+using log4net;
 
 namespace SSMP
 {
@@ -33,7 +34,7 @@ namespace SSMP
         private FrmCustomer frmCustomer;
         public string SessionUsername;
         public string SessionFullname;
-        
+        private static readonly ILog logger = LogManager.GetLogger(typeof(frmGiaoDienChinh));
 
         public string MaNguoiDung;
 
@@ -308,7 +309,7 @@ namespace SSMP
             }
             else
             {
-                System.Console.WriteLine("Config file existed!");
+                logger.Debug("Config file existed!");                
 
                 if (string.IsNullOrEmpty(this.SessionUsername))
                 {
