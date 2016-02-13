@@ -1,0 +1,1 @@
+Small Super Market Professional is window application run on .Net 2.0
